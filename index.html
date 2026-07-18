@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forensika — forenzná expertíza · komunita</title>
+  <meta name="description" content="Forensika — súdne lekárstvo a toxikológia. Keď okolnosti nie sú jasné, forenzné vedy vnášajú svetlo a ostrosť.">
+  <style>
+    :root{
+      --ink:#274863;
+      --muted:#7C90A4;
+      --bg-top:#F4F8FC;
+      --bg-bottom:#E7EEF6;
+      --teal:#4FCBBB;
+      --blue:#66B0E8;
+      --violet:#8E86EC;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html,body{height:100%;}
+    body{
+      font-family:'Helvetica Neue',Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(102,176,232,.16), transparent 60%),
+        linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      -webkit-font-smoothing:antialiased;
+    }
+    main{
+      width:100%;
+      max-width:560px;
+      text-align:center;
+    }
+    .logo{
+      width:clamp(140px,34vw,180px);
+      height:auto;
+      margin:0 auto 30px;
+      display:block;
+      border-radius:24%;
+      filter:drop-shadow(0 18px 40px rgba(19,42,61,.28));
+    }
+    .lede{
+      font-size:clamp(19px,3.4vw,26px);
+      font-weight:500;
+      line-height:1.45;
+      color:var(--ink);
+      max-width:34ch;
+      margin:0 auto 16px;
+    }
+    .sub{
+      font-size:clamp(15px,2.4vw,17px);
+      font-weight:400;
+      line-height:1.6;
+      color:var(--muted);
+      max-width:46ch;
+      margin:0 auto;
+    }
+    .rule{
+      width:64px;
+      height:4px;
+      border-radius:2px;
+      margin:26px auto 24px;
+      background:linear-gradient(90deg,var(--teal),var(--blue),var(--violet));
+    }
+    footer{
+      margin-top:40px;
+      font-size:13px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    footer a{color:inherit;text-decoration:none;}
+    footer a:hover{color:var(--ink);}
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forensika">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1">
+          <stop offset="0" stop-color="#2A4E70"/>
+          <stop offset="1" stop-color="#132A3D"/>
+        </linearGradient>
+        <radialGradient id="glassI" cx="36%" cy="26%" r="85%">
+          <stop offset="0" stop-color="#FFFFFF"/>
+          <stop offset="0.52" stop-color="#EDF2F8"/>
+          <stop offset="1" stop-color="#C9D7E5"/>
+        </radialGradient>
+        <linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0">
+          <stop offset="0" stop-color="#3FB4AC"/>
+          <stop offset="1" stop-color="#4C8CCF"/>
+        </linearGradient>
+        <filter id="blurC" x="-40%" y="-70%" width="180%" height="240%">
+          <feGaussianBlur stdDeviation="3.4"/>
+        </filter>
+        <clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+      </defs>
+      <rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+      <g transform="translate(256,248)">
+        <circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+        <circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+        <circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+        <g clip-path="url(#lensI)">
+          <ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+          <path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18"
+                fill="none" stroke="url(#pc)" stroke-width="12"
+                stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+          <path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11"
+                stroke-linecap="round" stroke-dasharray="0.5 20"/>
+        </g>
+        <circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+        <circle cx="0" cy="0" r="126" fill="none" stroke="#0C1E2E" stroke-width="2" opacity="0.12"/>
+        <rect x="80" y="80" width="64" height="21" rx="10.5"
+              transform="rotate(45 80 80)" fill="#F4F8FC"/>
+      </g>
+    </svg>
+
+    <p class="lede">Keď okolnosti nie sú jasné, forenzné vedy vnášajú svetlo a ostrosť.</p>
+    <div class="rule"></div>
+    <p class="sub">Forensika — o poslaní a význame práce súdneho lekára a toxikológa. Objasňujeme, spájame a posúvame odbor vpred.</p>
+
+    <footer>Pripravujeme · <a href="mailto:jansikuta@me.com">jansikuta@me.com</a></footer>
+  </main>
+</body>
+</html>
