@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Forensika — forenzné vedy · aplikácie</title>
-<meta name="description" content="Forensika — súdne lekárstvo a toxikológia. Aplikácie a nástroje pre forenznú prax: 4n6 Tools, Colorime3ka a littlEye AI.">
+<meta name="description" content="Forensika — súdne lekárstvo a toxikológia. Aplikácie a nástroje pre forenznú prax: 4n6 Šikuta Tools, Colorime3ka a littlEye AI.">
 <meta property="og:title" content="Forensika — forenzné vedy · aplikácie">
-<meta property="og:description" content="Aplikácie a nástroje pre forenznú prax: 4n6 Tools, Colorime3ka a littlEye AI.">
+<meta property="og:description" content="Aplikácie a nástroje pre forenznú prax: 4n6 Šikuta Tools, Colorime3ka a littlEye AI.">
 <style>
   :root{
     --ink:#274863; --ink-2:#22415C; --ink-3:#132A3D;
@@ -71,6 +71,25 @@
 
   .grid{display:grid;grid-template-columns:1fr;gap:24px;}
   @media(min-width:820px){.grid{grid-template-columns:1fr 1fr;}}
+
+  /* Odbor / disciplíny */
+  section.field{padding:66px 0 10px;}
+  .intro{max-width:760px;margin:0 auto 40px;text-align:center;}
+  .intro p{color:#4d647a;font-size:clamp(16px,2.3vw,18.5px);line-height:1.65;}
+  .intro p + p{margin-top:14px;}
+  .disc{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:640px){.disc{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.disc{grid-template-columns:repeat(3,1fr);}}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.2s;}
+  .d:hover{border-color:#bcd3e9;box-shadow:0 14px 30px rgba(19,42,61,.08);transform:translateY(-2px);}
+  .d .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;margin-bottom:13px;
+    background:linear-gradient(150deg,#eaf4fb,#e6f7f4);}
+  .d .ico svg{width:21px;height:21px;fill:none;stroke:#3f7fae;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+  .d h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .d p{color:#5d7186;font-size:14.5px;line-height:1.55;}
+  .closing{margin-top:26px;text-align:center;color:#4d647a;font-size:16px;max-width:66ch;
+    margin-left:auto;margin-right:auto;}
+  .closing b{color:var(--ink);}
 
   .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;
     display:flex;flex-direction:column;transition:.22s;box-shadow:0 1px 2px rgba(19,42,61,.03);}
@@ -155,6 +174,7 @@
   <div class="wrap nav">
     <a class="brand" href="#top"><svg class="mark"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
     <div style="display:flex;align-items:center;gap:10px;">
+      <a class="cta" href="#odbor">O odbore</a>
       <a class="cta" href="#aplikacie">Aplikácie</a>
       <a class="cta" href="/en/" style="padding:9px 14px;">EN</a>
     </div>
@@ -176,6 +196,62 @@
   </section>
   <div class="wave"></div>
 
+  <section class="field" id="odbor">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">O odbore</div>
+        <h2>Čo sú forenzné vedy</h2>
+      </div>
+
+      <div class="intro">
+        <p>Forenzné vedy sú mostom medzi právom a prírodnými vedami. Tam, kde sa vyšetrovanie opiera o dohady, prinášajú meranie, metódu a overiteľný dôkaz — pri objasňovaní trestných činov, dopravných nehôd aj pri zisťovaní príčiny smrti.</p>
+        <p>Nie je to jeden odbor, ale súhra viacerých. Každý pozerá na prípad z inej strany a odpovedá na inú otázku.</p>
+      </div>
+
+      <div class="disc">
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M7.5 15h9"/></svg></div>
+          <h3>Súdne lekárstvo a toxikológia</h3>
+          <p>Zisťuje príčinu a mechanizmus smrti, hodnotí poranenia a ich vznik, odhaľuje prítomnosť liekov, drog či jedov v tele.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M7 3c0 6 10 6 10 12"/><path d="M17 3c0 6-10 6-10 12"/><path d="M8.5 7h7M8.5 17h7"/><path d="M7 21h10"/></svg></div>
+          <h3>Forenzná genetika a biológia</h3>
+          <p>Z krvi, vlasov, slín a ďalších biologických stôp určuje totožnosť a spája konkrétnu osobu s miestom činu.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 10a6 6 0 0 0-12 0v4"/><path d="M15 10a3 3 0 0 0-6 0v8"/><path d="M12 10v9"/><path d="M18 13v4"/></svg></div>
+          <h3>Daktyloskopia</h3>
+          <p>Porovnáva odtlačky prstov a dlaní — jedna z najstarších identifikačných metód, ktorá dodnes patrí k najspoľahlivejším.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+          <h3>Balistika</h3>
+          <p>Skúma zbrane, strelivo a stopy po výstrele — umožňuje určiť smer, vzdialenosť a priebeh streľby.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8 9.5l2 2-2 2M13 13.5h3"/></svg></div>
+          <h3>Digitálna forenzika</h3>
+          <p>Získava a zaisťuje dáta z počítačov, mobilov a dátových nosičov — vrátane stôp, ktoré sa niekto pokúsil zmazať.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(120 12 12)"/></svg></div>
+          <h3>Forenzná chémia a fyzika</h3>
+          <p>Identifikuje neznáme látky, farby, sklo, vlákna a mikrostopy — často práve tie prepoja zdanlivo nesúvisiace dôkazy.</p>
+        </div>
+
+      </div>
+
+      <p class="closing">Žiadna z týchto disciplín nestojí sama. Skutočnú silu majú vtedy, keď sa ich zistenia stretnú nad jedným prípadom — <b>a preto má zmysel poznatky zdieľať, metódy zjednocovať a odbor spájať naprieč pracoviskami.</b></p>
+    </div>
+  </section>
+
   <section class="apps" id="aplikacie">
     <div class="wrap">
       <div class="sec-head">
@@ -186,12 +262,12 @@
 
       <div class="grid">
 
-        <!-- 4n6 Tools -->
+        <!-- 4n6 Šikuta Tools -->
         <div class="card wide">
           <div class="top">
             <div class="icon" style="background:linear-gradient(160deg,#2A4E70,#132A3D);color:#7fd6cb;">4n6</div>
             <div>
-              <h3>4n6 Tools</h3>
+              <h3>4n6 Šikuta Tools</h3>
               <div class="sub">Vreckové forenzné kalkulačky</div>
             </div>
           </div>
