@@ -133,6 +133,42 @@
   .foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;color:#6b7f93;font-size:14px;}
   .foot a{font-weight:600;color:var(--ink);}
   .foot a:hover{color:var(--blue);}
+  .nav a.cta.lang{padding:9px 14px;}
+  .nav .navwrap{display:flex;align-items:center;gap:10px;}
+
+  /* ---------- Mobil ---------- */
+  @media (max-width:760px){
+    .wrap{padding:0 18px;}
+    .nav{height:58px;gap:10px;}
+    .brand{font-size:17px;gap:9px;}
+    .brand .mark{width:32px;height:32px;}
+    .nav a.cta{font-size:13px;padding:7px 12px;}
+    .nav a.cta.lang{padding:7px 11px;}
+    .hero{padding:52px 0 62px;}
+    .hero .logo{width:92px;height:92px;margin-bottom:20px;}
+    .kicker{font-size:11px;letter-spacing:2.6px;margin-bottom:16px;}
+    .hero .btns{gap:10px;}
+    .btn-primary,.btn-ghost{padding:12px 20px;font-size:14.5px;}
+    section.field{padding:48px 0 6px;}
+    section.apps{padding:48px 0 28px;}
+    .sec-head{margin-bottom:30px;}
+    .intro{margin-bottom:28px;}
+    .card{padding:22px;border-radius:18px;}
+    .d{padding:18px;}
+    .mission{padding:14px 0 54px;}
+    .mission .box{padding:34px 22px;border-radius:20px;}
+    .mission .box .words{letter-spacing:2.6px;font-size:12px;}
+    .store{padding:9px 13px;}
+    .store .lbl span{font-size:13px;}
+    .foot{flex-direction:column;text-align:center;gap:10px;}
+    footer{padding:30px 0;}
+  }
+  /* Na úzkych displejoch necháme v hlavičke len jazyk — sekcie sú dosiahnuteľné rolovaním */
+  @media (max-width:560px){
+    .nav .navlink{display:none;}
+  }
+  /* Dlhé odkazy nesmú pretiecť mimo obrazovku */
+  a,p,li,div{overflow-wrap:anywhere;}
 </style>
 </head>
 <body>
@@ -173,10 +209,10 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top"><svg class="mark"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <a class="cta" href="#odbor">O odbore</a>
-      <a class="cta" href="#aplikacie">Aplikácie</a>
-      <a class="cta" href="/en/" style="padding:9px 14px;">EN</a>
+    <div class="navwrap">
+      <a class="cta navlink" href="#odbor">O odbore</a>
+      <a class="cta navlink" href="#aplikacie">Aplikácie</a>
+      <a class="cta lang" href="/en/">EN</a>
     </div>
   </div>
 </header>
