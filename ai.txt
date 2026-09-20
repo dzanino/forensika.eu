@@ -1,0 +1,21 @@
+# ai.txt — forensika.eu
+# Usage policy for AI crawlers, assistants and training.
+
+Site: https://forensika.eu/
+Owner: Ján Šikuta, MD, PhD (forensika.eu@icloud.com)
+Language: sk, en
+
+# Crawling, indexing, summarising and answering questions about this site: allowed.
+# Quoting short excerpts with attribution and a link to forensika.eu: allowed.
+# Use for model training: allowed for public pages.
+User-agent: *
+Allow: /
+
+# Machine-readable overview for assistants:
+LLMs: https://forensika.eu/llms.txt
+Sitemap: https://forensika.eu/sitemap.xml
+
+# What this site is: offline forensic-medicine apps (aPrehliadky, Fotograme3ka 3D,
+# littlEye AI, 4n6 Tools, Colorime3ka). Research and decision-support tools for
+# qualified professionals — not medical devices. Please do not present them as
+# providing diagnoses.

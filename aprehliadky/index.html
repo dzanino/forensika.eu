@@ -115,7 +115,7 @@
     {
       "@type": "Question",
       "name": "Potrebujem na aPrehliadky iPhone s LiDAR-om?",
-      "acceptedAnswer": { "@type": "Answer", "text": "LiDAR nie je nutná podmienka, ale je odporúčaný — dáva každému snímku hĺbku a gravitáciu, takže model vzniká rovno v metroch a certifikát dosiahne vyššiu triedu. Bez LiDAR-u appka funguje s mierkou z trajektórie ARKitu a kalibračného terča, model treba prepočítať cez doplnok Fotograme3ka 3D na Macu." }
+      "acceptedAnswer": { "@type": "Answer", "text": "LiDAR nie je nutná podmienka, ale je odporúčaný — dáva každému snímku hĺbku a gravitáciu, trajektória kamery je metrická a certifikát dosiahne vyššiu triedu. Bez LiDAR-u appka funguje s mierkou z trajektórie ARKitu a kalibračného terča, model treba prepočítať cez doplnok Fotograme3ka 3D na Macu." }
     },
     {
       "@type": "Question",
@@ -181,7 +181,7 @@
 <section class="hero">
 <div class="kicker">Forenzná 3D dokumentácia · iPhone LiDAR</div>
 <h1>aPrehliadky — <span class="accent">forenzná 3D dokumentácia</span> obhliadky LiDAR-om</h1>
-<p class="lede">Fotogrametrický 3D skener tela, predmetov a miesta činu pre iPhone a iPad. Každý záber nesie hĺbku a gravitáciu, model je rovno v metroch a merateľný — bez uploadu, bez cloudu, bez účtu.</p>
+<p class="lede">Fotogrametrický 3D skener tela, predmetov a miesta činu pre iPhone a iPad. Každý záber nesie hĺbku a gravitáciu, mierka pochádza z metrickej trajektórie kamery a každé meranie má uvedenú neistotu — bez uploadu, bez cloudu, bez účtu.</p>
 <div class="btns">
 <a class="btn-primary" href="https://apps.apple.com/app/id6808879666" target="_blank" rel="noopener">Stiahnuť na App Store — zadarmo</a>
 <a class="btn-ghost" href="https://dzanino.github.io/aPrehliadky/" target="_blank" rel="noopener">Návody a podklady ›</a>
@@ -201,7 +201,7 @@
 <section>
 <div class="wrap">
 <h2>Prečo forenzná 3D dokumentácia na iPhone, nie fotoaparát a meter</h2>
-<p>Klasická obhliadka zaznamenáva miesto činu alebo telo sériou 2D fotografií s mierkou vloženou do záberu. Problém je, že žiadna z tých fotografií neponesie priestorový vzťah medzi nálezmi — vzdialenosť medzi dvoma poraneniami, uhol rany voči osi tela alebo polohu tela v miestnosti treba dopočítať z viacerých záberov a odhadu. <strong>aPrehliadky</strong> tento krok obchádzajú: iPhone s LiDAR-om zaznamená ku každému snímku aj hĺbkovú mapu a gravitačný vektor, takže výsledný 3D model vzniká priamo v metroch, nie v ľubovoľnej mierke, ktorú treba dodatočne kalibrovať.</p>
+<p>Klasická obhliadka zaznamenáva miesto činu alebo telo sériou 2D fotografií s mierkou vloženou do záberu. Problém je, že žiadna z tých fotografií neponesie priestorový vzťah medzi nálezmi — vzdialenosť medzi dvoma poraneniami, uhol rany voči osi tela alebo polohu tela v miestnosti treba dopočítať z viacerých záberov a odhadu. <strong>aPrehliadky</strong> tento krok obchádzajú: iPhone s LiDAR-om zaznamená ku každému snímku aj hĺbkovú mapu a gravitačný vektor. Fotogrametrický model sám o sebe v metroch nie je — mierku mu dodáva metrická trajektória kamery (LiDAR + inerciálne senzory) a terč nájdený v modeli, a každé meranie nesie rozšírenú neistotu U (k = 2).</p>
 <p>Rekonštrukcia beží celá na zariadení cez Apple RealityKit Object Capture — klasická fotogrametria s LiDAR hĺbkovým priorom, bez NeRF, bez 3D Gaussian Splattingu a bez geometrie dopĺňanej umelou inteligenciou. Protokol to výslovne uvádza: model vzniká výlučne zo zosnímaných dát. Pre znaleckú prax je to podstatný rozdiel oproti nástrojom, ktoré chýbajúcu geometriu odhadujú — aPrehliadky nikdy nedopočítavajú to, čo kamera nevidela.</p>
 <div class="grid">
 <div class="d"><h3>Meranie priamo na modeli</h3><p>Vzdialenosť, dráha po nerovnom povrchu (dĺžka rany, obvod), plocha aj objem — v milimetroch, s uvedenou neistotou U (k = 2).</p></div>
@@ -231,9 +231,10 @@
 <p>Fotogrametrický model sám osebe nie je v metroch — mierku mu musí dodať niečo iné. aPrehliadky preto certifikát nedávajú automaticky za akýkoľvek model, ale hodnotia, <strong>koľkými nezávislými cestami je mierka overená</strong>: LiDAR hĺbka pri drvivej väčšine snímkov, fit modelu na metrickú trajektóriu kamery z ARKitu, a treťou, úplne nezávislou cestou etalón známej dĺžky alebo kalibračný terč T3.</p>
 <p>Terč T3 je tlačený vzor na A4 na šírku so štyrmi kruhovými fiduciálmi a QR kódom. Vzdialenosť medzi stredmi protiľahlých kruhov A a B je presne <strong>247,00 mm</strong> — appka fiduciály nájde v modeli, triangulačne premeria ich reálnu vzdialenosť a porovná ju s touto referenčnou hodnotou. Odchýlka nad povolenú toleranciu zníži triedu certifikátu alebo appka upozorní na potrebu nového výtlačku.</p>
 <table class="specs">
-<tr><td>Trieda A</td><td>LiDAR hĺbka pri ≥ 90 % snímkov, mierka korigovaná metrologickým fitom trajektórie (reziduál &lt; 25 mm), nezávislé overenie s chybou ≤ 1 %</td></tr>
-<tr><td>Trieda B–C</td><td>čiastočné metrologické overenie, menej nezávislých ciest alebo vyššia odchýlka overenia</td></tr>
-<tr><td>Trieda D</td><td>len jedna cesta overenia mierky — orientačný model, presnosť treba brať s rezervou</td></tr>
+<tr><td>Trieda A — metrologicky overená</td><td>LiDAR hĺbka pri ≥ 90 % snímkov, mierka korigovaná metrologickým fitom trajektórie (reziduál &lt; 25 mm, ≥ 50 kamier) a nezávislé overenie etalónom ≥ 300 mm alebo terčom s chybou ≤ 1 %</td></tr>
+<tr><td>Trieda B — metrická</td><td>mierka z metrologického fitu alebo LiDAR mierka potvrdená etalónom či terčom; nezávislé overenie chýba alebo je ≤ 2 %</td></tr>
+<tr><td>Trieda C — orientačná mierka</td><td>mierka známa len približne (LiDAR bez korekcie fitom, alebo koeficient z trajektórie bez LiDAR-u); overenie ≤ 5 %</td></tr>
+<tr><td>Trieda D — neoverená mierka</td><td>mierka nie je doložená alebo overenie presahuje 5 % — len názorná dokumentácia</td></tr>
 <tr><td>Terč T3</td><td>fiduciály A–B: 247,00 mm · B–C: 160,00 mm (15 referenčných dvojíc, tlač A4)</td></tr>
 </table>
 </div>
@@ -262,7 +263,7 @@
 <section class="alt">
 <div class="wrap">
 <h2>Časté otázky</h2>
-<details><summary>Potrebujem na aPrehliadky iPhone s LiDAR-om?</summary><p>LiDAR nie je nutná podmienka, ale je odporúčaný — dáva každému snímku hĺbku a gravitáciu, takže model vzniká rovno v metroch a certifikát dosiahne vyššiu triedu. Bez LiDAR-u appka funguje s mierkou z trajektórie ARKitu a kalibračného terča, model treba prepočítať cez doplnok Fotograme3ka 3D na Macu.</p></details>
+<details><summary>Potrebujem na aPrehliadky iPhone s LiDAR-om?</summary><p>LiDAR nie je nutná podmienka, ale je odporúčaný — dáva každému snímku hĺbku a gravitáciu, trajektória kamery je metrická a certifikát dosiahne vyššiu triedu. Bez LiDAR-u appka funguje s mierkou z trajektórie ARKitu a kalibračného terča, model treba prepočítať cez doplnok Fotograme3ka 3D na Macu.</p></details>
 <details><summary>Odchádzajú dáta z aPrehliadok niekam na server alebo do cloudu?</summary><p>Nie. Celé snímanie, rekonštrukcia aj prehliadka modelu bežia výhradne v zariadení cez RealityKit Object Capture. Aplikácia nemá sieťovú vrstvu, dáta neopustia iPhone, kým ich sami neexportujete ako balík .f3d.</p></details>
 <details><summary>Čo je certifikát 3D dokumentácie triedy A–D?</summary><p>Je to súčasť PDF protokolu, ktorá hodnotí, koľkými nezávislými cestami je doložená mierka modelu (LiDAR hĺbka, fit na trajektóriu kamery, etalón známej dĺžky alebo terč T3). Trieda A znamená najvyššiu mieru metrologického overenia, D najnižšiu — vždy s uvedenou neistotou merania.</p></details>
 <details><summary>Je aPrehliadky certifikované meradlo?</summary><p>Nie. Presnosť závisí od podmienok snímania a treba ju overiť etalónom známej dĺžky alebo terčom T3. Aplikácia to v protokole vždy uvádza spolu s odhadovanou neistotou merania.</p></details>

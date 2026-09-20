@@ -115,7 +115,7 @@
     {
       "@type": "Question",
       "name": "Do I need a LiDAR-equipped iPhone for aPrehliadky?",
-      "acceptedAnswer": { "@type": "Answer", "text": "LiDAR is not a strict requirement but is recommended: it gives every frame depth and gravity, so the model is built directly in metres and the resulting certificate reaches a higher class. Without LiDAR, the app derives scale from the ARKit camera trajectory and a calibration target, and the model should be recomputed on a Mac with the Fotograme3ka 3D companion app." }
+      "acceptedAnswer": { "@type": "Answer", "text": "LiDAR is not a strict requirement but is recommended: it gives every frame depth and gravity, the camera trajectory is metric and the resulting certificate reaches a higher class. Without LiDAR, the app derives scale from the ARKit camera trajectory and a calibration target, and the model should be recomputed on a Mac with the Fotograme3ka 3D companion app." }
     },
     {
       "@type": "Question",
@@ -181,7 +181,7 @@
 <section class="hero">
 <div class="kicker">Offline Forensic 3D LiDAR Scanning</div>
 <h1>aPrehliadky — <span class="accent">offline forensic 3D scanning</span> for iPhone</h1>
-<p class="lede">A photogrammetric 3D scanner for bodies, objects and crime scenes, built for iPhone and iPad. Every frame carries depth and gravity, so the resulting model is built directly in metres and is measurable — with no upload, no cloud and no account.</p>
+<p class="lede">A photogrammetric 3D scanner for bodies, objects and crime scenes, built for iPhone and iPad. Every frame carries depth and gravity, the scale comes from the metric camera trajectory, and every measurement carries a stated uncertainty — with no upload, no cloud and no account.</p>
 <div class="btns">
 <a class="btn-primary" href="https://apps.apple.com/app/id6808879666" target="_blank" rel="noopener">Download on the App Store — free</a>
 <a class="btn-ghost" href="https://dzanino.github.io/aPrehliadky/" target="_blank" rel="noopener">Guides and documentation ›</a>
@@ -201,7 +201,7 @@
 <section>
 <div class="wrap">
 <h2>Why forensic 3D scanning on an iPhone, not a camera and a tape measure</h2>
-<p>A conventional scene or body examination records a series of 2D photographs with a scale placed in the frame. The limitation is that none of those photographs carries the spatial relationship between findings — the distance between two injuries, the angle of a wound relative to the body's axis, or the position of a body within a room, all have to be reconstructed afterwards from several images and estimation. <strong>aPrehliadky</strong> removes that step: an iPhone with LiDAR records a depth map and a gravity vector alongside every frame, so the resulting 3D model is built directly in metres rather than an arbitrary scale that must be calibrated after the fact.</p>
+<p>A conventional scene or body examination records a series of 2D photographs with a scale placed in the frame. The limitation is that none of those photographs carries the spatial relationship between findings — the distance between two injuries, the angle of a wound relative to the body's axis, or the position of a body within a room, all have to be reconstructed afterwards from several images and estimation. <strong>aPrehliadky</strong> removes that step: an iPhone with LiDAR records a depth map and a gravity vector alongside every frame. A photogrammetric model is not in metres by itself — its scale comes from the metric camera trajectory (LiDAR + inertial sensors) and from the target triangulated in the model, and every measurement carries an expanded uncertainty U (k = 2).</p>
 <p>Reconstruction runs entirely on the device through Apple's RealityKit Object Capture — classical photogrammetry with a LiDAR depth prior, with no NeRF, no 3D Gaussian Splatting and no AI-completed geometry. The report states this explicitly: the model is built exclusively from captured data. For expert practice this is a material distinction from tools that infer missing geometry — aPrehliadky never extrapolates what the camera did not see.</p>
 <div class="grid">
 <div class="d"><h3>On-model measurement</h3><p>Straight-line distance, a path along an uneven surface (wound length, circumference), area and volume — in millimetres, each with a stated uncertainty U (k = 2).</p></div>
@@ -231,9 +231,10 @@
 <p>A photogrammetric model is not, by itself, in metres — something else has to supply the scale. aPrehliadky therefore does not award a certificate for any model indiscriminately; instead it rates <strong>how many independent routes substantiate that scale</strong>: LiDAR depth for the large majority of frames, a fit of the model to the camera's metric ARKit trajectory, and, as a genuinely independent third route, a reference of known length or the T3 calibration target.</p>
 <p>The T3 target is a printed pattern on landscape A4 with four circular fiducials and a QR code. The distance between the centres of the opposite fiducials A and B is exactly <strong>247.00 mm</strong> — the app locates the fiducials in the model, triangulates their measured distance, and compares it against this reference value. A deviation beyond the allowed tolerance lowers the certificate class or prompts the app to request a fresh printout.</p>
 <table class="specs">
-<tr><td>Class A</td><td>LiDAR depth on ≥ 90% of frames, scale corrected by a metrological fit of the trajectory (residual &lt; 25 mm), independent verification with error ≤ 1%</td></tr>
-<tr><td>Class B–C</td><td>partial metrological verification, fewer independent routes or a higher verification deviation</td></tr>
-<tr><td>Class D</td><td>only one route of scale verification — an orientational model; accuracy should be treated with caution</td></tr>
+<tr><td>Class A — metrologically verified</td><td>LiDAR depth on ≥ 90% of frames, scale corrected by a metrological fit of the trajectory (residual &lt; 25 mm, ≥ 50 cameras) and independent verification by a ≥ 300 mm reference or the target with error ≤ 1%</td></tr>
+<tr><td>Class B — metric</td><td>scale from the metrological fit, or LiDAR scale confirmed by a reference or target; independent verification missing or ≤ 2%</td></tr>
+<tr><td>Class C — approximate scale</td><td>scale known only approximately (LiDAR without fit correction, or a trajectory coefficient without LiDAR); verification ≤ 5%</td></tr>
+<tr><td>Class D — unverified scale</td><td>scale not substantiated, or verification above 5% — illustrative documentation only</td></tr>
 <tr><td>T3 target</td><td>fiducials A–B: 247.00 mm · B–C: 160.00 mm (15 reference pairs, A4 print)</td></tr>
 </table>
 </div>
@@ -262,7 +263,7 @@
 <section class="alt">
 <div class="wrap">
 <h2>Frequently asked questions</h2>
-<details><summary>Do I need a LiDAR-equipped iPhone for aPrehliadky?</summary><p>LiDAR is not a strict requirement but is recommended: it gives every frame depth and gravity, so the model is built directly in metres and the resulting certificate reaches a higher class. Without LiDAR, the app derives scale from the ARKit camera trajectory and a calibration target, and the model should be recomputed on a Mac with the Fotograme3ka 3D companion app.</p></details>
+<details><summary>Do I need a LiDAR-equipped iPhone for aPrehliadky?</summary><p>LiDAR is not a strict requirement but is recommended: it gives every frame depth and gravity, the camera trajectory is metric and the resulting certificate reaches a higher class. Without LiDAR, the app derives scale from the ARKit camera trajectory and a calibration target, and the model should be recomputed on a Mac with the Fotograme3ka 3D companion app.</p></details>
 <details><summary>Does aPrehliadky send any data to a server or the cloud?</summary><p>No. Capture, reconstruction and model review all run entirely on-device through Apple's RealityKit Object Capture. The app has no networking layer — data never leaves the iPhone unless you explicitly export it as an .f3d package.</p></details>
 <details><summary>What is the class A–D 3D documentation certificate?</summary><p>It is part of the PDF report and rates how many independent routes substantiate the model's scale — LiDAR depth, a fit to the camera's metric trajectory, and a reference of known length or the T3 calibration target. Class A denotes the highest degree of metrological verification, class D the lowest, each stated together with its measurement uncertainty.</p></details>
 <details><summary>Is aPrehliadky a certified measuring instrument?</summary><p>No. Accuracy depends on capture conditions and must be verified with a reference of known length or the T3 target. The app always states this in the report together with the estimated measurement uncertainty.</p></details>
