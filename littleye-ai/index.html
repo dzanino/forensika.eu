@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>littlEye AI — forenzná histológia s AI trénovanou v zariadení</title>
+<meta name="description" content="littlEye AI: tréning AI modelov z histologických preparátov priamo v iPhone, iPade a Macu. 27 orgánov, atlas 103 diagnóz, bez cloudu. Od verzie 3.0 zadarmo.">
+<link rel="canonical" href="https://forensika.eu/littleye-ai/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/littleye-ai/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/littleye-ai/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/littleye-ai/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="littlEye AI — forenzná histológia s AI trénovanou v zariadení">
+<meta property="og:description" content="Tréning a vyhodnocovanie AI modelov z mikrofotografií histologických preparátov — pre súdnych lekárov, patológov a študentov medicíny. 27 orgánov, atlas 103 diagnóz. Bez cloudu, bez telemetrie, zadarmo.">
+<meta property="og:url" content="https://forensika.eu/littleye-ai/">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:66ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:74ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  .steps{counter-reset:s;margin-top:8px;}
+  .step{display:flex;gap:16px;margin-bottom:18px;}
+  .step .n{counter-increment:s;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step .n::before{content:counter(s);}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "littlEye AI",
+  "url": "https://forensika.eu/littleye-ai/",
+  "applicationCategory": "MedicalApplication",
+  "operatingSystem": "iOS 17+, iPadOS 17+, macOS 14+",
+  "softwareVersion": "3.1",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "author": { "@type": "Person", "name": "Ján Šikuta" },
+  "publisher": { "@type": "Person", "name": "Ján Šikuta" },
+  "downloadUrl": "https://apps.apple.com/app/id6799417580",
+  "description": "Aplikácia na tréning a vyhodnocovanie AI modelov z histologických preparátov priamo v zariadení. Dataset po 27 orgánoch, atlas 103 diagnóz, šifrované zdieľanie modelov .le3AI. Bez cloudu, bez telemetrie."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Forensika", "item": "https://forensika.eu/" },
+    { "@type": "ListItem", "position": 2, "name": "Aplikácie", "item": "https://forensika.eu/#aplikacie" },
+    { "@type": "ListItem", "position": 3, "name": "littlEye AI", "item": "https://forensika.eu/littleye-ai/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Obsahuje littlEye AI hotové diagnostické modely?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. Aplikácia je nástroj na tréning, nie zbierka modelov — obsahuje jediný ukážkový model natrénovaný na syntetických vzoroch. Skutočné modely si trénujete z vlastných preparátov, alebo si ich vymieňate s kolegami ako samostatné šifrované súbory .le3AI." }
+    },
+    {
+      "@type": "Question",
+      "name": "Odchádzajú mikrofotografie preparátov niekam na server?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. Celá appka pracuje výhradne v zariadení — snímky, prípady aj natrénované modely ho nikdy neopúšťajú, kým ich sami neexportujete. Aplikácia sa nepripája na žiadnu sieť a nemá žiadnu telemetriu ani analytiku." }
+    },
+    {
+      "@type": "Question",
+      "name": "Koľko snímok potrebujem na natrénovanie modelu?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Technické minimum je 2 triedy po 5 snímok, appka však odporúča 30 a viac snímok na triedu z viacerých prípadov — semafor pripravenosti datasetu farbou ukáže, či máte dosť materiálu pred spustením tréningu." }
+    },
+    {
+      "@type": "Question",
+      "name": "Je littlEye AI zdravotnícka pomôcka?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nie. Je to výskumný a podporný nástroj pre kvalifikovaných odborníkov. Neposkytuje diagnózu — finálne posúdenie vždy patrí patológovi či súdnemu lekárovi." }
+    },
+    {
+      "@type": "Question",
+      "name": "Je littlEye AI zadarmo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Áno, od verzie 3.0. Žiadne predplatné, žiadna funkcia za platbou — voliteľný jednorazový príspevok v aplikácii podporuje ďalší vývoj a nič neodomyká." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/#aplikacie">Aplikácie</a>
+<a class="cta" href="/en/littleye-ai/">EN</a>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/">Forensika</a> › <a href="/#aplikacie">Aplikácie</a> › littlEye AI</p>
+<section class="hero">
+<div class="kicker">Forenzná histológia a AI · on-device</div>
+<h1>littlEye AI — <span class="accent">histológia s AI</span> trénovanou v zariadení</h1>
+<p class="lede">Naučte vlastný AI model rozpoznávať histologické preparáty priamo v iPhone, iPade či Macu — bez internetu a bez odoslania jediného pixelu. Od verzie 3.0 zadarmo.</p>
+<div class="btns">
+<a class="btn-primary" href="https://apps.apple.com/app/id6799417580" target="_blank" rel="noopener">Stiahnuť na App Store — zadarmo</a>
+<a class="btn-ghost" href="https://dzanino.github.io/littlEyeAI/" target="_blank" rel="noopener">Návody a atlas ›</a>
+</div>
+<div class="pills">
+<span class="pill">Core ML · on-device</span>
+<span class="pill">27 orgánov a tkanív</span>
+<span class="pill">Atlas 103 diagnóz</span>
+<span class="pill">Šifrované .le3AI / .le3set</span>
+<span class="pill">Offline · bez telemetrie</span>
+<span class="pill">Zadarmo od v3.0</span>
+</div>
+</section>
+</div>
+</main>
+
+<section>
+<div class="wrap">
+<h2>Offline forenzná aplikácia pre histológiu, nie cloudové AI</h2>
+<p>Väčšina AI nástrojov na rozpoznávanie histologických obrazov posiela snímky na server — pre forenznú prax so snímkami reálnych pitiev je to problém sám osebe, bez ohľadu na presnosť modelu. <strong>littlEye AI</strong> ide opačnou cestou: celý tréning aj vyhodnocovanie beží cez Core ML priamo v iPhone, iPade alebo Macu, snímka nikdy neopustí zariadenie a appka nemá žiadnu sieťovú vrstvu ani telemetriu.</p>
+<p>Dataset HE preparátov pokrýva <strong>27 orgánov a tkanív</strong>, sklíčka hodnotia kolegovia s audit trailom a finálnu diagnózu určí väčšina hlasov. Tréning vždy vyčlení nezávislú testovaciu množinu a ukáže konfúznu maticu so senzitivitou a precíznosťou pre každú triedu — študent aj lekár vidia presne, kde model zlyháva, nie len kde uspel.</p>
+<div class="grid">
+<div class="d"><h3>Semafor pripravenosti</h3><p>Farebné hodnotenie datasetu ukáže, či máte na triedu dosť rôznorodých snímok (30 a viac) predtým, než spustíte tréning.</p></div>
+<div class="d"><h3>Šifrované zdieľanie</h3><p>Modely .le3AI a datasety .le3set sú šifrované AES-GCM, nesú vlastné metriky a audit trail — zdieľajú sa AirDropom či mailom medzi kolegami.</p></div>
+<div class="d"><h3>Atlas 103 diagnóz</h3><p>Znalostná báza s mikroskopickými opismi, kľúčovými znakmi a návrhmi záverov — vychádza z citovanej odbornej literatúry.</p></div>
+<div class="d"><h3>Učenie z opráv</h3><p>Nesprávne vyhodnotenú snímku appka jedným ťuknutím pridá späť do datasetu, aby sa z nej ďalší tréning poučil.</p></div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Od sklíčka po natrénovaný model</h2>
+<div class="steps">
+<div class="step"><div class="n"></div><div><h3>Import a dataset</h3><p>Mikrofotografie (JPEG/PNG/TIFF/HEIC) sa zaraďujú podľa orgánu a diagnózy; evidencia farbenia a zväčšenia drží dáta v poriadku.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Hodnotenie kolegami</h3><p>Viacero kolegov nezávisle hodnotí sklíčka, appka zaznamenáva meno a dátum každého hodnotenia (audit trail), finálny label určí väčšina hlasov.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Tréning Core ML v zariadení</h3><p>Konfigurovateľné iterácie a augmentácie, nezávislá testovacia množina (10–20 % stratifikovaný holdout), priebeh s možnosťou zrušenia.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Metriky a konfúzna matica</h3><p>Presnosť na tréningovej, validačnej aj testovacej množine, senzitivita a precíznosť pre každú triedu zvlášť.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Export a zdieľanie</h3><p>Hotový model sa uloží ako šifrovaný súbor .le3AI s manifestom — importuje sa v ďalšej inštalácii littlEye AI cez Súbory, AirDrop či dvojklik.</p></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Pre pracovné prípady aj výučbu</h2>
+<p>littlEye AI nie je len tréningový nástroj — má aj plnohodnotné pracovné prípady: sklíčka zo skenera priradené k číslu prípadu, katamnéza a diagnostický záver po pitve ako vstupy, kontrola tkaniva, ktorá upozorní na možnú zámenu sklíčka, a stručný súhrn nálezov na jedno ťuknutie do schránky. Edukačný modul dopĺňa sprievodcu „čo ďalej po HE", špeciálne farbenia, IHC markery, bunkové elementy a pigmenty — každý s citáciou zdroja.</p>
+<table class="specs">
+<tr><td>Platforma</td><td>iPhone, iPad (iOS/iPadOS 17+), Mac (macOS 14+)</td></tr>
+<tr><td>Dataset</td><td>27 orgánov a tkanív, vlastné snímky používateľa</td></tr>
+<tr><td>Atlas</td><td>103 diagnóz s mikroskopickými opismi a citáciami</td></tr>
+<tr><td>Formáty</td><td>.le3AI (model), .le3set (dataset) — šifrované</td></tr>
+<tr><td>Cena</td><td>zadarmo od verzie 3.0 (donationware)</td></tr>
+</table>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Súkromie na prvom mieste</h2>
+<ul class="check">
+<li>Žiadna sieťová vrstva — aplikácia sa nikam nepripája</li>
+<li>Snímky, prípady aj modely zostávajú výhradne v zariadení</li>
+<li>Žiadna analytika, žiadna telemetria, žiadne reklamné identifikátory</li>
+<li>Prenosové súbory .le3AI a .le3set otvorí len littlEye AI</li>
+</ul>
+<div class="note">littlEye AI vzniká v spolupráci troch pracovísk Lekárskej fakulty UK v Bratislave. Je to výskumný a podporný nástroj pre kvalifikovaných odborníkov — nie je zdravotníckou pomôckou a neposkytuje diagnózu; finálne posúdenie vždy patrí patológovi či súdnemu lekárovi.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Časté otázky</h2>
+<details><summary>Obsahuje littlEye AI hotové diagnostické modely?</summary><p>Nie. Aplikácia je nástroj na tréning, nie zbierka modelov — obsahuje jediný ukážkový model natrénovaný na syntetických vzoroch. Skutočné modely si trénujete z vlastných preparátov, alebo si ich vymieňate s kolegami ako samostatné šifrované súbory .le3AI.</p></details>
+<details><summary>Odchádzajú mikrofotografie preparátov niekam na server?</summary><p>Nie. Celá appka pracuje výhradne v zariadení — snímky, prípady aj natrénované modely ho nikdy neopúšťajú, kým ich sami neexportujete. Aplikácia sa nepripája na žiadnu sieť a nemá žiadnu telemetriu ani analytiku.</p></details>
+<details><summary>Koľko snímok potrebujem na natrénovanie modelu?</summary><p>Technické minimum je 2 triedy po 5 snímok, appka však odporúča 30 a viac snímok na triedu z viacerých prípadov — semafor pripravenosti datasetu farbou ukáže, či máte dosť materiálu pred spustením tréningu.</p></details>
+<details><summary>Je littlEye AI zdravotnícka pomôcka?</summary><p>Nie. Je to výskumný a podporný nástroj pre kvalifikovaných odborníkov. Neposkytuje diagnózu — finálne posúdenie vždy patrí patológovi či súdnemu lekárovi.</p></details>
+<details><summary>Je littlEye AI zadarmo?</summary><p>Áno, od verzie 3.0. Žiadne predplatné, žiadna funkcia za platbou — voliteľný jednorazový príspevok v aplikácii podporuje ďalší vývoj a nič neodomyká.</p></details>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="site"><a href="/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy">© 2026 MUDr. Ján Šikuta, PhD. · <a href="mailto:forensika.eu@icloud.com">forensika.eu@icloud.com</a> · <a href="/">forensika.eu</a></div>
+</div>
+</footer>
+</body>
+</html>
