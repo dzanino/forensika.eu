@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://forensika.eu/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
 <title>aPrehliadky — forenzná 3D dokumentácia LiDAR-om (iPhone)</title>
 <meta name="description" content="aPrehliadky: 3D dokumentácia obhliadky mŕtveho tela aj miesta činu LiDAR-om na iPhone. Meranie, certifikát triedy A–D, .f3d balík. Offline, bez cloudu.">
 <link rel="canonical" href="https://forensika.eu/aprehliadky/">
@@ -88,7 +94,7 @@
   "url": "https://forensika.eu/aprehliadky/",
   "applicationCategory": "MedicalApplication",
   "operatingSystem": "iOS 18+, iPadOS 18+",
-  "softwareVersion": "3.1.2",
+  "softwareVersion": "3.1.3",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
   "author": { "@type": "Person", "name": "Ján Šikuta" },
   "publisher": { "@type": "Person", "name": "Ján Šikuta" },
@@ -231,11 +237,11 @@
 <p>Fotogrametrický model sám osebe nie je v metroch — mierku mu musí dodať niečo iné. aPrehliadky preto certifikát nedávajú automaticky za akýkoľvek model, ale hodnotia, <strong>koľkými nezávislými cestami je mierka overená</strong>: LiDAR hĺbka pri drvivej väčšine snímkov, fit modelu na metrickú trajektóriu kamery z ARKitu, a treťou, úplne nezávislou cestou etalón známej dĺžky alebo kalibračný terč T3.</p>
 <p>Terč T3 je tlačený vzor na A4 na šírku so štyrmi kruhovými fiduciálmi a QR kódom. Vzdialenosť medzi stredmi protiľahlých kruhov A a B je presne <strong>247,00 mm</strong> — appka fiduciály nájde v modeli, triangulačne premeria ich reálnu vzdialenosť a porovná ju s touto referenčnou hodnotou. Odchýlka nad povolenú toleranciu zníži triedu certifikátu alebo appka upozorní na potrebu nového výtlačku.</p>
 <table class="specs">
-<tr><td>Trieda A — metrologicky overená</td><td>LiDAR hĺbka pri ≥ 90 % snímkov, mierka korigovaná metrologickým fitom trajektórie (reziduál &lt; 25 mm, ≥ 50 kamier) a nezávislé overenie etalónom ≥ 300 mm alebo terčom s chybou ≤ 1 %</td></tr>
+<tr><td>Trieda A — metrologicky overená</td><td>LiDAR hĺbka pri ≥ 90 % snímkov, mierka korigovaná metrologickým fitom trajektórie (reziduál &lt; 25 mm, ≥ 50 kamier) a nezávislé overenie etalónom od 290 mm (stačí uhlopriečka terča T3 A–C, 294 mm) alebo terčom s chybou ≤ 1 %</td></tr>
 <tr><td>Trieda B — metrická</td><td>mierka z metrologického fitu alebo LiDAR mierka potvrdená etalónom či terčom; nezávislé overenie chýba alebo je ≤ 2 %</td></tr>
 <tr><td>Trieda C — orientačná mierka</td><td>mierka známa len približne (LiDAR bez korekcie fitom, alebo koeficient z trajektórie bez LiDAR-u); overenie ≤ 5 %</td></tr>
 <tr><td>Trieda D — neoverená mierka</td><td>mierka nie je doložená alebo overenie presahuje 5 % — len názorná dokumentácia</td></tr>
-<tr><td>Terč T3</td><td>fiduciály A–B: 247,00 mm · B–C: 160,00 mm (15 referenčných dvojíc, tlač A4)</td></tr>
+<tr><td>Terč T3</td><td>kruhové fiduciály A–B: 247,00 mm · B–C: 160,00 mm · A–C: 294 mm; v modeli sa triangulujú, 10 známych vzdialeností 33–294 mm (tlač A4)</td></tr>
 </table>
 </div>
 </section>
@@ -274,8 +280,9 @@
 <footer>
 <div class="wrap">
 <div class="site"><a href="/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
-<div class="copy">© 2026 MUDr. Ján Šikuta, PhD. · <a href="mailto:forensika.eu@icloud.com">forensika.eu@icloud.com</a> · <a href="/">forensika.eu</a></div>
+<div class="copy"><span data-fz>©</span> 2026 MUDr. Ján Šikuta, PhD. · <a href="mailto:forensika.eu@icloud.com">forensika.eu@icloud.com</a> · <a href="/">forensika.eu</a></div>
 </div>
 </footer>
+<script src="/site.js" defer></script>
 </body>
 </html>
