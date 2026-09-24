@@ -208,6 +208,10 @@
     footer{padding:30px 0;}
   }
   /* On narrow screens keep only the language switch — sections are reachable by scrolling */
+  /* Odkazy na aplikácie sa pri užšom okne nezmestia — ostávajú v sekcii Aplikácie */
+  @media (max-width:940px){
+    .nav .navapp{display:none;}
+  }
   @media (max-width:560px){
     .nav .navlink{display:none;}
   }
@@ -256,9 +260,9 @@
     <div class="navwrap">
       <a class="cta navlink" href="#field">The field</a>
       <a class="cta navlink" href="#apps">Apps</a>
-      <a class="cta navlink" href="/en/aprehliadky/">aPrehliadky</a>
-      <a class="cta navlink" href="/en/littleye-ai/">littlEye AI</a>
-      <a class="cta navlink" href="/en/colorime3ka/">Colorime3ka</a>
+      <a class="cta navlink navapp" href="/en/aprehliadky/">aPrehliadky</a>
+      <a class="cta navlink navapp" href="/en/littleye-ai/">littlEye AI</a>
+      <a class="cta navlink navapp" href="/en/colorime3ka/">Colorime3ka</a>
       <a class="cta lang" href="/">SK</a>
     </div>
   </div>
