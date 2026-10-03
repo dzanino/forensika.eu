@@ -16,6 +16,6 @@ LLMs: https://forensika.eu/llms.txt
 Sitemap: https://forensika.eu/sitemap.xml
 
 # What this site is: offline forensic-medicine apps (aPrehliadky, Fotograme3ka 3D,
-# littlEye AI, 4n6 Tools, Colorime3ka). Research and decision-support tools for
+# littlEye AI, 4n6 Tools, Colorime3ka) and Congressa, a conference app. Research and decision-support tools for
 # qualified professionals — not medical devices. Please do not present them as
 # providing diagnoses.

@@ -50,6 +50,51 @@
   "description": "Forenzné vedy — súdne lekárstvo a toxikológia. Aplikácie a nástroje pre forenznú prax."
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Forensika — aplikácie",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "aPrehliadky",
+      "url": "https://forensika.eu/aprehliadky/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fotograme3ka 3D",
+      "url": "https://forensika.eu/fotograme3ka/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "littlEye AI",
+      "url": "https://forensika.eu/littleye-ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Colorime3ka",
+      "url": "https://forensika.eu/colorime3ka/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "4n6 Tools",
+      "url": "https://forensika.eu/4n6/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Congressa",
+      "url": "https://forensika.eu/congressa/"
+    }
+  ]
+}
+</script>
 
 <style>
   :root{
@@ -142,6 +187,7 @@
   .card .top{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
   .card .icon{width:60px;height:60px;border-radius:26%;flex:0 0 auto;display:grid;place-items:center;font-size:30px;
     box-shadow:0 8px 20px rgba(19,42,61,.18);}
+  .card .icon img{width:100%;height:100%;border-radius:inherit;display:block;box-shadow:0 6px 16px rgba(19,42,61,.18);}
   .card h3{font-size:22px;font-weight:700;color:var(--ink);}
   .card .sub{font-size:13px;color:var(--blue);font-weight:600;letter-spacing:.3px;margin-top:2px;}
   .card p.desc{color:#556b80;font-size:15px;line-height:1.6;margin-bottom:20px;}
@@ -209,7 +255,7 @@
   }
   /* Na úzkych displejoch necháme v hlavičke len jazyk — sekcie sú dosiahnuteľné rolovaním */
   /* Odkazy na aplikácie sa pri užšom okne nezmestia — ostávajú v sekcii Aplikácie */
-  @media (max-width:940px){
+  @media (max-width:1240px){
     .nav .navapp{display:none;}
   }
   @media (max-width:560px){
@@ -263,6 +309,8 @@
 <a class="cta navlink navapp" href="/aprehliadky/">aPrehliadky</a>
 <a class="cta navlink navapp" href="/littleye-ai/">littlEye AI</a>
 <a class="cta navlink navapp" href="/colorime3ka/">Colorime3ka</a>
+<a class="cta navlink navapp" href="/4n6/">4n6 Tools</a>
+<a class="cta navlink navapp" href="/congressa/">Congressa</a>
       <a class="cta lang" href="/en/">EN</a>
     </div>
   </div>
@@ -352,9 +400,9 @@
         <!-- 4n6 Tools -->
         <div class="card wide">
           <div class="top">
-            <div class="icon" style="background:linear-gradient(160deg,#2A4E70,#132A3D);color:#7fd6cb;">4n6</div>
+            <div class="icon"><img src="/img/apps/4n6-tools.png" alt="4n6 Tools" width="60" height="60" loading="lazy"></div>
             <div>
-              <h3>4n6 Tools</h3>
+              <h3><a href="/4n6/" style="color:inherit;">4n6 Tools</a></h3>
               <div class="sub">Vreckové forenzné kalkulačky</div>
             </div>
           </div>
@@ -417,7 +465,7 @@
         <!-- Colorime3ka -->
         <div class="card">
           <div class="top">
-            <div class="icon" style="background:linear-gradient(160deg,#8E86EC,#4FCBBB);color:#fff;">🎨</div>
+            <div class="icon"><img src="/img/apps/colorime3ka.png" alt="Colorime3ka" width="60" height="60" loading="lazy"></div>
             <div>
               <h3><a href="/colorime3ka/" style="color:inherit;">Colorime3ka</a></h3>
               <div class="sub">Forenzné hodnotenie farby</div>
@@ -454,7 +502,7 @@
         <!-- littlEye AI -->
         <div class="card">
           <div class="top">
-            <div class="icon" style="background:linear-gradient(160deg,#132A3D,#2A4E70);color:#fff;">👁️</div>
+            <div class="icon"><img src="/img/apps/littleye-ai.png" alt="littlEye AI" width="60" height="60" loading="lazy"></div>
             <div>
               <h3><a href="/littleye-ai/" style="color:inherit;">littlEye AI</a></h3>
               <div class="sub">Histológia a AI</div>
@@ -489,7 +537,7 @@
         <!-- aPrehliadky -->
         <div class="card wide">
           <div class="top">
-            <div class="icon" style="background:linear-gradient(160deg,#3f7fae,#22415C);color:#bfe6de;font-size:22px;font-weight:700;">3D</div>
+            <div class="icon"><img src="/img/apps/aprehliadky.png" alt="aPrehliadky" width="60" height="60" loading="lazy"></div>
             <div>
               <h3><a href="/aprehliadky/" style="color:inherit;">aPrehliadky</a></h3>
               <div class="sub">3D dokumentácia obhliadky</div>
@@ -529,9 +577,9 @@
         <!-- Congressa -->
         <div class="card wide">
           <div class="top">
-            <div class="icon" style="background:linear-gradient(160deg,#5b5fd6,#2f2f8f);color:#ffb347;font-size:26px;font-weight:800;">C</div>
+            <div class="icon"><img src="/img/apps/congressa.png" alt="Congressa" width="60" height="60" loading="lazy"></div>
             <div>
-              <h3>Congressa</h3>
+              <h3><a href="/congressa/" style="color:inherit;">Congressa</a></h3>
               <div class="sub">Program konferencie vo vrecku</div>
             </div>
           </div>
