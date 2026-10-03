@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://forensika.eu/img/apps/4n6.png">
+<title>4n6 Tools — forensic-medicine calculators</title>
+<meta name="description" content="4n6 Tools: 27 professional forensic-medicine calculators — time of death (Henssge), toxicology and ethanol, 67 substances, DVI, anthropology. Cited methods, offline. Free Lite, Pro for iPhone and Android.">
+<link rel="canonical" href="https://forensika.eu/en/4n6/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/4n6/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/4n6/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/4n6/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="4n6 Tools — forensic-medicine calculators">
+<meta property="og:description" content="27 forensic-medicine tools with a citation for every method: Henssge, ethanol, 67 substances, DVI, anthropology. All on the device, no internet.">
+<meta property="og:url" content="https://forensika.eu/en/4n6/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:66ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:74ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  .steps{counter-reset:s;margin-top:8px;}
+  .step{display:flex;gap:16px;margin-bottom:18px;}
+  .step .n{counter-increment:s;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step .n::before{content:counter(s);}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+  .appicon{width:72px;height:72px;border-radius:26%;box-shadow:0 8px 22px rgba(19,42,61,.2);margin-bottom:14px;display:block;}
+  table.specs td.b{font-weight:700;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "4n6 Tools Pro",
+      "url": "https://forensika.eu/en/4n6/",
+      "applicationCategory": "MedicalApplication",
+      "operatingSystem": "iOS 17+, iPadOS 17+, Android",
+      "softwareVersion": "5.2",
+      "offers": {
+        "@type": "Offer",
+        "price": "104.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Ján Šikuta"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Ján Šikuta"
+      },
+      "downloadUrl": "https://apps.apple.com/app/id6785259219",
+      "installUrl": "https://play.google.com/store/apps/details?id=sk.sikuta.forn4n6.pro",
+      "description": "Professional forensic-medicine calculators: 27 tools for time of death, toxicology, identification, DVI and anthropology, with a citation for every method. Runs entirely on the device."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "4n6 Tools Lite",
+      "applicationCategory": "MedicalApplication",
+      "operatingSystem": "iOS 15+, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Ján Šikuta"
+      },
+      "downloadUrl": "https://apps.apple.com/app/id6783425913",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.sikuta.n6toolslite"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Forensika",
+      "item": "https://forensika.eu/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Apps",
+      "item": "https://forensika.eu/en/#apps"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "4n6 Tools",
+      "item": "https://forensika.eu/en/4n6/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does 4n6 Tools Lite differ from Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lite is free and includes six fully working tools: the Henssge nomogram, PMI from vitreous potassium, BMI, body surface area and predicted heart weight, age from aortic circumferences and a unit converter. Pro unlocks all 27 tools, including toxicology, ethanol, entomology, DVI, odontology and anthropology."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 4n6 Tools a medical device?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a professional aid for forensic pathologists and expert witnesses; values are orientational, every result carries a range or a caveat, and the final assessment belongs to a qualified expert."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the app work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All calculations run on the device; the app needs no connection and transmits no data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Pro cost €104.99?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is an extensive professional tool: 27 tools, 67 substances with reference levels and methods revised against the primary literature, cited with every result. It is a one-time purchase with no subscription, ads or data collection; after VAT and the store commission roughly 57 % of the price reaches the author."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which languages does the app support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Slovak and English, including recalculated results. The app opens in the device language and the language can be switched at any time."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/en/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/en/#apps">Apps</a>
+<a class="cta" href="/4n6/">SK</a>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/en/">Forensika</a> › <a href="/en/#apps">Apps</a> › 4n6 Tools</p>
+<section class="hero">
+<img class="appicon" src="/img/apps/4n6-tools.png" alt="4n6 Tools" width="72" height="72">
+<div class="kicker">Forensic medicine · calculators · on-device</div>
+<h1>4n6 Tools — <span class="accent">forensic calculators</span> that compute, interpret and cite</h1>
+<p class="lede">27 tools for the autopsy table, the scene and the expert report: time of death, toxicology, identification, DVI and anthropology. Every result carries a range or a caveat and every method its citation — a result you cannot defend is worse than none.</p>
+<div class="btns">
+<a class="btn-primary" href="https://apps.apple.com/app/id6785259219" target="_blank" rel="noopener">Pro on the App Store</a>
+<a class="btn-ghost" href="https://play.google.com/store/apps/details?id=sk.sikuta.forn4n6.pro" target="_blank" rel="noopener">Pro on Google Play</a>
+<a class="btn-ghost" href="#lite">Free Lite ›</a>
+</div>
+<div class="pills">
+<span class="pill">Henssge · Marshall–Hoare · 95 % CI</span>
+<span class="pill">Ethanol · Widmark</span>
+<span class="pill">67 substances</span>
+<span class="pill">DVI · INTERPOL 2023</span>
+<span class="pill">Cited methods</span>
+<span class="pill">SK / EN · offline</span>
+<span class="pill">iPhone · iPad · Android</span>
+</div>
+</section>
+</div>
+</main>
+
+<section>
+<div class="wrap">
+<h2>What the app contains</h2>
+<div class="grid">
+<div class="d"><h3>Time of death and thanatology</h3><p>The Henssge nomogram with a corrective-factor assistant and 95 % intervals, post-mortem changes on a shared timeline (livor, rigor by muscle group, corneal clouding, Casper's rule), vitreous potassium by four methods with hypoxanthine as a check, and forensic entomology with the ADD method.</p></div>
+<div class="d"><h3>Toxicology</h3><p>Ethanol: interpretation, Widmark, back-calculation to the time of the event, a blood-alcohol curve with an uncertainty band and breath conversion. Reference levels for 67 substances in therapeutic – toxic – lethal ranges and post-mortem femoral blood values from 122,000 autopsies. CO-Hb and vitality in fire.</p></div>
+<div class="d"><h3>Trauma and cardiac pathology</h3><p>Burns (TBSA per Lund and Browder, the Baux score and its revision), body surface area and predicted heart weight, age from aortic circumferences, the Traube index, BMI and nutritional status.</p></div>
+<div class="d"><h3>Identification and anthropology</h3><p>DVI per the INTERPOL DVI Guide 2023, odontology (dental chart, AM/PM comparison, six age-estimation methods), blood groups and stains, stature from long bones, sex and age of the skeleton, foetal age from the femur.</p></div>
+<div class="d"><h3>Microscopy and imaging</h3><p>Cell and structure counting with semi-automatic detection, CPA quantification in desmin IHC, a grey-card-calibrated colorimeter and photogrammetry — lengths, angles and areas from a photograph, with native measurement on LiDAR iPhones.</p></div>
+<div class="d"><h3>Case and report</h3><p>Enter the case data once; the tools hand their results to a shared report with sources, which you export and back up together with the case.</p></div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Built for expert practice</h2>
+<ul class="check">
+<li>Every result carries a range or a caveat; an impossible input returns an explanation, not a number</li>
+<li>A citation of the original source with every method, plus a unified reference list</li>
+<li>Methods revised against the primary literature (version 5.2)</li>
+<li>Slovak and English including recalculated results, light and dark appearance</li>
+</ul>
+</div>
+</section>
+
+<section id="lite">
+<div class="wrap">
+<h2>Lite for free, Pro as a one-time purchase</h2>
+<p>Lite includes six fully working tools so you can check whether the app fits your practice. Pro unlocks all 27 tools — a one-time purchase with no subscription, no ads and no data collection.</p>
+<table class="specs">
+<tr><td></td><td class="b">Lite · free</td><td class="b">Pro · €104.99</td></tr>
+<tr><td>Henssge, vitreous potassium, BMI, body surface and heart, age from the aorta, unit converter</td><td>✓</td><td>✓</td></tr>
+<tr><td>Post-mortem changes, toxicology and ethanol, 67 substances, CO-Hb</td><td>—</td><td>✓</td></tr>
+<tr><td>Entomology, burns, DVI, odontology, anthropology</td><td>—</td><td>✓</td></tr>
+<tr><td>Microscopy, colorimeter, photogrammetry, case and report</td><td>—</td><td>✓</td></tr>
+<tr><td>Platform</td><td>iOS 15+ · Android</td><td>iOS 17+ · Android</td></tr>
+</table>
+<div class="btns" style="margin-top:18px">
+<a class="btn-ghost" href="https://apps.apple.com/app/id6783425913" target="_blank" rel="noopener">Lite on the App Store</a>
+<a class="btn-ghost" href="https://play.google.com/store/apps/details?id=com.sikuta.n6toolslite" target="_blank" rel="noopener">Lite on Google Play</a>
+<a class="btn-ghost" href="https://dzanino.github.io/4n6/4n6-Tools-Pro-navod.pdf" target="_blank" rel="noopener">Manual (PDF, SK/EN) ›</a>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Privacy first</h2>
+<ul class="check">
+<li>All calculations run on the device; the app needs no internet</li>
+<li>No data transmitted, no analytics, no account</li>
+<li>Case data stays on the device until you export it yourself</li>
+</ul>
+<div class="note">4n6 Tools is a professional aid for qualified experts — it is not a medical device and does not replace the judgement of the examining physician or expert. The author is Ján Šikuta, MD, PhD, a forensic pathologist. <a href="https://dzanino.github.io/4n6/privacy.html" style="color:var(--blue)">Privacy</a> · <a href="https://dzanino.github.io/4n6/support.html" style="color:var(--blue)">Support</a></div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Frequently asked questions</h2>
+<details><summary>How does 4n6 Tools Lite differ from Pro?</summary><p>Lite is free and includes six fully working tools: the Henssge nomogram, PMI from vitreous potassium, BMI, body surface area and predicted heart weight, age from aortic circumferences and a unit converter. Pro unlocks all 27 tools, including toxicology, ethanol, entomology, DVI, odontology and anthropology.</p></details>
+<details><summary>Is 4n6 Tools a medical device?</summary><p>No. It is a professional aid for forensic pathologists and expert witnesses; values are orientational, every result carries a range or a caveat, and the final assessment belongs to a qualified expert.</p></details>
+<details><summary>Does the app work offline?</summary><p>Yes. All calculations run on the device; the app needs no connection and transmits no data.</p></details>
+<details><summary>Why does Pro cost €104.99?</summary><p>It is an extensive professional tool: 27 tools, 67 substances with reference levels and methods revised against the primary literature, cited with every result. It is a one-time purchase with no subscription, ads or data collection; after VAT and the store commission roughly 57 % of the price reaches the author.</p></details>
+<details><summary>Which languages does the app support?</summary><p>Slovak and English, including recalculated results. The app opens in the device language and the language can be switched at any time.</p></details>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="site"><a href="/en/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy"><span data-fz>©</span> 2026 Ján Šikuta, MD, PhD. · <a href="mailto:forensika.eu@icloud.com">forensika.eu@icloud.com</a> · <a href="/en/">forensika.eu</a></div>
+</div>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>

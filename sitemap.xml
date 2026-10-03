@@ -102,4 +102,44 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://forensika.eu/4n6/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/4n6/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/4n6/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/4n6/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://forensika.eu/en/4n6/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/4n6/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/4n6/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/4n6/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://forensika.eu/congressa/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/congressa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/congressa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/congressa/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://forensika.eu/en/congressa/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/congressa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/congressa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/congressa/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
