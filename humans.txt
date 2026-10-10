@@ -1,6 +1,6 @@
 /* TEAM */
 Author: Ján Šikuta, MD, PhD — forensic pathologist, Slovakia
-Contact: forensika.eu@icloud.com
+Contact: admin@forensika.eu
 Site: https://forensika.eu/
 
 /* THANKS */
