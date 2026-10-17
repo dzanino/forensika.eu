@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://forensika.eu/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<title>Colorime3ka - forensische Farbmessung von Hautbefunden</title>
+<meta name="description" content="Colorime3ka misst und benennt die Farbe eines Hautbefunds im Foto: CIELAB, ΔE (CIEDE2000), Chromophor, Maßstab per LiDAR, Atlas mit 68 Befunden. Für Rechtsmedizin und Dermatologie, ohne Netz, auf Deutsch.">
+<link rel="canonical" href="https://forensika.eu/de/colorime3ka/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/colorime3ka/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/colorime3ka/">
+<link rel="alternate" hreflang="de" href="https://forensika.eu/de/colorime3ka/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/colorime3ka/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Colorime3ka - forensische Farbmessung von Hautbefunden">
+<meta property="og:description" content="Die Farbe eines Hämatoms oder einer Narbe gemessen, nicht geschätzt: CIELAB und ΔE (CIEDE2000), Kalibrierung mit Graukarte, Maßstab per LiDAR, forensischer und dermatologischer Modus, Atlas mit 68 Befunden. Alles auf dem Gerät.">
+<meta property="og:url" content="https://forensika.eu/de/colorime3ka/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:66ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:74ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  .steps{counter-reset:s;margin-top:8px;}
+  .step{display:flex;gap:16px;margin-bottom:18px;}
+  .step .n{counter-increment:s;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step .n::before{content:counter(s);}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Colorime3ka",
+  "url": "https://forensika.eu/de/colorime3ka/",
+  "applicationCategory": "MedicalApplication",
+  "operatingSystem": "iOS 17+, iPadOS 17+",
+  "softwareVersion": "3.2.1",
+  "inLanguage": [
+    "de",
+    "en",
+    "sk"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "17.99",
+    "priceCurrency": "EUR"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ján Šikuta"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Ján Šikuta"
+  },
+  "downloadUrl": "https://apps.apple.com/de/app/id6793206733",
+  "description": "App zum Messen und Benennen der Farbe eines Hautbefunds aus einem Foto oder dem Live-Kamerabild, für die rechtsmedizinische und dermatologische Dokumentation. CIELAB, ΔE (CIEDE2000), Kalibrierung, Maßstab per LiDAR, Atlas mit 68 Befunden. Ohne Netz, ohne Konto."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Forensika",
+      "item": "https://forensika.eu/de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Apps",
+      "item": "https://forensika.eu/de/#apps"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Colorime3ka",
+      "item": "https://forensika.eu/de/colorime3ka/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Bestimmt Colorime3ka das Alter eines Hämatoms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Farbtabellen, die eine Anzahl von Tagen zuordnen, haben sich in neueren Arbeiten nicht bestätigt; belegt ist nur die Gelbkomponente, die bei Hämatomen jünger als etwa 18 Stunden nicht beobachtet wird. Die App sagt das offen, statt das Alter zu schätzen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich für die Messung eine Kalibrierkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sie ist nicht Pflicht, hilft aber deutlich. Eine Graukarte gleicht den Farbstich der Beleuchtung aus, eine Farbtafel mit 24 Feldern liefert eine Korrekturmatrix für vergleichbare Serien, und die gedruckte Kalibriertafel T2/T3 wird im Foto automatisch gefunden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Lässt sich die Größe eines Befunds ohne Lineal messen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Auf dem iPhone Pro ja - LiDAR misst den Abstand zum Messpunkt, daraus entsteht ein Millimetermaßstab. Sonst genügen zwei Tipps auf ein Lineal oder die Millimetermarken der Kalibriertafel; Länge und Breite lassen sich auch von Hand eingeben."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Werden Fotos auf einen Server übertragen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die App hat keine Netzwerkschicht, erhebt keine Daten, und Fotos wie Messungen bleiben auf dem Gerät, bis Sie sie selbst exportieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist Colorime3ka ein Medizinprodukt oder eine Melanomdiagnostik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die Prozentwerte geben die Übereinstimmung der gemessenen Merkmale mit Referenzkriterien an, keine diagnostische Sicherheit, und die Obergrenze liegt bei 85 %. Die ABCDE-Kriterien dienen der Lehre; die Entscheidung trifft immer die Ärztin oder der Arzt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist die App auf Deutsch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, ab Version 3.3 vollständig: Oberfläche, Atlas, Fragen der Untersuchung, Hinweise und Protokoll. Die Fachbegriffe folgen der deutschsprachigen rechtsmedizinischen und dermatologischen Literatur. Auf einem deutschen Gerät startet die App auf Deutsch; die Sprache lässt sich unter Info ändern. Dazu gibt es ein Fachhandbuch als PDF auf Deutsch."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/glam.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/de/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/de/#apps">Apps</a>
+<span class="langs"><a href="/colorime3ka/" hreflang="sk">SK</a><a href="/en/colorime3ka/" hreflang="en">EN</a><a class="on" href="/de/colorime3ka/" hreflang="de">DE</a></span>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/de/">Forensika</a> › <a href="/de/#apps">Apps</a> › Colorime3ka</p>
+<section class="hero">
+<div class="kicker">Forensische Farbbeurteilung · auf dem Gerät</div>
+<h1>Colorime3ka - <span class="accent">die Farbe eines Hautbefunds</span> gemessen, nicht geschätzt</h1>
+<p class="lede">Zwei Ärzte beschreiben dasselbe Hämatom mit zwei verschiedenen Farben. Colorime3ka misst die Farbe des Befunds im Foto oder im Live-Kamerabild, benennt sie und zeigt, welcher Stoff sie verursacht - Melanin, Hämoglobin, eingetrocknetes Blut oder keiner. Ab Version 3.3 vollständig auf Deutsch.</p>
+<div class="btns">
+<a class="btn-primary" href="https://apps.apple.com/de/app/id6793206733" target="_blank" rel="noopener">Laden im App Store</a>
+<a class="btn-ghost" href="https://dzanino.github.io/colorime3ka/Colorime3ka-Handbuch-DE.pdf" target="_blank" rel="noopener">Handbuch (PDF, Deutsch) ›</a>
+</div>
+<div class="pills">
+<span class="pill">CIELAB · ΔE (CIEDE2000)</span>
+<span class="pill">Atlas mit 68 Befunden</span>
+<span class="pill">Maßstab per LiDAR</span>
+<span class="pill">Forensischer und dermatologischer Modus</span>
+<span class="pill">Ohne Netz · ohne Konto</span>
+<span class="pill">Deutsch · Englisch · Slowakisch</span>
+<span class="pill">iPhone · iPad</span>
+</div>
+</section>
+</div>
+</main>
+
+<section>
+<div class="wrap">
+<h2>Entscheidend ist der Farbstoff, nicht die Farbe</h2>
+<p>Nicht die Farbe selbst zählt, sondern der Stoff, der sie verursacht. <strong>Melanin</strong> dunkelt die ganze Fläche ab und behält einen gelbbraunen Farbton. <strong>Hämoglobin</strong> fügt Farbe hinzu, dunkelt die Haut aber kaum ab, weil das Blut unter einer intakten Epidermis liegt. <strong>Eingetrocknetes Blut</strong> hat einen sehr dunklen rotbraunen Kern. Eine <strong>Narbe</strong> erkennt man an dem, was ihr fehlt: kein dunkler Anteil, keine Hautfelderung.</p>
+<p>Colorime3ka misst die robuste Farbe der Fläche (Median der Kanäle), rechnet sie in CIELAB um und benennt sie nach ΔE (CIEDE2000). Dazu kommen Gleichmäßigkeit, Schärfe der Begrenzung, Oberflächenrauigkeit, Umriss und Farbtonverlauf von der Mitte zum Rand. Das Fadenkreuz erfasst auch die umgebende Haut, mit der der Befund verglichen wird.</p>
+<div class="grid">
+<div class="d"><h3>Kalibrierung</h3><p>Eine Graukarte gleicht den Farbstich der Beleuchtung aus, eine Farbtafel mit 24 Feldern liefert eine Korrekturmatrix für vergleichbare Serien. Die gedruckte Kalibriertafel T2/T3 aus dem Projekt aPrehliadky wird im Foto von selbst gefunden.</p></div>
+<div class="d"><h3>Maßstab in Millimetern</h3><p>Zwei Tipps auf ein Lineal, die Millimetermarken der Kalibriertafel oder auf dem iPhone Pro direkt LiDAR - ohne Lineal. Bei Zoom liefert LiDAR keinen Maßstab: Ein stillschweigend falscher Maßstab ist schlechter als keiner.</p></div>
+<div class="d"><h3>Atlas mit 68 Befunden</h3><p>Auf Deutsch, Englisch und Slowakisch, mit eigenen schematischen Zeichnungen von Oberfläche und Querschnitt: mechanische, thermische und elektrische Verletzungen, Wundheilung, Pigmentläsionen, Effloreszenzen, postmortale Veränderungen und Befunde, die regelmäßig mit Misshandlung verwechselt werden.</p></div>
+<div class="d"><h3>Postoperative Wunde</h3><p>Bei Kontext „Operation“ und Operationsdatum rät die App nicht, was der Befund ist, sondern beschreibt die Wundheilung nach dem Southampton-Score und der Infektionsdefinition von CDC/NHSN. Aus der Farbe nie mehr als Grad II - Eiter und Wunddehiszenz werden aus einem Foto nicht behauptet.</p></div>
+<div class="d"><h3>Referenz-Messprofile</h3><p>Die Schwellenwerte sind an offen lizenzierten Referenzfotos gemessen. Der Expertenmodus speichert eine Messung als weiteres Referenz-Messprofil - zwölf Zahlen und eine Notiz, nie ein Foto; weitergegeben wird es als .ch3lab-Datei, und empfangene Profile werden erst nach Ihrer Prüfung verwendet.</p></div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Vom Foto zum Protokoll</h2>
+<div class="steps">
+<div class="step"><div class="n"></div><div><h3>Foto oder Live-Kamera</h3><p>Sie fotografieren den Befund oder messen direkt im Kamerabild; die Messfläche mit Fadenkreuz ist einstellbar.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Kalibrierung und Maßstab</h3><p>Graukarte, 24-Feld-Farbtafel oder T2/T3; Maßstab aus Lineal, Kalibriertafel oder LiDAR. Länge und Breite des Befunds lassen sich auch von Hand eingeben, in mm, cm oder Zoll.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Klinischer Kontext</h3><p>Was am häufigsten entscheidet, zeigt das Foto nicht. Deshalb fragt die App: Zustand der Person, Trauma oder Operation in der Anamnese, Dauer, Körperregion, ob die Haut verletzt ist, ob der Befund unter Druck abblasst (Glasspatelprobe). Sachlich unmögliche Kombinationen schließt sie aus und nennt den Grund.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Beurteilung in zwei Modi</h3><p>Rechtsmedizinisch (Hämatom, Schürfung, Wunden, Krusten und Narben, Erythem, Vitalität) und dermatologisch (Pigmentläsionen und ABCDE, Effloreszenzen, entzündliche und vaskuläre Veränderungen). Die Prozentwerte zeigen die Übereinstimmung mit den Merkmalen, die Obergrenze liegt bei 85 %.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Protokoll und Export</h3><p>Ein Eintrag mit Angabe der Maßstabsquelle und der Export aller gemessenen Größen als CSV einschließlich der Bedingungen, unter denen sie entstanden - für die Dokumentation wie für die Forschung.</p></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Was die App nicht tut</h2>
+<p>Colorime3ka stellt keine Diagnose und ist kein Medizinprodukt. <strong>Das Alter eines Hämatoms bestimmt sie aus der Farbe nicht</strong> und sagt das offen: Farbtabellen, die eine Anzahl von Tagen zuordnen, haben sich in neueren Arbeiten nicht bestätigt, und belegt ist nur die Gelbkomponente, die bei Hämatomen jünger als etwa 18 Stunden nicht beobachtet wird. Die ABCDE-Kriterien sind als publizierte Lehrkriterien für Ärztinnen und Ärzte angegeben - die App behauptet nie, ob eine Läsion bösartig ist. Kein neuronales Netz, kein trainiertes Modell: Alle Ergebnisse stammen aus veröffentlichten Farbformeln und festen, von Hand geschriebenen Schwellenwerttabellen.</p>
+<table class="specs">
+<tr><td>Plattform</td><td>iPhone, iPad (iOS/iPadOS 17+); Maßstab per LiDAR auf dem iPhone Pro</td></tr>
+<tr><td>Messung</td><td>CIELAB, ΔE (CIEDE2000), Farbtonanteile, Textur, Umriss</td></tr>
+<tr><td>Atlas</td><td>68 Befunde mit eigenen Schemazeichnungen, DE/EN/SK</td></tr>
+<tr><td>Sprachen</td><td>Deutsch (ab Version 3.3), Englisch, Slowakisch</td></tr>
+<tr><td>Export</td><td>CSV (alle Größen), .ch3lab (Referenz-Messprofile)</td></tr>
+<tr><td>Handbuch</td><td><a href="https://dzanino.github.io/colorime3ka/Colorime3ka-Handbuch-DE.pdf" target="_blank" rel="noopener">Fachhandbuch als PDF auf Deutsch</a>, auch auf Englisch und Slowakisch</td></tr>
+<tr><td>Preis</td><td>Einmalkauf im App Store, ohne Abo</td></tr>
+</table>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Datenschutz zuerst</h2>
+<ul class="check">
+<li>Keine Netzwerkschicht - die App verbindet sich nirgendwohin</li>
+<li>Fotos und Messungen bleiben auf dem Gerät</li>
+<li>Keine Analyse-Tools, keine Telemetrie, kein Konto</li>
+<li>Ein Referenz-Messprofil enthält zwölf gemessene Zahlen und eine Notiz - nie ein Foto und keine Angaben zur untersuchten Person</li>
+</ul>
+<div class="note">Colorime3ka ist ein Forschungs- und Hilfswerkzeug für qualifizierte Fachleute - kein Medizinprodukt und keine Diagnose; die abschließende Beurteilung liegt immer bei der Ärztin oder dem Arzt. Autor ist Dr. med. Ján Šikuta, PhD, Rechtsmediziner. <a href="https://dzanino.github.io/colorime3ka/privacy.html" style="color:var(--blue)">Datenschutz</a> · <a href="https://dzanino.github.io/colorime3ka/" style="color:var(--blue)">Support</a></div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Häufige Fragen</h2>
+<details><summary>Bestimmt Colorime3ka das Alter eines Hämatoms?</summary><p>Nein. Farbtabellen, die eine Anzahl von Tagen zuordnen, haben sich in neueren Arbeiten nicht bestätigt; belegt ist nur die Gelbkomponente, die bei Hämatomen jünger als etwa 18 Stunden nicht beobachtet wird. Die App sagt das offen, statt das Alter zu schätzen.</p></details>
+<details><summary>Brauche ich für die Messung eine Kalibrierkarte?</summary><p>Sie ist nicht Pflicht, hilft aber deutlich. Eine Graukarte gleicht den Farbstich der Beleuchtung aus, eine Farbtafel mit 24 Feldern liefert eine Korrekturmatrix für vergleichbare Serien, und die gedruckte Kalibriertafel T2/T3 wird im Foto automatisch gefunden.</p></details>
+<details><summary>Lässt sich die Größe eines Befunds ohne Lineal messen?</summary><p>Auf dem iPhone Pro ja - LiDAR misst den Abstand zum Messpunkt, daraus entsteht ein Millimetermaßstab. Sonst genügen zwei Tipps auf ein Lineal oder die Millimetermarken der Kalibriertafel; Länge und Breite lassen sich auch von Hand eingeben.</p></details>
+<details><summary>Werden Fotos auf einen Server übertragen?</summary><p>Nein. Die App hat keine Netzwerkschicht, erhebt keine Daten, und Fotos wie Messungen bleiben auf dem Gerät, bis Sie sie selbst exportieren.</p></details>
+<details><summary>Ist Colorime3ka ein Medizinprodukt oder eine Melanomdiagnostik?</summary><p>Nein. Die Prozentwerte geben die Übereinstimmung der gemessenen Merkmale mit Referenzkriterien an, keine diagnostische Sicherheit, und die Obergrenze liegt bei 85 %. Die ABCDE-Kriterien dienen der Lehre; die Entscheidung trifft immer die Ärztin oder der Arzt.</p></details>
+<details><summary>Ist die App auf Deutsch?</summary><p>Ja, ab Version 3.3 vollständig: Oberfläche, Atlas, Fragen der Untersuchung, Hinweise und Protokoll. Die Fachbegriffe folgen der deutschsprachigen rechtsmedizinischen und dermatologischen Literatur. Auf einem deutschen Gerät startet die App auf Deutsch; die Sprache lässt sich unter Info ändern. Dazu gibt es ein Fachhandbuch als PDF auf Deutsch.</p></details>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="site"><a href="/de/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy"><span data-fz>©</span> 2026 Dr. med. Ján Šikuta, PhD · <a href="mailto:admin@forensika.eu">admin@forensika.eu</a> · <a href="/de/">forensika.eu</a></div>
+</div>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
