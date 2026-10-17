@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://forensika.eu/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<title>Forensika - Forensische Wissenschaften · Apps</title>
+<meta name="description" content="Forensika - Rechtsmedizin und Toxikologie. Apps und Werkzeuge für die forensische Praxis: 4n6 Tools Pro und Lite, Colorime3ka, littlEye AI, aPrehliadky und Congressa. Offline, mit zitierten Methoden.">
+<meta property="og:title" content="Forensika - Forensische Wissenschaften · Apps">
+<meta property="og:description" content="Apps und Werkzeuge für die forensische Praxis: 4n6 Tools Pro und Lite, Colorime3ka, littlEye AI, aPrehliadky und Congressa.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://forensika.eu/de/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://forensika.eu/de/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/">
+<link rel="alternate" hreflang="de" href="https://forensika.eu/de/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Forensika",
+  "url": "https://forensika.eu/",
+  "logo": "https://forensika.eu/icon-512.png",
+  "founder": { "@type": "Person", "name": "Ján Šikuta" },
+  "sameAs": [
+    "https://dzanino.github.io/aPrehliadky/",
+    "https://dzanino.github.io/littlEyeAI/",
+    "https://dzanino.github.io/colorime3ka/",
+    "https://dzanino.github.io/4n6/",
+    "https://dzanino.github.io/Congressa/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Forensika",
+  "url": "https://forensika.eu/",
+  "inLanguage": ["sk", "en", "de"],
+  "description": "Forensische Wissenschaften - Rechtsmedizin und Toxikologie. Apps und Werkzeuge für die forensische Praxis."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Forensika - Apps",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "aPrehliadky",
+      "url": "https://forensika.eu/en/aprehliadky/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fotograme3ka 3D",
+      "url": "https://forensika.eu/en/fotograme3ka/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "littlEye AI",
+      "url": "https://forensika.eu/en/littleye-ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Colorime3ka",
+      "url": "https://forensika.eu/en/colorime3ka/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "4n6 Tools",
+      "url": "https://forensika.eu/de/4n6/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Congressa",
+      "url": "https://forensika.eu/de/congressa/"
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#274863; --ink-2:#22415C; --ink-3:#132A3D;
+    --muted:#6b7f93;
+    --paper:#f5f8fc; --paper-2:#eaf1f8;
+    --card:#ffffff; --line:#e2eaf2;
+    --teal:#4FCBBB; --blue:#66B0E8; --violet:#8E86EC; --lila:#C79BE2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,248,252,.82);
+    backdrop-filter:saturate(160%) blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:20px;letter-spacing:.3px;}
+  .brand .mark{width:38px;height:38px;border-radius:22%;display:block;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;color:#fff;text-align:center;
+    background:
+      radial-gradient(900px 500px at 50% -20%, rgba(102,176,232,.35), transparent 60%),
+      linear-gradient(160deg,#2A4E70,#132A3D);
+    padding:76px 0 92px;}
+  .hero .logo{width:118px;height:118px;border-radius:26%;margin:0 auto 26px;display:block;
+    box-shadow:0 22px 50px rgba(8,20,32,.45);}
+  .hero h1{font-size:clamp(38px,7vw,66px);font-weight:700;letter-spacing:.5px;line-height:1.02;margin-bottom:14px;}
+  .hero h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .kicker{font-size:13px;letter-spacing:4px;font-weight:600;color:#9fc4e6;text-transform:uppercase;margin-bottom:22px;}
+  .hero p.lede{font-size:clamp(17px,2.6vw,21px);color:#dbe8f4;max-width:40ch;margin:0 auto 30px;font-weight:400;}
+  .hero .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn-primary{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#12324a;
+    background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 26px;border-radius:999px;transition:.2s;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(79,203,187,.42);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;color:#eaf3fb;border:1px solid rgba(255,255,255,.3);padding:13px 24px;border-radius:999px;transition:.2s;}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.55);}
+  .wave{height:34px;background:linear-gradient(90deg,var(--teal),var(--blue),var(--violet),var(--lila));}
+
+  /* Sections */
+  section.apps{padding:74px 0 40px;}
+  .sec-head{text-align:center;max-width:620px;margin:0 auto 48px;}
+  .sec-head .tag{font-size:12px;letter-spacing:3px;font-weight:700;color:var(--blue);text-transform:uppercase;}
+  .sec-head h2{font-size:clamp(28px,4.4vw,40px);font-weight:700;color:var(--ink);margin:10px 0 12px;}
+  .sec-head p{color:#5c7186;font-size:16px;}
+
+  .grid{display:grid;grid-template-columns:1fr;gap:24px;}
+  @media(min-width:820px){.grid{grid-template-columns:1fr 1fr;}}
+
+  /* Odbor / disciplíny */
+  section.field{padding:66px 0 10px;}
+  .intro{max-width:760px;margin:0 auto 40px;text-align:center;}
+  .intro p{color:#4d647a;font-size:clamp(16px,2.3vw,18.5px);line-height:1.65;}
+  .intro p + p{margin-top:14px;}
+  .disc{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:640px){.disc{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.disc{grid-template-columns:repeat(3,1fr);}}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.2s;}
+  .d:hover{border-color:#bcd3e9;box-shadow:0 14px 30px rgba(19,42,61,.08);transform:translateY(-2px);}
+  .d .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;margin-bottom:13px;
+    background:linear-gradient(150deg,#eaf4fb,#e6f7f4);}
+  .d .ico svg{width:21px;height:21px;fill:none;stroke:#3f7fae;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+  .d h3{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .d p{color:#5d7186;font-size:14.5px;line-height:1.55;}
+  .closing{margin-top:26px;text-align:center;color:#4d647a;font-size:16px;max-width:66ch;
+    margin-left:auto;margin-right:auto;}
+  .closing b{color:var(--ink);}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;
+    display:flex;flex-direction:column;transition:.22s;box-shadow:0 1px 2px rgba(19,42,61,.03);}
+  .card:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(19,42,61,.10);border-color:#cddcec;}
+  .card.wide{grid-column:1/-1;}
+  .card .top{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+  .card .icon{width:60px;height:60px;border-radius:26%;flex:0 0 auto;display:grid;place-items:center;font-size:30px;
+    box-shadow:0 8px 20px rgba(19,42,61,.18);}
+  .card .icon img{width:100%;height:100%;border-radius:inherit;display:block;box-shadow:0 6px 16px rgba(19,42,61,.18);}
+  .card h3{font-size:22px;font-weight:700;color:var(--ink);}
+  .card .sub{font-size:13px;color:var(--blue);font-weight:600;letter-spacing:.3px;margin-top:2px;}
+  .card p.desc{color:#556b80;font-size:15px;line-height:1.6;margin-bottom:20px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+  .pill{font-size:12px;font-weight:600;color:#3d5a74;background:var(--paper-2);border:1px solid var(--line);padding:5px 11px;border-radius:999px;}
+
+  .tier{border-top:1px solid var(--line);padding-top:16px;margin-top:auto;}
+  .tier + .tier{margin-top:16px;}
+  .tier-name{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);font-size:15px;margin-bottom:10px;}
+  .price{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;}
+  .price.free{color:#1c7a5e;background:#d8f3ea;}
+  .price.paid{color:#3a5a86;background:#e2ecf9;}
+
+  .stores{display:flex;flex-wrap:wrap;gap:10px;}
+  .store{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border-radius:13px;
+    background:var(--ink-3);color:#fff;transition:.2s;}
+  .store:hover{transform:translateY(-1px);background:#0d2032;}
+  .store svg{width:20px;height:20px;flex:0 0 auto;}
+  .store .lbl{display:flex;flex-direction:column;line-height:1.05;}
+  .store .lbl small{font-size:9px;opacity:.8;letter-spacing:.3px;}
+  .store .lbl span{font-size:14px;font-weight:600;}
+  .store.web{background:linear-gradient(90deg,var(--teal),var(--blue));color:#0f2f47;}
+  .store.web:hover{background:linear-gradient(90deg,#43c2b1,#5aa6e2);}
+
+  /* Mission strip */
+  .mission{padding:20px 0 78px;}
+  .mission .box{background:linear-gradient(160deg,#2A4E70,#1a374f);border-radius:24px;padding:48px 40px;text-align:center;color:#fff;}
+  .mission .box h2{font-size:clamp(24px,3.6vw,32px);font-weight:700;margin-bottom:12px;}
+  .mission .box p{color:#cfe0ef;max-width:56ch;margin:0 auto;font-size:16px;}
+  .mission .box .words{margin-top:20px;font-size:13px;letter-spacing:4px;font-weight:600;color:#8fd6cc;text-transform:uppercase;}
+
+  footer{border-top:1px solid var(--line);padding:38px 0;background:#fff;}
+  .foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;color:#6b7f93;font-size:14px;}
+  .foot a{font-weight:600;color:var(--ink);}
+  .foot a:hover{color:var(--blue);}
+  .nav a.cta.lang{padding:9px 14px;}
+  .nav .navwrap{display:flex;align-items:center;gap:10px;}
+
+  /* ---------- Mobil ---------- */
+  @media (max-width:760px){
+    .wrap{padding:0 18px;}
+    .nav{height:58px;gap:10px;}
+    .brand{font-size:17px;gap:9px;}
+    .brand .mark{width:32px;height:32px;}
+    .nav a.cta{font-size:13px;padding:7px 12px;}
+    .nav a.cta.lang{padding:7px 11px;}
+    .hero{padding:52px 0 62px;}
+    .hero .logo{width:92px;height:92px;margin-bottom:20px;}
+    .kicker{font-size:11px;letter-spacing:2.6px;margin-bottom:16px;}
+    .hero .btns{gap:10px;}
+    .btn-primary,.btn-ghost{padding:12px 20px;font-size:14.5px;}
+    section.field{padding:48px 0 6px;}
+    section.apps{padding:48px 0 28px;}
+    .sec-head{margin-bottom:30px;}
+    .intro{margin-bottom:28px;}
+    .card{padding:22px;border-radius:18px;}
+    .d{padding:18px;}
+    .mission{padding:14px 0 54px;}
+    .mission .box{padding:34px 22px;border-radius:20px;}
+    .mission .box .words{letter-spacing:2.6px;font-size:12px;}
+    .store{padding:9px 13px;}
+    .store .lbl span{font-size:13px;}
+    .foot{flex-direction:column;text-align:center;gap:10px;}
+    footer{padding:30px 0;}
+  }
+  /* Na úzkych displejoch necháme v hlavičke len jazyk - sekcie sú dosiahnuteľné rolovaním */
+  /* Odkazy na aplikácie sa pri užšom okne nezmestia - ostávajú v sekcii Aplikácie */
+  @media (max-width:1240px){
+    .nav .navapp{display:none;}
+  }
+  @media (max-width:560px){
+    .nav .navlink{display:none;}
+  }
+  /* Dlhé odkazy nesmú pretiecť mimo obrazovku */
+  a,p,li,div{overflow-wrap:anywhere;}
+</style>
+<link rel="stylesheet" href="/glam.css">
+</head>
+<body>
+
+<!-- reusable logo icon as symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/>
+    </linearGradient>
+    <radialGradient id="glassI" cx="36%" cy="26%" r="85%">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/>
+    </radialGradient>
+    <linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0">
+      <stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/>
+    </linearGradient>
+    <filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+    <clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+    <symbol id="forensika-icon" viewBox="0 0 512 512">
+      <rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+      <g transform="translate(256,248)">
+        <circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+        <circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+        <circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+        <g clip-path="url(#lensI)">
+          <ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+          <path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18"
+                fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+          <path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+        </g>
+        <circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+        <rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><svg class="mark"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+    <div class="navwrap">
+      <a class="cta navlink" href="#fachgebiet">Fachgebiet</a>
+      <a class="cta navlink" href="#apps">Apps</a>
+<a class="cta navlink navapp" href="/en/aprehliadky/">aPrehliadky</a>
+<a class="cta navlink navapp" href="/en/littleye-ai/">littlEye AI</a>
+<a class="cta navlink navapp" href="/en/colorime3ka/">Colorime3ka</a>
+<a class="cta navlink navapp" href="/de/4n6/">4n6 Tools</a>
+<a class="cta navlink navapp" href="/de/congressa/">Congressa</a>
+      <span class="langs"><a href="/" hreflang="sk">SK</a><a href="/en/" hreflang="en">EN</a><a class="on" href="/de/" hreflang="de">DE</a></span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <svg class="logo"><use href="#forensika-icon"/></svg>
+      <div class="kicker">Forensische Wissenschaften · Gemeinschaft</div>
+      <h1><span>Forens</span><span class="accent">ika</span></h1>
+      <p class="lede">Wo die Umstände unklar sind, bringen die forensischen Wissenschaften Licht und Schärfe. Werkzeuge und Apps für Rechtsmedizin und Toxikologie.</p>
+      <div class="btns">
+        <a class="btn-primary" href="#apps">Apps entdecken</a>
+        <a class="btn-ghost" href="mailto:admin@forensika.eu">Kontakt</a>
+      </div>
+    </div>
+  </section>
+  <div class="wave"></div>
+
+  <section class="field" id="fachgebiet">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">Das Fachgebiet</div>
+        <h2>Was forensische Wissenschaften sind</h2>
+      </div>
+
+      <div class="intro">
+        <p>Die forensischen Wissenschaften verbinden das Recht mit den Naturwissenschaften. Statt Vermutungen liefern sie Messung, eine definierte Methode und einen überprüfbaren Beweis - bei der Aufklärung von Straftaten und Verkehrsunfällen ebenso wie bei der Klärung der Todesursache.</p>
+        <p>Sie bestehen aus mehreren Disziplinen, und jede beantwortet eine andere Frage.</p>
+      </div>
+
+      <div class="disc">
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M7.5 15h9"/></svg></div>
+          <h3>Rechtsmedizin und Toxikologie</h3>
+          <p>Klärt Todesursache und Todesmechanismus, beurteilt Verletzungen und ihre Entstehung und weist Medikamente, Drogen oder Gifte im Körper nach.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M7 3c0 6 10 6 10 12"/><path d="M17 3c0 6-10 6-10 12"/><path d="M8.5 7h7M8.5 17h7"/><path d="M7 21h10"/></svg></div>
+          <h3>Forensische Genetik und Biologie</h3>
+          <p>Bestimmt aus Blut, Speichel, Haaren mit Wurzel und anderen biologischen Spuren die Identität und verknüpft eine bestimmte Person mit dem Tatort.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 10a6 6 0 0 0-12 0v4"/><path d="M15 10a3 3 0 0 0-6 0v8"/><path d="M12 10v9"/><path d="M18 13v4"/></svg></div>
+          <h3>Daktyloskopie</h3>
+          <p>Vergleicht Finger- und Handflächenabdrücke - eine der ältesten Identifizierungsmethoden und bis heute eine der zuverlässigsten.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div>
+          <h3>Ballistik</h3>
+          <p>Untersucht Waffen, Munition und Schussspuren - und erlaubt so, Richtung, Entfernung und Ablauf eines Schusswechsels zu bestimmen.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8 9.5l2 2-2 2M13 13.5h3"/></svg></div>
+          <h3>Digitale Forensik</h3>
+          <p>Sichert und gewinnt Daten von Computern, Mobiltelefonen und Datenträgern - einschließlich der Spuren, die jemand zu löschen versucht hat.</p>
+        </div>
+
+        <div class="d">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(120 12 12)"/></svg></div>
+          <h3>Forensische Chemie und Physik</h3>
+          <p>Identifiziert unbekannte Substanzen, Lacke, Glas, Fasern und Mikrospuren - oft genau jene, die scheinbar unzusammenhängende Beweise verbinden.</p>
+        </div>
+
+      </div>
+
+      <p class="closing">Keine dieser Disziplinen steht für sich allein - am aussagekräftigsten sind sie, wenn ihre Befunde in einem Fall zusammenkommen. <b>Deshalb ist es wichtig, Wissen zu teilen, Methoden zu vereinheitlichen und über Institutsgrenzen hinweg zusammenzuarbeiten.</b></p>
+    </div>
+  </section>
+
+  <section class="apps" id="apps">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">Apps und Werkzeuge</div>
+        <h2>Forensische Apps für die Kitteltasche</h2>
+        <p>Werkzeuge für den Sektionstisch, den Tatort und das Schreiben von Protokollen und Gutachten. Entstanden aus der Praxis eines Rechtsmediziners, offline nutzbar und mit Quellenangabe bei jeder Methode.</p>
+      </div>
+
+      <div class="grid">
+
+        <!-- 4n6 Tools -->
+        <div class="card wide">
+          <div class="top">
+            <div class="icon"><img src="/img/apps/4n6-tools.png" alt="4n6 Tools" width="60" height="60" loading="lazy"></div>
+            <div>
+              <h3><a href="/de/4n6/" style="color:inherit;">4n6 Tools</a></h3>
+              <div class="sub">Forensische Rechner für unterwegs</div>
+            </div>
+          </div>
+          <p class="desc">Rechner und Referenztabellen für die Rechtsmedizin - am Sektionstisch, bei der Leichenschau am Tatort und beim Schreiben von Protokollen und Gutachten. Enthalten sind die Todeszeitschätzung nach Henssge aus der Rektaltemperatur (Marshall und Hoare) mit Assistent für den Korrekturfaktor und 95-%-Vertrauensbereichen, die Liegezeit aus Totenstarre und Totenflecken, K⁺ im Glaskörper, der Traub-Index, Interpretation und Berechnung von Ethanol (Widmark, Rückrechnung), toxikologische Referenzkonzentrationen in den Bereichen therapeutisch – toxisch – letal, BMI und Ernährungszustand, Körperoberfläche und erwartetes Herzgewicht, Altersschätzung aus den Aortenumfängen, Körperhöhe und Alter aus Knochenlängen, Geschlecht und Alter am Skelett, forensische Entomologie und ein Einheitenrechner.</p>
+          <p class="desc"><b>Version 5.4</b> bringt drei Designs (Laborinstrument, Farbiges Glas sowie Schwarz und Gold, jeweils hell und dunkel), eine Startkarte für den aktiven Fall und eine korrigierte Henssge-Berechnung bei warmer Umgebung (ab 23,3 °C). <b>Version 5.3</b> ergänzt Deutsch, Tschechisch, Italienisch, Französisch und Ukrainisch - die App spricht damit sieben Sprachen, Ergebnisse und Bericht eingeschlossen. <b>Version 5.2</b> wurde von Grund auf neu gestaltet: neues Design, Überarbeitung der Methoden anhand der Originalliteratur und neue Werkzeuge - DVI nach dem INTERPOL DVI Guide 2023, Verbrennungen (Lund-Browder, Baux), CO-Hb mit Vitalitätsbeurteilung, Referenzwerte für 67 Substanzen einschließlich postmortaler Werte im Femoralvenenblut sowie „Fall und Bericht“ mit gemeinsamem Export und Sicherung der Fälle. Erhältlich im App Store und bei Google Play. Seit Version 5.1 öffnet Lite auch die übrigen Werkzeuge als Vorschau: Formular, Methode und Literatur; das Ergebnis berechnet Pro.</p>
+          <p class="desc">Jedes Werkzeug nennt die publizierte Methode, auf der es beruht, samt Literaturzitat. Alles läuft auf dem Gerät, ohne Konto und ohne Datenübertragung.</p>
+          <div class="pills">
+            <span class="pill">Henssge · Marshall–Hoare · 95 % CI</span>
+            <span class="pill">Liegezeit · Totenstarre und Totenflecke</span>
+            <span class="pill">K⁺ im Glaskörper</span>
+            <span class="pill">Ethanol · Widmark</span>
+            <span class="pill">Toxikologische Referenzwerte</span>
+            <span class="pill">Osteologische Schätzungen</span>
+            <span class="pill">Entomologie</span>
+            <span class="pill">Zitierte Methoden</span>
+            <span class="pill">7 Sprachen · offline</span>
+          </div>
+
+          <div class="tier">
+            <div class="tier-name">Lite <span class="price free">Kostenlos</span></div>
+            <div class="stores">
+              <a class="store" href="https://apps.apple.com/app/id6783425913" target="_blank" rel="noopener">
+                <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span class="lbl"><small>Laden im</small><span>App Store</span></span>
+              </a>
+              <a class="store" href="https://play.google.com/store/apps/details?id=com.sikuta.n6toolslite&hl=de" target="_blank" rel="noopener">
+                <svg viewBox="0 0 512 512"><path fill="#00d3ff" d="M47 30C40 34 36 42 36 53v406c0 11 4 19 11 23l236-229z"/><path fill="#00f076" d="M47 30c5-3 12-3 20 1l301 173-72 70z"/><path fill="#ffce00" d="M368 204l72 41c19 11 19 33 0 44l-72 41-73-83z"/><path fill="#ff3a44" d="M47 482c5 3 12 3 20-1l301-173-72-70z"/></svg>
+                <span class="lbl"><small>Jetzt bei</small><span>Google Play</span></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="tier">
+            <div class="tier-name">Pro <span class="price paid">Vollversion</span></div>
+            <div class="stores">
+              <a class="store" href="https://apps.apple.com/app/id6785259219" target="_blank" rel="noopener">
+                <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span class="lbl"><small>Laden im</small><span>App Store</span></span>
+              </a>
+              <a class="store" href="https://play.google.com/store/apps/details?id=sk.sikuta.forn4n6.pro&hl=de" target="_blank" rel="noopener">
+                <svg viewBox="0 0 512 512"><path fill="#00d3ff" d="M47 30C40 34 36 42 36 53v406c0 11 4 19 11 23l236-229z"/><path fill="#00f076" d="M47 30c5-3 12-3 20 1l301 173-72 70z"/><path fill="#ffce00" d="M368 204l72 41c19 11 19 33 0 44l-72 41-73-83z"/><path fill="#ff3a44" d="M47 482c5 3 12 3 20-1l301-173-72-70z"/></svg>
+                <span class="lbl"><small>Jetzt bei</small><span>Google Play</span></span>
+              </a>
+              <a class="store" href="https://dzanino.github.io/4n6/privacy.html" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 5 3 9 7 10 4-1 7-5 7-10V6z"/></svg>
+                <span class="lbl"><small>Datenschutz</small><span>4n6 Tools</span></span>
+              </a>
+              <a class="store" href="https://dzanino.github.io/4n6/support.html" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9a2.8 2.8 0 1 1 3.8 2.6c-.8.4-1 .9-1 1.6"/><path d="M12 17h.01"/></svg>
+                <span class="lbl"><small>Support</small><span>4n6 Tools</span></span>
+              </a>
+              <a class="store" href="https://dzanino.github.io/4n6/4n6-Tools-Pro-navod.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+                <span class="lbl"><small>Handbuch (PDF, SK/EN)</small><span>4n6 Tools Pro</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colorime3ka -->
+        <div class="card">
+          <div class="top">
+            <div class="icon"><img src="/img/apps/colorime3ka.png" alt="Colorime3ka" width="60" height="60" loading="lazy"></div>
+            <div>
+              <h3><a href="/en/colorime3ka/" style="color:inherit;">Colorime3ka</a></h3>
+              <div class="sub">Forensische Farbbeurteilung</div>
+            </div>
+          </div>
+          <p class="desc">Misst und benennt die Farbe eines Hautbefunds aus einem Foto oder dem Live-Kamerabild. Entscheidend ist nicht die Farbe selbst, sondern das Chromophor, das sie verursacht - Melanin dunkelt die Fläche ab und hält einen gelbbraunen Ton, Hämoglobin färbt, dunkelt aber kaum ab, angetrocknetes Blut hat einen sehr dunklen rotbraunen Kern, und eine Narbe erkennt man an dem, was ihr fehlt. Die robuste Flächenfarbe wird in CIELAB umgerechnet und über ΔE nach CIEDE2000 benannt; dazu kommen Gleichmäßigkeit, Randschärfe, Oberflächenrauigkeit, Kontur und der Farbtonverlauf von der Mitte zum Rand.</p>
+          <p class="desc">Die Kalibrierung mit Graukarte und 24-Feld-Farbtafel macht Serien vergleichbar; ein Millimetermaßstab entsteht mit zwei Tipps auf ein Lineal oder auf dem iPhone Pro direkt per LiDAR, ganz ohne Lineal. Zwei Beurteilungsmodi - forensisch (Hämatome, Schürfungen, Wunden, Krusten und Narben, Rötung, Vitalität und Altersschätzung) und dermatologisch (Pigmentläsionen und Melanom nach ABCDE, Effloreszenzen, entzündliche und vaskuläre Veränderungen). Ein Atlas mit 68 Befunden und eigenen schematischen Zeichnungen. Version 3.1 ergänzte die Körperregion im klinischen Kontext und die Beurteilung der Wundheilung nach Operationen mit dem Southampton-Score - Eiter und Wunddehiszenz werden aus einem Foto nicht beurteilt. Version 3.2 machte das Zielen präziser: Ein mit der Lupe gezogener Punkt bleibt genau dort, wo Sie den Finger anheben, und Maßstabspunkte lassen sich nachträglich mit dem Finger oder dem Apple Pencil verschieben.</p>
+          <p class="desc" style="font-size:14px;color:#6b7f93;">Die Prozentwerte geben die Übereinstimmung der gemessenen Merkmale mit Referenzkriterien an, keine diagnostische Sicherheit - die Obergrenze liegt bei 85 %. Das Alter eines Hämatoms bestimmt die App nicht und sagt das ausdrücklich: Farbtabellen, die eine Anzahl von Tagen zuordnen, haben sich in neueren Arbeiten nicht bestätigt; belegt ist nur die Gelbkomponente, die bei Hämatomen jünger als etwa 18 Stunden nicht beobachtet wird. Zur App gehört ein Fachhandbuch, auch auf Deutsch. Die App selbst ist derzeit auf Englisch und Slowakisch.</p>
+          <div class="pills">
+            <span class="pill">CIELAB · ΔE (CIEDE2000)</span>
+            <span class="pill">Atlas mit 68 Befunden</span>
+            <span class="pill">Expertenmodus · .ch3lab</span>
+            <span class="pill">Handbuch PDF (DE/EN/SK)</span>
+            <span class="pill">Foto und Live-Kamera</span>
+            <span class="pill">Graukarte · 24 Felder</span>
+            <span class="pill">Maßstab in mm</span>
+            <span class="pill">Forensischer und dermatologischer Modus</span>
+          </div>
+          <div class="tier">
+            <div class="tier-name">iOS / iPadOS <span class="price paid">App Store</span></div>
+            <div class="stores">
+              <a class="store" href="https://apps.apple.com/app/id6793206733" target="_blank" rel="noopener">
+                <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span class="lbl"><small>Laden im</small><span>App Store</span></span>
+              </a>
+              <a class="store web" href="https://dzanino.github.io/colorime3ka/Colorime3ka-Handbuch-DE.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.8 3.8 9S14.5 18.4 12 21C9.5 18.4 8.2 15.2 8.2 12S9.5 5.6 12 3z"/></svg>
+                <span class="lbl"><small>Handbuch und Support</small><span>Colorime3ka</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- littlEye AI -->
+        <div class="card">
+          <div class="top">
+            <div class="icon"><img src="/img/apps/littleye-ai.png" alt="littlEye AI" width="60" height="60" loading="lazy"></div>
+            <div>
+              <h3><a href="/en/littleye-ai/" style="color:inherit;">littlEye AI</a></h3>
+              <div class="sub">Histologie und KI</div>
+            </div>
+          </div>
+          <p class="desc">Trainieren Sie ein eigenes Modell, das histologische Präparate erkennt - direkt auf iPhone, iPad oder Mac, ohne Internet und ohne dass ein einziges Pixel das Gerät verlässt. Der HE-Datensatz umfasst 27 Organe und Gewebe, Kolleginnen und Kollegen bewerten die Objektträger mit Audit-Trail, und die endgültige Diagnose entscheidet die Mehrheit. Das Core-ML-Training läuft auf dem Gerät und zeigt immer einen unabhängigen Testdatensatz, eine Konfusionsmatrix sowie Sensitivität und Präzision für jede Klasse - Studierende sehen, wo das Modell versagt, nicht nur, wo es gelingt.</p>
+          <p class="desc">Färbung (HE, PAS, Trichrom, Versilberung, Elastika und weitere) und Vergrößerung von 4× bis 1000× werden zu jedem Objektträger erfasst; beim Lernen aus Korrekturen kehrt ein falsch bewertetes Bild in den Datensatz zurück. Modelle <b>.le3AI</b> und Datensätze <b>.le3set</b> sind verschlüsselt und tragen eigene Metriken und einen Audit-Trail. Ein Atlas mit über 100 Diagnosen und ein Lernmodul: Spezialfärbungen, IHC-Marker, Zellelemente und Pigmente - jeder Eintrag mit Quellenangabe. Arbeitsfälle: Scanner-Objektträger werden einer Fallnummer zugeordnet, eine Gewebekontrolle warnt vor Verwechslungen, und eine kurze Befundzusammenfassung landet in der Zwischenablage. Entwickelt in Zusammenarbeit mit drei Instituten der Medizinischen Fakultät der Comenius-Universität Bratislava.</p>
+          <p class="desc" style="font-size:14px;color:#6b7f93;">Die App ist ein Werkzeug, keine Modellsammlung - sie enthält ein einziges Demomodell, trainiert auf synthetischen Mustern. Echte Modelle trainieren Sie aus eigenen Präparaten oder tauschen sie als eigenständige .le3AI-Dateien mit Kollegen aus; Teil der App waren und werden sie nicht. Ein lizenzrechtlich sauberes Modell für das kolorektale Karzinom (Datensatz NCT-CRC, CC BY 4.0) unterscheidet 9 Tumorkomponenten und erreicht 88 % auf 7 180 Bildern von fünfzig Patienten, die es nie gesehen hat; es ist auf Anfrage kostenlos erhältlich. Die Versionen 3.2–3.3 brachten Bildquantifizierung, einen Rechner für Desmin-IHC und Werkzeuge für Publikationen (Bildqualitätskontrolle, Schwellenwert-Sensitivität, ICC und Bland-Altman). Version 4.0 brachte ein neues Design und eine klarere Navigation entlang des Arbeitsablaufs, vom Import bis zu Training und Weitergabe; .le3AI- und .le3set-Dateien bleiben mit Version 3.x kompatibel. Seit Version 3.0 ist die App kostenlos - ein freiwilliger Beitrag in der App schaltet nichts frei. Die App ist auf Englisch und Slowakisch.</p>
+          <div class="pills">
+            <span class="pill">Core ML · auf dem Gerät</span>
+            <span class="pill">27 Organe und Gewebe</span>
+            <span class="pill">Atlas mit über 100 Diagnosen</span>
+            <span class="pill">Konfusionsmatrix und Metriken</span>
+            <span class="pill">Verschlüsselt .le3AI / .le3set</span>
+            <span class="pill">Comenius-Universität Bratislava</span>
+          </div>
+          <div class="tier">
+            <div class="tier-name">iPhone · iPad · Mac <span class="price free">Kostenlos</span></div>
+            <div class="stores">
+              <a class="store" href="https://apps.apple.com/app/id6799417580" target="_blank" rel="noopener">
+                <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span class="lbl"><small>Laden im</small><span>App Store</span></span>
+              </a>
+              <a class="store web" href="https://dzanino.github.io/littlEyeAI/index.html" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.8 3.8 9S14.5 18.4 12 21C9.5 18.4 8.2 15.2 8.2 12S9.5 5.6 12 3z"/></svg>
+                <span class="lbl"><small>Mehr zum Projekt</small><span>littlEye AI</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- aPrehliadky -->
+        <div class="card wide">
+          <div class="top">
+            <div class="icon"><img src="/img/apps/aprehliadky.png" alt="aPrehliadky" width="60" height="60" loading="lazy"></div>
+            <div>
+              <h3><a href="/en/aprehliadky/" style="color:inherit;">aPrehliadky</a></h3>
+              <div class="sub">3D-Dokumentation der Leichenschau</div>
+            </div>
+          </div>
+          <p class="desc">Ein photogrammetrischer 3D-Scanner für Körper und Gegenstände. Die Aufnahme mit LiDAR gibt jedem Bild Tiefe, Schwerkraftrichtung und eine metrische Kameratrajektorie, aus der die App den Maßstab des Modells ableitet; ohne LiDAR ergänzen die ARKit-Trajektorie und eine Kalibriermarke den Maßstab. Die Rekonstruktion läuft vollständig auf dem Gerät über RealityKit Object Capture - klassische Photogrammetrie, kein NeRF, kein Gaussian Splatting und keine durch KI ergänzte Geometrie. Das Modell entsteht ausschließlich aus den aufgenommenen Daten, und das Protokoll hält das ausdrücklich fest.</p>
+          <p class="desc">Messen lassen sich Abstand, ein Weg über die Oberfläche, der auch unebenen und gekrümmten Formen folgt (Wundlänge, Umfang), Fläche und Volumen; eine Polylinie summiert gerade Abschnitte (Körperlänge bei gebeugten Gliedmaßen). Ein Referenzmaß bekannter Länge prüft den Maßstab des ganzen Modells, der Abgleich mit der LiDAR-Trajektorie liefert eine unabhängige Kontrolle, und jede Messung trägt eine Unsicherheit ± U (k = 2). Befunde werden mit nummerierten Pins markiert, und die Umgebung lässt sich als zweites metrisches Raummodell erfassen - die Lage des Körpers im Raum ist selbst ein Befund. Ergebnis sind ein PDF-Protokoll, ein <b>Zertifikat der 3D-Dokumentation der Klasse A–D</b>, je nachdem, wie viele unabhängige Wege den Maßstab stützen, und ein <b>.f3d</b>-Paket mit SHA-256 jeder Datei; der Empfänger sieht beim Import, ob das Paket verändert wurde. Die Ergänzung <b>Fotograme3ka 3D</b> für den Mac (Apple Silicon, kostenlos) berechnet das Paket in höherem Detail neu - auch von einem älteren iPhone ohne LiDAR - und bietet Ansicht, Messung und Protokoll auf dem großen Bildschirm. Version 3.2 brachte das Pausieren der Aufnahme, die Wiederherstellung der Position nach einer Unterbrechung und eine Konsistenzprüfung der Maßstabsquellen; Fotograme3ka 2.1 hat Berechnungsvorgaben (Forensisch: 300 000 Dreiecke, 8K-Textur) und ein Berechnungsprotokoll direkt im Paket und im Bericht.</p>
+          <p class="desc" style="font-size:14px;color:#6b7f93;">Konzipiert als mögliche Ergänzung zu ePrehliadky (Software der slowakischen Behörde für Gesundheitsaufsicht ÚDZS) - es handelt sich um eine eigenständige App des Autors, nicht um ein Produkt der ÚDZS. Kein geeichtes Messgerät; die Genauigkeit hängt von den Aufnahmebedingungen ab und muss mit einem Referenzmaß bekannter Länge überprüft werden. Die App ist auf Englisch und Slowakisch.</p>
+          <div class="pills">
+            <span class="pill">LiDAR + Photogrammetrie</span>
+            <span class="pill">Abstand · Weg · Fläche · Volumen</span>
+            <span class="pill">Zertifikat Klasse A–D</span>
+            <span class="pill">Kalibriermarke T3</span>
+            <span class="pill">Umgebung per LiDAR</span>
+            <span class="pill">.f3d mit SHA-256</span>
+            <span class="pill">Ohne Netz · ohne Konto</span>
+          </div>
+          <div class="tier">
+            <div class="tier-name">iPhone · iPad · iOS 18+ (LiDAR empfohlen) · Mac <span class="price free">Kostenlos</span></div>
+            <div class="stores">
+              <a class="store" href="https://apps.apple.com/app/id6808879666" target="_blank" rel="noopener">
+                <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span class="lbl"><small>Laden im</small><span>App Store</span></span>
+              </a>
+              <a class="store" href="https://apps.apple.com/app/id6809335678" target="_blank" rel="noopener">
+                <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span class="lbl"><small>Für den Mac · kostenlos</small><span>Fotograme3ka 3D</span></span>
+              </a>
+              <a class="store web" href="https://dzanino.github.io/aPrehliadky/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.8 3.8 9S14.5 18.4 12 21C9.5 18.4 8.2 15.2 8.2 12S9.5 5.6 12 3z"/></svg>
+                <span class="lbl"><small>Mehr zum Projekt</small><span>aPrehliadky</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Congressa -->
+        <div class="card wide">
+          <div class="top">
+            <div class="icon"><img src="/img/apps/congressa.png" alt="Congressa" width="60" height="60" loading="lazy"></div>
+            <div>
+              <h3><a href="/de/congressa/" style="color:inherit;">Congressa</a></h3>
+              <div class="sub">Das Kongressprogramm in der Tasche</div>
+            </div>
+          </div>
+          <p class="desc">Ein gefaltetes Papierprogramm in der Sakkotasche, Blättern zwischen den Tagen und die Suche nach dem Saal des eigenen Vortrags - deshalb ist Congressa entstanden. Sie laden das Kongressprogramm einmal (direkt von der Kongress-Website, aus einem PDF, vom Server des Veranstalters oder per QR-Code von Kollegen), danach funktioniert es <b>offline</b>, auch dort, wo der Kongresssaal keinen Empfang hat. Der Bildschirm <b>Jetzt</b> zeigt, was gerade läuft, was als Nächstes kommt und wohin Sie gehen müssen; in <b>Mein Plan</b> markieren Sie Vorträge, die App erinnert ein paar Minuten vorher und meldet auch Überschneidungen. Wenn Sie vortragen oder den Vorsitz führen, werden Ihre Programmpunkte hervorgehoben und bevorzugt erinnert.</p>
+          <p class="desc">Nutzt der Veranstalter einen Congressa-Server, kommen Anmeldungen zu Abendessen, Ausflügen und Workshops mit Kapazität und Warteliste sowie Ankündigungen direkt aufs Telefon hinzu. Das Programm wird per QR-Code geteilt - Kollegen haben es in Sekunden, auf iPhone wie Android; wer die App noch nicht hat, landet über den Code im richtigen Store, und nach der Installation lädt sich dasselbe Programm von selbst. Die App ist in acht Sprachen verfügbar, darunter Deutsch (SK, CZ, EN, DE, FR, ES, IT, UA). <b>Meine Kongresse</b> bewahren ein Archiv besuchter Veranstaltungen auf und stellen eine Teilnahmebestätigung als PDF aus. Ohne Konto, ohne Werbung, ohne Tracking.</p>
+          <p class="desc" style="font-size:14px;color:#6b7f93;">Eine unabhängige App des Autors - sie stammt nicht vom Kongressveranstalter. Sie ist kostenlos und vollständig; wer möchte, kann die Entwicklung mit einem freiwilligen Beitrag in der App unterstützen (er schaltet nichts frei).</p>
+          <div class="pills">
+            <span class="pill">Programm offline</span>
+            <span class="pill">Jetzt · Mein Plan · Erinnerungen</span>
+            <span class="pill">Import aus Website / PDF</span>
+            <span class="pill">Anmeldung mit Kapazität</span>
+            <span class="pill">Teilen per QR-Code</span>
+            <span class="pill">8 Sprachen</span>
+            <span class="pill">Teilnahmebestätigung</span>
+            <span class="pill">Ohne Konto · ohne Werbung</span>
+          </div>
+          <div class="tier">
+            <div class="tier-name">iPhone · iPad · Mac · Android <span class="price free">Kostenlos</span></div>
+            <div class="stores">
+              <a class="store" href="https://apps.apple.com/app/id6809326421" target="_blank" rel="noopener">
+                <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                <span class="lbl"><small>Laden im</small><span>App Store</span></span>
+              </a>
+              <a class="store" href="https://play.google.com/store/apps/details?id=sk.sikuta.congressa" target="_blank" rel="noopener">
+                <svg viewBox="0 0 512 512"><path fill="#00d3ff" d="M47 30C40 34 36 42 36 53v406c0 11 4 19 11 23l236-229z"/><path fill="#00f076" d="M47 30c5-3 12-3 20 1l301 173-72 70z"/><path fill="#ffce00" d="M368 204l72 41c19 11 19 33 0 44l-72 41-73-83z"/><path fill="#ff3a44" d="M47 482c5 3 12 3 20-1l301-173-72-70z"/></svg>
+                <span class="lbl"><small>Jetzt bei</small><span>Google Play</span></span>
+              </a>
+              <a class="store web" href="https://dzanino.github.io/Congressa/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.8 3.8 9S14.5 18.4 12 21C9.5 18.4 8.2 15.2 8.2 12S9.5 5.6 12 3z"/></svg>
+                <span class="lbl"><small>Mehr zum Projekt</small><span>Congressa</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="closing">Alle Apps sind <b>Forschungs- und Hilfswerkzeuge für qualifizierte Fachleute</b> - sie sind keine Medizinprodukte und stellen keine Diagnosen. Sie unterstützen das fachliche Urteil, ersetzen es aber nicht: Die abschließende Beurteilung liegt immer bei der Rechtsmedizinerin, dem Rechtsmediziner oder der Pathologie.</p>
+    </div>
+  </section>
+
+  <section class="mission">
+    <div class="wrap">
+      <div class="box">
+        <h2>Das letzte objektive Zeugnis</h2>
+        <p>Die Rechtsmedizin klärt Todesursache und Todesmechanismus objektiv, trägt zur Gerechtigkeit bei und schützt die öffentliche Gesundheit - wo Unsicherheit bleibt, bringt sie überprüfbare Beweise und Klarheit.</p>
+        <div class="words">Aufklären · Verbinden · Voranbringen</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><a href="#top"><b>Forens</b><span style="color:#66B0E8">ika</span></a> - Wissenschaft an der Schnittstelle von Medizin, Chemie, Biologie und Anthropologie: Sie forscht, teilt und verbindet Wissen für die Weiterentwicklung des Fachs.</div>
+    <div><span data-fz>©</span> 2026 Dr. med. Ján Šikuta, PhD · <a href="mailto:admin@forensika.eu">admin@forensika.eu</a></div>
+  </div>
+</footer>
+
+<script src="/site.js" defer></script>
+</body>
+</html>
