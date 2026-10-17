@@ -1,4 +1,4 @@
-/* forensika.eu — site.js
+/* forensika.eu - site.js
    Anonymous visit counter: no cookies, no identifiers, nothing stored about the visitor.
    A visit = first page opened in a browser tab session (sessionStorage), not every page view.
    Bots and headless browsers are not counted. Owner can exclude own device in the panel.

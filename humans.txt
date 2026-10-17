@@ -1,10 +1,10 @@
 /* TEAM */
-Author: Ján Šikuta, MD, PhD — forensic pathologist, Slovakia
+Author: Ján Šikuta, MD, PhD - forensic pathologist, Slovakia
 Contact: admin@forensika.eu
 Site: https://forensika.eu/
 
 /* THANKS */
-Faculty of Medicine, Comenius University Bratislava — Institute of Histology and Embryology,
+Faculty of Medicine, Comenius University Bratislava - Institute of Histology and Embryology,
 Institute of Pathological Anatomy, Institute of Forensic Medicine and Forensic Toxicology
 (collaboration on littlEye AI)
 
@@ -13,4 +13,4 @@ Last update: 2026-09-20
 Language: Slovak, English
 Hosting: GitHub Pages
 Standards: HTML5, CSS3, JSON-LD (schema.org)
-Principle: everything on the device — no cloud, no account, no telemetry
+Principle: everything on the device - no cloud, no account, no telemetry
