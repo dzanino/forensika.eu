@@ -1,10 +1,10 @@
-# forensika.eu - robots.txt
+# forensika.eu: robots.txt
 # Stránka je verejná a plne otvorená pre indexovanie.
 
 User-agent: *
 Allow: /
 
-# AI asistenti a crawler-y pre generatívne vyhľadávanie - vítané
+# AI asistenti a crawler-y pre generatívne vyhľadávanie: vítané
 User-agent: GPTBot
 Allow: /
 
@@ -47,4 +47,14 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+# Prehľad pre AI asistentov: https://forensika.eu/llms.txt (podrobne llms-full.txt, po slovensky llms-sk.txt)
 Sitemap: https://forensika.eu/sitemap.xml

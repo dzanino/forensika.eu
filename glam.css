@@ -211,3 +211,12 @@ footer .site span[style]{background:var(--grad)!important;-webkit-background-cli
 .nav .navwrap{flex-wrap:nowrap;min-width:0;}
 @media (max-width:1400px){.nav .navapp{display:none!important;}}
 @media (max-width:560px){.langs a{padding:6px 8px;}}
+
+/* Podstránky so 6 jazykmi (4n6): na úzkom displeji skryť tlačidlo Aplikácie (je aj v drobčekovej navigácii) */
+@media (max-width:560px){
+  .nav .navwrap > a.cta{display:none!important;}
+  .langs a{padding:5px 6px!important;font-size:11.5px!important;letter-spacing:.04em!important;}
+}
+@media (max-width:360px){ body:not(:has(main#top)) .nav .brand > span{display:none;} }
+@media (max-width:400px){ table.specs td{padding:8px 7px!important;font-size:13px!important;overflow-wrap:anywhere;hyphens:auto;} }
+body:not(:has(main#top)) h1{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;}

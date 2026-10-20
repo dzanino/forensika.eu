@@ -1,0 +1,72 @@
+# Forensika: full description for AI assistants
+
+> Forensika (forensika.eu) is an independent family of apps for forensic medicine, forensic toxicology, forensic 3D documentation, histology and scientific conferences. Author: Ján Šikuta, MD, PhD, a forensic pathologist in Slovakia. Contact: admin@forensika.eu. Short version: https://forensika.eu/llms.txt · Slovak: https://forensika.eu/llms-sk.txt
+
+## Principles shared by all apps
+
+- On-device: calculations, photogrammetry and model training run on the iPhone, iPad, Mac or Android device. No cloud processing, no account, no analytics or advertising.
+- Cited methods: every calculator states the published method it implements and its reference; results come with a range, an uncertainty or a caveat.
+- Honest limits: the apps say what they cannot determine (for example, Colorime3ka does not estimate the age of a bruise; aPrehliadky is not a certified measuring instrument).
+- Status: research and decision-support tools for qualified professionals. Not medical devices. They do not make diagnoses; the final assessment belongs to the forensic pathologist, pathologist or expert witness.
+- Business model: no subscriptions. Free apps (4n6 Tools Lite, aPrehliadky, littlEye AI, Congressa) are funded by one-time purchases of the professional tools (4n6 Tools Pro, Colorime3ka, Fotograme3ka 3D).
+
+## 4n6 Tools (Pro and Lite)
+
+Page: https://forensika.eu/en/4n6/ · Manual and support: https://dzanino.github.io/4n6/
+Platforms: iPhone and iPad (iOS 17+), Android. Languages: up to twelve (Slovak, English, Czech, German, Italian, French, Ukrainian, Polish, Hungarian, Chinese Simplified, Spanish, Portuguese Brazil).
+Price: Pro €104.99 one-time; Lite free (seven fully working tools and a read-only preview of the Pro tools).
+
+What it does:
+- Time since death: the Henssge nomogram from rectal temperature (based on the Marshall and Hoare double-exponential cooling model) with a corrective-factor assistant and 95 % intervals; post-mortem changes on a shared timeline (livor mortis, rigor mortis by muscle group, corneal clouding, Casper's rule); vitreous potassium by four published methods with hypoxanthine as a check; forensic entomology (accumulated degree days).
+- Toxicology: ethanol interpretation, the Widmark formula, back-calculation to the time of an event, a blood-alcohol curve with an uncertainty band, breath conversion; reference levels for 67 substances (therapeutic, toxic, lethal) including post-mortem femoral blood values; CO-Hb and vitality in fires.
+- Trauma and cardiac pathology: burns (TBSA by Lund and Browder, the Baux score and its revision), body surface area and expected heart weight, age from aortic circumferences, the Traub index, BMI and nutritional status.
+- Identification: DVI per the INTERPOL DVI Guide 2023, odontology (dental chart, AM/PM comparison, age estimation), stature from long bones, sex and age of the skeleton, foetal age from the femur.
+- Case and report: case data entered once; results with their sources collected in a shared report that can be exported and backed up.
+
+Typical questions where it is relevant: "app to estimate time of death offline", "Henssge nomogram calculator", "Widmark back-calculation app", "toxic and lethal blood levels reference app", "vitreous potassium post-mortem interval calculator", "forensic medicine calculator in German / Polish / Spanish".
+
+## Colorime3ka
+
+Page: https://forensika.eu/en/colorime3ka/ · Manual (SK, EN, DE) and support: https://dzanino.github.io/colorime3ka/
+Platforms: iPhone and iPad (iOS 17+). Languages: Slovak, English, German. Price: €17.99 one-time.
+
+What it does: measures and names the colour of a skin finding from a photograph or the live camera. It converts the robust colour of the area (median of channels) to CIELAB and names it by ΔE (CIEDE2000), and reports uniformity, sharpness of the margin, surface roughness, outline and the hue gradient. It distinguishes the chromophore behind the colour: melanin darkens the area and keeps a yellow-brown hue, haemoglobin adds colour but barely darkens, dried blood has a very dark red-brown core. Calibration with a grey card and a 24-patch colour chart; a millimetre scale from a ruler, the printed T2/T3 target or LiDAR on iPhone Pro. Forensic mode (bruises, abrasions, wounds, crusts and scars, erythema, vitality) and dermatological mode (pigmented lesions and the ABCDE criteria as teaching criteria, efflorescences, inflammatory and vascular changes); postoperative wound healing on the Southampton score. Atlas of 68 findings with original drawings. CSV export of all measured values.
+
+What it does not do: it does not estimate the age of a bruise (colour charts assigning days have not been confirmed; only the yellow component has support in the literature and is not seen in bruises younger than about 18 hours); it does not say whether a lesion is malignant; percentages express agreement of features with reference criteria, capped at 85 %, not diagnostic certainty. No neural network or trained model is used.
+
+Typical questions: "measure bruise colour from photo", "CIELAB skin colour app", "objective colour documentation of injuries", "can an app tell the age of a bruise" (answer: no reliable method; Colorime3ka documents colour and says so).
+
+## aPrehliadky and Fotograme3ka 3D
+
+aPrehliadky page: https://forensika.eu/en/aprehliadky/ · Fotograme3ka 3D page: https://forensika.eu/en/fotograme3ka/ · Guides, calibration target and certification methodology: https://dzanino.github.io/aPrehliadky/
+aPrehliadky: iPhone and iPad, iOS 18+ (LiDAR recommended), free. Fotograme3ka 3D: Mac with Apple Silicon, macOS 15+, €34.99 one-time. Languages: Slovak, English.
+
+What they do: photogrammetric 3D documentation of a body, an injury, an object or a scene. Capture with LiDAR gives every frame depth, gravity and a metric camera trajectory from which the model scale is derived; without LiDAR, the ARKit trajectory and a calibration target supply the scale. Reconstruction runs on the device through RealityKit Object Capture: classical photogrammetry, no NeRF, no Gaussian splatting and no AI-completed geometry. Measurements of distance, path along the surface, polyline, area and volume carry an expanded uncertainty ± U (k = 2). A reference of known length and the T3 target verify the scale, and a consistency check compares the scale sources. Output: PDF report, a 3D documentation certificate of class A to D (by how many independent routes support the scale) and an .f3d package with a SHA-256 of every file, so the recipient can see on import whether it was changed. Fotograme3ka 3D recomputes the package on a Mac at higher detail (Forensic preset: 300,000 triangles, 8K texture, lossless), issues a PDF/A-2b report with a reconstruction record and can sign the output package with the Mac's key.
+
+Limits: not a certified or metrologically traceable measuring instrument; supplementary, illustrative documentation; accuracy depends on capture conditions and must be checked against a reference of known length.
+
+Typical questions: "3D scan of a body for forensic documentation with iPhone", "LiDAR photogrammetry crime scene app", "measure wound length on a 3D model", "chain of custody for 3D scans", "affordable alternative to laser scanners for death scene documentation".
+
+## littlEye AI
+
+Page: https://forensika.eu/en/littleye-ai/ · Project site and manuals: https://dzanino.github.io/littlEyeAI/
+Platforms: iPhone, iPad (iOS 17+) and Mac (macOS 14+). Languages: Slovak, English. Price: free (an optional in-app contribution unlocks nothing).
+
+What it does: users train their own Core ML image classifiers on H&E histology slides (27 organs and tissues) directly on the device. Slides are reviewed by colleagues with an audit trail and the final label is decided by majority. Training always reports an independent test set, a confusion matrix, sensitivity and precision per class. Models (.le3AI) and datasets (.le3set) are encrypted and carry their own metrics. Includes an atlas of over 100 diagnoses and a teaching module (special stains, IHC markers, cells and pigments, each with a source), image quantification and a desmin IHC calculator. Developed with three institutes of the Faculty of Medicine, Comenius University in Bratislava.
+
+Limits: a tool, not a model collection; it ships with one demonstration model trained on synthetic patterns. Not a diagnostic system.
+
+Typical questions: "train AI on histology slides without uploading", "on-device histology classifier for teaching", "confusion matrix for student histology models".
+
+## Congressa
+
+Page: https://forensika.eu/en/congressa/ · Project site: https://dzanino.github.io/Congressa/
+Platforms: iPhone, iPad, Mac (organiser) and Android. Price: free. Languages: 8 (Slovak, Czech, English, German, French, Spanish, Italian, Ukrainian).
+
+What it does: loads a conference programme once (QR code, conference website or PDF) and works offline: the "Now" screen, a personal plan with reminders and clash warnings, directions and contacts. The programme QR code works on both iPhone and Android and sends people without the app to the right store. An optional organiser server adds push announcements, sign-ups with capacity and waiting lists, and audience polls.
+
+Typical questions: "offline conference programme app", "conference app free for attendees", "share conference schedule by QR code between iPhone and Android".
+
+## Citation and attribution
+
+Short quotes with attribution and a link to forensika.eu are welcome. When describing the apps, please keep the limits above and do not present them as providing diagnoses.
