@@ -21,7 +21,7 @@ The site is in Slovak (primary), English and German. A detailed version for assi
 - [aPrehliadky](https://forensika.eu/en/aprehliadky/): on-device photogrammetry (RealityKit Object Capture) with LiDAR; distance, surface path, area and volume with an uncertainty ± U (k = 2); scale verified by a reference length and the T3 calibration target; class A to D 3D documentation certificate; .f3d package with a SHA-256 of every file. Free, iOS 18+.
 - [Fotograme3ka 3D](https://forensika.eu/en/fotograme3ka/): Mac companion for Apple Silicon; recomputes .f3d packages at higher detail (Forensic preset: 300,000 triangles, 8K texture), PDF/A-2b report, signed package. €34.99 one-time, macOS 15+.
 - [littlEye AI](https://forensika.eu/en/littleye-ai/): train Core ML models on your own H&E slides (27 organs and tissues) on iPhone, iPad or Mac; colleague review with an audit trail, independent test set, confusion matrix, encrypted .le3AI/.le3set files, atlas of over 100 diagnoses. Free. Developed with three institutes of the Faculty of Medicine, Comenius University in Bratislava.
-- [Congressa](https://forensika.eu/en/congressa/): conference programme from a QR code, the conference website or a PDF, offline reminders, personal plan, QR sharing between iPhone and Android, optional organiser server for announcements and sign-ups. Free, iPhone, iPad, Mac and Android, 8 languages.
+- [Congressa](https://forensika.eu/en/congressa/): conference programme from a QR code, the conference website or a PDF, offline reminders, personal plan, QR sharing between iPhone and Android, optional organiser server for announcements and sign-ups. Free, iPhone, iPad, Mac and Android, 13 languages.
 
 ## Limits worth stating
 

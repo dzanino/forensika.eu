@@ -21,7 +21,7 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 - [aPrehliadky](https://forensika.eu/aprehliadky/): fotogrametria v zariadení (RealityKit Object Capture) s LiDARom; vzdialenosť, dráha po povrchu, plocha a objem s neistotou ± U (k = 2); mierka overená etalónom a kalibračným terčom T3; certifikát 3D dokumentácie triedy A až D; balík .f3d so SHA-256 každého súboru. Zadarmo, iOS 18+.
 - [Fotograme3ka 3D](https://forensika.eu/fotograme3ka/): doplnok pre Mac s Apple Silicon; prepočíta balík .f3d vo vyššom detaile (Forenzný preset: 300 tis. trojuholníkov, textúra 8K), protokol PDF/A-2b, podpísaný balík. 34,99 € jednorazovo, macOS 15+.
 - [littlEye AI](https://forensika.eu/littleye-ai/): tréning modelov Core ML na vlastných HE preparátoch (27 orgánov a tkanív) v iPhone, iPade alebo Macu; hodnotenie kolegami s audit trailom, nezávislá testovacia množina, konfúzna matica, šifrované súbory .le3AI/.le3set, atlas vyše 100 diagnóz. Zadarmo. Vzniká v spolupráci troch ústavov Lekárskej fakulty UK v Bratislave.
-- [Congressa](https://forensika.eu/congressa/): program konferencie z QR kódu, webu konferencie alebo PDF, pripomienky aj bez internetu, vlastný plán, zdieľanie QR kódom medzi iPhonom a Androidom, voliteľný server organizátora pre oznamy a prihlášky. Zadarmo, iPhone, iPad, Mac a Android, 8 jazykov.
+- [Congressa](https://forensika.eu/congressa/): program konferencie z QR kódu, webu konferencie alebo PDF, pripomienky aj bez internetu, vlastný plán, zdieľanie QR kódom medzi iPhonom a Androidom, voliteľný server organizátora pre oznamy a prihlášky. Zadarmo, iPhone, iPad, Mac a Android, 13 jazykov.
 
 ## Obmedzenia, ktoré treba uviesť
 
