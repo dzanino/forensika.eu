@@ -6,23 +6,25 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta property="og:image" content="https://forensika.eu/icon-512.png">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
-<title>aPrehliadky - Offline Forensic 3D LiDAR Scanning for iPhone</title>
-<meta name="description" content="aPrehliadky: offline forensic 3D documentation with iPhone LiDAR - bodies, scenes, objects. Measurement, class A–D certificate, .f3d package. No cloud, no account.">
+<meta property="og:image" content="https://forensika.eu/img/og/aprehliadky.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="aPrehliadky">
+<title>aPrehliadky: Offline Forensic 3D LiDAR Scanning for iPhone</title>
+<meta name="description" content="aPrehliadky: offline forensic 3D documentation with iPhone LiDAR · bodies, scenes, objects. Measurement, class A–D certificate, .f3d package. No cloud, no account.">
 <link rel="canonical" href="https://forensika.eu/en/aprehliadky/">
 <link rel="alternate" hreflang="sk" href="https://forensika.eu/aprehliadky/">
 <link rel="alternate" hreflang="en" href="https://forensika.eu/en/aprehliadky/">
 <link rel="alternate" hreflang="x-default" href="https://forensika.eu/aprehliadky/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="aPrehliadky - Offline Forensic 3D LiDAR Scanning for iPhone">
-<meta property="og:description" content="Photogrammetric 3D documentation of bodies, scenes and objects with iPhone LiDAR. Surface measurement, a class A–D documentation certificate, a hashed .f3d package. Fully on-device - no cloud, no account.">
+<meta property="og:title" content="aPrehliadky: Offline Forensic 3D LiDAR Scanning for iPhone">
+<meta property="og:description" content="Photogrammetric 3D documentation of bodies, scenes and objects with iPhone LiDAR. Surface measurement, a class A–D documentation certificate, a hashed .f3d package. Fully on-device, no cloud, no account.">
 <meta property="og:url" content="https://forensika.eu/en/aprehliadky/">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="sk_SK">
 <meta property="og:site_name" content="Forensika">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forensika.eu/img/og/aprehliadky.png">
 <style>
   :root{
     --ink:#274863; --ink-2:#22415C; --ink-3:#132A3D;
@@ -94,11 +96,21 @@
   "applicationCategory": "MedicalApplication",
   "operatingSystem": "iOS 18+, iPadOS 18+",
   "softwareVersion": "3.2.1",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-  "author": { "@type": "Person", "name": "Ján Šikuta" },
-  "publisher": { "@type": "Person", "name": "Ján Šikuta" },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ján Šikuta"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Ján Šikuta"
+  },
   "downloadUrl": "https://apps.apple.com/app/id6808879666",
-  "description": "A photogrammetric 3D scanner for bodies, objects and crime scenes using LiDAR. On-model measurement and findings, a class A–D 3D documentation certificate, an .f3d package with SHA-256 hashes. Runs entirely on-device - no cloud, no account."
+  "description": "A photogrammetric 3D scanner for bodies, objects and crime scenes using LiDAR. On-model measurement and findings, a class A–D 3D documentation certificate, an .f3d package with SHA-256 hashes. Runs entirely on-device, no cloud, no account."
 }
 </script>
 <script type="application/ld+json">
@@ -120,27 +132,42 @@
     {
       "@type": "Question",
       "name": "Do I need a LiDAR-equipped iPhone for aPrehliadky?",
-      "acceptedAnswer": { "@type": "Answer", "text": "LiDAR is not a strict requirement but is recommended: it gives every frame depth and gravity, the camera trajectory is metric and the resulting certificate reaches a higher class. Without LiDAR, the app derives scale from the ARKit camera trajectory and a calibration target, and the model should be recomputed on a Mac with the Fotograme3ka 3D companion app." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LiDAR is not a strict requirement but is recommended: it gives every frame depth and gravity, the camera trajectory is metric and the resulting certificate reaches a higher class. Without LiDAR, the app derives scale from the ARKit camera trajectory and a calibration target, and the model should be recomputed on a Mac with the Fotograme3ka 3D companion app."
+      }
     },
     {
       "@type": "Question",
       "name": "Does aPrehliadky send any data to a server or the cloud?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Capture, reconstruction and model review all run entirely on-device through Apple's RealityKit Object Capture. The app has no networking layer - data never leaves the iPhone unless you explicitly export it as an .f3d package." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Capture, reconstruction and model review all run entirely on-device through Apple's RealityKit Object Capture. The app has no networking layer: data never leaves the iPhone unless you explicitly export it as an .f3d package."
+      }
     },
     {
       "@type": "Question",
       "name": "What is the class A–D 3D documentation certificate?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It is part of the PDF report and rates how many independent routes substantiate the model's scale - LiDAR depth, a fit to the camera's metric trajectory, and a reference of known length or the T3 calibration target. Class A denotes the highest degree of metrological verification, class D the lowest, each stated together with its measurement uncertainty." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is part of the PDF report and rates how many independent routes substantiate the model's scale: LiDAR depth, a fit to the camera's metric trajectory, and a reference of known length or the T3 calibration target. Class A denotes the highest degree of metrological verification, class D the lowest, each stated together with its measurement uncertainty."
+      }
     },
     {
       "@type": "Question",
       "name": "Is aPrehliadky a certified measuring instrument?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Accuracy depends on capture conditions and must be verified with a reference of known length or the T3 target. The app always states this in the report together with the estimated measurement uncertainty." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Accuracy depends on capture conditions and must be verified with a reference of known length or the T3 target. The app always states this in the report together with the estimated measurement uncertainty."
+      }
     },
     {
       "@type": "Question",
       "name": "What is the .f3d package and what is the T3 target for?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The .f3d package bundles the model, findings, measurements and report with a SHA-256 hash of every file, so the recipient can see on import whether the package was modified afterwards. The T3 target is a printed calibration pattern whose fiducial centres sit exactly 247.00 mm apart; the app locates them in the model and uses that distance as an independent scale check." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The .f3d package bundles the model, findings, measurements and report with a SHA-256 hash of every file, so the recipient can see on import whether the package was modified afterwards. The T3 target is a printed calibration pattern whose fiducial centres sit exactly 247.00 mm apart; the app locates them in the model and uses that distance as an independent scale check."
+      }
     }
   ]
 }
@@ -186,10 +213,10 @@
 <p class="crumbs"><a href="/en/">Forensika</a> › <a href="/en/#apps">Apps</a> › aPrehliadky</p>
 <section class="hero">
 <div class="kicker">Offline Forensic 3D LiDAR Scanning</div>
-<h1>aPrehliadky - <span class="accent">offline forensic 3D scanning</span> for iPhone</h1>
-<p class="lede">A photogrammetric 3D scanner for bodies, objects and crime scenes, built for iPhone and iPad. Every frame carries depth and gravity, the scale comes from the metric camera trajectory, and every measurement carries a stated uncertainty - with no upload, no cloud and no account.</p>
+<h1>aPrehliadky: <span class="accent">offline forensic 3D scanning</span> for iPhone</h1>
+<p class="lede">A photogrammetric 3D scanner for bodies, objects and crime scenes, built for iPhone and iPad. Every frame carries depth and gravity, the scale comes from the metric camera trajectory, and every measurement carries a stated uncertainty: with no upload, no cloud and no account.</p>
 <div class="btns">
-<a class="btn-primary" href="https://apps.apple.com/app/id6808879666" target="_blank" rel="noopener">Download on the App Store - free</a>
+<a class="btn-primary" href="https://apps.apple.com/app/id6808879666" target="_blank" rel="noopener">Download on the App Store · free</a>
 <a class="btn-ghost" href="https://dzanino.github.io/aPrehliadky/" target="_blank" rel="noopener">Guides and documentation ›</a>
 </div>
 <div class="pills">
@@ -207,12 +234,12 @@
 <section>
 <div class="wrap">
 <h2>Why forensic 3D scanning on an iPhone, not a camera and a tape measure</h2>
-<p>A conventional scene or body examination records a series of 2D photographs with a scale placed in the frame. The limitation is that none of those photographs carries the spatial relationship between findings - the distance between two injuries, the angle of a wound relative to the body's axis, or the position of a body within a room, all have to be reconstructed afterwards from several images and estimation. <strong>aPrehliadky</strong> removes that step: an iPhone with LiDAR records a depth map and a gravity vector alongside every frame. A photogrammetric model is not in metres by itself - its scale comes from the metric camera trajectory (LiDAR + inertial sensors) and from the target triangulated in the model, and every measurement carries an expanded uncertainty U (k = 2).</p>
-<p>Reconstruction runs entirely on the device through Apple's RealityKit Object Capture - classical photogrammetry with a LiDAR depth prior, with no NeRF, no 3D Gaussian Splatting and no AI-completed geometry. The report states this explicitly: the model is built exclusively from captured data. For expert practice this is a material distinction from tools that infer missing geometry - aPrehliadky never extrapolates what the camera did not see.</p>
+<p>A conventional scene or body examination records a series of 2D photographs with a scale placed in the frame. The limitation is that none of those photographs carries the spatial relationship between findings: the distance between two injuries, the angle of a wound relative to the body's axis, or the position of a body within a room, all have to be reconstructed afterwards from several images and estimation. <strong>aPrehliadky</strong> removes that step: an iPhone with LiDAR records a depth map and a gravity vector alongside every frame. A photogrammetric model is not in metres by itself: its scale comes from the metric camera trajectory (LiDAR + inertial sensors) and from the target triangulated in the model, and every measurement carries an expanded uncertainty U (k = 2).</p>
+<p>Reconstruction runs entirely on the device through Apple's RealityKit Object Capture: classical photogrammetry with a LiDAR depth prior, with no NeRF, no 3D Gaussian Splatting and no AI-completed geometry. The report states this explicitly: the model is built exclusively from captured data. For expert practice this is a material distinction from tools that infer missing geometry: aPrehliadky never extrapolates what the camera did not see.</p>
 <div class="grid">
-<div class="d"><h3>On-model measurement</h3><p>Straight-line distance, a path along an uneven surface (wound length, circumference), area and volume - in millimetres, each with a stated uncertainty U (k = 2).</p></div>
+<div class="d"><h3>On-model measurement</h3><p>Straight-line distance, a path along an uneven surface (wound length, circumference), area and volume: in millimetres, each with a stated uncertainty U (k = 2).</p></div>
 <div class="d"><h3>Pinned findings</h3><p>Numbered findings placed directly on the model surface: type (injury, mark, livor mortis, sample), description, movable and editable.</p></div>
-<div class="d"><h3>Surroundings from LiDAR</h3><p>The room mesh as a second, metric, untextured model - the position of a body within a space is a finding in itself.</p></div>
+<div class="d"><h3>Surroundings from LiDAR</h3><p>The room mesh as a second, metric, untextured model: the position of a body within a space is a finding in itself.</p></div>
 <div class="d"><h3>PDF report and certificate</h3><p>Case, examiner, capture parameters, a method statement, scale verification, findings, measurements and model integrity in a single document.</p></div>
 </div>
 </div>
@@ -223,8 +250,8 @@
 <h2>How aPrehliadky records an examination</h2>
 <div class="steps">
 <div class="step"><div class="n"></div><div><h3>On-scene capture</h3><p>Two profiles (deceased / living person) and two ranges (whole body / regional detail). The app auto-triggers frames based on camera movement and rotation, and a coverage radar shows what is still missing.</p></div></div>
-<div class="step"><div class="n"></div><div><h3>On-device reconstruction</h3><p>RealityKit Object Capture turns the frame sequence into a textured 3D model - entirely offline, with not a single pixel transmitted.</p></div></div>
-<div class="step"><div class="n"></div><div><h3>Scale verification</h3><p>The T3 target or a reference of known length provides independent verification of scale alongside the LiDAR trajectory - the more independent routes, the higher the certificate class.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>On-device reconstruction</h3><p>RealityKit Object Capture turns the frame sequence into a textured 3D model: entirely offline, with not a single pixel transmitted.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Scale verification</h3><p>The T3 target or a reference of known length provides independent verification of scale alongside the LiDAR trajectory: the more independent routes, the higher the certificate class.</p></div></div>
 <div class="step"><div class="n"></div><div><h3>Review, measurement, findings</h3><p>Orbit, zoom, a 1:1 AR view, two-tap measurement, and numbered findings pinned directly to the model surface.</p></div></div>
 <div class="step"><div class="n"></div><div><h3>Export .f3d and PDF report</h3><p>A package with a SHA-256 hash of every file for the case record, plus a PDF report carrying the class A–D 3D documentation certificate.</p></div></div>
 </div>
@@ -234,13 +261,13 @@
 <section>
 <div class="wrap">
 <h2>The class A–D certificate and the T3 target</h2>
-<p>A photogrammetric model is not, by itself, in metres - something else has to supply the scale. aPrehliadky therefore does not award a certificate for any model indiscriminately; instead it rates <strong>how many independent routes substantiate that scale</strong>: LiDAR depth for the large majority of frames, a fit of the model to the camera's metric ARKit trajectory, and, as a genuinely independent third route, a reference of known length or the T3 calibration target.</p>
-<p>The T3 target is a printed pattern on landscape A4 with four circular fiducials and a QR code. The distance between the centres of the opposite fiducials A and B is exactly <strong>247.00 mm</strong> - the app locates the fiducials in the model, triangulates their measured distance, and compares it against this reference value. A deviation beyond the allowed tolerance lowers the certificate class or prompts the app to request a fresh printout.</p>
+<p>A photogrammetric model is not, by itself, in metres, something else has to supply the scale. aPrehliadky therefore does not award a certificate for any model indiscriminately; instead it rates <strong>how many independent routes substantiate that scale</strong>: LiDAR depth for the large majority of frames, a fit of the model to the camera's metric ARKit trajectory, and, as a genuinely independent third route, a reference of known length or the T3 calibration target.</p>
+<p>The T3 target is a printed pattern on landscape A4 with four circular fiducials and a QR code. The distance between the centres of the opposite fiducials A and B is exactly <strong>247.00 mm</strong>: the app locates the fiducials in the model, triangulates their measured distance, and compares it against this reference value. A deviation beyond the allowed tolerance lowers the certificate class or prompts the app to request a fresh printout.</p>
 <table class="specs">
-<tr><td>Class A - metrologically verified</td><td>LiDAR depth on ≥ 90% of frames, scale corrected by a metrological fit of the trajectory (residual &lt; 25 mm, ≥ 50 cameras) and independent verification by a reference from 290 mm (the T3 target's A–C diagonal, 294 mm, is enough) or the target with error ≤ 1%</td></tr>
-<tr><td>Class B - metric</td><td>scale from the metrological fit, or LiDAR scale confirmed by a reference or target; independent verification missing or ≤ 2%</td></tr>
-<tr><td>Class C - approximate scale</td><td>scale known only approximately (LiDAR without fit correction, or a trajectory coefficient without LiDAR); verification ≤ 5%</td></tr>
-<tr><td>Class D - unverified scale</td><td>scale not substantiated, or verification above 5% - illustrative documentation only</td></tr>
+<tr><td>Class A · metrologically verified</td><td>LiDAR depth on ≥ 90% of frames, scale corrected by a metrological fit of the trajectory (residual &lt; 25 mm, ≥ 50 cameras) and independent verification by a reference from 290 mm (the T3 target's A–C diagonal, 294 mm, is enough) or the target with error ≤ 1%</td></tr>
+<tr><td>Class B · metric</td><td>scale from the metrological fit, or LiDAR scale confirmed by a reference or target; independent verification missing or ≤ 2%</td></tr>
+<tr><td>Class C · approximate scale</td><td>scale known only approximately (LiDAR without fit correction, or a trajectory coefficient without LiDAR); verification ≤ 5%</td></tr>
+<tr><td>Class D · unverified scale</td><td>scale not substantiated, or verification above 5%: illustrative documentation only</td></tr>
 <tr><td>T3 target</td><td>circular fiducials A–B: 247.00 mm · B–C: 160.00 mm · A–C: 294 mm; triangulated in the model, 10 known distances 33–294 mm (A4 print)</td></tr>
 </table>
 </div>
@@ -248,8 +275,8 @@
 
 <section class="alt">
 <div class="wrap">
-<h2>Fotograme3ka 3D - the Mac companion</h2>
-<p>An older iPhone without LiDAR, or without an A17 Pro chip, can capture in aPrehliadky but cannot compute a model at higher detail on its own. That is what the standalone <a href="/en/fotograme3ka/" style="color:var(--blue);font-weight:600;">Fotograme3ka 3D</a> app is for on an Apple Silicon Mac - send the frame package over AirDrop, the Mac recomputes it at medium or full detail, and the model, together with any transferred findings, returns to the iPhone as an .f3d package. <a href="/en/fotograme3ka/" style="color:var(--blue);font-weight:600;">More on Fotograme3ka 3D ›</a></p>
+<h2>Fotograme3ka 3D: the Mac companion</h2>
+<p>An older iPhone without LiDAR, or without an A17 Pro chip, can capture in aPrehliadky but cannot compute a model at higher detail on its own. That is what the standalone <a href="/en/fotograme3ka/" style="color:var(--blue);font-weight:600;">Fotograme3ka 3D</a> app is for on an Apple Silicon Mac: send the frame package over AirDrop, the Mac recomputes it at medium or full detail, and the model, together with any transferred findings, returns to the iPhone as an .f3d package. <a href="/en/fotograme3ka/" style="color:var(--blue);font-weight:600;">More on Fotograme3ka 3D ›</a></p>
 </div>
 </section>
 
@@ -257,12 +284,12 @@
 <div class="wrap">
 <h2>Privacy and data security</h2>
 <ul class="check">
-<li>No networking layer - the app never connects anywhere and never transmits images or models</li>
+<li>No networking layer: the app never connects anywhere and never transmits images or models</li>
 <li>Images, models, findings and reports remain on the device until you explicitly export them</li>
-<li>The .f3d package carries a SHA-256 hash of every file - the recipient can see on import whether it was modified afterwards</li>
+<li>The .f3d package carries a SHA-256 hash of every file: the recipient can see on import whether it was modified afterwards</li>
 <li>No analytics, no advertising, no account</li>
 </ul>
-<div class="note">aPrehliadky is designed as a possible complement to ePrehliadky (the software of the Slovak Health Care Surveillance Authority, ÚDZS) - it is an independent application by its author, not a product of ÚDZS. It is not a certified measuring instrument; accuracy must always be verified with a reference of known length or the T3 target.</div>
+<div class="note">aPrehliadky is designed as a possible complement to ePrehliadky (the software of the Slovak Health Care Surveillance Authority, ÚDZS): it is an independent application by its author, not a product of ÚDZS. It is not a certified measuring instrument; accuracy must always be verified with a reference of known length or the T3 target.</div>
 </div>
 </section>
 
@@ -270,8 +297,8 @@
 <div class="wrap">
 <h2>Frequently asked questions</h2>
 <details><summary>Do I need a LiDAR-equipped iPhone for aPrehliadky?</summary><p>LiDAR is not a strict requirement but is recommended: it gives every frame depth and gravity, the camera trajectory is metric and the resulting certificate reaches a higher class. Without LiDAR, the app derives scale from the ARKit camera trajectory and a calibration target, and the model should be recomputed on a Mac with the Fotograme3ka 3D companion app.</p></details>
-<details><summary>Does aPrehliadky send any data to a server or the cloud?</summary><p>No. Capture, reconstruction and model review all run entirely on-device through Apple's RealityKit Object Capture. The app has no networking layer - data never leaves the iPhone unless you explicitly export it as an .f3d package.</p></details>
-<details><summary>What is the class A–D 3D documentation certificate?</summary><p>It is part of the PDF report and rates how many independent routes substantiate the model's scale - LiDAR depth, a fit to the camera's metric trajectory, and a reference of known length or the T3 calibration target. Class A denotes the highest degree of metrological verification, class D the lowest, each stated together with its measurement uncertainty.</p></details>
+<details><summary>Does aPrehliadky send any data to a server or the cloud?</summary><p>No. Capture, reconstruction and model review all run entirely on-device through Apple's RealityKit Object Capture. The app has no networking layer: data never leaves the iPhone unless you explicitly export it as an .f3d package.</p></details>
+<details><summary>What is the class A–D 3D documentation certificate?</summary><p>It is part of the PDF report and rates how many independent routes substantiate the model's scale: LiDAR depth, a fit to the camera's metric trajectory, and a reference of known length or the T3 calibration target. Class A denotes the highest degree of metrological verification, class D the lowest, each stated together with its measurement uncertainty.</p></details>
 <details><summary>Is aPrehliadky a certified measuring instrument?</summary><p>No. Accuracy depends on capture conditions and must be verified with a reference of known length or the T3 target. The app always states this in the report together with the estimated measurement uncertainty.</p></details>
 <details><summary>What is the .f3d package and what is the T3 target for?</summary><p>The .f3d package bundles the model, findings, measurements and report with a SHA-256 hash of every file, so the recipient can see on import whether the package was modified afterwards. The T3 target is a printed calibration pattern whose fiducial centres sit exactly 247.00 mm apart; the app locates them in the model and uses that distance as an independent scale check.</p></details>
 </div>

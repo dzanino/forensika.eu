@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://forensika.eu/img/og/4n6.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="4n6 Tools">
+<title>4n6 Tools: calculadoras de medicina legal</title>
+<meta name="description" content="4n6 Tools: 27 calculadoras de medicina legal. Hora da morte (Henssge), toxicologia e etanol (Widmark), 67 substâncias, DVI e antropologia. Métodos citados, offline, em português. Lite grátis, Pro para iPhone e Android.">
+<link rel="canonical" href="https://forensika.eu/pt/4n6/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/4n6/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/4n6/">
+<link rel="alternate" hreflang="de" href="https://forensika.eu/de/4n6/">
+<link rel="alternate" hreflang="es" href="https://forensika.eu/es/4n6/">
+<link rel="alternate" hreflang="pt-BR" href="https://forensika.eu/pt/4n6/">
+<link rel="alternate" hreflang="pl" href="https://forensika.eu/pl/4n6/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/4n6/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="4n6 Tools: calculadoras de medicina legal">
+<meta property="og:description" content="27 ferramentas de medicina legal com a citação de cada método: Henssge, etanol, 67 substâncias, DVI, antropologia. Tudo no dispositivo, sem internet.">
+<meta property="og:url" content="https://forensika.eu/pt/4n6/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forensika.eu/img/og/4n6.png">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:66ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:74ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  .steps{counter-reset:s;margin-top:8px;}
+  .step{display:flex;gap:16px;margin-bottom:18px;}
+  .step .n{counter-increment:s;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step .n::before{content:counter(s);}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+  .appicon{width:72px;height:72px;border-radius:26%;box-shadow:0 8px 22px rgba(19,42,61,.2);margin-bottom:14px;display:block;}
+  table.specs td.b{font-weight:700;}
+</style>
+<link rel="stylesheet" href="/glam.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "4n6 Tools Pro",
+      "url": "https://forensika.eu/pt/4n6/",
+      "applicationCategory": "MedicalApplication",
+      "operatingSystem": "iOS 17+, iPadOS 17+, Android",
+      "softwareVersion": "5.5",
+      "inLanguage": [
+        "sk",
+        "en",
+        "cs",
+        "de",
+        "it",
+        "fr",
+        "uk",
+        "pl",
+        "hu",
+        "zh-Hans",
+        "es",
+        "pt-BR"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "104.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Ján Šikuta"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Ján Šikuta"
+      },
+      "downloadUrl": "https://apps.apple.com/app/id6785259219",
+      "installUrl": "https://play.google.com/store/apps/details?id=sk.sikuta.forn4n6.pro",
+      "description": "Calculadoras de medicina legal: 27 ferramentas para hora da morte, toxicologia, identificação, DVI e antropologia, com a citação de cada método. Funciona inteiramente no dispositivo."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "4n6 Tools Lite",
+      "applicationCategory": "MedicalApplication",
+      "operatingSystem": "iOS 17+, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Ján Šikuta"
+      },
+      "downloadUrl": "https://apps.apple.com/app/id6783425913",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.sikuta.n6toolslite"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Forensika",
+      "item": "https://forensika.eu/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Aplicativos",
+      "item": "https://forensika.eu/en/#apps"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "4n6 Tools",
+      "item": "https://forensika.eu/pt/4n6/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual é a diferença entre o 4n6 Tools Lite e o Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Lite é gratuito e inclui sete ferramentas totalmente funcionais: o nomograma de Henssge, o intervalo post mortem pelo potássio no humor vítreo, o índice de Traub, o IMC, a superfície corporal e o peso cardíaco esperado, a idade pelas circunferências da aorta e um conversor de unidades. O Pro desbloqueia as 27 ferramentas, incluindo toxicologia, etanol, entomologia, DVI, odontologia e antropologia. O Lite também abre as demais ferramentas como prévia: formulário, método e referências; o resultado é calculado pelo Pro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O 4n6 Tools é um dispositivo médico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. É um auxílio profissional para médicos-legistas e peritos; os valores são orientativos, cada resultado traz um intervalo ou uma ressalva e a avaliação final cabe a um especialista qualificado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O aplicativo funciona offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Todos os cálculos são feitos no dispositivo; o aplicativo não precisa de conexão e não transmite dados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O aplicativo está em português?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O Pro (desde a versão 5.5) e o Lite (desde a 5.3) estão em doze idiomas, entre eles o português do Brasil: toda a interface, os resultados e o laudo. Na primeira abertura segue o idioma do telefone e pode ser alterado a qualquer momento pelo botão no cabeçalho."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por que o Pro custa 104,99 €?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É uma ferramenta profissional abrangente: 27 ferramentas, 67 substâncias com níveis de referência e métodos revisados segundo a literatura original, citados em cada resultado. É um pagamento único, sem assinatura, anúncios ou coleta de dados."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/en/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/en/#apps">Aplicativos</a>
+<span class="langs"><a href="/4n6/" hreflang="sk">SK</a><a href="/en/4n6/" hreflang="en">EN</a><a href="/de/4n6/" hreflang="de">DE</a><a href="/es/4n6/" hreflang="es">ES</a><a class="on" href="/pt/4n6/" hreflang="pt-BR">PT</a><a href="/pl/4n6/" hreflang="pl">PL</a></span>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/en/">Forensika</a> › <a href="/en/#apps">Aplicativos</a> › 4n6 Tools</p>
+<section class="hero">
+<img class="appicon" src="/img/apps/4n6-tools.png" alt="4n6 Tools" width="72" height="72">
+<div class="kicker">Medicina legal · calculadoras · no dispositivo</div>
+<h1>4n6 Tools: <span class="accent">calculadoras forenses</span> que calculam, interpretam e citam</h1>
+<p class="lede">27 ferramentas para a mesa de necropsia, o local do crime e o laudo pericial: hora da morte, toxicologia, identificação, DVI e antropologia. Cada resultado traz um intervalo ou uma ressalva e cada método a sua citação bibliográfica.</p>
+<div class="btns">
+<a class="btn-primary" href="https://apps.apple.com/app/id6785259219" target="_blank" rel="noopener">Pro na App Store</a>
+<a class="btn-ghost" href="https://play.google.com/store/apps/details?id=sk.sikuta.forn4n6.pro&hl=pt-BR" target="_blank" rel="noopener">Pro no Google Play</a>
+<a class="btn-ghost" href="#lite">Lite grátis ›</a>
+</div>
+<div class="pills">
+<span class="pill">Henssge · Marshall–Hoare · 95 % CI</span>
+<span class="pill">Etanol · Widmark</span>
+<span class="pill">67 substâncias</span>
+<span class="pill">DVI · INTERPOL 2023</span>
+<span class="pill">Métodos citados</span>
+<span class="pill">12 idiomas · offline</span>
+<span class="pill">iPhone · iPad · Android</span>
+</div>
+</section>
+</div>
+</main>
+
+<section>
+<div class="wrap">
+<h2>O que o aplicativo contém</h2>
+<div class="grid">
+<div class="d"><h3>Hora da morte e tanatologia</h3><p>O nomograma de Henssge com assistente para o fator de correção e intervalos de 95 %, os fenômenos cadavéricos numa linha do tempo comum (livores, rigidez por grupos musculares, opacificação da córnea, regra de Casper), o potássio no humor vítreo por quatro métodos com hipoxantina como controle e a entomologia forense pelo método ADD.</p></div>
+<div class="d"><h3>Toxicologia</h3><p>Etanol: interpretação, fórmula de Widmark, cálculo retrospectivo até o momento do fato, curva de alcoolemia com faixa de incerteza e conversão para o ar expirado. Níveis de referência de 67 substâncias nas faixas terapêutica, tóxica e letal e valores post mortem em sangue femoral de 122 000 necropsias. CO-Hb e vitalidade em incêndios.</p></div>
+<div class="d"><h3>Trauma e cardiopatologia</h3><p>Queimaduras (superfície segundo Lund e Browder, índice de Baux e sua revisão), superfície corporal e peso cardíaco esperado, idade a partir das circunferências da aorta, índice de Traub, IMC e estado nutricional.</p></div>
+<div class="d"><h3>Identificação e antropologia</h3><p>DVI segundo o INTERPOL DVI Guide 2023, odontologia (odontograma, comparação AM/PM, seis métodos de estimativa da idade), grupos sanguíneos e manchas, estatura a partir de ossos longos, sexo e idade do esqueleto, idade fetal a partir do fêmur.</p></div>
+<div class="d"><h3>Microscopia e imagem</h3><p>Contagem de células e estruturas com detecção semiautomática, quantificação de CPA em IHC de desmina, colorímetro calibrado com cartão cinza e fotogrametria: comprimentos, ângulos e áreas a partir de uma fotografia, com medição nativa em iPhones com LiDAR.</p></div>
+<div class="d"><h3>Caso e laudo</h3><p>Os dados do caso são inseridos uma única vez; as ferramentas enviam os resultados para um laudo comum com as fontes, que é exportado e guardado junto com o caso.</p></div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Feito para a prática pericial</h2>
+<ul class="check">
+<li>Cada resultado traz um intervalo ou uma ressalva; um dado impossível devolve uma explicação, não um número</li>
+<li>Em cada método, a citação da fonte original e uma lista de referências unificada</li>
+<li>Métodos revisados segundo a literatura original</li>
+<li>Doze idiomas desde a versão 5.5 (Lite desde a 5.3), entre eles o português do Brasil, com resultados e laudo recalculados e aparência clara ou escura</li>
+</ul>
+</div>
+</section>
+
+<section id="lite">
+<div class="wrap">
+<h2>Lite grátis, Pro com pagamento único</h2>
+<p>O Lite inclui sete ferramentas totalmente funcionais para você verificar se o aplicativo se encaixa na sua prática. O Pro desbloqueia as 27 ferramentas: pagamento único, sem assinatura, sem anúncios e sem coleta de dados.</p>
+<table class="specs">
+<tr><td></td><td class="b">Lite · grátis</td><td class="b">Pro · 104,99 €</td></tr>
+<tr><td>Henssge, potássio no humor vítreo, índice de Traub, IMC, superfície corporal e coração, idade pela aorta, conversor de unidades</td><td>✓</td><td>✓</td></tr>
+<tr><td>Fenômenos cadavéricos, toxicologia e etanol, 67 substâncias, CO-Hb</td><td>-</td><td>✓</td></tr>
+<tr><td>Entomologia, queimaduras, DVI, odontologia, antropologia</td><td>-</td><td>✓</td></tr>
+<tr><td>Microscopia, colorímetro, fotogrametria, caso e laudo</td><td>-</td><td>✓</td></tr>
+<tr><td>Prévia das demais ferramentas (formulário, método, referências)</td><td>✓</td><td>–</td></tr>
+<tr><td>Plataforma</td><td>iOS 17+ · Android</td><td>iOS 17+ · Android</td></tr>
+</table>
+<div class="btns" style="margin-top:18px">
+<a class="btn-ghost" href="https://apps.apple.com/app/id6783425913" target="_blank" rel="noopener">Lite na App Store</a>
+<a class="btn-ghost" href="https://play.google.com/store/apps/details?id=com.sikuta.n6toolslite&hl=pt-BR" target="_blank" rel="noopener">Lite no Google Play</a>
+<a class="btn-ghost" href="https://dzanino.github.io/4n6/4n6-Tools-Pro-navod.pdf" target="_blank" rel="noopener">Manual (PDF, SK/EN) ›</a>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Privacidade em primeiro lugar</h2>
+<ul class="check">
+<li>Todos os cálculos são feitos no dispositivo; o aplicativo não precisa de internet</li>
+<li>Não envia dados, sem análise de uso e sem conta</li>
+<li>Os dados dos casos permanecem no dispositivo até que você os exporte</li>
+</ul>
+<div class="note">4n6 Tools é uma ferramenta profissional para especialistas qualificados, não um dispositivo médico, e não substitui o julgamento do médico nem do perito. Autor: Ján Šikuta, MD, PhD, médico-legista. <a href="https://dzanino.github.io/4n6/privacy.html" style="color:var(--blue)">Privacidade</a> · <a href="https://dzanino.github.io/4n6/support.html" style="color:var(--blue)">Suporte</a></div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Perguntas frequentes</h2>
+<details><summary>Qual é a diferença entre o 4n6 Tools Lite e o Pro?</summary><p>O Lite é gratuito e inclui sete ferramentas totalmente funcionais: o nomograma de Henssge, o intervalo post mortem pelo potássio no humor vítreo, o índice de Traub, o IMC, a superfície corporal e o peso cardíaco esperado, a idade pelas circunferências da aorta e um conversor de unidades. O Pro desbloqueia as 27 ferramentas, incluindo toxicologia, etanol, entomologia, DVI, odontologia e antropologia. O Lite também abre as demais ferramentas como prévia: formulário, método e referências; o resultado é calculado pelo Pro.</p></details>
+<details><summary>O 4n6 Tools é um dispositivo médico?</summary><p>Não. É um auxílio profissional para médicos-legistas e peritos; os valores são orientativos, cada resultado traz um intervalo ou uma ressalva e a avaliação final cabe a um especialista qualificado.</p></details>
+<details><summary>O aplicativo funciona offline?</summary><p>Sim. Todos os cálculos são feitos no dispositivo; o aplicativo não precisa de conexão e não transmite dados.</p></details>
+<details><summary>O aplicativo está em português?</summary><p>Sim. O Pro (desde a versão 5.5) e o Lite (desde a 5.3) estão em doze idiomas, entre eles o português do Brasil: toda a interface, os resultados e o laudo. Na primeira abertura segue o idioma do telefone e pode ser alterado a qualquer momento pelo botão no cabeçalho.</p></details>
+<details><summary>Por que o Pro custa 104,99 €?</summary><p>É uma ferramenta profissional abrangente: 27 ferramentas, 67 substâncias com níveis de referência e métodos revisados segundo a literatura original, citados em cada resultado. É um pagamento único, sem assinatura, anúncios ou coleta de dados.</p></details>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="site"><a href="/en/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy"><span data-fz>©</span> 2026 Ján Šikuta, MD, PhD. · <a href="mailto:admin@forensika.eu">admin@forensika.eu</a> · <a href="/en/">forensika.eu</a></div>
+</div>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
