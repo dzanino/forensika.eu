@@ -1,0 +1,34 @@
+/* forensika.eu - bundle.css: sekcia „4n6 Pro + Colorime3ka + 3D“ (tmavý midnight z glam.css).
+   Načítava sa za glam.css. */
+[data-bf][hidden]{display:none!important}
+
+section.bundle{padding:30px 0 70px}
+section.bundle .sec-head{margin-bottom:28px;max-width:780px}
+.bundle-banner{display:block;border-radius:26px;overflow:hidden;border:1px solid var(--line-2,rgba(255,255,255,.16));
+  box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 70px rgba(111,184,240,.10);transition:transform .25s ease,box-shadow .25s ease}
+.bundle-banner:hover{transform:translateY(-3px);box-shadow:0 34px 80px rgba(0,0,0,.5),0 0 80px rgba(156,147,245,.18)}
+.bundle-banner img{display:block;width:100%;height:auto}
+
+.card.bundle-card{margin-top:24px}
+.bundle-apps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bundle-app{display:flex;gap:14px;align-items:flex-start}
+.bundle-app img{width:56px;height:56px;border-radius:22.4%;flex:0 0 auto;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 10px 26px rgba(0,0,0,.5)}
+.bundle-app h3{font-size:19px!important;margin:2px 0 4px}
+.bundle-app h3 small{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--gold);margin-left:6px}
+.bundle-app p{font-size:14.5px;line-height:1.55;margin:0}
+
+.bundle-buy{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+.bundle-price{display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:center}
+.bundle-price .bp-lbl{grid-column:2;grid-row:1;align-self:end;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.bundle-price b{grid-column:1;grid-row:1/3;font-family:var(--serif);font-weight:600;font-size:clamp(38px,6vw,52px);line-height:1;
+  background:linear-gradient(100deg,#7ef0dc 0%,#8cc8f6 45%,#c4b8ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.bundle-price .bp-save{grid-column:2;grid-row:2;align-self:start;color:#fff;font-weight:600;font-size:16px;line-height:1.3}
+.bundle-sep{margin:14px 0 0;font-size:15px}
+.bundle-sep b{color:var(--gold)!important}
+.bundle-note{font-size:13.5px;margin:14px 0 0;color:var(--soft)!important}
+
+@media (max-width:860px){.bundle-apps{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .bundle-price{grid-template-columns:1fr}
+  .bundle-price b,.bundle-price .bp-lbl,.bundle-price .bp-save{grid-column:1;grid-row:auto}
+}
