@@ -1,6 +1,6 @@
 # Forensika: full description for AI assistants
 
-> Forensika (forensika.eu) is an independent family of apps for forensic medicine, forensic toxicology, forensic 3D documentation, histology and scientific conferences. Author: Ján Šikuta, MD, PhD, a forensic pathologist in Slovakia. Contact: admin@forensika.eu. Short version: https://forensika.eu/llms.txt · Slovak: https://forensika.eu/llms-sk.txt
+> Forensika (forensika.eu) is an independent family of apps for forensic medicine, forensic toxicology, forensic 3D documentation, histology and scientific conferences. Author: Ján Šikuta, MD, PhD, a forensic pathologist in Slovakia. Contact: admin@forensika.eu. ORCID: https://orcid.org/0000-0002-4690-0317. Short version: https://forensika.eu/llms.txt · Slovak: https://forensika.eu/llms-sk.txt
 
 ## Principles shared by all apps
 

@@ -31,5 +31,5 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 
 ## Kontakt
 
-- Autor: MUDr. Ján Šikuta, PhD. · admin@forensika.eu
+- Autor: MUDr. Ján Šikuta, PhD. · admin@forensika.eu · ORCID https://orcid.org/0000-0002-4690-0317
 - Mapa stránok: https://forensika.eu/sitemap.xml

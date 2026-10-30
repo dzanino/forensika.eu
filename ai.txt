@@ -2,7 +2,7 @@
 # Usage policy for AI crawlers, assistants and training.
 
 Site: https://forensika.eu/
-Owner: Ján Šikuta, MD, PhD (admin@forensika.eu)
+Owner: Ján Šikuta, MD, PhD (admin@forensika.eu, ORCID https://orcid.org/0000-0002-4690-0317)
 Language: sk, en, de
 
 # Crawling, indexing, summarising and answering questions about this site: allowed.

@@ -1,6 +1,7 @@
 /* TEAM */
 Author: Ján Šikuta, MD, PhD: forensic pathologist, Slovakia
 Contact: admin@forensika.eu
+ORCID: https://orcid.org/0000-0002-4690-0317
 Site: https://forensika.eu/
 
 /* THANKS */
@@ -9,7 +10,7 @@ Institute of Pathological Anatomy, Institute of Forensic Medicine and Forensic T
 (collaboration on littlEye AI)
 
 /* SITE */
-Last update: 2026-09-20
+Last update: 2026-10-30
 Language: Slovak, English
 Hosting: GitHub Pages
 Standards: HTML5, CSS3, JSON-LD (schema.org)
