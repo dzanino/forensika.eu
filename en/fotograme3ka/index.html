@@ -130,7 +130,7 @@
       "name": "How many frames and what texture resolution does Fotograme3ka 3D support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Up to 1,500 frames and textures up to 16,384 px, compared with a 200-frame and 8,192 px limit on the iPhone. Several packages dropped at once are processed in a batch, one after another."
+        "text": "Up to 1,500 frames and textures up to 16,384 px. The iPhone captures up to 600 frames but computes the on-phone model from the best 200 only (an Apple limit) with textures up to 8,192 px. Several packages dropped at once are processed in a batch, one after another."
       }
     },
     {
@@ -226,7 +226,7 @@
 <p>A typical use case: an older iPhone without LiDAR, or without a sufficiently capable chip, can still capture in aPrehliadky, but cannot compute a model. The frame package is sent over AirDrop to a Mac, recomputed there, and the finished model returns to the iPhone as an .f3d package, including any findings and measurements carried over from the earlier model to the new one.</p>
 <div class="grid">
 <div class="d"><h3>Higher detail</h3><p>The iPhone computes the model only at low detail. The Mac offers medium, full and custom detail (a polygon cap, texture up to 16,384 px): a 3 to 5 times finer surface for measuring findings.</p></div>
-<div class="d"><h3>Larger scans</h3><p>The Mac limit is 1,500 frames versus 200 on the iPhone. Several packages dropped at once are processed in a batch, one after another.</p></div>
+<div class="d"><h3>Larger scans</h3><p>The Mac uses up to 1,500 frames; the iPhone captures up to 600 but computes from 200 (an Apple limit). Several packages dropped at once are processed in a batch, one after another.</p></div>
 <div class="d"><h3>Review and measurement</h3><p>The app's second tab offers full-featured work with the finished model: orbit, zoom, measurement, findings marked directly on the skin, and a PDF report with certificate.</p></div>
 <div class="d"><h3>Findings transfer</h3><p>After each recompute, camera poses are stored; on the next recompute they are fitted for yaw, scale and offset, and findings are carried over to the new model with an error on the order of millimetres.</p></div>
 <div class="d"><h3>Forensic preset</h3><p>Processing presets Fast, Forensic (300,000 triangles, 8K texture, lossless; recommended) and Maximum (1 million triangles, 16K). Blurred frames are dropped, frames showing the target are kept.</p></div>
@@ -247,7 +247,7 @@
 </ul>
 <table class="specs">
 <tr><td>Platform</td><td>macOS 15+, Apple Silicon (M1 and later)</td></tr>
-<tr><td>Frame limit</td><td>up to 1,500 (iPhone: 200)</td></tr>
+<tr><td>Frame limit</td><td>up to 1,500 (iPhone: captures up to 600, computes from 200)</td></tr>
 <tr><td>Texture</td><td>up to 16,384 px, custom polygon cap</td></tr>
 <tr><td>Network</td><td>none: App Sandbox, only the Open/Save panel</td></tr>
 <tr><td>Price</td><td>€34.99 one-time (US$29.99), no subscription; aPrehliadky for iPhone is free</td></tr>
@@ -284,7 +284,7 @@
 <h2>Frequently asked questions</h2>
 <details><summary>Do I need Fotograme3ka 3D if my iPhone already has LiDAR and an A17 Pro chip?</summary><p>Not necessarily. An iPhone with LiDAR and an A17 Pro chip or newer computes the model directly in aPrehliadky. Fotograme3ka 3D is useful when you want higher model detail (medium or full, a 3 to 5 times finer surface), or when you are capturing on an older iPhone without LiDAR or without a sufficiently capable chip.</p></details>
 <details><summary>How does the frame package get from the iPhone to Fotograme3ka on the Mac?</summary><p>Via AirDrop. You export the frame package from aPrehliadky, open it in Fotograme3ka 3D on the Mac, the app recomputes it, and the finished model, including transferred findings and measurements, returns to the iPhone again as an .f3d package.</p></details>
-<details><summary>How many frames and what texture resolution does Fotograme3ka 3D support?</summary><p>Up to 1,500 frames and textures up to 16,384 px, compared with a 200-frame and 8,192 px limit on the iPhone. Several packages dropped at once are processed in a batch, one after another.</p></details>
+<details><summary>How many frames and what texture resolution does Fotograme3ka 3D support?</summary><p>Up to 1,500 frames and textures up to 16,384 px. The iPhone captures up to 600 frames but computes the on-phone model from the best 200 only (an Apple limit) with textures up to 8,192 px. Several packages dropped at once are processed in a batch, one after another.</p></details>
 <details><summary>Is Fotograme3ka 3D a paid app?</summary><p>Yes. Since 18 October 2026 it costs €34.99 (US$29.99) as a one-time purchase, with no subscription and no ads. The aPrehliadky app for iPhone and iPad remains free. Fotograme3ka 3D requires a Mac with an Apple Silicon chip and macOS 15 or later.</p></details>
 <details><summary>Why is Fotograme3ka paid when aPrehliadky is free?</summary><p>aPrehliadky should be available to anyone who wants to try and use 3D documentation. Fotograme3ka 3D is a professional tool for departments that need the highest detail and a report with a chain of evidence. Its sales fund the development of both apps, accuracy validation, maintenance for new macOS and iOS releases and the running of the independent forensika.eu project.</p></details>
 <details><summary>I downloaded it when it was free. Do I have to pay?</summary><p>No. If you downloaded Fotograme3ka 3D before 18 October 2026, it stays yours, including all future updates. On a new Mac, simply download it again from the Mac App Store with the same Apple ID.</p></details>

@@ -130,7 +130,7 @@
       "name": "Koľko snímkov a akú textúru Fotograme3ka 3D zvládne?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Až 1 500 snímkov a textúru do 16 384 px, oproti limitu 200 snímkov a 8 192 px na iPhone. Viacero balíkov naraz appka spracuje dávkovo, jeden po druhom."
+        "text": "Až 1 500 snímkov a textúru do 16 384 px. iPhone sníma až 600 snímkov, ale model v telefóne vypočíta len z najlepších 200 (limit Apple) a s textúrou do 8 192 px. Viacero balíkov naraz appka spracuje dávkovo, jeden po druhom."
       }
     },
     {
@@ -226,7 +226,7 @@
 <p>Typické použitie: starší iPhone bez LiDAR-u alebo bez dostatočne výkonného čipu vie v aPrehliadkach snímať, ale nevie počítať. Balík so snímkami sa pošle AirDropom na Mac, tam sa prepočíta a hotový model sa vráti späť do iPhonu ako balík .f3d, vrátane nálezov a meraní, ktoré sa preniesli zo starého modelu na nový.</p>
 <div class="grid">
 <div class="d"><h3>Vyšší detail</h3><p>iPhone počíta model len v nízkom detaile. Mac ponúka stredný, vysoký a vlastný (limit polygónov, textúra do 16 384 px): 3 až 5× jemnejší povrch pre meranie nálezov.</p></div>
-<div class="d"><h3>Väčšie skeny</h3><p>Limit na Macu je 1 500 snímkov namiesto 200 na iPhone. Viac balíkov naraz sa spracuje dávkovo, jeden po druhom.</p></div>
+<div class="d"><h3>Väčšie skeny</h3><p>Mac použije až 1 500 snímkov; iPhone sníma až 600, ale počíta z 200 (limit Apple). Viac balíkov naraz sa spracuje dávkovo, jeden po druhom.</p></div>
 <div class="d"><h3>Prehliadka a meranie</h3><p>Druhá karta appky ponúka plnohodnotnú prácu s hotovým modelom: orbit, priblíženie, meranie, nálezy priamo na koži, protokol a certifikát PDF.</p></div>
 <div class="d"><h3>Prenos nálezov</h3><p>Po každom prepočte sa uložia pozície kamier; pri ďalšom prepočte sa z nich fituje yaw, mierka a posun a nálezy sa prenesú na nový model s chybou rádovo v milimetroch.</p></div>
 <div class="d"><h3>Forenzný preset</h3><p>Presety výpočtu Rýchly, Forenzný (300 tis. trojuholníkov, textúra 8K, bezstratovo; odporúčaný) a Maximálny (1 milión trojuholníkov, 16K). Rozmazané snímky sa vyradia, snímky s terčom ostávajú.</p></div>
@@ -247,7 +247,7 @@
 </ul>
 <table class="specs">
 <tr><td>Platforma</td><td>macOS 15+, Apple Silicon (M1 a novšie)</td></tr>
-<tr><td>Limit snímkov</td><td>až 1 500 (iPhone: 200)</td></tr>
+<tr><td>Limit snímkov</td><td>až 1 500 (iPhone: snímanie až 600, výpočet z 200)</td></tr>
 <tr><td>Textúra</td><td>do 16 384 px, vlastný limit polygónov</td></tr>
 <tr><td>Sieť</td><td>žiadna: App Sandbox, len Open/Save panel</td></tr>
 <tr><td>Cena</td><td>34,99 € jednorazovo (29,99 USD), bez predplatného; aPrehliadky pre iPhone zadarmo</td></tr>
@@ -284,7 +284,7 @@
 <h2>Časté otázky</h2>
 <details><summary>Potrebujem Fotograme3ku 3D, ak mám iPhone s LiDAR-om a A17 Pro?</summary><p>Nie nutne. iPhone s LiDAR-om a čipom A17 Pro alebo novším počíta model v aPrehliadkach priamo. Fotograme3ka 3D sa hodí, keď chcete vyšší detail modelu (stredný alebo vysoký, 3 až 5× jemnejší povrch), alebo keď snímate na staršom iPhone bez LiDAR-u či bez dostatočne výkonného čipu.</p></details>
 <details><summary>Ako sa balík snímkov dostane z iPhonu do Fotograme3ky na Macu?</summary><p>AirDropom. Z aPrehliadok exportujete balík so snímkami, na Macu ho otvoríte vo Fotograme3ke 3D, appka ho prepočíta a hotový model, vrátane prenesených nálezov a meraní, sa vráti do iPhonu opäť ako balík .f3d.</p></details>
-<details><summary>Koľko snímkov a akú textúru Fotograme3ka 3D zvládne?</summary><p>Až 1 500 snímkov a textúru do 16 384 px, oproti limitu 200 snímkov a 8 192 px na iPhone. Viacero balíkov naraz appka spracuje dávkovo, jeden po druhom.</p></details>
+<details><summary>Koľko snímkov a akú textúru Fotograme3ka 3D zvládne?</summary><p>Až 1 500 snímkov a textúru do 16 384 px. iPhone sníma až 600 snímkov, ale model v telefóne vypočíta len z najlepších 200 (limit Apple) a s textúrou do 8 192 px. Viacero balíkov naraz appka spracuje dávkovo, jeden po druhom.</p></details>
 <details><summary>Je Fotograme3ka 3D platená appka?</summary><p>Áno. Od 18. 10. 2026 stojí 34,99 € jednorazovo, bez predplatného a bez reklám. Aplikácia aPrehliadky pre iPhone a iPad ostáva zadarmo. Fotograme3ka 3D vyžaduje Mac s čipom Apple Silicon a macOS 15 alebo novší.</p></details>
 <details><summary>Prečo je Fotograme3ka platená, keď aPrehliadky sú zadarmo?</summary><p>aPrehliadky majú byť dostupné každému, kto chce 3D dokumentáciu vyskúšať a používať. Fotograme3ka 3D je profesionálny nástroj pre pracoviská, ktoré potrebujú najvyšší detail a protokol s reťazou dôkazov. Jej predaj financuje vývoj oboch aplikácií, overovanie presnosti, údržbu pri nových verziách macOS a iOS a chod nezávislého projektu forensika.eu.</p></details>
 <details><summary>Stiahol som si ju, keď bola zadarmo. Musím platiť?</summary><p>Nie. Ak ste si Fotograme3ku 3D stiahli pred 18. 10. 2026, ostáva vaša aj so všetkými budúcimi aktualizáciami. Na novom Macu ju stačí znova stiahnuť v Mac App Store pod rovnakým Apple ID.</p></details>
