@@ -27,7 +27,7 @@
 <link rel="alternate" hreflang="sk" href="https://forensika.eu/">
 <link rel="alternate" hreflang="en" href="https://forensika.eu/en/">
 <link rel="alternate" hreflang="de" href="https://forensika.eu/de/">
-<link rel="alternate" hreflang="x-default" href="https://forensika.eu/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/">
 
 <style>
   :root{
@@ -625,12 +625,21 @@
    ],
    "description": "3D documentation of a body, objects and scenes on iPhone and iPad: classical photogrammetry (RealityKit Object Capture) with LiDAR, measurement of distance, surface path, area and volume with an uncertainty ± U (k = 2), scale verification with a reference length and a calibration target, a class A to D 3D documentation certificate and an .f3d package with a SHA-256 of every file. No cloud and no AI-completed geometry.",
    "keywords": "forensic photogrammetry, LiDAR, 3D body scanning, crime scene documentation, injury documentation, measurement uncertainty, 3D documentation certificate, SHA-256, chain of evidence, RealityKit Object Capture",
-   "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock"
-   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "price": "0",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock"
+    },
+    {
+     "@type": "Offer",
+     "name": "aPrehliadky Pro (optional in-app licence)",
+     "price": "149.99",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock"
+    }
+   ],
    "isAccessibleForFree": true,
    "author": {
     "@id": "https://forensika.eu/#autor"
@@ -759,7 +768,12 @@
     "fr",
     "es",
     "it",
-    "uk"
+    "uk",
+    "pl",
+    "hu",
+    "zh-Hans",
+    "ja",
+    "ko"
    ],
    "description": "The conference programme on your phone, even offline: from a QR code, the conference website or a PDF, with reminders before talks, a personal plan and sharing between iPhone and Android. Optional organiser server for announcements and sign-ups.",
    "keywords": "conference programme, congress app, offline, QR code, talk reminders, conference organiser",
@@ -1103,7 +1117,7 @@
             </div>
           </div>
           <p class="desc">A folded paper programme in a jacket pocket, leafing between days and looking for the hall of my own talk: that is why Congressa exists. Load the conference programme once (straight from the conference website, from a PDF, from the organiser's server or from a colleague's QR code) and it keeps working <b>offline</b>, even where a congress hall has no signal. The <b>Now</b> screen shows what is on, what comes next and where to go; in <b>My plan</b> you star the talks you care about and the app reminds you a few minutes ahead and warns about clashes. If you present or chair, your slots are highlighted and reminded first.</p>
-          <p class="desc">When the organiser runs a Congressa server, you also get sign-up for dinners, trips and workshops with capacity and a waiting list, and announcements straight to the phone. The programme is shared by QR code: a colleague has it in seconds, on iPhone or Android; anyone without the app is sent to the right store and the same programme loads by itself after installing. The app is available in eight languages (SK, CZ, EN, DE, FR, ES, IT, UA). <b>My conferences</b> keeps an archive of attended events and issues a PDF certificate of attendance. No account, no ads, no tracking.</p>
+          <p class="desc">When the organiser runs a Congressa server, you also get sign-up for dinners, trips and workshops with capacity and a waiting list, and announcements straight to the phone. The programme is shared by QR code: a colleague has it in seconds, on iPhone or Android; anyone without the app is sent to the right store and the same programme loads by itself after installing. The app is available in thirteen languages (SK, CZ, EN, DE, FR, ES, IT, UA, PL, HU, ZH, JA, KO). <b>My conferences</b> keeps an archive of attended events and issues a PDF certificate of attendance. No account, no ads, no tracking.</p>
           <p class="desc" style="font-size:14px;color:#6b7f93;">An independent app by the author: not made by the conference organiser. Free and complete; an optional in-app tip supports development and unlocks nothing.</p>
           <div class="pills">
             <span class="pill">Offline programme</span>
@@ -1137,9 +1151,9 @@
       </div>
 
       <div class="card wide" id="support" style="margin-top:28px">
-<div class="sub" style="margin-bottom:8px">New from 18 October 2026</div>
-<h3 style="margin-bottom:12px">An independent project funded by its users</h3>
-<p class="desc">Forensika has no ads, no investors and no subscriptions, and it sells no data. 4n6 Tools Lite, aPrehliadky, littlEye AI and Congressa remain free for everyone. Development, validation of methods against the literature and the running of the whole project are funded by one-time purchases of the professional tools: <b>4n6 Tools Pro</b>, <b>Colorime3ka</b> and, from 18 October 2026, <b>Fotograme3ka 3D</b> for Mac.</p>
+<div class="sub" style="margin-bottom:8px">How the project is funded</div>
+<h3 style="margin-bottom:12px">Independent research, funded by the author and the users</h3>
+<p class="desc">Forensika has no ads, no investors and no subscriptions, and it sells no data. Development and the research behind the apps (method validation, accuracy tests, validation studies) are so far funded by the author himself, alongside his work as a forensic pathologist. 4n6 Tools Lite, aPrehliadky, littlEye AI and Congressa remain free for everyone. The costs are helped by one-time purchases of the professional tools: <b>4n6 Tools Pro</b>, <b>Colorime3ka</b> and <b>Fotograme3ka 3D</b> for Mac, the optional <b>aPrehliadky Pro</b> licence for institutions that want packages and reports cryptographically signed, and voluntary in-app contributions.</p>
 <p class="desc">Every purchase means updates for new iOS and macOS releases, new tools, method revisions and answers straight from the author. If the apps help you in your practice, buying them is the best way to make sure they carry on. Thank you.</p>
 <div class="stores">
 <a class="store" href="https://apps.apple.com/app/id6785259219" target="_blank" rel="noopener">
@@ -1186,8 +1200,8 @@
           <div class="bundle-price">
             <span class="bp-lbl">All three</span>
             <b>€119.99</b>
-            <span class="bp-save" data-bf="off">save €37.98 compared with buying separately</span>
-            <span class="bp-save" data-bf="on" hidden>save €14.98 compared with buying separately</span>
+            <span class="bp-save" data-bf="off">save €37.98 compared with the regular prices of the individual apps</span>
+            <span class="bp-save" data-bf="on" hidden>during Black Friday you save €14.98 compared with the sale prices of the individual apps</span>
           </div>
           <div class="stores">
             <a class="store" href="https://apps.apple.com/app-bundle/id6824160695" target="_blank" rel="noopener">

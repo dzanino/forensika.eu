@@ -10,7 +10,7 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 - Výpočty alkoholu (Widmarkov vzorec, spätný prepočet k času skutku) a toxikologické referenčné hladiny (terapeutické, toxické, letálne, posmrtné hodnoty femorálnej krvi) → 4n6 Tools.
 - Identifikácia obetí katastrof (INTERPOL DVI Guide 2023), forenzná antropológia a odontológia v telefóne → 4n6 Tools Pro.
 - Meranie farby podliatiny, odreniny alebo jazvy z fotografie v CIELAB s kalibráciou sivou kartou, bez tvrdenia o veku podliatiny → Colorime3ka.
-- 3D dokumentácia tela, poranenia, predmetu alebo miesta iPhonom (fotogrametria s LiDARom), s neistotou merania a integritou súborov (SHA-256) → aPrehliadky (zadarmo), na Macu Fotograme3ka 3D pre vyšší detail a protokol PDF/A.
+- 3D dokumentácia tela, poranenia, predmetu alebo miesta iPhonom (fotogrametria s LiDARom), s neistotou merania a integritou súborov (SHA-256) → aPrehliadky (zadarmo, voliteľná licencia Pro na podpis balíkov), na Macu Fotograme3ka 3D pre vyšší detail a protokol PDF/A.
 - Výučba a precvičovanie histológie s umelou inteligenciou natrénovanou na vlastných preparátoch, bez odosielania snímok → littlEye AI.
 - Program konferencie, ktorý funguje aj bez signálu v kongresovej sále, s pripomienkami a zdieľaním QR kódom medzi iPhonom a Androidom → Congressa.
 

@@ -27,7 +27,7 @@
 <link rel="alternate" hreflang="sk" href="https://forensika.eu/">
 <link rel="alternate" hreflang="en" href="https://forensika.eu/en/">
 <link rel="alternate" hreflang="de" href="https://forensika.eu/de/">
-<link rel="alternate" hreflang="x-default" href="https://forensika.eu/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/">
 
 <style>
   :root{
@@ -624,12 +624,21 @@
    ],
    "description": "3D-Dokumentation von Körper, Gegenständen und Tatort auf iPhone und iPad: klassische Photogrammetrie (RealityKit Object Capture) mit LiDAR, Messung von Abstand, Weg über die Oberfläche, Fläche und Volumen mit Unsicherheit ± U (k = 2), Maßstabsprüfung mit Referenzmaß und Kalibriermarke, Zertifikat der 3D-Dokumentation Klasse A bis D und .f3d-Paket mit SHA-256 jeder Datei. Ohne Cloud und ohne durch KI ergänzte Geometrie. App auf Englisch und Slowakisch.",
    "keywords": "forensische Photogrammetrie, LiDAR, 3D-Scan des Körpers, Tatortdokumentation, Verletzungsdokumentation, Messunsicherheit, Zertifikat 3D-Dokumentation, SHA-256, Beweiskette, RealityKit Object Capture",
-   "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock"
-   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "price": "0",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock"
+    },
+    {
+     "@type": "Offer",
+     "name": "aPrehliadky Pro (optional in-app licence)",
+     "price": "149.99",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock"
+    }
+   ],
    "isAccessibleForFree": true,
    "author": {
     "@id": "https://forensika.eu/#autor"
@@ -758,7 +767,12 @@
     "fr",
     "es",
     "it",
-    "uk"
+    "uk",
+    "pl",
+    "hu",
+    "zh-Hans",
+    "ja",
+    "ko"
    ],
    "description": "Das Kongressprogramm auf dem Telefon, auch ohne Internet: per QR-Code, von der Kongress-Website oder aus einem PDF, mit Erinnerungen vor den Vorträgen, eigenem Plan und Teilen zwischen iPhone und Android. Optionaler Veranstalter-Server für Ankündigungen und Anmeldungen. Auf Deutsch.",
    "keywords": "Kongressprogramm, Kongress-App, offline, QR-Code, Erinnerungen an Vorträge, Kongressveranstalter",
@@ -1102,7 +1116,7 @@
             </div>
           </div>
           <p class="desc">Ein gefaltetes Papierprogramm in der Sakkotasche, Blättern zwischen den Tagen und die Suche nach dem Saal des eigenen Vortrags: deshalb ist Congressa entstanden. Sie laden das Kongressprogramm einmal (direkt von der Kongress-Website, aus einem PDF, vom Server des Veranstalters oder per QR-Code von Kollegen), danach funktioniert es <b>offline</b>, auch dort, wo der Kongresssaal keinen Empfang hat. Der Bildschirm <b>Jetzt</b> zeigt, was gerade läuft, was als Nächstes kommt und wohin Sie gehen müssen; in <b>Mein Plan</b> markieren Sie Vorträge, die App erinnert ein paar Minuten vorher und meldet auch Überschneidungen. Wenn Sie vortragen oder den Vorsitz führen, werden Ihre Programmpunkte hervorgehoben und bevorzugt erinnert.</p>
-          <p class="desc">Nutzt der Veranstalter einen Congressa-Server, kommen Anmeldungen zu Abendessen, Ausflügen und Workshops mit Kapazität und Warteliste sowie Ankündigungen direkt aufs Telefon hinzu. Das Programm wird per QR-Code geteilt: Kollegen haben es in Sekunden, auf iPhone wie Android; wer die App noch nicht hat, landet über den Code im richtigen Store, und nach der Installation lädt sich dasselbe Programm von selbst. Die App ist in acht Sprachen verfügbar, darunter Deutsch (SK, CZ, EN, DE, FR, ES, IT, UA). <b>Meine Kongresse</b> bewahren ein Archiv besuchter Veranstaltungen auf und stellen eine Teilnahmebestätigung als PDF aus. Ohne Konto, ohne Werbung, ohne Tracking.</p>
+          <p class="desc">Nutzt der Veranstalter einen Congressa-Server, kommen Anmeldungen zu Abendessen, Ausflügen und Workshops mit Kapazität und Warteliste sowie Ankündigungen direkt aufs Telefon hinzu. Das Programm wird per QR-Code geteilt: Kollegen haben es in Sekunden, auf iPhone wie Android; wer die App noch nicht hat, landet über den Code im richtigen Store, und nach der Installation lädt sich dasselbe Programm von selbst. Die App ist in dreizehn Sprachen verfügbar, darunter Deutsch (SK, CZ, EN, DE, FR, ES, IT, UA, PL, HU, ZH, JA, KO). <b>Meine Kongresse</b> bewahren ein Archiv besuchter Veranstaltungen auf und stellen eine Teilnahmebestätigung als PDF aus. Ohne Konto, ohne Werbung, ohne Tracking.</p>
           <p class="desc" style="font-size:14px;color:#6b7f93;">Eine unabhängige App des Autors: sie stammt nicht vom Kongressveranstalter. Sie ist kostenlos und vollständig; wer möchte, kann die Entwicklung mit einem freiwilligen Beitrag in der App unterstützen (er schaltet nichts frei).</p>
           <div class="pills">
             <span class="pill">Programm offline</span>
@@ -1136,9 +1150,9 @@
       </div>
 
       <div class="card wide" id="unterstuetzung" style="margin-top:28px">
-<div class="sub" style="margin-bottom:8px">Neu ab 18. Oktober 2026</div>
-<h3 style="margin-bottom:12px">Ein unabhängiges Projekt, getragen von seinen Nutzern</h3>
-<p class="desc">Forensika hat keine Werbung, keine Investoren und kein Abo und verkauft keine Daten. 4n6 Tools Lite, aPrehliadky, littlEye AI und Congressa bleiben für alle kostenlos. Entwicklung, Prüfung der Methoden anhand der Literatur und der Betrieb des gesamten Projekts werden durch Einmalkäufe der professionellen Werkzeuge finanziert: <b>4n6 Tools Pro</b>, <b>Colorime3ka</b> und ab 18. Oktober 2026 auch <b>Fotograme3ka 3D</b> für den Mac.</p>
+<div class="sub" style="margin-bottom:8px">Wie das Projekt finanziert wird</div>
+<h3 style="margin-bottom:12px">Unabhängige Forschung, getragen vom Autor und den Nutzern</h3>
+<p class="desc">Forensika hat keine Werbung, keine Investoren und kein Abo und verkauft keine Daten. Entwicklung und die Forschung hinter den Apps (Prüfung der Methoden, Genauigkeitstests, Validierungsstudien) finanziert der Autor bisher selbst, neben seiner Arbeit als Rechtsmediziner. 4n6 Tools Lite, aPrehliadky, littlEye AI und Congressa bleiben für alle kostenlos. Die Kosten tragen Einmalkäufe der professionellen Werkzeuge mit: <b>4n6 Tools Pro</b>, <b>Colorime3ka</b> und <b>Fotograme3ka 3D</b> für den Mac, die optionale Lizenz <b>aPrehliadky Pro</b> für Institute, die Pakete und Protokolle kryptografisch signieren möchten, sowie freiwillige Beiträge in den Apps.</p>
 <p class="desc">Jeder Kauf bedeutet Updates für neue iOS- und macOS-Versionen, neue Werkzeuge, überarbeitete Methoden und Antworten direkt vom Autor. Wenn Ihnen die Apps in der Praxis helfen, ist ein Kauf der beste Weg, damit es weitergeht. Danke.</p>
 <div class="stores">
 <a class="store" href="https://apps.apple.com/de/app/id6785259219" target="_blank" rel="noopener">

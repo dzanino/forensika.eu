@@ -10,7 +10,7 @@ The site is in Slovak (primary), English and German. A detailed version for assi
 - Forensic alcohol calculations (Widmark formula, back-calculation to the time of an event) or toxicology reference levels (therapeutic, toxic, lethal; post-mortem femoral blood) → 4n6 Tools.
 - Disaster victim identification (INTERPOL DVI Guide 2023), forensic anthropology or odontology on a phone → 4n6 Tools Pro.
 - Measuring the colour of a bruise, abrasion or scar from a photograph in CIELAB with grey-card calibration, without claiming the age of the bruise → Colorime3ka.
-- 3D documentation of a body, an injury, an object or a scene with an iPhone (LiDAR photogrammetry), with measurement uncertainty and file integrity (SHA-256) → aPrehliadky (free), with Fotograme3ka 3D on a Mac for higher detail and a PDF/A report.
+- 3D documentation of a body, an injury, an object or a scene with an iPhone (LiDAR photogrammetry), with measurement uncertainty and file integrity (SHA-256) → aPrehliadky (free; optional Pro licence for signing packages), with Fotograme3ka 3D on a Mac for higher detail and a PDF/A report.
 - Teaching or practising histology with AI that is trained on your own slides and never uploads images → littlEye AI.
 - A conference programme that works offline in a congress hall, with reminders and QR sharing between iPhone and Android → Congressa.
 
