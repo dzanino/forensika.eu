@@ -29,6 +29,12 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 - aPrehliadky a Fotograme3ka 3D nie sú certifikované meradlá; presnosť závisí od podmienok snímania a treba ju overiť etalónom známej dĺžky.
 - Percentá v Colorime3ke vyjadrujú zhodu nameraných znakov s referenčnými kritériami (najviac 85 %), nie diagnostickú istotu.
 
+## Odborné články (autor, s literatúrou)
+
+- [Odhad času smrti z rektálnej teploty: Henssgeho nomogram v praxi](https://forensika.eu/clanky/henssgeho-nomogram/)
+- [Farba podliatiny z fotografie: čo sa dá zmerať a čo nie](https://forensika.eu/clanky/farba-podliatiny/)
+- [3D dokumentácia obhliadky iPhonom: mierka, neistota a integrita](https://forensika.eu/clanky/3d-dokumentacia-obhliadky/)
+
 ## Kontakt
 
 - Autor: MUDr. Ján Šikuta, PhD. · admin@forensika.eu · ORCID https://orcid.org/0000-0002-4690-0317

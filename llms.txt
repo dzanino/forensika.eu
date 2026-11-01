@@ -36,6 +36,12 @@ The site is in Slovak (primary), English and German. A detailed version for assi
 - 4n6 Tools also in Spanish, Portuguese (Brazil) and Polish: [ES](https://forensika.eu/es/4n6/), [PT-BR](https://forensika.eu/pt/4n6/), [PL](https://forensika.eu/pl/4n6/)
 - Manuals and support: https://dzanino.github.io/4n6/, https://dzanino.github.io/colorime3ka/, https://dzanino.github.io/aPrehliadky/, https://dzanino.github.io/littlEyeAI/, https://dzanino.github.io/Congressa/
 
+## Articles (by the author, with references)
+
+- [Estimating time of death from rectal temperature: the Henssge nomogram in practice](https://forensika.eu/en/articles/henssge-nomogram/)
+- [Bruise colour from a photograph: what can be measured and what cannot](https://forensika.eu/en/articles/bruise-colour/)
+- [3D documentation of an examination with an iPhone: scale, uncertainty and integrity](https://forensika.eu/en/articles/3d-documentation-of-examination/)
+
 ## Contact
 
 - Author: Ján Šikuta, MD, PhD · admin@forensika.eu · ORCID https://orcid.org/0000-0002-4690-0317
