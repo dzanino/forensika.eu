@@ -27,7 +27,7 @@
 <link rel="alternate" hreflang="sk" href="https://forensika.eu/">
 <link rel="alternate" hreflang="en" href="https://forensika.eu/en/">
 <link rel="alternate" hreflang="de" href="https://forensika.eu/de/">
-<link rel="alternate" hreflang="x-default" href="https://forensika.eu/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/">
 
 <style>
   :root{
@@ -625,12 +625,21 @@
    ],
    "description": "3D dokumentácia obhliadky tela, predmetov a miesta na iPhone a iPade: klasická fotogrametria (RealityKit Object Capture) s LiDARom, meranie vzdialenosti, dráhy po povrchu, plochy a objemu s neistotou ± U (k = 2), overenie mierky etalónom a kalibračným terčom, certifikát 3D dokumentácie triedy A až D a balík .f3d so SHA-256 každého súboru. Bez cloudu a bez geometrie dopĺňanej umelou inteligenciou.",
    "keywords": "forenzná fotogrametria, LiDAR, 3D skenovanie tela, obhliadka miesta činu, dokumentácia poranení, neistota merania, certifikát 3D dokumentácie, SHA-256, integrita dôkazov, RealityKit Object Capture",
-   "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock"
-   },
+   "offers": [
+    {
+     "@type": "Offer",
+     "price": "0",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock"
+    },
+    {
+     "@type": "Offer",
+     "name": "aPrehliadky Pro (optional in-app licence)",
+     "price": "149.99",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock"
+    }
+   ],
    "isAccessibleForFree": true,
    "author": {
     "@id": "https://forensika.eu/#autor"
@@ -759,7 +768,12 @@
     "fr",
     "es",
     "it",
-    "uk"
+    "uk",
+    "pl",
+    "hu",
+    "zh-Hans",
+    "ja",
+    "ko"
    ],
    "description": "Program konferencie v telefóne aj bez internetu: z QR kódu, webu konferencie alebo PDF, s pripomienkami pred prednáškami, vlastným plánom a zdieľaním medzi iPhonom a Androidom. Voliteľný server organizátora pre oznamy a prihlášky.",
    "keywords": "program konferencie, kongres, offline, QR kód, pripomienky prednášok, organizátor konferencie",
@@ -1103,7 +1117,7 @@
             </div>
           </div>
           <p class="desc">Papierový program poskladaný v saku, listovanie medzi dňami a hľadanie, v ktorej sále je moja prednáška: to bol dôvod, prečo Congressa vznikla. Program konferencie si načítate raz (priamo z webu konferencie, z PDF, zo servera organizátora alebo z QR kódu kolegu) a ďalej funguje <b>offline</b>, aj tam, kde v kongresovej sále nie je signál. Obrazovka <b>Teraz</b> ukáže, čo práve prebieha, čo nasleduje a kam ísť; v <b>Mojom pláne</b> si označíte prednášky a appka vás upozorní pár minút vopred a hlási aj kolízie. Ak prednášate alebo predsedáte, vaše body sú zvýraznené a pripomenuté prednostne.</p>
-          <p class="desc">Keď organizátor používa server Congressa, pribudne prihlasovanie na večere, výlety a workshopy s kapacitou a čakacou listinou a oznamy priamo do telefónu. Program sa zdieľa QR kódom: kolega ho má za pár sekúnd, na iPhone aj Androide; kto aplikáciu ešte nemá, kód ho pošle do správneho obchodu a po inštalácii sa ten istý program načíta sám. Aplikácia je v ôsmich jazykoch (SK, CZ, EN, DE, FR, ES, IT, UA). <b>Moje konferencie</b> uchovajú archív absolvovaných podujatí a vystavia potvrdenie o účasti v PDF. Bez účtu, bez reklám, bez sledovania.</p>
+          <p class="desc">Keď organizátor používa server Congressa, pribudne prihlasovanie na večere, výlety a workshopy s kapacitou a čakacou listinou a oznamy priamo do telefónu. Program sa zdieľa QR kódom: kolega ho má za pár sekúnd, na iPhone aj Androide; kto aplikáciu ešte nemá, kód ho pošle do správneho obchodu a po inštalácii sa ten istý program načíta sám. Aplikácia je v trinástich jazykoch (SK, CZ, EN, DE, FR, ES, IT, UA, PL, HU, ZH, JA, KO). <b>Moje konferencie</b> uchovajú archív absolvovaných podujatí a vystavia potvrdenie o účasti v PDF. Bez účtu, bez reklám, bez sledovania.</p>
           <p class="desc" style="font-size:14px;color:#6b7f93;">Nezávislá aplikácia autora: nevyrába ju organizátor konferencie. Je zadarmo a celá; kto chce, môže vývoj podporiť dobrovoľným príspevkom v aplikácii (nič neodomyká).</p>
           <div class="pills">
             <span class="pill">Offline program</span>
@@ -1137,9 +1151,9 @@
       </div>
 
       <div class="card wide" id="podpora" style="margin-top:28px">
-<div class="sub" style="margin-bottom:8px">Novinka od 18. 10. 2026</div>
-<h3 style="margin-bottom:12px">Nezávislý projekt, ktorý financujú jeho používatelia</h3>
-<p class="desc">Forensika nemá reklamy, investorov ani predplatné a nepredáva žiadne údaje. Aplikácie 4n6 Tools Lite, aPrehliadky, littlEye AI a Congressa ostávajú zadarmo pre každého. Vývoj, overovanie metód podľa literatúry a chod celého projektu financujú jednorazové nákupy profesionálnych nástrojov: <b>4n6 Tools Pro</b>, <b>Colorime3ka</b> a od 18. 10. 2026 aj <b>Fotograme3ka 3D</b> pre Mac.</p>
+<div class="sub" style="margin-bottom:8px">Ako je projekt financovaný</div>
+<h3 style="margin-bottom:12px">Nezávislý výskum, ktorý financujú autor a používatelia</h3>
+<p class="desc">Forensika nemá reklamy, investorov ani predplatné a nepredáva žiadne údaje. Vývoj aj výskum, z ktorého aplikácie vychádzajú (overovanie metód, testy presnosti, validačné štúdie), zatiaľ financuje autor sám, popri praxi súdneho lekára. Aplikácie 4n6 Tools Lite, aPrehliadky, littlEye AI a Congressa ostávajú zadarmo pre každého. Náklady pomáhajú pokryť jednorazové nákupy profesionálnych nástrojov: <b>4n6 Tools Pro</b>, <b>Colorime3ka</b> a <b>Fotograme3ka 3D</b> pre Mac, voliteľná licencia <b>aPrehliadky Pro</b> pre pracoviská, ktoré chcú balíky a protokoly kryptograficky podpisovať, a dobrovoľné príspevky v aplikáciách.</p>
 <p class="desc">Každá kúpa znamená aktualizácie pre nové verzie iOS a macOS, nové nástroje, revízie metód a odpovede priamo od autora. Ak vám aplikácie pomáhajú v praxi, kúpa je najlepší spôsob, ako zabezpečiť, že budú pokračovať. Ďakujeme.</p>
 <div class="stores">
 <a class="store" href="https://apps.apple.com/app/id6785259219" target="_blank" rel="noopener">
@@ -1186,8 +1200,8 @@
           <div class="bundle-price">
             <span class="bp-lbl">Všetky tri spolu</span>
             <b>119,99 €</b>
-            <span class="bp-save" data-bf="off">ušetríte 37,98 € oproti samostatnému nákupu</span>
-            <span class="bp-save" data-bf="on" hidden>ušetríte 14,98 € oproti samostatnému nákupu</span>
+            <span class="bp-save" data-bf="off">ušetríte 37,98 € oproti bežným cenám jednotlivých appiek</span>
+            <span class="bp-save" data-bf="on" hidden>počas Black Friday ušetríte 14,98 € oproti akciovým cenám jednotlivých appiek</span>
           </div>
           <div class="stores">
             <a class="store" href="https://apps.apple.com/app-bundle/id6824160695" target="_blank" rel="noopener">

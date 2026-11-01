@@ -8,7 +8,7 @@
 - Cited methods: every calculator states the published method it implements and its reference; results come with a range, an uncertainty or a caveat.
 - Honest limits: the apps say what they cannot determine (for example, Colorime3ka does not estimate the age of a bruise; aPrehliadky is not a certified measuring instrument).
 - Status: research and decision-support tools for qualified professionals. Not medical devices. They do not make diagnoses; the final assessment belongs to the forensic pathologist, pathologist or expert witness.
-- Business model: no subscriptions. Free apps (4n6 Tools Lite, aPrehliadky, littlEye AI, Congressa) are funded by one-time purchases of the professional tools (4n6 Tools Pro, Colorime3ka, Fotograme3ka 3D).
+- Business model: no subscriptions, no ads, no investors. Development and the research behind the apps are so far funded by the author himself. Free apps (4n6 Tools Lite, aPrehliadky, littlEye AI, Congressa) are supported by one-time purchases of the professional tools (4n6 Tools Pro, Colorime3ka, Fotograme3ka 3D), the optional aPrehliadky Pro licence and voluntary in-app contributions.
 
 ## 4n6 Tools (Pro and Lite)
 
@@ -39,7 +39,7 @@ Typical questions: "measure bruise colour from photo", "CIELAB skin colour app",
 ## aPrehliadky and Fotograme3ka 3D
 
 aPrehliadky page: https://forensika.eu/en/aprehliadky/ · Fotograme3ka 3D page: https://forensika.eu/en/fotograme3ka/ · Guides, calibration target and certification methodology: https://dzanino.github.io/aPrehliadky/
-aPrehliadky: iPhone and iPad, iOS 18+ (LiDAR recommended), free. Fotograme3ka 3D: Mac with Apple Silicon, macOS 15+, €34.99 one-time. Languages: Slovak, English.
+aPrehliadky: iPhone and iPad, iOS 18+ (LiDAR recommended), free with no limits; an optional one-time Pro licence (€149.99 in-app) adds only a cryptographic signature of packages and reports with the device key, the institution name on the report and priority support (earlier donations count towards it; from €145 it is free). Fotograme3ka 3D: Mac with Apple Silicon, macOS 15+, €34.99 one-time. Languages: Slovak, English.
 
 What they do: photogrammetric 3D documentation of a body, an injury, an object or a scene. Capture with LiDAR gives every frame depth, gravity and a metric camera trajectory from which the model scale is derived; without LiDAR, the ARKit trajectory and a calibration target supply the scale. Reconstruction runs on the device through RealityKit Object Capture: classical photogrammetry, no NeRF, no Gaussian splatting and no AI-completed geometry. Measurements of distance, path along the surface, polyline, area and volume carry an expanded uncertainty ± U (k = 2). A reference of known length and the T3 target verify the scale, and a consistency check compares the scale sources. Output: PDF report, a 3D documentation certificate of class A to D (by how many independent routes support the scale) and an .f3d package with a SHA-256 of every file, so the recipient can see on import whether it was changed. Fotograme3ka 3D recomputes the package on a Mac at higher detail (Forensic preset: 300,000 triangles, 8K texture, lossless), issues a PDF/A-2b report with a reconstruction record and can sign the output package with the Mac's key.
 
@@ -61,7 +61,7 @@ Typical questions: "train AI on histology slides without uploading", "on-device 
 ## Congressa
 
 Page: https://forensika.eu/en/congressa/ · Project site: https://dzanino.github.io/Congressa/
-Platforms: iPhone, iPad, Mac (organiser) and Android. Price: free. Languages: 8 (Slovak, Czech, English, German, French, Spanish, Italian, Ukrainian).
+Platforms: iPhone, iPad, Mac (organiser) and Android. Price: free. Languages: 13 (Slovak, Czech, English, German, French, Spanish, Italian, Ukrainian, Polish, Hungarian, Chinese, Japanese, Korean).
 
 What it does: loads a conference programme once (QR code, conference website or PDF) and works offline: the "Now" screen, a personal plan with reminders and clash warnings, directions and contacts. The programme QR code works on both iPhone and Android and sends people without the app to the right store. An optional organiser server adds push announcements, sign-ups with capacity and waiting lists, and audience polls.
 

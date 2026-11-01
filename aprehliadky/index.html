@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://forensika.eu/aprehliadky/">
 <link rel="alternate" hreflang="sk" href="https://forensika.eu/aprehliadky/">
 <link rel="alternate" hreflang="en" href="https://forensika.eu/en/aprehliadky/">
-<link rel="alternate" hreflang="x-default" href="https://forensika.eu/aprehliadky/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/aprehliadky/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="aPrehliadky: forenzná 3D dokumentácia LiDAR-om (iPhone)">
 <meta property="og:description" content="3D dokumentácia obhliadky mŕtveho tela, miesta činu aj predmetov LiDAR-om na iPhone. Meranie po povrchu, certifikát triedy A–D, balík .f3d so SHA-256. Offline, bez cloudu.">
@@ -119,6 +119,14 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Je aPrehliadky zadarmo? Čo pridáva licencia Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Áno. Snímanie, výpočet modelu, meranie, nálezy, certifikát triedy A až D aj PDF protokol sú a zostanú zadarmo, bez obmedzení. Voliteľná licencia Pro (jednorazový nákup v aplikácii, nie predplatné, 149,99 €) pridáva len to, čo bezplatná verzia nikdy nemala: kryptografický podpis balíkov a protokolov kľúčom zariadenia, názov pracoviska na protokole a prioritnú podporu. Doterajšie dobrovoľné príspevky sa do Pro započítavajú automaticky: od 145 € je Pro zadarmo, menší darcovia majú zľavnený doplatok. Výnos z Pro aj z príspevkov ide na vývoj a výskum, ktorý autor zatiaľ financuje sám."
+      }
+    },
     {
       "@type": "Question",
       "name": "Potrebujem na aPrehliadky iPhone s LiDAR-om?",
@@ -260,6 +268,13 @@
 <tr><td>Trieda D · neoverená mierka</td><td>mierka nie je doložená alebo overenie presahuje 5 % · len názorná dokumentácia</td></tr>
 <tr><td>Terč T3</td><td>kruhové fiduciály A–B: 247,00 mm · B–C: 160,00 mm · A–C: 294 mm; v modeli sa triangulujú, 10 známych vzdialeností 33–294 mm (tlač A4)</td></tr>
 </table>
+<h3 style="margin-top:28px">Prvé overenie v praxi</h3>
+<p>Výsledky úvodných testov autora (nejde ešte o validačnú štúdiu, tá sa pripravuje so sieťou pracovísk):</p>
+<ul>
+<li><strong>Etalón na reálnom predmete:</strong> dlhá strana štítku (75 mm) zadaná ako etalón, výška štítku vypočítaná z modelu <strong>35,7 mm</strong>, pravítko <strong>36 mm</strong>. Rozdiel 0,3 mm je v rámci rozšírenej neistoty ± 5,9 mm (k = 2), ktorú appka uviedla.</li>
+<li><strong>Simulačná figurína, celé telo:</strong> 364 snímok z iPhonu, detailný model vypočítaný na Macu približne za 15 minút, zachytená scéna asi 3,6 m. Bez kalibračného terča appka mierku z LiDARu poctivo označí ako orientačnú (približne ± 5 %).</li>
+<li><strong>Dráha po povrchu na figurantovi:</strong> 12,71 cm ± 0,83 cm cez 5 bodov, s rozšírenou neistotou pri každom meraní.</li>
+</ul>
 </div>
 </section>
 
@@ -286,6 +301,7 @@
 <section class="alt">
 <div class="wrap">
 <h2>Časté otázky</h2>
+<details><summary>Je aPrehliadky zadarmo? Čo pridáva licencia Pro?</summary><p>Áno. Snímanie, výpočet modelu, meranie, nálezy, certifikát triedy A až D aj PDF protokol sú a zostanú zadarmo, bez obmedzení. Voliteľná licencia Pro (jednorazový nákup v aplikácii, nie predplatné, 149,99 €) pridáva len to, čo bezplatná verzia nikdy nemala: kryptografický podpis balíkov a protokolov kľúčom zariadenia, názov pracoviska na protokole a prioritnú podporu. Doterajšie dobrovoľné príspevky sa do Pro započítavajú automaticky: od 145 € je Pro zadarmo, menší darcovia majú zľavnený doplatok. Výnos z Pro aj z príspevkov ide na vývoj a výskum, ktorý autor zatiaľ financuje sám.</p></details>
 <details><summary>Potrebujem na aPrehliadky iPhone s LiDAR-om?</summary><p>LiDAR nie je nutná podmienka, ale je odporúčaný: dáva každému snímku hĺbku a gravitáciu, trajektória kamery je metrická a certifikát dosiahne vyššiu triedu. Bez LiDAR-u appka funguje s mierkou z trajektórie ARKitu a kalibračného terča, model treba prepočítať cez doplnok Fotograme3ka 3D na Macu.</p></details>
 <details><summary>Odchádzajú dáta z aPrehliadok niekam na server alebo do cloudu?</summary><p>Nie. Celé snímanie, rekonštrukcia aj prehliadka modelu bežia výhradne v zariadení cez RealityKit Object Capture. Aplikácia nemá sieťovú vrstvu, dáta neopustia iPhone, kým ich sami neexportujete ako balík .f3d.</p></details>
 <details><summary>Čo je certifikát 3D dokumentácie triedy A–D?</summary><p>Je to súčasť PDF protokolu, ktorá hodnotí, koľkými nezávislými cestami je doložená mierka modelu (LiDAR hĺbka porovnaná s modelom, fit na trajektóriu kamery, etalón známej dĺžky alebo terč T3). Trieda A znamená najvyššiu mieru metrologického overenia, D najnižšiu: vždy s uvedenou neistotou merania.</p></details>

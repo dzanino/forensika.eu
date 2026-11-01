@@ -15,7 +15,7 @@
 <link rel="canonical" href="https://forensika.eu/en/aprehliadky/">
 <link rel="alternate" hreflang="sk" href="https://forensika.eu/aprehliadky/">
 <link rel="alternate" hreflang="en" href="https://forensika.eu/en/aprehliadky/">
-<link rel="alternate" hreflang="x-default" href="https://forensika.eu/aprehliadky/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/aprehliadky/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="aPrehliadky: Offline Forensic 3D LiDAR Scanning for iPhone">
 <meta property="og:description" content="Photogrammetric 3D documentation of bodies, scenes and objects with iPhone LiDAR. Surface measurement, a class A–D documentation certificate, a hashed .f3d package. Fully on-device, no cloud, no account.">
@@ -129,6 +129,14 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is aPrehliadky free? What does the Pro licence add?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Capture, model computation, measurement, findings, the class A–D certificate and the PDF report are and will remain free, with no limits. The optional Pro licence (a one-time in-app purchase, not a subscription, €149.99) adds only what the free version never had: a cryptographic signature of packages and reports with the device key, the institution name on the report and priority support. Earlier voluntary contributions count towards Pro automatically: from €145 Pro is free, smaller donors get a discounted top-up. Income from Pro and from contributions funds development and research that the author so far finances himself."
+      }
+    },
     {
       "@type": "Question",
       "name": "Do I need a LiDAR-equipped iPhone for aPrehliadky?",
@@ -270,6 +278,13 @@
 <tr><td>Class D · unverified scale</td><td>scale not substantiated, or verification above 5%: illustrative documentation only</td></tr>
 <tr><td>T3 target</td><td>circular fiducials A–B: 247.00 mm · B–C: 160.00 mm · A–C: 294 mm; triangulated in the model, 10 known distances 33–294 mm (A4 print)</td></tr>
 </table>
+<h3 style="margin-top:28px">First checks in practice</h3>
+<p>Results of the author's initial tests (not yet a validation study, which is being prepared with a network of institutions):</p>
+<ul>
+<li><strong>Reference on a real object:</strong> the long side of a label (75 mm) entered as the reference; the label height computed from the model was <strong>35.7 mm</strong>, the ruler showed <strong>36 mm</strong>. The 0.3 mm difference lies within the expanded uncertainty of ± 5.9 mm (k = 2) reported by the app.</li>
+<li><strong>Whole-body simulation manikin:</strong> 364 iPhone frames, a detailed model computed on a Mac in about 15 minutes, a captured scene of about 3.6 m. Without a calibration target the app honestly marks the LiDAR scale as indicative (about ± 5 %).</li>
+<li><strong>Surface path on a live subject:</strong> 12.71 cm ± 0.83 cm across 5 points, with the expanded uncertainty stated for every measurement.</li>
+</ul>
 </div>
 </section>
 
@@ -296,6 +311,7 @@
 <section class="alt">
 <div class="wrap">
 <h2>Frequently asked questions</h2>
+<details><summary>Is aPrehliadky free? What does the Pro licence add?</summary><p>Yes. Capture, model computation, measurement, findings, the class A–D certificate and the PDF report are and will remain free, with no limits. The optional Pro licence (a one-time in-app purchase, not a subscription, €149.99) adds only what the free version never had: a cryptographic signature of packages and reports with the device key, the institution name on the report and priority support. Earlier voluntary contributions count towards Pro automatically: from €145 Pro is free, smaller donors get a discounted top-up. Income from Pro and from contributions funds development and research that the author so far finances himself.</p></details>
 <details><summary>Do I need a LiDAR-equipped iPhone for aPrehliadky?</summary><p>LiDAR is not a strict requirement but is recommended: it gives every frame depth and gravity, the camera trajectory is metric and the resulting certificate reaches a higher class. Without LiDAR, the app derives scale from the ARKit camera trajectory and a calibration target, and the model should be recomputed on a Mac with the Fotograme3ka 3D companion app.</p></details>
 <details><summary>Does aPrehliadky send any data to a server or the cloud?</summary><p>No. Capture, reconstruction and model review all run entirely on-device through Apple's RealityKit Object Capture. The app has no networking layer: data never leaves the iPhone unless you explicitly export it as an .f3d package.</p></details>
 <details><summary>What is the class A–D 3D documentation certificate?</summary><p>It is part of the PDF report and rates how many independent routes substantiate the model's scale: LiDAR depth compared with the model, a fit to the camera trajectory, and a reference of known length or the T3 calibration target. Class A denotes the highest degree of metrological verification, class D the lowest, each stated together with its measurement uncertainty.</p></details>
