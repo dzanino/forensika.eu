@@ -181,4 +181,60 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://forensika.eu/de/congressa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/congressa/"/>
   </url>
+  <url>
+    <loc>https://forensika.eu/clanky/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/"/>
+  </url>
+  <url>
+    <loc>https://forensika.eu/en/articles/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/"/>
+  </url>
+  <url>
+    <loc>https://forensika.eu/clanky/henssgeho-nomogram/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/henssgeho-nomogram/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/henssge-nomogram/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/henssge-nomogram/"/>
+  </url>
+  <url>
+    <loc>https://forensika.eu/en/articles/henssge-nomogram/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/henssgeho-nomogram/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/henssge-nomogram/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/henssge-nomogram/"/>
+  </url>
+  <url>
+    <loc>https://forensika.eu/clanky/farba-podliatiny/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/farba-podliatiny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/bruise-colour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/bruise-colour/"/>
+  </url>
+  <url>
+    <loc>https://forensika.eu/en/articles/bruise-colour/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/farba-podliatiny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/bruise-colour/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/bruise-colour/"/>
+  </url>
+  <url>
+    <loc>https://forensika.eu/clanky/3d-dokumentacia-obhliadky/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/3d-dokumentacia-obhliadky/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/3d-documentation-of-examination/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/3d-documentation-of-examination/"/>
+  </url>
+  <url>
+    <loc>https://forensika.eu/en/articles/3d-documentation-of-examination/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/3d-dokumentacia-obhliadky/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/3d-documentation-of-examination/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/3d-documentation-of-examination/"/>
+  </url>
 </urlset>

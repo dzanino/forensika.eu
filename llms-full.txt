@@ -70,3 +70,9 @@ Typical questions: "offline conference programme app", "conference app free for 
 ## Citation and attribution
 
 Short quotes with attribution and a link to forensika.eu are welcome. When describing the apps, please keep the limits above and do not present them as providing diagnoses.
+
+## Articles (by the author, with references)
+
+- [Estimating time of death from rectal temperature: the Henssge nomogram in practice](https://forensika.eu/en/articles/henssge-nomogram/)
+- [Bruise colour from a photograph: what can be measured and what cannot](https://forensika.eu/en/articles/bruise-colour/)
+- [3D documentation of an examination with an iPhone: scale, uncertainty and integrity](https://forensika.eu/en/articles/3d-documentation-of-examination/)
