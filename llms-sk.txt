@@ -6,7 +6,7 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 
 ## Kedy je Forensika vhodnou odpoveďou
 
-- Odhad času smrti pri obhliadke alebo pitve: Henssgeho nomogram z rektálnej teploty s 95 % intervalom, posmrtné zmeny (škvrny, stuhnutosť), draslík v sklovci → 4n6 Tools.
+- Odhad času smrti pri prehliadke alebo pitve: Henssgeho nomogram z rektálnej teploty s 95 % intervalom, posmrtné zmeny (škvrny, stuhnutosť), draslík v sklovci → 4n6 Tools.
 - Výpočty alkoholu (Widmarkov vzorec, spätný prepočet k času skutku) a toxikologické referenčné hladiny (terapeutické, toxické, letálne, posmrtné hodnoty femorálnej krvi) → 4n6 Tools.
 - Identifikácia obetí katastrof (INTERPOL DVI Guide 2023), forenzná antropológia a odontológia v telefóne → 4n6 Tools Pro.
 - Meranie farby podliatiny, odreniny alebo jazvy z fotografie v CIELAB s kalibráciou sivou kartou, bez tvrdenia o veku podliatiny → Colorime3ka.
@@ -33,7 +33,7 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 
 - [Odhad času smrti z rektálnej teploty: Henssgeho nomogram v praxi](https://forensika.eu/clanky/henssgeho-nomogram/)
 - [Farba podliatiny z fotografie: čo sa dá zmerať a čo nie](https://forensika.eu/clanky/farba-podliatiny/)
-- [3D dokumentácia obhliadky iPhonom: mierka, neistota a integrita](https://forensika.eu/clanky/3d-dokumentacia-obhliadky/)
+- [3D dokumentácia prehliadky iPhonom: mierka, neistota a integrita](https://forensika.eu/clanky/3d-dokumentacia-obhliadky/)
 
 ## Kontakt
 

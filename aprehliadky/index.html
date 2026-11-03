@@ -11,14 +11,14 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="aPrehliadky">
 <title>aPrehliadky: forenzná 3D dokumentácia LiDAR-om (iPhone)</title>
-<meta name="description" content="aPrehliadky: 3D dokumentácia obhliadky mŕtveho tela aj miesta činu LiDAR-om na iPhone. Meranie, certifikát triedy A–D, .f3d balík. Offline, bez cloudu.">
+<meta name="description" content="aPrehliadky: 3D dokumentácia prehliadky mŕtveho tela aj obhliadky miesta činu LiDAR-om na iPhone. Meranie, certifikát triedy A–D, .f3d balík. Offline, bez cloudu.">
 <link rel="canonical" href="https://forensika.eu/aprehliadky/">
 <link rel="alternate" hreflang="sk" href="https://forensika.eu/aprehliadky/">
 <link rel="alternate" hreflang="en" href="https://forensika.eu/en/aprehliadky/">
 <link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/aprehliadky/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="aPrehliadky: forenzná 3D dokumentácia LiDAR-om (iPhone)">
-<meta property="og:description" content="3D dokumentácia obhliadky mŕtveho tela, miesta činu aj predmetov LiDAR-om na iPhone. Meranie po povrchu, certifikát triedy A–D, balík .f3d so SHA-256. Offline, bez cloudu.">
+<meta property="og:description" content="3D dokumentácia prehliadky mŕtveho tela, miesta činu aj predmetov LiDAR-om na iPhone. Meranie po povrchu, certifikát triedy A–D, balík .f3d so SHA-256. Offline, bez cloudu.">
 <meta property="og:url" content="https://forensika.eu/aprehliadky/">
 <meta property="og:locale" content="sk_SK">
 <meta property="og:locale:alternate" content="en_US">
@@ -211,7 +211,7 @@
 <p class="crumbs"><a href="/">Forensika</a> › <a href="/#aplikacie">Aplikácie</a> › aPrehliadky</p>
 <section class="hero">
 <div class="kicker">Forenzná 3D dokumentácia · iPhone LiDAR</div>
-<h1>aPrehliadky: <span class="accent">forenzná 3D dokumentácia</span> obhliadky LiDAR-om</h1>
+<h1>aPrehliadky: <span class="accent">forenzná 3D dokumentácia</span> prehliadky LiDAR-om</h1>
 <p class="lede">Fotogrametrický 3D skener tela, predmetov a miesta činu pre iPhone a iPad. Každý záber nesie hĺbku a gravitáciu, mierka pochádza z LiDAR hĺbky a trajektórie kamery s poctivo uvedenou neistotou a každé meranie má uvedenú neistotu: bez uploadu, bez cloudu, bez účtu.</p>
 <div class="btns">
 <a class="btn-primary" href="https://apps.apple.com/app/id6808879666" target="_blank" rel="noopener">Stiahnuť na App Store · zadarmo</a>
@@ -232,20 +232,20 @@
 <section>
 <div class="wrap">
 <h2>Prečo forenzná 3D dokumentácia na iPhone, nie fotoaparát a meter</h2>
-<p>Klasická obhliadka zaznamenáva miesto činu alebo telo sériou 2D fotografií s mierkou vloženou do záberu. Problém je, že žiadna z tých fotografií neponesie priestorový vzťah medzi nálezmi: vzdialenosť medzi dvoma poraneniami, uhol rany voči osi tela alebo polohu tela v miestnosti treba dopočítať z viacerých záberov a odhadu. <strong>aPrehliadky</strong> tento krok obchádzajú: iPhone s LiDAR-om zaznamená ku každému snímku aj hĺbkovú mapu a gravitačný vektor. Fotogrametrický model sám o sebe v metroch nie je: mierku mu dodáva LiDAR hĺbka porovnaná s modelom, trajektória kamery (LiDAR + inerciálne senzory) a terč nájdený v modeli, a každé meranie nesie rozšírenú neistotu U (k = 2).</p>
+<p>Klasická prehliadka alebo obhliadka zaznamenáva telo alebo miesto činu sériou 2D fotografií s mierkou vloženou do záberu. Problém je, že žiadna z tých fotografií neponesie priestorový vzťah medzi nálezmi: vzdialenosť medzi dvoma poraneniami, uhol rany voči osi tela alebo polohu tela v miestnosti treba dopočítať z viacerých záberov a odhadu. <strong>aPrehliadky</strong> tento krok obchádzajú: iPhone s LiDAR-om zaznamená ku každému snímku aj hĺbkovú mapu a gravitačný vektor. Fotogrametrický model sám o sebe v metroch nie je: mierku mu dodáva LiDAR hĺbka porovnaná s modelom, trajektória kamery (LiDAR + inerciálne senzory) a terč nájdený v modeli, a každé meranie nesie rozšírenú neistotu U (k = 2).</p>
 <p>Rekonštrukcia beží celá na zariadení cez Apple RealityKit Object Capture: klasická fotogrametria s LiDAR hĺbkovým priorom, bez NeRF, bez 3D Gaussian Splattingu a bez geometrie dopĺňanej umelou inteligenciou. Protokol to výslovne uvádza: model vzniká výlučne zo zosnímaných dát. Pre znaleckú prax je to podstatný rozdiel oproti nástrojom, ktoré chýbajúcu geometriu odhadujú: aPrehliadky nikdy nedopočítavajú to, čo kamera nevidela.</p>
 <div class="grid">
 <div class="d"><h3>Meranie priamo na modeli</h3><p>Vzdialenosť, dráha po nerovnom povrchu (dĺžka rany, obvod), plocha aj objem: v milimetroch, s uvedenou neistotou U (k = 2).</p></div>
 <div class="d"><h3>Nálezy so špendlíkmi</h3><p>Číslované nálezy priamo na povrchu modelu: typ (poranenie, znak, posmrtná škvrna, odber), popis, presúvateľné a editovateľné.</p></div>
 <div class="d"><h3>Okolie z LiDAR-u</h3><p>Mesh miestnosti ako druhý, metrický model bez textúry: poloha tela v priestore je sama osebe nález.</p></div>
-<div class="d"><h3>PDF protokol a certifikát</h3><p>Prípad, obhliadajúci, parametre snímania, vyhlásenie o metóde, overenie mierky, nálezy, merania a integrita modelu na jednom mieste.</p></div>
+<div class="d"><h3>PDF protokol a certifikát</h3><p>Prípad, prehliadajúci, parametre snímania, vyhlásenie o metóde, overenie mierky, nálezy, merania a integrita modelu na jednom mieste.</p></div>
 </div>
 </div>
 </section>
 
 <section class="alt">
 <div class="wrap">
-<h2>Ako aPrehliadky zaznamenávajú obhliadku</h2>
+<h2>Ako aPrehliadky zaznamenávajú prehliadku</h2>
 <div class="steps">
 <div class="step"><div class="n"></div><div><h3>Snímanie na mieste</h3><p>Dva profily (zomrelý / živá osoba) a dva rozsahy (celé telo / detail regiónu). Aplikácia sama spúšťa snímky podľa posunu a pootočenia kamery, radar pokrytia ukazuje, čo ešte chýba.</p></div></div>
 <div class="step"><div class="n"></div><div><h3>Rekonštrukcia v zariadení</h3><p>RealityKit Object Capture spracuje sériu snímkov na 3D model s textúrou: celé offline, bez odoslania jediného pixelu.</p></div></div>
