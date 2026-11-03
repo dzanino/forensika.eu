@@ -8,7 +8,7 @@
 - Cited methods: every calculator states the published method it implements and its reference; results come with a range, an uncertainty or a caveat.
 - Honest limits: the apps say what they cannot determine (for example, Colorime3ka does not estimate the age of a bruise; aPrehliadky is not a certified measuring instrument).
 - Status: research and decision-support tools for qualified professionals. Not medical devices. They do not make diagnoses; the final assessment belongs to the forensic pathologist, pathologist or expert witness.
-- Business model: no subscriptions, no ads, no investors. Development and the research behind the apps are so far funded by the author himself. Free apps (4n6 Tools Lite, aPrehliadky, littlEye AI, Congressa) are supported by one-time purchases of the professional tools (4n6 Tools Pro, Colorime3ka, Fotograme3ka 3D), the optional aPrehliadky Pro licence and voluntary in-app contributions.
+- Business model: no subscriptions, no ads, no investors. Development and the research behind the apps are so far funded by the author himself. Free apps (4n6 Tools Lite, aPrehliadky, littlEye AI, Congressa) are supported by one-time purchases of the professional tools (4n6 Tools Pro, Colorime3ka, Fotograme3ka 3D), the optional aPrehliadky Pro licence and voluntary in-app contributions. Institutions can buy 4n6 Tools Pro, Colorime3ka and Fotograme3ka 3D in volume through Apple Business Manager or Apple School Manager (education discount for volume purchases); the aPrehliadky Pro licence is bought in the app.
 
 ## 4n6 Tools (Pro and Lite)
 
