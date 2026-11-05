@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>The Widmark calculation in practice: back-calculation, balance and breath · Forensika</title>
+<meta name="description" content="How to calculate blood alcohol with the Widmark equation, when to use an individual r after Seidl, how to report a range, and what the 2025 Slovak forensic society statement says.">
+<link rel="canonical" href="https://forensika.eu/en/articles/widmark-calculation/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/widmarkov-vypocet/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/widmark-calculation/">
+<link rel="alternate" hreflang="de" href="https://forensika.eu/de/artikel/widmark-berechnung/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/widmark-calculation/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Widmark calculation in practice: back-calculation, balance and breath · Forensika">
+<meta property="og:description" content="How to calculate blood alcohol with the Widmark equation, when to use an individual r after Seidl, how to report a range, and what the 2025 Slovak forensic society statement says.">
+<meta property="og:url" content="https://forensika.eu/en/articles/widmark-calculation/">
+<meta property="og:image" content="https://forensika.eu/img/og/4n6.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forensika.eu/img/og/4n6.png">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:66ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:74ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  .steps{counter-reset:s;margin-top:8px;}
+  .step{display:flex;gap:16px;margin-bottom:18px;}
+  .step .n{counter-increment:s;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step .n::before{content:counter(s);}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+</style>
+<style>article h1,article h2{hyphens:manual;-webkit-hyphens:manual} article .body h2{margin-top:30px} article .body p{max-width:72ch} .meta{color:var(--muted);font-size:14px;margin:6px 0 18px} ol.refs li{font-size:14px;color:var(--muted);margin-bottom:8px}</style>
+<link rel="stylesheet" href="/glam.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://forensika.eu/en/articles/widmark-calculation/#clanok",
+      "headline": "The Widmark calculation in practice: back-calculation, balance and breath",
+      "description": "How to calculate blood alcohol with the Widmark equation, when to use an individual r after Seidl, how to report a range, and what the 2025 Slovak forensic society statement says.",
+      "inLanguage": "en",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "image": "https://forensika.eu/img/og/4n6.png",
+      "author": {
+        "@type": "Person",
+        "@id": "https://forensika.eu/#autor",
+        "name": "Ján Šikuta"
+      },
+      "publisher": {
+        "@id": "https://forensika.eu/#forensika"
+      },
+      "mainEntityOfPage": "https://forensika.eu/en/articles/widmark-calculation/",
+      "about": {
+        "@id": "https://forensika.eu/#app-4n6pro"
+      },
+      "citation": [
+        "Widmark EMP. Principles and Applications of Medicolegal Alcohol Determination. Davis: Biomedical Publications; 1981.",
+        "Seidl S, Jensen U, Alt A. The calculation of blood ethanol concentrations in males and females. Int J Legal Med. 2000;114(1–2):71–77. doi:10.1007/s004140000154",
+        "Searle J. Alcohol calculations and their uncertainty. Med Sci Law. 2015;55(1):58–64. doi:10.1177/0025802414524385",
+        "Jones AW, Andersson L. Variability of the blood/breath alcohol ratio in drinking drivers. J Forensic Sci. 1996;41(6):916–921.",
+        "Kugelberg FC, Jones AW. Interpreting results of ethanol analysis in postmortem specimens: a review of the literature. Forensic Sci Int. 2007;165(1):10–29. doi:10.1016/j.forsciint.2006.05.004",
+        "Bauer M, Bauerová J, Šikuta J, Šidlo J. Confrontation of knowledge on alcohol concentration in blood and in exhaled air. Soud Lek. 2015;60(2):21–24 (English abstract).",
+        "Slovak Society of Forensic Medicine (SSLS). Position statement on assessing the influence of ethanol on a person. Bratislava, 22 January 2025."
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forensika",
+          "item": "https://forensika.eu/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://forensika.eu/en/articles/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Widmark calculation in practice: back-calculation, balance and breath",
+          "item": "https://forensika.eu/en/articles/widmark-calculation/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/en/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/en/articles/">Articles</a>
+<span class="langs"><a href="/clanky/widmarkov-vypocet/" hreflang="sk">SK</a><a class="on" href="/en/articles/widmark-calculation/" hreflang="en">EN</a><a href="/de/artikel/widmark-berechnung/" hreflang="de">DE</a></span>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/en/">Forensika</a> › <a href="/en/articles/">Articles</a></p>
+<article>
+<section class="hero">
+<div class="kicker">Forensic medicine · alcohol</div>
+<h1>The Widmark calculation in practice: back-calculation, balance and breath</h1>
+<p class="meta">Ján Šikuta, MD, PhD, forensic pathologist · Published 5 November 2026</p>
+<p class="lede">“How much did he have in his blood at the time of the accident?” is one of the questions a forensic pathologist hears most often. The answer is never a single figure but a range, and its width depends on what is really known about the drinking and about the person.</p>
+</section>
+<div class="body">
+<h2>One equation, three questions</h2>
+<p>The Widmark equation links three quantities: the amount of ethanol consumed, body mass reduced by the factor r, and the elimination rate β. The concentration at time t is c = A / (m · r) − β · t. The same equation answers three different questions that are often mixed up in expert reports:</p>
+<ul class="check">
+<li><b>curve:</b> what concentration a person could reach after a given drinking pattern,</li>
+<li><b>back-calculation:</b> what the concentration was at the time of the incident, given a later sample,</li>
+<li><b>balance:</b> how much alcohol must have been consumed to reach the measured concentration, and whether that fits the person's account.</li>
+</ul>
+<p>The ethanol in a drink is volume × alcohol content × 0.789 (density of ethanol in g/mL). A half-litre of 4 % beer thus contains about 15.8 g of ethanol, four of them about 63 g.</p>
+
+<h2>The factor r: a fixed value or calculated from height and weight</h2>
+<p>Widmark used fixed values of 0.7 for men and 0.6 for women. The factor r, however, expresses the ratio of total body water to blood water, and that varies considerably between people. Seidl et al. (2000) measured it in 529 adults: from 0.44 to 0.80 in women and from 0.60 to 0.87 in men. They derived regression equations from height and weight, and in drinking experiments the individual r matched measured values better than the fixed 0.6 and 0.7. When height is known, an individual r is a sensible choice; for a tall slim person and for an obese person a fixed factor shifts the result in opposite directions.</p>
+
+<h2>Back-calculation and its conditions</h2>
+<p>Back-calculation adds what was eliminated between the incident and the sample: c₀ = c + β · Δt. Example: a sample taken two hours after an accident showed 0.90 g/kg. With β of 0.12 to 0.20 g/kg/h the concentration at the time of the accident was 1.14 to 1.30 g/kg. The result is reported as a range, not as a single mid-value.</p>
+<p>The calculation is only meaningful if the person was in the elimination phase for the whole time between the incident and the sample. If they drank shortly before or after the incident, alcohol was still being absorbed and a linear addition gives a wrong answer. It is reasonably reliable up to about ten hours; beyond that the error grows so much that the result is only indicative.</p>
+
+<h2>Uncertainty: a range, not a figure</h2>
+<p>Every input carries its own uncertainty: the amount and type of drink from a statement, body weight, r and β. Searle (2015) showed that the uncertainty cannot be expressed as one fixed percentage, as has sometimes been done in the literature, but has to be calculated for the case at hand. In practice this means reporting the range from the extreme values of β and, in a balance calculation, allowing for the absorption deficit, the part of the alcohol that never reaches the blood.</p>
+
+<h2>Breath and blood</h2>
+<p>The ratio of blood to breath alcohol is not a constant. Jones and Andersson (1996) measured it in 799 drivers at a mean of 2407 (95 % limits of agreement 1981 to 2833) after correcting for elimination between the samples. Statutory conversions in many countries use a lower ratio of 2000 or 2100, so for most people they work in the driver's favour. In Slovakia, according to the statement of the Slovak Society of Forensic Medicine of 22 January 2025, a breath result in mg/L is converted to g/kg directly with a factor of 2.1.</p>
+<p>Differences between breath and blood also have practical causes: exhalation technique, the time between the breath test and blood sampling, and the quality of the analysis. Bauer et al. (2015) drew attention above all to the human factor in analysis and recommended two mutually independent methods or the analysis of two biological materials.</p>
+
+<h2>Slovak limits according to the SSLS (2025)</h2>
+<ul class="check">
+<li>up to and including 0.30 g/kg in blood and 0.14 mg/L in breath the finding is insignificant for road traffic,</li>
+<li>at 0.80 g/kg in blood or 0.38 mg/L in breath and above nobody is fit to drive,</li>
+<li>blood is analysed by HS-GC-FID (or HS-GC-MS) and the result is the mean of at least two determinations,</li>
+<li>the degree of impairment cannot be assessed from the urine concentration alone,</li>
+<li>β is usually taken as 0.12 to 0.20 g/kg/h; at low concentrations below 0.30 g/kg it may fall to 0.10, and with prolonged heavy drinking above 2.00 g/kg it may exceptionally rise to 0.25.</li>
+</ul>
+
+<h2>After death different rules apply</h2>
+<p>In post-mortem samples ethanol can be produced by microorganisms, especially with decomposition, and central blood may gain alcohol by diffusion from the stomach. Kugelberg and Jones (2007) therefore recommend analysing vitreous humour as well, which is better protected from these effects, and the urine to blood ratio can indicate whether alcohol was still being absorbed at the time of death.</p>
+
+<h2>How 4n6 Tools handles it</h2>
+<p>The Ethanol calculations tool in 4n6 Tools computes the curve, the back-calculation and the balance, offers an individual r after Seidl, the β range of the SSLS statement and breath conversion with the factor 2.1. It reports the result as a range, warns when the elimination-phase conditions are not met and, with two or more samples, estimates an individual β from the slope of the curve. The Slovak procedure is preselected by language; a general one is also available.</p>
+</div>
+<div class="note" style="margin-top:22px">Related app: <a href="/en/4n6/">4n6 Tools</a>. This article is a professional overview for qualified experts; it does not replace a textbook, guidelines or an expert opinion.</div>
+<h2>References</h2>
+<ol class="refs"><li>Widmark EMP. Principles and Applications of Medicolegal Alcohol Determination. Davis: Biomedical Publications; 1981.</li><li>Seidl S, Jensen U, Alt A. The calculation of blood ethanol concentrations in males and females. Int J Legal Med. 2000;114(1–2):71–77. doi:10.1007/s004140000154</li><li>Searle J. Alcohol calculations and their uncertainty. Med Sci Law. 2015;55(1):58–64. doi:10.1177/0025802414524385</li><li>Jones AW, Andersson L. Variability of the blood/breath alcohol ratio in drinking drivers. J Forensic Sci. 1996;41(6):916–921.</li><li>Kugelberg FC, Jones AW. Interpreting results of ethanol analysis in postmortem specimens: a review of the literature. Forensic Sci Int. 2007;165(1):10–29. doi:10.1016/j.forsciint.2006.05.004</li><li>Bauer M, Bauerová J, Šikuta J, Šidlo J. Confrontation of knowledge on alcohol concentration in blood and in exhaled air. Soud Lek. 2015;60(2):21–24 (English abstract).</li><li>Slovak Society of Forensic Medicine (SSLS). Position statement on assessing the influence of ethanol on a person. Bratislava, 22 January 2025.</li></ol>
+</article>
+</div>
+</main>
+<footer>
+<div class="wrap">
+<div class="site"><a href="/en/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy"><span data-fz>©</span> 2026 Ján Šikuta, MD, PhD. · <a href="mailto:admin@forensika.eu">admin@forensika.eu</a> · <a href="/en/">forensika.eu</a></div>
+</div>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>

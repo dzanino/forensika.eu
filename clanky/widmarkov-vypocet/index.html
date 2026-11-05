@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Widmarkov výpočet v praxi: spätný prepočet, bilancia a dych · Forensika</title>
+<meta name="description" content="Ako počítať koncentráciu alkoholu podľa Widmarka, kedy použiť individuálny faktor r podľa Seidla, ako uviesť rozsah a čo hovorí stanovisko SSLS z roku 2025.">
+<link rel="canonical" href="https://forensika.eu/clanky/widmarkov-vypocet/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/widmarkov-vypocet/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/widmark-calculation/">
+<link rel="alternate" hreflang="de" href="https://forensika.eu/de/artikel/widmark-berechnung/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/widmark-calculation/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Widmarkov výpočet v praxi: spätný prepočet, bilancia a dych · Forensika">
+<meta property="og:description" content="Ako počítať koncentráciu alkoholu podľa Widmarka, kedy použiť individuálny faktor r podľa Seidla, ako uviesť rozsah a čo hovorí stanovisko SSLS z roku 2025.">
+<meta property="og:url" content="https://forensika.eu/clanky/widmarkov-vypocet/">
+<meta property="og:image" content="https://forensika.eu/img/og/4n6.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forensika.eu/img/og/4n6.png">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:66ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:74ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  .steps{counter-reset:s;margin-top:8px;}
+  .step{display:flex;gap:16px;margin-bottom:18px;}
+  .step .n{counter-increment:s;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step .n::before{content:counter(s);}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+</style>
+<style>article h1,article h2{hyphens:manual;-webkit-hyphens:manual} article .body h2{margin-top:30px} article .body p{max-width:72ch} .meta{color:var(--muted);font-size:14px;margin:6px 0 18px} ol.refs li{font-size:14px;color:var(--muted);margin-bottom:8px}</style>
+<link rel="stylesheet" href="/glam.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://forensika.eu/clanky/widmarkov-vypocet/#clanok",
+      "headline": "Widmarkov výpočet v praxi: spätný prepočet, bilancia a dych",
+      "description": "Ako počítať koncentráciu alkoholu podľa Widmarka, kedy použiť individuálny faktor r podľa Seidla, ako uviesť rozsah a čo hovorí stanovisko SSLS z roku 2025.",
+      "inLanguage": "sk",
+      "datePublished": "2026-11-05",
+      "dateModified": "2026-11-05",
+      "image": "https://forensika.eu/img/og/4n6.png",
+      "author": {
+        "@type": "Person",
+        "@id": "https://forensika.eu/#autor",
+        "name": "Ján Šikuta"
+      },
+      "publisher": {
+        "@id": "https://forensika.eu/#forensika"
+      },
+      "mainEntityOfPage": "https://forensika.eu/clanky/widmarkov-vypocet/",
+      "about": {
+        "@id": "https://forensika.eu/#app-4n6pro"
+      },
+      "citation": [
+        "Widmark EMP. Principles and Applications of Medicolegal Alcohol Determination. Davis: Biomedical Publications; 1981.",
+        "Seidl S, Jensen U, Alt A. The calculation of blood ethanol concentrations in males and females. Int J Legal Med. 2000;114(1–2):71–77. doi:10.1007/s004140000154",
+        "Searle J. Alcohol calculations and their uncertainty. Med Sci Law. 2015;55(1):58–64. doi:10.1177/0025802414524385",
+        "Jones AW, Andersson L. Variability of the blood/breath alcohol ratio in drinking drivers. J Forensic Sci. 1996;41(6):916–921.",
+        "Kugelberg FC, Jones AW. Interpreting results of ethanol analysis in postmortem specimens: a review of the literature. Forensic Sci Int. 2007;165(1):10–29. doi:10.1016/j.forsciint.2006.05.004",
+        "Bauer M, Bauerová J, Šikuta J, Šidlo J. Confrontation of knowledge on alcohol concentration in blood and in exhaled air. Soud Lek. 2015;60(2):21–24 (anglický abstrakt).",
+        "Slovenská súdnolekárska spoločnosť SLS. Stanovisko k posudzovaniu ovplyvnenia ľudského jedinca etanolom. Bratislava, 22. 1. 2025."
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forensika",
+          "item": "https://forensika.eu/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Odborné články",
+          "item": "https://forensika.eu/clanky/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Widmarkov výpočet v praxi: spätný prepočet, bilancia a dych",
+          "item": "https://forensika.eu/clanky/widmarkov-vypocet/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/clanky/">Odborné články</a>
+<span class="langs"><a class="on" href="/clanky/widmarkov-vypocet/" hreflang="sk">SK</a><a href="/en/articles/widmark-calculation/" hreflang="en">EN</a><a href="/de/artikel/widmark-berechnung/" hreflang="de">DE</a></span>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/">Forensika</a> › <a href="/clanky/">Odborné články</a></p>
+<article>
+<section class="hero">
+<div class="kicker">Súdne lekárstvo · alkohológia</div>
+<h1>Widmarkov výpočet v praxi: spätný prepočet, bilancia a dych</h1>
+<p class="meta">MUDr. Ján Šikuta, PhD., súdny lekár · Uverejnené 5. 11. 2026</p>
+<p class="lede">Otázka „koľko mal v krvi v čase nehody“ patrí k najčastejším, ktoré súdny lekár dostáva. Odpoveď nikdy nie je jedno číslo, ale rozsah, a jeho šírka závisí od toho, čo o pití a o človeku naozaj vieme.</p>
+</section>
+<div class="body">
+<h2>Jedna rovnica, tri otázky</h2>
+<p>Widmarkova rovnica spája tri veličiny: množstvo vypitého etanolu, hmotnosť človeka zníženú o faktor r a rýchlosť odbúravania β. Koncentrácia v čase t je c = A / (m · r) − β · t. Z tej istej rovnice sa dajú riešiť tri rôzne otázky, ktoré sa v posudkoch často zamieňajú:</p>
+<ul class="check">
+<li><b>krivka:</b> akú koncentráciu mohol mať človek po konkrétnom pití,</li>
+<li><b>spätný prepočet:</b> aká bola koncentrácia v čase skutku, keď poznáme výsledok neskoršieho odberu,</li>
+<li><b>bilancia:</b> koľko alkoholu musel vypiť, aby dosiahol nameranú koncentráciu, a či to sedí s jeho výpoveďou.</li>
+</ul>
+<p>Množstvo etanolu v nápoji je objem × obsah alkoholu × 0,789 (hustota etanolu v g/ml). Pollitrové pivo so 4 % obj. tak obsahuje približne 15,8 g etanolu, štyri pivá spolu asi 63 g.</p>
+
+<h2>Faktor r: pevná hodnota alebo výpočet z výšky a hmotnosti</h2>
+<p>Widmark použil pevné hodnoty 0,7 pre mužov a 0,6 pre ženy. Faktor r však vyjadruje pomer celkovej telesnej vody k vode v krvi a ten sa medzi ľuďmi výrazne líši. Seidl a spol. (2000) ho zmerali u 529 dospelých: u žien od 0,44 do 0,80, u mužov od 0,60 do 0,87. Z výšky a hmotnosti odvodili regresné rovnice a pri pitných pokusoch sa výpočet s individuálnym r zhodoval s nameranými hodnotami lepšie než s pevnými 0,6 a 0,7. Keď je výška známa, je individuálny r rozumnou voľbou; pri vysokom štíhlom človeku a pri obéznom dá pevný faktor výsledok posunutý opačnými smermi.</p>
+
+<h2>Spätný prepočet a jeho podmienky</h2>
+<p>Pri spätnom prepočte sa k nameranej hodnote pripočíta to, čo sa medzi skutkom a odberom odbúralo: c₀ = c + β · Δt. Príklad: odber dve hodiny po nehode ukázal 0,90 g/kg. Pri β 0,12 až 0,20 g/kg/h vychádza v čase nehody 1,14 až 1,30 g/kg. Výsledok sa uvádza ako rozsah, nie ako jedno číslo zo stredu.</p>
+<p>Prepočet má zmysel len vtedy, keď bol človek celý čas medzi skutkom a odberom v eliminačnej fáze. Ak pil krátko pred skutkom alebo po ňom, alkohol sa ešte vstrebával a lineárne pripočítanie dá nesprávny výsledok. Spoľahlivý je približne do desiatich hodín, potom rastie chyba natoľko, že výsledok je už len orientačný.</p>
+
+<h2>Neistota: rozsah, nie jedno číslo</h2>
+<p>Každý vstup má vlastnú neistotu: množstvo a druh nápoja z výpovede, hmotnosť, r aj β. Searle (2015) ukázal, že neistotu nemožno vyjadriť jedným pevným percentom, ako sa to v literatúre niekedy robilo, ale treba ju počítať pre konkrétny prípad. V praxi to znamená uviesť rozsah z krajných hodnôt β a pri bilancii aj s resorpčným deficitom, teda s tou časťou alkoholu, ktorá sa do krvi nedostane.</p>
+
+<h2>Dych a krv</h2>
+<p>Pomer koncentrácie v krvi a v dychu nie je konštanta. Jones a Andersson (1996) ho u 799 vodičov zmerali v priemere 2407 (95 % hranice zhody 1981 až 2833) po korekcii na odbúravanie medzi odbermi. Zákonné prepočty v mnohých krajinách počítajú s nižším pomerom 2000 alebo 2100, takže pre väčšinu ľudí vychádzajú v ich prospech. Na Slovensku sa podľa stanoviska Slovenskej súdnolekárskej spoločnosti z 22. 1. 2025 prepočítava výsledok dychovej skúšky v mg/l na g/kg priamo koeficientom 2,1.</p>
+<p>Rozdiely medzi dychom a krvou majú aj praktické príčiny: technika výdychu, čas medzi skúškou a odberom, kvalita analýzy. Bauer a spol. (2015) upozornili najmä na ľudský faktor pri analýze a odporučili analýzu dvoma na sebe nezávislými metódami alebo dvoch biologických materiálov.</p>
+
+<h2>Slovenské hranice podľa SSLS (2025)</h2>
+<ul class="check">
+<li>do 0,30 g/kg v krvi a 0,14 mg/l v dychu vrátane je nález pre cestnú premávku bezvýznamný,</li>
+<li>pri 0,80 g/kg v krvi alebo 0,38 mg/l v dychu a viac nie je nikto spôsobilý viesť vozidlo,</li>
+<li>krv sa vyšetruje metódou HS-GC-FID (alebo HS-GC-MS) a výsledok je priemer najmenej dvoch stanovení,</li>
+<li>stupeň ovplyvnenia nemožno hodnotiť len z koncentrácie v moči,</li>
+<li>pre β sa bežne používa 0,12 až 0,20 g/kg/h; pri nízkych koncentráciách pod 0,30 g/kg môže klesnúť na 0,10 a pri dlhodobom excese nad 2,00 g/kg výnimočne stúpnuť na 0,25.</li>
+</ul>
+
+<h2>Po smrti platia iné pravidlá</h2>
+<p>V posmrtných vzorkách môže etanol vznikať mikrobiálne, najmä pri rozklade, a v centrálnej krvi ho môže pribudnúť difúziou zo žalúdka. Kugelberg a Jones (2007) preto odporúčajú vyšetriť aj sklovec, ktorý je od týchto vplyvov lepšie chránený, a pomer moču ku krvi môže naznačiť, či sa alkohol v čase smrti ešte vstrebával.</p>
+
+<h2>Ako to rieši 4n6 Tools</h2>
+<p>Nástroj Etanol: prepočty v aplikácii 4n6 Tools počíta krivku, spätný prepočet aj bilanciu, ponúka individuálny r podľa Seidla, rozsah β podľa stanoviska SSLS a prepočet dychu koeficientom 2,1. Výsledok uvádza ako rozsah, upozorní, keď nie sú splnené podmienky eliminačnej fázy, a pri dvoch a viac odberoch odhadne individuálnu β zo sklonu krivky. Slovenský postup sa predvolí podľa jazyka, k dispozícii je aj všeobecný.</p>
+</div>
+<div class="note" style="margin-top:22px">Aplikácia k téme: <a href="/4n6/">4n6 Tools</a>. Článok je odborný prehľad pre kvalifikovaných odborníkov; nenahrádza učebnicu, metodické usmernenie ani posudok.</div>
+<h2>Literatúra</h2>
+<ol class="refs"><li>Widmark EMP. Principles and Applications of Medicolegal Alcohol Determination. Davis: Biomedical Publications; 1981.</li><li>Seidl S, Jensen U, Alt A. The calculation of blood ethanol concentrations in males and females. Int J Legal Med. 2000;114(1–2):71–77. doi:10.1007/s004140000154</li><li>Searle J. Alcohol calculations and their uncertainty. Med Sci Law. 2015;55(1):58–64. doi:10.1177/0025802414524385</li><li>Jones AW, Andersson L. Variability of the blood/breath alcohol ratio in drinking drivers. J Forensic Sci. 1996;41(6):916–921.</li><li>Kugelberg FC, Jones AW. Interpreting results of ethanol analysis in postmortem specimens: a review of the literature. Forensic Sci Int. 2007;165(1):10–29. doi:10.1016/j.forsciint.2006.05.004</li><li>Bauer M, Bauerová J, Šikuta J, Šidlo J. Confrontation of knowledge on alcohol concentration in blood and in exhaled air. Soud Lek. 2015;60(2):21–24 (anglický abstrakt).</li><li>Slovenská súdnolekárska spoločnosť SLS. Stanovisko k posudzovaniu ovplyvnenia ľudského jedinca etanolom. Bratislava, 22. 1. 2025.</li></ol>
+</article>
+</div>
+</main>
+<footer>
+<div class="wrap">
+<div class="site"><a href="/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy"><span data-fz>©</span> 2026 MUDr. Ján Šikuta, PhD. · <a href="mailto:admin@forensika.eu">admin@forensika.eu</a> · <a href="/">forensika.eu</a></div>
+</div>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
