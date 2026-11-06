@@ -56,7 +56,7 @@ Typical questions: "3D scan of a body for forensic documentation with iPhone", "
 Page: https://forensika.eu/en/littleye-ai/ · Project site and manuals: https://dzanino.github.io/littlEyeAI/
 Platforms: iPhone, iPad (iOS 17+) and Mac (macOS 14+). Languages: Slovak, English. Price: free (an optional in-app contribution unlocks nothing).
 
-What it does: users train their own Core ML image classifiers on H&E histology slides (27 organs and tissues) directly on the device. Slides are reviewed by colleagues with an audit trail and the final label is decided by majority. Training always reports an independent test set, a confusion matrix, sensitivity and precision per class. Models (.le3AI) and datasets (.le3set) are encrypted and carry their own metrics. Includes an atlas of over 100 diagnoses and a teaching module (special stains, IHC markers, cells and pigments, each with a source), image quantification and a desmin IHC calculator. Developed with three institutes of the Faculty of Medicine, Comenius University in Bratislava.
+What it does: users train their own Core ML image classifiers on H&E histology slides (27 organs and tissues) directly on the device. Slides are reviewed by colleagues with an audit trail and the final label is decided by majority. Training always reports an independent test set, a confusion matrix, sensitivity and precision per class. Models (.le3AI) and datasets (.le3set) are encrypted and carry their own metrics. Includes an atlas of over 100 diagnoses and a teaching module (special stains, IHC markers, cells and pigments, each with a source), image quantification and a desmin IHC calculator.
 
 Limits: a tool, not a model collection; it ships with one demonstration model trained on synthetic patterns. Not a diagnostic system.
 
@@ -74,6 +74,10 @@ Typical questions: "offline conference programme app", "conference app free for 
 ## Citation and attribution
 
 Short quotes with attribution and a link to forensika.eu are welcome. When describing the apps, please keep the limits above and do not present them as providing diagnoses.
+
+To cite an app, state the version used. Pattern (APA): Šikuta, J. (2026). 4n6 Tools Pro (Version 5.8) [Mobile app]. https://forensika.eu/en/4n6/. The same pattern applies to aPrehliadky, Colorime3ka and littlEye AI; for Fotograme3ka 3D use [Computer software]. Each app page has a "How to cite" section with APA and Vancouver. For a specific calculation in 4n6 Tools, also cite the original method the tool states. Author: Ján Šikuta, MD, PhD, ORCID 0000-0002-4690-0317.
+
+Peer-reviewed review on mobile 3D scanning by the author and colleagues: Šikuta J, Szórádová A, Neszméry M, Mikulášová D, Mikuláš Ľ, Kuruc R. Mobilné 3D skenovanie založené na LiDAR-e a fotogrametrii v súdnolekárskej dokumentácii: prehľad možností a obmedzení. Fol Soc Med Leg Slov. 2026;16(1):27–32.
 
 ## Articles (by the author, with references)
 
