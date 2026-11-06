@@ -38,7 +38,7 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 
 ## O autorovi
 
-MUDr. Ján Šikuta, PhD., je súdny lekár a vysokoškolský učiteľ na Ústave súdneho lekárstva a súdnolekárskej toxikológie LF UK v Bratislave a pracuje na súdnolekárskom pracovisku Úradu pre dohľad nad zdravotnou starostlivosťou. V roku 2022 bol členom slovenského tímu, ktorý pomáhal ukrajinskej prokuratúre dokumentovať podozrenia z vojnových trestných činov. Aplikácie vyvíja vo vlastnom mene, nie sú produktmi jeho zamestnávateľov.
+MUDr. Ján Šikuta, PhD., je súdny lekár a vysokoškolský učiteľ na Lekárskej fakulte Univerzity Komenského v Bratislave. Aplikácie na tomto webe vyvíja vo vlastnom mene, nie sú produktmi jeho zamestnávateľov.
 
 ## Kontakt
 
