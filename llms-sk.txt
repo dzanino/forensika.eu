@@ -34,6 +34,11 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 - [Odhad času smrti z rektálnej teploty: Henssgeho nomogram v praxi](https://forensika.eu/clanky/henssgeho-nomogram/)
 - [Farba podliatiny z fotografie: čo sa dá zmerať a čo nie](https://forensika.eu/clanky/farba-podliatiny/)
 - [3D dokumentácia prehliadky iPhonom: mierka, neistota a integrita](https://forensika.eu/clanky/3d-dokumentacia-obhliadky/)
+- [Widmarkov výpočet v praxi: spätný prepočet, bilancia a dych](https://forensika.eu/clanky/widmarkov-vypocet/)
+
+## O autorovi
+
+MUDr. Ján Šikuta, PhD., je súdny lekár a vysokoškolský učiteľ na Ústave súdneho lekárstva a súdnolekárskej toxikológie LF UK v Bratislave a pracuje na súdnolekárskom pracovisku Úradu pre dohľad nad zdravotnou starostlivosťou. V roku 2022 bol členom slovenského tímu, ktorý pomáhal ukrajinskej prokuratúre dokumentovať podozrenia z vojnových trestných činov. Aplikácie vyvíja vo vlastnom mene, nie sú produktmi jeho zamestnávateľov.
 
 ## Kontakt
 
