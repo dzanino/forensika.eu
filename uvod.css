@@ -30,3 +30,12 @@ table.compare td:last-child{color:#fff;font-weight:600;white-space:nowrap}
   table.compare td{border:0;padding:3px 0}
   table.compare td:last-child{white-space:normal}
 }
+
+section.field{padding:100px 0 44px!important}
+section.apps{padding:100px 0 60px!important}
+section#aplikacie,section#apps{background:linear-gradient(180deg,rgba(255,255,255,.022),rgba(255,255,255,.008) 60%,rgba(255,255,255,0))!important;border-top:1px solid var(--line)}
+section.otazky{padding:80px 0 40px!important;border-top:1px solid var(--line)}
+.hero p.lede{max-width:46ch!important}
+@media (max-width:760px){section.field,section.apps{padding:64px 0 36px!important}section.otazky{padding:56px 0 30px!important}}
+.card.wide .shot{width:104px}
+@media (max-width:560px){.card.wide .shot{width:96px}}

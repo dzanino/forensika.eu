@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; media-src 'self'; connect-src 'self' https://abacus.jasoncameron.dev; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://forensika.eu/img/og/fotograme3ka.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fotograme3ka 3D">
+<title>Fotograme3ka 3D: Neuberechnung forensischer 3D-Modelle auf dem Mac</title>
+<meta name="description" content="Fotograme3ka 3D: die Mac-Begleit-App zu aPrehliadky für Apple Silicon. Berechnet ein Paket .f3d in höherem Detail neu, auch von einem älteren iPhone ohne LiDAR. Einmaliger Kauf, offline.">
+<link rel="canonical" href="https://forensika.eu/de/fotograme3ka/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/fotograme3ka/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/fotograme3ka/">
+<link rel="alternate" hreflang="de" href="https://forensika.eu/de/fotograme3ka/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/fotograme3ka/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fotograme3ka 3D: Neuberechnung forensischer 3D-Modelle auf dem Mac">
+<meta property="og:description" content="Die Begleit-App zu aPrehliadky für Macs mit Apple Silicon: Berechnet ein Paket .f3d zu einem 3D-Modell in höherem Detail neu, auch von einem älteren iPhone ohne LiDAR. Ohne Cloud, ohne Konto, mit Beweiskette.">
+<meta property="og:url" content="https://forensika.eu/de/fotograme3ka/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forensika.eu/img/og/fotograme3ka.png">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(26px,4.4vw,40px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:68ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:76ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Fotograme3ka 3D",
+  "url": "https://forensika.eu/de/fotograme3ka/",
+  "applicationCategory": "MedicalApplication",
+  "operatingSystem": "macOS 15+ (Apple Silicon)",
+  "softwareVersion": "2.1.4",
+  "offers": { "@type": "Offer", "price": "34.99", "priceCurrency": "EUR" },
+  "author": { "@type": "Person", "name": "Ján Šikuta" },
+  "publisher": { "@type": "Person", "name": "Ján Šikuta" },
+  "downloadUrl": "https://apps.apple.com/app/id6809335678",
+  "description": "Native Mac-Anwendung für Apple Silicon, die ein Paket .f3d aus aPrehliadky zu einem 3D-Modell in höherem Detail neu berechnet, auch von einem älteren iPhone ohne LiDAR. Ohne Cloud, ohne Upload, ohne Konto."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Forensika", "item": "https://forensika.eu/de/" },
+    { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://forensika.eu/de/#apps" },
+    { "@type": "ListItem", "position": 3, "name": "Fotograme3ka 3D", "item": "https://forensika.eu/de/fotograme3ka/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Brauche ich Fotograme3ka 3D, wenn mein iPhone bereits LiDAR und einen A17-Pro-Chip hat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nicht unbedingt. Ein iPhone mit LiDAR und einem A17-Pro-Chip oder neuer berechnet das Modell direkt in aPrehliadky. Fotograme3ka 3D ist sinnvoll, wenn Sie ein höheres Modelldetail wünschen (mittel oder voll, eine 3- bis 5-mal feinere Oberfläche) oder wenn Sie mit einem älteren iPhone ohne LiDAR oder ohne ausreichend leistungsfähigen Chip aufnehmen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie gelangt das Bildpaket vom iPhone zu Fotograme3ka auf dem Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per AirDrop. Sie exportieren das Bildpaket aus aPrehliadky und öffnen es in Fotograme3ka 3D auf dem Mac, die App berechnet es neu, und das fertige Modell, einschließlich übertragener Befunde und Messungen, kehrt als Paket .f3d wieder auf das iPhone zurück."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Bilder und welche Texturauflösung unterstützt Fotograme3ka 3D?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bis zu 1 500 Bilder und Texturen bis 16 384 px. Das iPhone nimmt bis zu 600 Bilder auf, berechnet das Modell auf dem Gerät aber nur aus den besten 200 (eine Vorgabe von Apple) mit Texturen bis 8 192 px. Mehrere gleichzeitig abgelegte Pakete werden als Stapel nacheinander verarbeitet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist Fotograme3ka 3D eine kostenpflichtige App?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Seit dem 18. Oktober 2026 kostet sie 34,99 € (29,99 US-Dollar) als einmaliger Kauf, ohne Abonnement und ohne Werbung. Die App aPrehliadky für iPhone und iPad bleibt kostenlos. Fotograme3ka 3D erfordert einen Mac mit Apple-Silicon-Chip und macOS 15 oder neuer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum ist Fotograme3ka kostenpflichtig, aPrehliadky aber kostenlos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "aPrehliadky soll für alle verfügbar sein, die die 3D-Dokumentation ausprobieren und nutzen möchten. Fotograme3ka 3D ist ein professionelles Werkzeug für Institute, die höchstes Detail und ein Protokoll mit Beweiskette brauchen. Die Einnahmen finanzieren die Entwicklung beider Apps, die Validierung der Genauigkeit, die Pflege für neue macOS- und iOS-Versionen und den Betrieb des unabhängigen Projekts forensika.eu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ich habe die App geladen, als sie kostenlos war. Muss ich zahlen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Wenn Sie Fotograme3ka 3D vor dem 18. Oktober 2026 geladen haben, bleibt sie Ihnen erhalten, einschließlich aller künftigen Updates. Auf einem neuen Mac laden Sie sie einfach mit derselben Apple-ID erneut aus dem Mac App Store."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/glam.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/de/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/de/#apps">Apps</a>
+<span class="langs"><a href="/fotograme3ka/" hreflang="sk">SK</a><a href="/en/fotograme3ka/" hreflang="en">EN</a><a class="on" href="/de/fotograme3ka/" hreflang="de">DE</a></span>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/de/">Forensika</a> › <a href="/de/#apps">Apps</a> › Fotograme3ka 3D</p>
+<section class="hero">
+<div class="kicker">Forensische Photogrammetrie · Mac mit Apple Silicon</div>
+<h1>Fotograme3ka 3D: <span class="accent">forensisches Modell neu berechnen</span> auf dem Mac</h1>
+<p class="lede">Die professionelle Begleit-App zu aPrehliadky: Sie berechnet ein Bildpaket vom iPhone direkt auf einem Mac mit Apple Silicon zu einem 3D-Modell in höherem Detail neu und erstellt ein Protokoll mit Beweiskette. Ohne Cloud, ohne Upload, ohne Abonnement.</p>
+<div class="btns">
+<a class="btn-primary" href="https://apps.apple.com/app/id6809335678" target="_blank" rel="noopener">Kaufen im Mac App Store · <span data-bf="off" style="font:inherit">34,99 €</span><span data-bf="on" hidden style="font:inherit">29,99 €</span></a>
+<a class="btn-ghost" href="/de/aprehliadky/">Mehr zu aPrehliadky für das iPhone ›</a>
+</div>
+<div class="pills">
+<span class="pill">Apple Silicon</span>
+<span class="pill">Bis zu 1 500 Bilder</span>
+<span class="pill">Textur bis 16 384 px</span>
+<span class="pill">Übernahme der Befunde</span>
+<span class="pill">Offline · ohne Cloud</span>
+<span class="pill"><span data-bf="off" style="font:inherit">34,99 €</span><span data-bf="on" hidden style="font:inherit">29,99 €</span> einmalig</span>
+</div>
+</section>
+</div>
+</main>
+
+<section>
+<div class="wrap">
+<h2>Wofür Fotograme3ka 3D gedacht ist</h2>
+<p>Die App <strong>aPrehliadky</strong> für iPhone und iPad kann ein 3D-Modell direkt auf dem Gerät aufnehmen und rekonstruieren, jedoch nur auf iPhones mit LiDAR und einem A17-Pro-Chip oder neuer, da Apples Photogrammetrieschicht in iOS (CorePhotogrammetry) auf älteren Geräten oder auf einem Mac nicht läuft. <strong>Fotograme3ka 3D</strong> ist daher eine eigenständige, native macOS-Anwendung, die dasselbe Bildpaket mit einem nativen macOS-Photogrammetrie-Framework verarbeitet: in einem Detailgrad, den das iPhone selbst nicht erreicht.</p>
+<p>Ein typischer Anwendungsfall: Ein älteres iPhone ohne LiDAR oder ohne ausreichend leistungsfähigen Chip kann in aPrehliadky trotzdem aufnehmen, aber kein Modell berechnen. Das Bildpaket wird per AirDrop an einen Mac gesendet, dort neu berechnet, und das fertige Modell kehrt als Paket .f3d auf das iPhone zurück, einschließlich aller Befunde und Messungen, die vom früheren Modell auf das neue übertragen wurden.</p>
+<div class="grid">
+<div class="d"><h3>Höheres Detail</h3><p>Das iPhone berechnet das Modell nur in niedrigem Detail. Der Mac bietet mittleres, volles und benutzerdefiniertes Detail (Obergrenze der Polygonzahl, Textur bis 16 384 px): eine 3- bis 5-mal feinere Oberfläche für die Messung von Befunden.</p></div>
+<div class="d"><h3>Größere Scans</h3><p>Der Mac verwendet bis zu 1 500 Bilder; das iPhone nimmt bis zu 600 auf, berechnet aber aus 200 (eine Vorgabe von Apple). Mehrere gleichzeitig abgelegte Pakete werden als Stapel nacheinander verarbeitet.</p></div>
+<div class="d"><h3>Prüfung und Messung</h3><p>Der zweite Tab der App bietet die volle Arbeit mit dem fertigen Modell: Drehen, Zoomen, Messung, direkt auf der Haut markierte Befunde und ein PDF-Protokoll mit Zertifikat.</p></div>
+<div class="d"><h3>Übernahme der Befunde</h3><p>Nach jeder Neuberechnung werden die Kamerapositionen gespeichert; bei der nächsten Neuberechnung werden sie hinsichtlich Gierwinkel, Maßstab und Versatz angepasst, und die Befunde werden mit einem Fehler in der Größenordnung von Millimetern auf das neue Modell übertragen.</p></div>
+<div class="d"><h3>Forensische Voreinstellung</h3><p>Verarbeitungsvoreinstellungen Schnell, Forensisch (300 000 Dreiecke, 8K-Textur, verlustfrei; empfohlen) und Maximal (1 Million Dreiecke, 16K). Unscharfe Bilder werden verworfen, Bilder mit dem Kalibrierziel bleiben erhalten.</p></div>
+<div class="d"><h3>Beweiskette</h3><p>Ein SHA-256-Hashwert jeder Datei, Überprüfung der Eingaben vor der Verarbeitung, ein Rekonstruktionsprotokoll im Paket und im Protokoll sowie die Signatur des Ausgabepakets mit dem Schlüssel dieses Macs. Ein Protokoll im Format PDF/A-2b und ein Zertifikat der Klasse A bis D.</p></div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Wie es funktioniert</h2>
+<ul class="check">
+<li>Exportieren Sie das Bildpaket aus aPrehliadky auf dem iPhone (per AirDrop an den Mac oder über die Dateien-App)</li>
+<li>Fotograme3ka 3D öffnet das Paket und startet die Neuberechnung im gewählten Detailgrad: mittel, voll oder benutzerdefiniert</li>
+<li>Fortschritt, geschätzte Zeit und eine Temperaturwarnung werden während der gesamten Berechnung angezeigt</li>
+<li>Prüfen, messen und Befunde direkt am Modell auf dem Mac markieren</li>
+<li>Das entstandene Paket .f3d mit seinem Protokoll per AirDrop zurück an das iPhone senden</li>
+</ul>
+<table class="specs">
+<tr><td>Plattform</td><td>macOS 15+, Apple Silicon (M1 und neuer)</td></tr>
+<tr><td>Bildlimit</td><td>bis zu 1 500 (iPhone: nimmt bis zu 600 auf, berechnet aus 200)</td></tr>
+<tr><td>Textur</td><td>bis 16 384 px, benutzerdefinierte Polygonobergrenze</td></tr>
+<tr><td>Netzwerk</td><td>keines: App Sandbox, nur das Öffnen-/Sichern-Fenster</td></tr>
+<tr><td>Preis</td><td>34,99 € einmalig (29,99 US-Dollar), kein Abonnement; aPrehliadky für das iPhone ist kostenlos</td></tr>
+</table>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Keine Cloud, kein Upload</h2>
+<p>Fotograme3ka 3D läuft in der App Sandbox ohne jegliche Netzwerkschicht: Es kann nur auf Dateien zugreifen, die Sie ausdrücklich über das Öffnen-/Sichern-Fenster des Systems auswählen. Die App überträgt Modelle, Bilder oder Protokolle nirgendwohin; Daten verlassen den Mac nur über AirDrop oder einen Dateiexport, den Sie selbst auslösen.</p>
+<div class="note">Fotograme3ka 3D ist eine Begleit-App zu aPrehliadky, kein eigenständiges Produkt · ohne ein Paket .f3d aus aPrehliadky gibt es nichts zu verarbeiten. Beide Anwendungen teilen dasselbe Paketformat und dieselben Datenschutzprinzipien.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Warum Fotograme3ka 3D ab dem 18. Oktober 2026 kostenpflichtig ist</h2>
+<p>Die App <strong>aPrehliadky</strong> für iPhone und iPad bleibt kostenlos, damit jede und jeder die 3D-Dokumentation einer Untersuchung ausprobieren und nutzen kann. <strong>Fotograme3ka 3D</strong> ist ein professionelles Werkzeug für Institute, die höchstes Modelldetail, die Untersuchung auf einem großen Bildschirm und ein Protokoll mit Beweiskette brauchen. Ab dem 18. Oktober 2026 kostet sie <strong>34,99 € (29,99 US-Dollar) als einmaligen Kauf</strong>, ohne Abonnement, ohne Werbung und ohne Datenerhebung.</p>
+<div class="grid">
+<div class="d"><h3>Entwicklung und Pflege</h3><p>Apples Photogrammetrie ändert sich zwischen den Versionen von macOS und iOS. Ihr Kauf finanziert schnelle Korrekturen bei jeder neuen Systemversion und neue Funktionen in Fotograme3ka und aPrehliadky.</p></div>
+<div class="d"><h3>Validierte Genauigkeit</h3><p>Messungen an Referenznormalen, das Kalibrierziel T3, die Methodik der Zertifizierung A–D und ihre Überarbeitungen: die Arbeit, die jeder Messung eine angegebene Unsicherheit und ein Protokoll verleiht, das einer Prüfung standhält.</p></div>
+<div class="d"><h3>Ein unabhängiges forensika.eu</h3><p>Das Projekt hat keine Werbung, keine Investoren und verkauft keine Daten. Der Verkauf der professionellen Werkzeuge hält auch die kostenlosen Apps am Leben: aPrehliadky, 4n6 Tools Lite, littlEye AI und Congressa.</p></div>
+<div class="d"><h3>Direkter Support</h3><p>Die Apps entstehen parallel zur Praxis eines Rechtsmediziners. Der Autor antwortet Ihnen direkt, und Rückmeldungen aus der Praxis fließen in die nächsten Versionen ein.</p></div>
+</div>
+<p style="margin-top:18px">Für einen Bruchteil des Preises typischer professioneller Photogrammetrie-Software erhalten Sie ein Werkzeug, das speziell für die Rechtsmedizin und die Todesermittlung gebaut ist: eine Unsicherheit bei jeder Messung, ein signiertes Paket und ein PDF/A-Protokoll.</p>
+<div class="note">Fotograme3ka 3D bereits geladen, als sie noch kostenlos war? Sie bleibt Ihnen erhalten, einschließlich aller künftigen Updates.</div>
+<div class="btns" style="margin-top:18px"><a class="btn-primary" href="https://apps.apple.com/app/id6809335678" target="_blank" rel="noopener">Kaufen im Mac App Store · <span data-bf="off" style="font:inherit">34,99 €</span><span data-bf="on" hidden style="font:inherit">29,99 €</span></a><a class="btn-ghost" href="https://apps.apple.com/app/id6808879666" target="_blank" rel="noopener">aPrehliadky für das iPhone · kostenlos ›</a></div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Häufige Fragen</h2>
+<details><summary>Brauche ich Fotograme3ka 3D, wenn mein iPhone bereits LiDAR und einen A17-Pro-Chip hat?</summary><p>Nicht unbedingt. Ein iPhone mit LiDAR und einem A17-Pro-Chip oder neuer berechnet das Modell direkt in aPrehliadky. Fotograme3ka 3D ist sinnvoll, wenn Sie ein höheres Modelldetail wünschen (mittel oder voll, eine 3- bis 5-mal feinere Oberfläche) oder wenn Sie mit einem älteren iPhone ohne LiDAR oder ohne ausreichend leistungsfähigen Chip aufnehmen.</p></details>
+<details><summary>Wie gelangt das Bildpaket vom iPhone zu Fotograme3ka auf dem Mac?</summary><p>Per AirDrop. Sie exportieren das Bildpaket aus aPrehliadky und öffnen es in Fotograme3ka 3D auf dem Mac, die App berechnet es neu, und das fertige Modell, einschließlich übertragener Befunde und Messungen, kehrt als Paket .f3d wieder auf das iPhone zurück.</p></details>
+<details><summary>Wie viele Bilder und welche Texturauflösung unterstützt Fotograme3ka 3D?</summary><p>Bis zu 1 500 Bilder und Texturen bis 16 384 px. Das iPhone nimmt bis zu 600 Bilder auf, berechnet das Modell auf dem Gerät aber nur aus den besten 200 (eine Vorgabe von Apple) mit Texturen bis 8 192 px. Mehrere gleichzeitig abgelegte Pakete werden als Stapel nacheinander verarbeitet.</p></details>
+<details><summary>Ist Fotograme3ka 3D eine kostenpflichtige App?</summary><p>Ja. Seit dem 18. Oktober 2026 kostet sie 34,99 € (29,99 US-Dollar) als einmaliger Kauf, ohne Abonnement und ohne Werbung. Die App aPrehliadky für iPhone und iPad bleibt kostenlos. Fotograme3ka 3D erfordert einen Mac mit Apple-Silicon-Chip und macOS 15 oder neuer.</p></details>
+<details><summary>Warum ist Fotograme3ka kostenpflichtig, aPrehliadky aber kostenlos?</summary><p>aPrehliadky soll für alle verfügbar sein, die die 3D-Dokumentation ausprobieren und nutzen möchten. Fotograme3ka 3D ist ein professionelles Werkzeug für Institute, die höchstes Detail und ein Protokoll mit Beweiskette brauchen. Die Einnahmen finanzieren die Entwicklung beider Apps, die Validierung der Genauigkeit, die Pflege für neue macOS- und iOS-Versionen und den Betrieb des unabhängigen Projekts forensika.eu.</p></details>
+<details><summary>Ich habe die App geladen, als sie kostenlos war. Muss ich zahlen?</summary><p>Nein. Wenn Sie Fotograme3ka 3D vor dem 18. Oktober 2026 geladen haben, bleibt sie Ihnen erhalten, einschließlich aller künftigen Updates. Auf einem neuen Mac laden Sie sie einfach mit derselben Apple-ID erneut aus dem Mac App Store.</p></details>
+<!-- ako-citovat -->
+<details id="cite" style="overflow-wrap:anywhere"><summary>So zitieren Sie Fotograme3ka 3D</summary>
+<p>Wenn Sie Fotograme3ka 3D in einem Artikel, einer Arbeit oder einem Vortrag erwähnen, können Sie so zitieren. Geben Sie die verwendete Version an, sie steht in der App.</p>
+<p><b>APA:</b> Šikuta, J. (2026). <i>Fotograme3ka 3D</i> (Version 2.1.4) [Computerprogramm]. https://forensika.eu/de/fotograme3ka/</p>
+<p><b>Vancouver:</b> Šikuta J. Fotograme3ka 3D [Computerprogramm]. Version 2.1.4. Bratislava: Ján Šikuta; 2026 [zitiert am TT.MM.JJJJ]. Verfügbar unter: https://forensika.eu/de/fotograme3ka/</p>
+<p>Autor: Ján Šikuta, MD, PhD · ORCID <a href="https://orcid.org/0000-0002-4690-0317" rel="me noopener" target="_blank">0000-0002-4690-0317</a></p>
+</details>
+<!-- /ako-citovat -->
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="site"><a href="/de/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy"><span data-fz>©</span> 2026 Dr. med. Ján Šikuta, PhD · <a href="mailto:admin@forensika.eu">admin@forensika.eu</a> · <a href="https://orcid.org/0000-0002-4690-0317" rel="me noopener" target="_blank" title="ORCID iD 0000-0002-4690-0317"><svg width="14" height="14" viewBox="0 0 256 256" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"><circle cx="128" cy="128" r="128" fill="#A6CE39"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C191.7 111.2 178 93 148 93h-23.7v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1c0-5.6 4.5-10.1 10.1-10.1s10.1 4.6 10.1 10.1z"/></svg>ORCID</a> · <a href="/de/">forensika.eu</a></div>
+</div>
+</footer>
+<script src="/site.js" defer></script>
+<script src="/bundle-akcia.js" defer></script>
+</body>
+</html>

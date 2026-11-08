@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; media-src 'self'; connect-src 'self' https://abacus.jasoncameron.dev; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://forensika.eu/img/og/littleye-ai.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="littlEye AI">
+<title>littlEye AI: forensische Histologie-KI, auf dem Gerät trainiert</title>
+<meta name="description" content="littlEye AI: eigene KI-Modelle aus histologischen Präparaten auf iPhone, iPad und Mac trainieren. 27 Organe, Atlas mit 103 Diagnosen, ohne Cloud. Kostenlos seit Version 3.0.">
+<link rel="canonical" href="https://forensika.eu/de/littleye-ai/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/littleye-ai/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/littleye-ai/">
+<link rel="alternate" hreflang="de" href="https://forensika.eu/de/littleye-ai/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/littleye-ai/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="littlEye AI: forensische Histologie-KI, auf dem Gerät trainiert">
+<meta property="og:description" content="KI-Modelle aus Mikrofotografien histologischer Präparate trainieren und auswerten: für Rechtsmedizinerinnen und Rechtsmediziner, Pathologinnen und Pathologen sowie Medizinstudierende. 27 Organe, Atlas mit 103 Diagnosen. Ohne Cloud, ohne Telemetrie, kostenlos.">
+<meta property="og:url" content="https://forensika.eu/de/littleye-ai/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forensika.eu/img/og/littleye-ai.png">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(26px,4.4vw,40px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:68ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:76ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  .steps{counter-reset:s;margin-top:8px;}
+  .step{display:flex;gap:16px;margin-bottom:18px;}
+  .step .n{counter-increment:s;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step .n::before{content:counter(s);}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "littlEye AI",
+  "url": "https://forensika.eu/de/littleye-ai/",
+  "applicationCategory": "MedicalApplication",
+  "operatingSystem": "iOS 17+, iPadOS 17+, macOS 14+",
+  "softwareVersion": "4.1.1",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "author": { "@type": "Person", "name": "Ján Šikuta" },
+  "publisher": { "@type": "Person", "name": "Ján Šikuta" },
+  "downloadUrl": "https://apps.apple.com/app/id6799417580",
+  "description": "Anwendung zum Trainieren und Auswerten von KI-Modellen aus Mikrofotografien histologischer Präparate, vollständig auf dem Gerät. Ein Datensatz über 27 Organe, Atlas mit 103 Diagnosen, verschlüsselter Austausch von .le3AI-Modellen. Ohne Cloud, ohne Telemetrie."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Forensika", "item": "https://forensika.eu/de/" },
+    { "@type": "ListItem", "position": 2, "name": "Apps", "item": "https://forensika.eu/de/#apps" },
+    { "@type": "ListItem", "position": 3, "name": "littlEye AI", "item": "https://forensika.eu/de/littleye-ai/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wird littlEye AI mit fertigen Diagnosemodellen ausgeliefert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die App ist ein Trainingswerkzeug, keine Modellsammlung: Sie enthält nur ein einziges Demonstrationsmodell, das auf synthetischen Mustern trainiert wurde. Echte Modelle werden aus Ihren eigenen Präparaten trainiert oder mit Kolleginnen und Kollegen als eigenständige verschlüsselte .le3AI-Dateien ausgetauscht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Werden Mikrofotografien von Präparaten an einen Server gesendet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Die gesamte App läuft ausschließlich auf dem Gerät: Bilder, Fälle und trainierte Modelle verlassen es nur, wenn Sie sie ausdrücklich exportieren. Die App stellt keine Netzwerkverbindungen her und hat weder Telemetrie noch Analyse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Bilder brauche ich, um ein Modell zu trainieren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das technische Minimum sind 2 Klassen mit je 5 Bildern, die App empfiehlt jedoch 30 oder mehr Bilder pro Klasse aus mehreren Fällen: Eine farbcodierte Anzeige der Datensatzreife zeigt, ob Sie vor dem Training genug Material haben."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist littlEye AI ein Medizinprodukt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Es ist ein Forschungs- und Entscheidungshilfewerkzeug für qualifizierte Fachleute. Es stellt keine Diagnose: Die abschließende Beurteilung liegt immer bei der Pathologin oder dem Pathologen beziehungsweise der Rechtsmedizinerin oder dem Rechtsmediziner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist littlEye AI kostenlos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, seit Version 3.0. Kein Abonnement, keine Funktion hinter einer Bezahlschranke: Ein optionaler einmaliger Beitrag in der App unterstützt die Weiterentwicklung und schaltet nichts frei."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/glam.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/de/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/de/#apps">Apps</a>
+<span class="langs"><a href="/littleye-ai/" hreflang="sk">SK</a><a href="/en/littleye-ai/" hreflang="en">EN</a><a class="on" href="/de/littleye-ai/" hreflang="de">DE</a></span>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/de/">Forensika</a> › <a href="/de/#apps">Apps</a> › littlEye AI</p>
+<section class="hero">
+<div class="kicker">Forensische Histologie-KI · auf dem Gerät</div>
+<h1>littlEye AI: <span class="accent">Histologie-KI</span>, auf dem Gerät trainiert</h1>
+<p class="lede">Bringen Sie Ihrem eigenen KI-Modell bei, histologische Präparate zu erkennen, direkt auf einem iPhone, iPad oder Mac: ohne Internet und ohne dass ein einziges Pixel das Gerät verlässt. Kostenlos seit Version 3.0.</p>
+<div class="btns">
+<a class="btn-primary" href="https://apps.apple.com/app/id6799417580" target="_blank" rel="noopener">Laden im App Store · kostenlos</a>
+<a class="btn-ghost" href="https://dzanino.github.io/littlEyeAI/" target="_blank" rel="noopener">Anleitungen und Atlas ›</a>
+</div>
+<div class="pills">
+<span class="pill">Core ML · auf dem Gerät</span>
+<span class="pill">27 Organe und Gewebe</span>
+<span class="pill">Atlas mit 103 Diagnosen</span>
+<span class="pill">Verschlüsselte .le3AI / .le3set</span>
+<span class="pill">Offline · keine Telemetrie</span>
+<span class="pill">Kostenlos seit v3.0</span>
+</div>
+</section>
+</div>
+</main>
+
+<section>
+<div class="wrap">
+<h2>Eine forensische Histologie-KI offline, kein Cloud-Dienst</h2>
+<p>Die meisten KI-Werkzeuge zur Bilderkennung in der Histologie senden Bilder an einen Server: Für die rechtsmedizinische Praxis, die mit Bildern echter Obduktionspräparate arbeitet, ist das unabhängig von der Modellgenauigkeit schon für sich ein Problem. <strong>littlEye AI</strong> geht den umgekehrten Weg: Training und Auswertung laufen über Core ML direkt auf einem iPhone, iPad oder Mac, ein Bild verlässt das Gerät nie, und die App hat weder eine Netzwerkschicht noch Telemetrie.</p>
+<p>Der Datensatz von H&amp;E-Präparaten umfasst <strong>27 Organe und Gewebe</strong>; die Präparate werden von Kolleginnen und Kollegen mit einem Prüfpfad beurteilt, und die endgültige Diagnose ergibt sich per Mehrheitsentscheid. Das Training legt stets einen unabhängigen Testdatensatz zurück und liefert eine Konfusionsmatrix mit Sensitivität und Präzision je Klasse: Studierende wie Ärztinnen und Ärzte sehen genau, wo ein Modell versagt, nicht nur, wo es gelingt.</p>
+<div class="grid">
+<div class="d"><h3>Anzeige der Datensatzreife</h3><p>Eine farbcodierte Bewertung des Datensatzes zeigt, ob Sie vor dem Training genügend unterschiedliche Bilder pro Klasse (30 oder mehr) haben.</p></div>
+<div class="d"><h3>Verschlüsselter Austausch</h3><p>.le3AI-Modelle und .le3set-Datensätze sind mit AES-GCM verschlüsselt und tragen ihre eigenen Metriken und ihren Prüfpfad: Austausch zwischen Kolleginnen und Kollegen per AirDrop oder E-Mail.</p></div>
+<div class="d"><h3>Atlas mit 103 Diagnosen</h3><p>Eine Wissensbasis mit mikroskopischen Beschreibungen, Leitmerkmalen und Schlussfolgerungsvorschlägen aus zitierter Literatur.</p></div>
+<div class="d"><h3>Bildquantifizierung (3.2–3.3)</h3><p>Fläche, Anzahl und Größe farblich definierter Strukturen, am Bild gemessen, ein Desmin-IHC-Rechner und Werkzeuge für Publikationen: Bildqualitätskontrolle, Schwellenwertsensitivität, ICC und Bland–Altman.</p></div>
+<div class="d"><h3>Lernen aus Korrekturen</h3><p>Ein falsch gelesenes Präparat wird mit einem Tipp wieder in den Datensatz aufgenommen, sodass die nächste Trainingsrunde daraus lernt.</p></div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Vom Präparat zum trainierten Modell</h2>
+<div class="steps">
+<div class="step"><div class="n"></div><div><h3>Import und Datensatz</h3><p>Mikrofotografien (JPEG/PNG/TIFF/HEIC) werden nach Organ und Diagnose geordnet; ein Protokoll zu Färbung und Vergrößerung hält die Daten konsistent.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Beurteilung durch Kolleginnen und Kollegen</h3><p>Mehrere Kolleginnen und Kollegen beurteilen die Präparate unabhängig voneinander; die App erfasst für jede Beurteilung Name und Datum der beurteilenden Person (Prüfpfad), und der Mehrheitsentscheid legt das endgültige Label fest.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Core-ML-Training auf dem Gerät</h3><p>Konfigurierbare Iterationen und Augmentierungen, ein unabhängiger Testdatensatz (10–20 % stratifizierter Holdout), Fortschrittsanzeige mit der Möglichkeit zum Abbruch.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Metriken und Konfusionsmatrix</h3><p>Genauigkeit in Training, Validierung und Test sowie Sensitivität und Präzision, für jede Klasse gesondert ausgewiesen.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Export und Austausch</h3><p>Das fertige Modell wird als verschlüsselte .le3AI-Datei mit Manifest gespeichert: Der Import in eine andere Installation von littlEye AI erfolgt über die Dateien-App, AirDrop oder durch Doppeltippen.</p></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Für die Fallarbeit ebenso gedacht wie für die Lehre</h2>
+<p>littlEye AI ist nicht nur ein Trainingswerkzeug: Es bietet auch einen vollständigen Fall-Workflow: gescannte Präparate, einer Fallnummer zugeordnet, Fallanamnese und Obduktionsergebnis als Eingaben, eine Gewebeprüfung, die auf eine mögliche Präparateverwechslung hinweist, und eine knappe Zusammenfassung der Befunde, die mit einem Tipp in die Zwischenablage kopiert wird. Ein Lehrmodul ergänzt einen Leitfaden „Was kommt nach H&amp;E“, Spezialfärbungen, IHC-Marker, Zellelemente und Pigmente: jeder Eintrag mit Quellenangabe.</p>
+<table class="specs">
+<tr><td>Plattform</td><td>iPhone, iPad (iOS/iPadOS 17+), Mac (macOS 14+)</td></tr>
+<tr><td>Datensatz</td><td>27 Organe und Gewebe, eigene Bilder</td></tr>
+<tr><td>Atlas</td><td>103 Diagnosen mit mikroskopischen Beschreibungen und Zitaten</td></tr>
+<tr><td>Formate</td><td>.le3AI (Modell), .le3set (Datensatz) · verschlüsselt</td></tr>
+<tr><td>Preis</td><td>kostenlos seit Version 3.0 (Donationware)</td></tr>
+</table>
+</div>
+</section>
+
+<section class="alt">
+<div class="wrap">
+<h2>Datenschutz zuerst</h2>
+<ul class="check">
+<li>Keine Netzwerkschicht: Die App verbindet sich nirgendwohin</li>
+<li>Bilder, Fälle und Modelle bleiben ausschließlich auf dem Gerät</li>
+<li>Keine Analyse, keine Telemetrie, keine Werbe-IDs</li>
+<li>Die Transferdateien .le3AI und .le3set lassen sich nur mit littlEye AI öffnen</li>
+</ul>
+<div class="note">littlEye AI ist ein Forschungs- und Entscheidungshilfewerkzeug für qualifizierte Fachleute: kein Medizinprodukt, und es stellt keine Diagnose; die abschließende Beurteilung liegt immer bei der Pathologin oder dem Pathologen beziehungsweise der Rechtsmedizinerin oder dem Rechtsmediziner.</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Häufige Fragen</h2>
+<details><summary>Wird littlEye AI mit fertigen Diagnosemodellen ausgeliefert?</summary><p>Nein. Die App ist ein Trainingswerkzeug, keine Modellsammlung: Sie enthält nur ein einziges Demonstrationsmodell, das auf synthetischen Mustern trainiert wurde. Echte Modelle werden aus Ihren eigenen Präparaten trainiert oder mit Kolleginnen und Kollegen als eigenständige verschlüsselte .le3AI-Dateien ausgetauscht.</p></details>
+<details><summary>Werden Mikrofotografien von Präparaten an einen Server gesendet?</summary><p>Nein. Die gesamte App läuft ausschließlich auf dem Gerät: Bilder, Fälle und trainierte Modelle verlassen es nur, wenn Sie sie ausdrücklich exportieren. Die App stellt keine Netzwerkverbindungen her und hat weder Telemetrie noch Analyse.</p></details>
+<details><summary>Wie viele Bilder brauche ich, um ein Modell zu trainieren?</summary><p>Das technische Minimum sind 2 Klassen mit je 5 Bildern, die App empfiehlt jedoch 30 oder mehr Bilder pro Klasse aus mehreren Fällen: Eine farbcodierte Anzeige der Datensatzreife zeigt, ob Sie vor dem Training genug Material haben.</p></details>
+<details><summary>Ist littlEye AI ein Medizinprodukt?</summary><p>Nein. Es ist ein Forschungs- und Entscheidungshilfewerkzeug für qualifizierte Fachleute. Es stellt keine Diagnose: Die abschließende Beurteilung liegt immer bei der Pathologin oder dem Pathologen beziehungsweise der Rechtsmedizinerin oder dem Rechtsmediziner.</p></details>
+<details><summary>Ist littlEye AI kostenlos?</summary><p>Ja, seit Version 3.0. Kein Abonnement, keine Funktion hinter einer Bezahlschranke: Ein optionaler einmaliger Beitrag in der App unterstützt die Weiterentwicklung und schaltet nichts frei.</p></details>
+<!-- ako-citovat -->
+<details id="cite" style="overflow-wrap:anywhere"><summary>So zitieren Sie littlEye AI</summary>
+<p>Wenn Sie littlEye AI in einem Artikel, einer Arbeit oder einem Vortrag erwähnen, können Sie so zitieren. Geben Sie die verwendete Version an, sie steht in der App.</p>
+<p><b>APA:</b> Šikuta, J. (2026). <i>littlEye AI</i> (Version 4.1.1) [Mobile App]. https://forensika.eu/de/littleye-ai/</p>
+<p><b>Vancouver:</b> Šikuta J. littlEye AI [Mobile App]. Version 4.1.1. Bratislava: Ján Šikuta; 2026 [zitiert am TT.MM.JJJJ]. Verfügbar unter: https://forensika.eu/de/littleye-ai/</p>
+<p>Autor: Ján Šikuta, MD, PhD · ORCID <a href="https://orcid.org/0000-0002-4690-0317" rel="me noopener" target="_blank">0000-0002-4690-0317</a></p>
+</details>
+<!-- /ako-citovat -->
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="site"><a href="/de/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy"><span data-fz>©</span> 2026 Dr. med. Ján Šikuta, PhD · <a href="mailto:admin@forensika.eu">admin@forensika.eu</a> · <a href="https://orcid.org/0000-0002-4690-0317" rel="me noopener" target="_blank" title="ORCID iD 0000-0002-4690-0317"><svg width="14" height="14" viewBox="0 0 256 256" aria-hidden="true" style="vertical-align:-2px;margin-right:4px"><circle cx="128" cy="128" r="128" fill="#A6CE39"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C191.7 111.2 178 93 148 93h-23.7v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1c0-5.6 4.5-10.1 10.1-10.1s10.1 4.6 10.1 10.1z"/></svg>ORCID</a> · <a href="/de/">forensika.eu</a></div>
+</div>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>
