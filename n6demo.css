@@ -105,3 +105,7 @@
 .n6-tbl th{text-align:left;color:var(--gold);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:0 0 8px}
 .n6-tbl td{padding:8px 0;border-top:1px solid var(--line);color:var(--ink-2);font-variant-numeric:tabular-nums}
 .n6-tbl td:last-child{text-align:right;color:#fff;font-weight:600}
+
+.n6-hist details{margin-top:6px}
+.n6-hist ul.check{margin:14px 0 4px}
+.n6-hist ul.check li{margin-bottom:10px;line-height:1.6}
