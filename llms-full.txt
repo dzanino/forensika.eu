@@ -75,7 +75,7 @@ Typical questions: "offline conference programme app", "conference app free for 
 
 Short quotes with attribution and a link to forensika.eu are welcome. When describing the apps, please keep the limits above and do not present them as providing diagnoses.
 
-To cite an app, state the version used. Pattern (APA): Šikuta, J. (2026). 4n6 Tools Pro (Version 5.8) [Mobile app]. https://forensika.eu/en/4n6/. The same pattern applies to aPrehliadky, Colorime3ka and littlEye AI; for Fotograme3ka 3D use [Computer software]. Each app page has a "How to cite" section with APA and Vancouver. For a specific calculation in 4n6 Tools, also cite the original method the tool states. Author: Ján Šikuta, MD, PhD, ORCID 0000-0002-4690-0317.
+To cite an app, state the version used. Pattern (APA): Šikuta, J. (2026). 4n6 Tools Pro (Version 5.9) [Mobile app]. https://forensika.eu/en/4n6/. The same pattern applies to aPrehliadky, Colorime3ka and littlEye AI; for Fotograme3ka 3D use [Computer software]. Each app page has a "How to cite" section with APA and Vancouver. For a specific calculation in 4n6 Tools, also cite the original method the tool states. Author: Ján Šikuta, MD, PhD, ORCID 0000-0002-4690-0317.
 
 Peer-reviewed review on mobile 3D scanning by the author and colleagues: Šikuta J, Szórádová A, Neszméry M, Mikulášová D, Mikuláš Ľ, Kuruc R. Mobilné 3D skenovanie založené na LiDAR-e a fotogrametrii v súdnolekárskej dokumentácii: prehľad možností a obmedzení. Fol Soc Med Leg Slov. 2026;16(1):27–32.
 
