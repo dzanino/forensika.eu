@@ -1,18 +1,15 @@
-/* bundle-akcia.js (forensika.eu) - prepína obsah webu podľa dátumu, aby ceny sedeli s App Store.
-   Obdobia (slovenský čas):
-     Halloween     29. 10. - 2. 11. 2026  len vzhľad banneru, ceny bežné (data-hw="on"/"off")
-     Black Friday  23. 11. - 30. 11. 2026 akciové ceny (data-bf="on"/"off") a pás s cenami hore na stránke
-   Bez JavaScriptu sa ukážu bežné ceny. Náhľad: na koniec adresy pridaj ?bf=1 alebo ?hw=1.
-   Ak by sa akcia v App Store Connect zrušila, prepni BF_ZAPNUTE na false. */
 (function () {
   var BF_ZAPNUTE = true;
-  var BF = ['2026-11-23T00:00:00+01:00', '2026-12-01T00:00:00+01:00'];
+  var BF = ['2026-11-23T09:00:00+01:00', '2026-12-01T00:00:00+01:00'];
   var HW = ['2026-10-29T00:00:00+01:00', '2026-11-03T00:00:00+01:00'];
   var ODKAZ = 'https://apps.apple.com/app-bundle/id6824160695';
   var PAS = {
     sk: 'Black Friday do 30. 11.: 4n6 Tools Pro 89,99 € (bežne 104,99 €) · Colorime3ka 14,99 € (bežne 17,99 €) · Fotograme3ka 3D 29,99 € (bežne 34,99 €) · všetky tri v bundli 119,99 €',
     en: 'Black Friday until Nov 30: 4n6 Tools Pro €89.99 (usually €104.99) · Colorime3ka €14.99 (usually €17.99) · Fotograme3ka 3D €29.99 (usually €34.99) · all three in a bundle €119.99',
-    de: 'Black Friday bis 30. 11.: 4n6 Tools Pro 89,99 € (sonst 104,99 €) · Colorime3ka 14,99 € (sonst 17,99 €) · Fotograme3ka 3D 29,99 € (sonst 34,99 €) · alle drei im Bundle 119,99 €'
+    de: 'Black Friday bis 30. 11.: 4n6 Tools Pro 89,99 € (sonst 104,99 €) · Colorime3ka 14,99 € (sonst 17,99 €) · Fotograme3ka 3D 29,99 € (sonst 34,99 €) · alle drei im Bundle 119,99 €',
+    es: 'Black Friday hasta el 30/11: 4n6 Tools Pro 89,99 € (normalmente 104,99 €) · Colorime3ka 14,99 € (normalmente 17,99 €) · Fotograme3ka 3D 29,99 € (normalmente 34,99 €) · las tres en un paquete 119,99 €',
+    pt: 'Black Friday até 30/11: 4n6 Tools Pro 89,99 € (normalmente 104,99 €) · Colorime3ka 14,99 € (normalmente 17,99 €) · Fotograme3ka 3D 29,99 € (normalmente 34,99 €) · as três em um pacote 119,99 €',
+    pl: 'Black Friday do 30.11: 4n6 Tools Pro 89,99 € (zwykle 104,99 €) · Colorime3ka 14,99 € (zwykle 17,99 €) · Fotograme3ka 3D 29,99 € (zwykle 34,99 €) · wszystkie trzy w pakiecie 119,99 €'
   };
 
   function v(r) { var t = Date.now(); return t >= Date.parse(r[0]) && t < Date.parse(r[1]); }
