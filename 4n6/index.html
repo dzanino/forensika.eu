@@ -92,6 +92,7 @@
   table.specs td.b{font-weight:700;}
 </style>
 <link rel="stylesheet" href="/glam.css">
+<link rel="stylesheet" href="/n6demo.css?v=20261108">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -289,6 +290,37 @@
 </div>
 </main>
 
+<section class="n6-live" id="vyskusajte">
+<div class="wrap">
+<h2>Tri metódy, ako ich počíta aplikácia</h2>
+<p class="sec-sub">Posuňte hodnoty a sledujte, ako sa mení výsledok aj jeho <b>rozptyl</b>. Rovnaké vzorce ako v aplikácii, s citáciou pri každej metóde; všetky tri nástroje sú zadarmo aj v 4n6 Tools Lite. V aplikácii k nim pribudnú asistenti, výhrady a zápis do zápisnice.</p>
+<div id="n6live"><noscript><p class="note">Ukážky potrebujú JavaScript. Bez neho si ich vyskúšate v aplikácii 4n6 Tools Lite, ktorá je zadarmo.</p></noscript></div>
+</div>
+</section>
+
+<section class="alt n6-trust">
+<div class="wrap">
+<h2>Metódy overené podľa pôvodnej literatúry</h2>
+<p class="sec-sub">Aplikáciu vyvíja súdny lekár pre vlastnú prax. Každý vzorec, prah a interval sa dohľadáva v pôvodnom článku, nie v sekundárnych tabuľkách.</p>
+<div class="grid3">
+<div class="d"><span class="k">27</span><h3>nástrojov s citáciou</h3><p>Každý výsledok má zdroj, rozptyl alebo výhradu. Nemožný vstup vráti vysvetlenie, nie číslo.</p></div>
+<div class="d"><span class="k">3</span><h3>kolá overenia zdrojov</h3><p>Vzorce a prahy prešli tromi samostatnými kontrolami proti pôvodnej literatúre; opravy idú do aplikácie aj s uvedením zdroja.</p></div>
+<div class="d"><span class="k">0</span><h3>odoslaných údajov</h3><p>Všetko beží v zariadení: bez účtu, bez analytiky a bez cloudu. Údaje prípadov opustia zariadenie len vaším exportom.</p></div>
+</div>
+<div class="log"><span class="lbl">Z posledných overení</span><ul>
+<li><b>Henssge:</b> konštanta B a pásma intervalu podľa Henssge 1988 a Schweitzer a Thali 2019</li>
+<li><b>Traubov index:</b> prahy podľa matrice, dolná hranica 160 mg/dl (Karlovsek 2004, Kaehler 2025)</li>
+<li><b>Posmrtné zmeny:</b> Mallachove rozpätia s priemerom ± SD</li>
+<li><b>Etanol:</b> stanoviská Slovenskej súdnolekárskej spoločnosti (SSLS 2025)</li>
+<li><b>Entomológia:</b> prah 1,0 °C pre C. vicina (Donovan 2006) popri 2,0 °C (Marchenko)</li>
+<li><b>Odontológia:</b> Kvaalove rovnice aj pre horný bočný rezák a dolný špičák</li>
+<li><b>Vek plodu:</b> regresia z dĺžky femuru podľa Carneiro 2016 s 95 % rozpätím</li>
+<li><b>Zuby:</b> rovnice Prince a Ubelakera overené v otvorene dostupných prácach</li>
+</ul></div>
+<p class="n6-author">Autor: <b>MUDr. Ján Šikuta, PhD.</b>, súdny lekár · <a href="https://orcid.org/0000-0002-4690-0317" target="_blank" rel="noopener">ORCID 0000-0002-4690-0317</a></p>
+</div>
+</section>
+
 <section>
 <div class="wrap">
 <h2>Čo aplikácia obsahuje</h2>
@@ -313,6 +345,17 @@
 <li>Dvanásť jazykov od verzie 5.5, Lite od 5.3 (SK, EN, CS, DE, IT, FR, UA, PL, HU, ZH, ES, PT) vrátane prepočítaných výsledkov a zápisnice, svetlý aj tmavý vzhľad</li>
 <li>Verzia 5.9: overenie zdrojov (Mallach, Traub, entomológia, Kvaal, vek plodu); verzia 5.8: stanoviská SSLS 2025 pre etanol a drogy, vek plodu podľa Carneiro 2016, Traubov index s dolnou hranicou 160 mg/dl</li>
 </ul>
+</div>
+</section>
+
+
+<section class="n6-tools">
+<div class="wrap">
+<h2>Všetkých 27 nástrojov</h2>
+<p class="sec-sub">Filtrujte podľa oblasti. Nástroje označené Lite sú plne funkčné aj v bezplatnej verzii.</p>
+<div class="n6-filter" id="n6filter"></div>
+<div class="n6-grid" id="n6grid"></div>
+<p class="n6-count" id="n6count"></p>
 </div>
 </section>
 
@@ -369,6 +412,7 @@
 </div>
 </section>
 
+<script src="/n6demo.js?v=20261108" defer></script>
 <footer>
 <div class="wrap">
 <div class="site"><a href="/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>

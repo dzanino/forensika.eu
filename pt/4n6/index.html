@@ -92,6 +92,7 @@
   table.specs td.b{font-weight:700;}
 </style>
 <link rel="stylesheet" href="/glam.css">
+<link rel="stylesheet" href="/n6demo.css?v=20261108">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -289,6 +290,37 @@
 </div>
 </main>
 
+<section class="n6-live" id="vyskusajte">
+<div class="wrap">
+<h2>Três métodos, calculados como no aplicativo</h2>
+<p class="sec-sub">Mova os valores e veja como mudam o resultado e o seu <b>intervalo</b>. As mesmas fórmulas do aplicativo, com a citação de cada método; as três ferramentas são gratuitas também no 4n6 Tools Lite. No aplicativo somam-se assistentes, ressalvas e o registro no laudo.</p>
+<div id="n6live"><noscript><p class="note">As demonstrações precisam de JavaScript. Sem ele, experimente-as no aplicativo gratuito 4n6 Tools Lite.</p></noscript></div>
+</div>
+</section>
+
+<section class="alt n6-trust">
+<div class="wrap">
+<h2>Métodos verificados na literatura original</h2>
+<p class="sec-sub">O aplicativo é desenvolvido por um médico legista para a própria prática. Cada fórmula, limiar e intervalo é rastreado até o artigo original, não até tabelas secundárias.</p>
+<div class="grid3">
+<div class="d"><span class="k">27</span><h3>ferramentas com citação</h3><p>Cada resultado tem fonte, intervalo ou ressalva. Uma entrada impossível devolve uma explicação, não um número.</p></div>
+<div class="d"><span class="k">3</span><h3>rodadas de verificação de fontes</h3><p>Fórmulas e limiares passaram por três revisões independentes frente à literatura original; as correções chegam ao aplicativo com a fonte.</p></div>
+<div class="d"><span class="k">0</span><h3>dados enviados</h3><p>Tudo roda no dispositivo: sem conta, sem análise e sem nuvem. Os dados dos casos saem do dispositivo apenas pela sua própria exportação.</p></div>
+</div>
+<div class="log"><span class="lbl">Das últimas verificações</span><ul>
+<li><b>Henssge:</b> constante B e faixas do intervalo segundo Henssge 1988 e Schweitzer e Thali 2019</li>
+<li><b>Índice de Traub:</b> limiares por matriz, limite inferior 160 mg/dl (Karlovsek 2004, Kaehler 2025)</li>
+<li><b>Fenômenos cadavéricos:</b> intervalos de Mallach com média ± DP</li>
+<li><b>Etanol:</b> posicionamentos da Sociedade Eslovaca de Medicina Legal (SSLS 2025)</li>
+<li><b>Entomologia:</b> limiar de 1,0 °C para C. vicina (Donovan 2006) ao lado de 2,0 °C (Marchenko)</li>
+<li><b>Odontologia:</b> equações de Kvaal também para o incisivo lateral superior e o canino inferior</li>
+<li><b>Idade fetal:</b> regressão do comprimento do fêmur segundo Carneiro 2016 com intervalo de 95 %</li>
+<li><b>Dentes:</b> equações de Prince e Ubelaker verificadas em artigos de acesso aberto</li>
+</ul></div>
+<p class="n6-author">Autor: <b>Ján Šikuta, MD, PhD</b>, médico legista · <a href="https://orcid.org/0000-0002-4690-0317" target="_blank" rel="noopener">ORCID 0000-0002-4690-0317</a></p>
+</div>
+</section>
+
 <section>
 <div class="wrap">
 <h2>O que o aplicativo contém</h2>
@@ -312,6 +344,17 @@
 <li>Métodos revisados segundo a literatura original</li>
 <li>Doze idiomas desde a versão 5.5 (Lite desde a 5.3), entre eles o português do Brasil, com resultados e laudo recalculados e aparência clara ou escura</li>
 </ul>
+</div>
+</section>
+
+
+<section class="n6-tools">
+<div class="wrap">
+<h2>As 27 ferramentas</h2>
+<p class="sec-sub">Filtre por área. As ferramentas marcadas como Lite funcionam por completo também na versão gratuita.</p>
+<div class="n6-filter" id="n6filter"></div>
+<div class="n6-grid" id="n6grid"></div>
+<p class="n6-count" id="n6count"></p>
 </div>
 </section>
 
@@ -368,6 +411,7 @@
 </div>
 </section>
 
+<script src="/n6demo.js?v=20261108" defer></script>
 <footer>
 <div class="wrap">
 <div class="site"><a href="/en/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>

@@ -92,6 +92,7 @@
   table.specs td.b{font-weight:700;}
 </style>
 <link rel="stylesheet" href="/glam.css">
+<link rel="stylesheet" href="/n6demo.css?v=20261108">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -289,6 +290,37 @@
 </div>
 </main>
 
+<section class="n6-live" id="vyskusajte">
+<div class="wrap">
+<h2>Three methods, computed as the app computes them</h2>
+<p class="sec-sub">Move the values and watch both the result and its <b>range</b> change. The same formulas as in the app, with a citation for every method; all three tools are free in 4n6 Tools Lite too. In the app they come with assistants, caveats and a report entry.</p>
+<div id="n6live"><noscript><p class="note">The demos need JavaScript. Without it, try them in the free 4n6 Tools Lite app.</p></noscript></div>
+</div>
+</section>
+
+<section class="alt n6-trust">
+<div class="wrap">
+<h2>Methods checked against the original literature</h2>
+<p class="sec-sub">The app is developed by a practising forensic pathologist, for daily casework. Every formula, threshold and interval is traced to the original paper, not to secondary tables.</p>
+<div class="grid3">
+<div class="d"><span class="k">27</span><h3>tools with citations</h3><p>Every result has a source, a range or a caveat. An impossible input returns an explanation, not a number.</p></div>
+<div class="d"><span class="k">3</span><h3>rounds of source verification</h3><p>Formulas and thresholds went through three separate checks against the original literature; corrections reach the app together with their source.</p></div>
+<div class="d"><span class="k">0</span><h3>data sent anywhere</h3><p>Everything runs on the device: no account, no analytics, no cloud. Case data leaves the device only through your own export.</p></div>
+</div>
+<div class="log"><span class="lbl">From the latest verification rounds</span><ul>
+<li><b>Henssge:</b> constant B and interval bands after Henssge 1988 and Schweitzer and Thali 2019</li>
+<li><b>Traub index:</b> thresholds by matrix, lower limit 160 mg/dL (Karlovsek 2004, Kaehler 2025)</li>
+<li><b>Post-mortem changes:</b> Mallach’s ranges with mean ± SD</li>
+<li><b>Ethanol:</b> position statements of the Slovak Society of Forensic Medicine (SSLS 2025)</li>
+<li><b>Entomology:</b> 1.0 °C threshold for C. vicina (Donovan 2006) next to 2.0 °C (Marchenko)</li>
+<li><b>Odontology:</b> Kvaal’s equations also for the upper lateral incisor and lower canine</li>
+<li><b>Fetal age:</b> femur-length regression after Carneiro 2016 with a 95 % range</li>
+<li><b>Teeth:</b> Prince and Ubelaker equations verified in open-access papers</li>
+</ul></div>
+<p class="n6-author">Author: <b>Ján Šikuta, MD, PhD</b>, forensic pathologist · <a href="https://orcid.org/0000-0002-4690-0317" target="_blank" rel="noopener">ORCID 0000-0002-4690-0317</a></p>
+</div>
+</section>
+
 <section>
 <div class="wrap">
 <h2>What the app contains</h2>
@@ -313,6 +345,17 @@
 <li>Twelve languages from version 5.5, Lite from 5.3 (SK, EN, CS, DE, IT, FR, UA, PL, HU, ZH, ES, PT) including recalculated results and the report, light and dark appearance</li>
 <li>Version 5.9: source verification (Mallach, Traub, entomology, Kvaal, foetal age); version 5.8: SSLS 2025 position statements for ethanol and drugs, foetal age after Carneiro 2016, Traub index with a lower limit of 160 mg/dL</li>
 </ul>
+</div>
+</section>
+
+
+<section class="n6-tools">
+<div class="wrap">
+<h2>All 27 tools</h2>
+<p class="sec-sub">Filter by field. Tools marked Lite are fully functional in the free version too.</p>
+<div class="n6-filter" id="n6filter"></div>
+<div class="n6-grid" id="n6grid"></div>
+<p class="n6-count" id="n6count"></p>
 </div>
 </section>
 
@@ -369,6 +412,7 @@
 </div>
 </section>
 
+<script src="/n6demo.js?v=20261108" defer></script>
 <footer>
 <div class="wrap">
 <div class="site"><a href="/en/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>

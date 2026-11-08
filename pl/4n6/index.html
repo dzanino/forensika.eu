@@ -92,6 +92,7 @@
   table.specs td.b{font-weight:700;}
 </style>
 <link rel="stylesheet" href="/glam.css">
+<link rel="stylesheet" href="/n6demo.css?v=20261108">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -289,6 +290,37 @@
 </div>
 </main>
 
+<section class="n6-live" id="vyskusajte">
+<div class="wrap">
+<h2>Trzy metody, liczone tak jak w aplikacji</h2>
+<p class="sec-sub">Przesuwaj wartości i obserwuj, jak zmienia się wynik i jego <b>przedział</b>. Te same wzory co w aplikacji, z cytatem przy każdej metodzie; wszystkie trzy narzędzia są bezpłatne także w 4n6 Tools Lite. W aplikacji dochodzą asystenci, zastrzeżenia i wpis do protokołu.</p>
+<div id="n6live"><noscript><p class="note">Pokazy wymagają JavaScriptu. Bez niego wypróbujesz je w bezpłatnej aplikacji 4n6 Tools Lite.</p></noscript></div>
+</div>
+</section>
+
+<section class="alt n6-trust">
+<div class="wrap">
+<h2>Metody sprawdzone w oryginalnym piśmiennictwie</h2>
+<p class="sec-sub">Aplikację rozwija lekarz medycyny sądowej na potrzeby własnej praktyki. Każdy wzór, próg i przedział jest sprawdzany w oryginalnej pracy, a nie w tabelach wtórnych.</p>
+<div class="grid3">
+<div class="d"><span class="k">27</span><h3>narzędzi z cytatem</h3><p>Każdy wynik ma źródło, przedział lub zastrzeżenie. Niemożliwe dane zwracają wyjaśnienie, a nie liczbę.</p></div>
+<div class="d"><span class="k">3</span><h3>rundy weryfikacji źródeł</h3><p>Wzory i progi przeszły trzy niezależne kontrole wobec oryginalnego piśmiennictwa; poprawki trafiają do aplikacji wraz ze źródłem.</p></div>
+<div class="d"><span class="k">0</span><h3>wysłanych danych</h3><p>Wszystko działa w urządzeniu: bez konta, bez analityki i bez chmury. Dane spraw opuszczają urządzenie tylko przez Twój własny eksport.</p></div>
+</div>
+<div class="log"><span class="lbl">Z ostatnich weryfikacji</span><ul>
+<li><b>Henssge:</b> stała B i pasma przedziału według Henssge 1988 oraz Schweitzer i Thali 2019</li>
+<li><b>Wskaźnik Trauba:</b> progi według materiału, dolna granica 160 mg/dl (Karlovsek 2004, Kaehler 2025)</li>
+<li><b>Zmiany pośmiertne:</b> zakresy Mallacha ze średnią ± SD</li>
+<li><b>Etanol:</b> stanowiska Słowackiego Towarzystwa Medycyny Sądowej (SSLS 2025)</li>
+<li><b>Entomologia:</b> próg 1,0 °C dla C. vicina (Donovan 2006) obok 2,0 °C (Marchenko)</li>
+<li><b>Odontologia:</b> równania Kvaala także dla górnego siekacza bocznego i dolnego kła</li>
+<li><b>Wiek płodu:</b> regresja z długości kości udowej według Carneiro 2016 z przedziałem 95 %</li>
+<li><b>Zęby:</b> równania Prince’a i Ubelakera zweryfikowane w pracach w otwartym dostępie</li>
+</ul></div>
+<p class="n6-author">Autor: <b>Ján Šikuta, MD, PhD</b>, lekarz medycyny sądowej · <a href="https://orcid.org/0000-0002-4690-0317" target="_blank" rel="noopener">ORCID 0000-0002-4690-0317</a></p>
+</div>
+</section>
+
 <section>
 <div class="wrap">
 <h2>Co zawiera aplikacja</h2>
@@ -312,6 +344,17 @@
 <li>Metody zweryfikowane według oryginalnego piśmiennictwa</li>
 <li>Dwanaście języków od wersji 5.5 (Lite od 5.3), w tym polski, z przeliczonymi wynikami i protokołem, w jasnym lub ciemnym wyglądzie</li>
 </ul>
+</div>
+</section>
+
+
+<section class="n6-tools">
+<div class="wrap">
+<h2>Wszystkie 27 narzędzi</h2>
+<p class="sec-sub">Filtruj według dziedziny. Narzędzia oznaczone jako Lite w pełni działają także w wersji bezpłatnej.</p>
+<div class="n6-filter" id="n6filter"></div>
+<div class="n6-grid" id="n6grid"></div>
+<p class="n6-count" id="n6count"></p>
 </div>
 </section>
 
@@ -368,6 +411,7 @@
 </div>
 </section>
 
+<script src="/n6demo.js?v=20261108" defer></script>
 <footer>
 <div class="wrap">
 <div class="site"><a href="/en/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>

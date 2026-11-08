@@ -92,6 +92,7 @@
   table.specs td.b{font-weight:700;}
 </style>
 <link rel="stylesheet" href="/glam.css">
+<link rel="stylesheet" href="/n6demo.css?v=20261108">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -289,6 +290,37 @@
 </div>
 </main>
 
+<section class="n6-live" id="vyskusajte">
+<div class="wrap">
+<h2>Drei Methoden, so gerechnet wie in der App</h2>
+<p class="sec-sub">Verschieben Sie die Werte und beobachten Sie, wie sich das Ergebnis und sein <b>Streubereich</b> ändern. Dieselben Formeln wie in der App, mit Zitat bei jeder Methode; alle drei Werkzeuge sind auch in 4n6 Tools Lite kostenlos. In der App kommen Assistenten, Vorbehalte und der Protokolleintrag hinzu.</p>
+<div id="n6live"><noscript><p class="note">Die Demos benötigen JavaScript. Ohne JavaScript probieren Sie sie in der kostenlosen App 4n6 Tools Lite aus.</p></noscript></div>
+</div>
+</section>
+
+<section class="alt n6-trust">
+<div class="wrap">
+<h2>Methoden an der Originalliteratur geprüft</h2>
+<p class="sec-sub">Die App entwickelt ein Rechtsmediziner für die eigene Praxis. Jede Formel, jede Schwelle und jedes Intervall wird bis zur Originalarbeit zurückverfolgt, nicht nur bis zu Sekundärtabellen.</p>
+<div class="grid3">
+<div class="d"><span class="k">27</span><h3>Werkzeuge mit Zitat</h3><p>Jedes Ergebnis hat Quelle, Streubereich oder Vorbehalt. Unmögliche Eingaben liefern eine Erklärung statt einer Zahl.</p></div>
+<div class="d"><span class="k">3</span><h3>Runden der Quellenprüfung</h3><p>Formeln und Schwellen durchliefen drei getrennte Prüfungen an der Originalliteratur; Korrekturen gehen mit Quellenangabe in die App.</p></div>
+<div class="d"><span class="k">0</span><h3>gesendete Daten</h3><p>Alles läuft auf dem Gerät: kein Konto, keine Analytik, keine Cloud. Falldaten verlassen das Gerät nur über Ihren eigenen Export.</p></div>
+</div>
+<div class="log"><span class="lbl">Aus den letzten Prüfungen</span><ul>
+<li><b>Henssge:</b> Konstante B und Intervallbänder nach Henssge 1988 sowie Schweitzer und Thali 2019</li>
+<li><b>Traub-Index:</b> Schwellen nach Matrix, Untergrenze 160 mg/dl (Karlovsek 2004, Kaehler 2025)</li>
+<li><b>Leichenerscheinungen:</b> Mallach-Spannen mit Mittelwert ± SD</li>
+<li><b>Ethanol:</b> Stellungnahmen der Slowakischen Gesellschaft für Rechtsmedizin (SSLS 2025)</li>
+<li><b>Entomologie:</b> Schwelle 1,0 °C für C. vicina (Donovan 2006) neben 2,0 °C (Marchenko)</li>
+<li><b>Odontologie:</b> Kvaal-Gleichungen auch für den oberen seitlichen Schneidezahn und den unteren Eckzahn</li>
+<li><b>Fetalalter:</b> Regression aus der Femurlänge nach Carneiro 2016 mit 95-%-Spanne</li>
+<li><b>Zähne:</b> Gleichungen von Prince und Ubelaker in Open-Access-Arbeiten verifiziert</li>
+</ul></div>
+<p class="n6-author">Autor: <b>Dr. med. Ján Šikuta, PhD</b>, Rechtsmediziner · <a href="https://orcid.org/0000-0002-4690-0317" target="_blank" rel="noopener">ORCID 0000-0002-4690-0317</a></p>
+</div>
+</section>
+
 <section>
 <div class="wrap">
 <h2>Was die App enthält</h2>
@@ -313,6 +345,17 @@
 <li>Zwölf Sprachen ab Version 5.5, Lite ab 5.3 (DE, SK, EN, CS, IT, FR, UA, PL, HU, ZH, ES, PT) einschließlich umgerechneter Ergebnisse und des Berichts; drei Designs, jeweils hell und dunkel</li>
 <li>Version 5.9: Quellenprüfung (Mallach, Traub, Entomologie, Kvaal, Fetalalter); Version 5.8: SSLS-Stellungnahmen 2025 zu Ethanol und Drogen, Fetalalter nach Carneiro 2016, Traub-Index mit unterer Grenze 160 mg/dl</li>
 </ul>
+</div>
+</section>
+
+
+<section class="n6-tools">
+<div class="wrap">
+<h2>Alle 27 Werkzeuge</h2>
+<p class="sec-sub">Nach Fachgebiet filtern. Mit Lite markierte Werkzeuge sind auch in der kostenlosen Version voll funktionsfähig.</p>
+<div class="n6-filter" id="n6filter"></div>
+<div class="n6-grid" id="n6grid"></div>
+<p class="n6-count" id="n6count"></p>
 </div>
 </section>
 
@@ -369,6 +412,7 @@
 </div>
 </section>
 
+<script src="/n6demo.js?v=20261108" defer></script>
 <footer>
 <div class="wrap">
 <div class="site"><a href="/de/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
