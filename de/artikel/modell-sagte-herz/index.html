@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; media-src 'self'; connect-src 'self' https://abacus.jasoncameron.dev; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Das Modell sagte „Herz, 100 %“. Es war eine normale Lunge. · Forensika</title>
+<meta name="description" content="Was mich die Fehler von Modellen bei der Entwicklung von littlEye AI gelehrt haben: Vergrößerung, Zahl der Fälle, ein ehrlicher Test und Datenlizenzen. Warum ein hoher Prozentwert keine Sicherheit ist und wo die Grenzen eines solchen Werkzeugs liegen.">
+<link rel="canonical" href="https://forensika.eu/de/artikel/modell-sagte-herz/">
+<link rel="alternate" hreflang="sk" href="https://forensika.eu/clanky/model-povedal-srdce/">
+<link rel="alternate" hreflang="en" href="https://forensika.eu/en/articles/model-said-heart/">
+<link rel="alternate" hreflang="de" href="https://forensika.eu/de/artikel/modell-sagte-herz/">
+<link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/articles/model-said-heart/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Das Modell sagte „Herz, 100 %“. Es war eine normale Lunge. · Forensika">
+<meta property="og:description" content="Was mich die Fehler von Modellen bei der Entwicklung von littlEye AI gelehrt haben: Vergrößerung, Zahl der Fälle, ein ehrlicher Test und Datenlizenzen. Warum ein hoher Prozentwert keine Sicherheit ist und wo die Grenzen eines solchen Werkzeugs liegen.">
+<meta property="og:url" content="https://forensika.eu/de/artikel/modell-sagte-herz/">
+<meta property="og:image" content="https://forensika.eu/img/og/littleye-ai.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Forensika">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://forensika.eu/img/og/littleye-ai.png">
+<style>
+  :root{--ink:#274863;--ink-2:#22415C;--ink-3:#132A3D;--muted:#6b7f93;--paper:#f5f8fc;--paper-2:#eaf1f8;--card:#ffffff;--line:#e2eaf2;--teal:#4FCBBB;--blue:#66B0E8;--violet:#8E86EC;--lila:#C79BE2;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:rgba(245,248,252,.88);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:19px;letter-spacing:.3px;}
+  .brand b{font-weight:600;color:var(--ink);}
+  .brand .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .navwrap{display:flex;gap:10px;align-items:center;}
+  .nav a.cta{font-size:14px;font-weight:600;color:var(--ink);border:1px solid var(--line);padding:9px 16px;border-radius:999px;background:#fff;transition:.2s;}
+  .nav a.cta:hover{border-color:var(--blue);color:var(--blue);}
+  .crumbs{font-size:13px;color:var(--muted);padding:14px 0 0;}
+  .crumbs a{color:var(--blue);}
+  .hero{padding:26px 0 30px;}
+  .kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;line-height:1.15;margin-bottom:16px;color:var(--ink);}
+  h1 .accent{background:linear-gradient(90deg,var(--teal),var(--blue) 55%,var(--lila));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:18px;color:var(--muted);max-width:66ch;margin-bottom:22px;}
+  .btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:linear-gradient(90deg,var(--teal),var(--blue));padding:13px 24px;border-radius:999px;box-shadow:0 10px 26px rgba(79,203,187,.32);}
+  .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);border:1px solid var(--line);background:#fff;padding:12px 22px;border-radius:999px;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .pill{font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--paper-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;}
+  section{padding:38px 0;}
+  section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(23px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:16px;}
+  h3{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  p{color:var(--muted);font-size:15.5px;margin-bottom:14px;max-width:74ch;}
+  ul.check{list-style:none;margin:14px 0;}
+  ul.check li{position:relative;padding-left:26px;margin-bottom:10px;color:var(--muted);font-size:15.5px;}
+  ul.check li::before{content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:8px;}
+  .d{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;}
+  .d h3{margin-bottom:7px;}
+  .d p{margin:0;font-size:14.5px;}
+  .steps{counter-reset:s;margin-top:8px;}
+  .step{display:flex;gap:16px;margin-bottom:18px;}
+  .step .n{counter-increment:s;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .step .n::before{content:counter(s);}
+  table.specs{width:100%;border-collapse:collapse;margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.specs td{padding:10px 14px;font-size:14.5px;border-bottom:1px solid var(--line);color:var(--ink);}
+  table.specs td:first-child{color:var(--muted);width:42%;}
+  table.specs tr:last-child td{border-bottom:none;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15.5px;}
+  details p{margin:10px 0 0;}
+  .note{background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--ink-2);}
+  footer{margin-top:20px;padding:34px 0 40px;background:#fff;border-top:1px solid var(--line);text-align:center;}
+  footer .site{font-size:15px;font-weight:700;}
+  footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
+  footer .copy a{color:var(--blue);font-weight:600;}
+</style>
+<style>article h1,article h2{hyphens:manual;-webkit-hyphens:manual} article .body h2{margin-top:30px} article .body p{max-width:72ch} .meta{color:var(--muted);font-size:14px;margin:6px 0 18px} ol.refs li{font-size:14px;color:var(--muted);margin-bottom:8px}</style>
+<link rel="stylesheet" href="/glam.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://forensika.eu/de/artikel/modell-sagte-herz/#clanok",
+      "headline": "Das Modell sagte „Herz, 100 %“. Es war eine normale Lunge.",
+      "description": "Was mich die Fehler von Modellen bei der Entwicklung von littlEye AI gelehrt haben: Vergrößerung, Zahl der Fälle, ein ehrlicher Test und Datenlizenzen. Warum ein hoher Prozentwert keine Sicherheit ist und wo die Grenzen eines solchen Werkzeugs liegen.",
+      "inLanguage": "de",
+      "datePublished": "2026-11-15",
+      "dateModified": "2026-11-15",
+      "image": "https://forensika.eu/img/og/littleye-ai.png",
+      "author": {
+        "@type": "Person",
+        "@id": "https://forensika.eu/#autor",
+        "name": "Ján Šikuta"
+      },
+      "publisher": {
+        "@id": "https://forensika.eu/#forensika"
+      },
+      "mainEntityOfPage": "https://forensika.eu/de/artikel/modell-sagte-herz/",
+      "about": {
+        "@id": "https://forensika.eu/#app-littleye"
+      },
+      "citation": [
+        "Šikuta J. How littlEye AI learns, and why it sometimes answers wrongly. App guide. https://dzanino.github.io/littlEyeAI/littlEye_AI_how_it_learns_EN.pdf",
+        "Tellez D, Litjens G, Bándi P, et al. Quantifying the effects of data augmentation and stain color normalization in convolutional neural networks for computational pathology. Med Image Anal. 2019;58:101544. doi:10.1016/j.media.2019.101544",
+        "Howard FM, Dolezal J, Kochanny S, et al. The impact of site-specific digital histology signatures on deep learning model accuracy and bias. Nat Commun. 2021;12(1):4423. doi:10.1038/s41467-021-24698-1"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forensika",
+          "item": "https://forensika.eu/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Fachartikel",
+          "item": "https://forensika.eu/de/artikel/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Das Modell sagte „Herz, 100 %“. Es war eine normale Lunge.",
+          "item": "https://forensika.eu/de/artikel/modell-sagte-herz/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#2A4E70"/><stop offset="1" stop-color="#132A3D"/></linearGradient>
+<radialGradient id="glassI" cx="36%" cy="26%" r="85%"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.52" stop-color="#EDF2F8"/><stop offset="1" stop-color="#C9D7E5"/></radialGradient>
+<linearGradient id="pc" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="6" y2="0"><stop offset="0" stop-color="#3FB4AC"/><stop offset="1" stop-color="#4C8CCF"/></linearGradient>
+<filter id="blurC" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="3.4"/></filter>
+<clipPath id="lensI"><circle cx="0" cy="0" r="92"/></clipPath>
+<symbol id="forensika-icon" viewBox="0 0 512 512">
+<rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+<g transform="translate(256,248)">
+<circle cx="0" cy="6" r="118" fill="#0C1E2E" opacity="0.28"/>
+<circle cx="0" cy="0" r="92" fill="url(#glassI)"/>
+<circle cx="0" cy="0" r="90" fill="none" stroke="#16324A" stroke-width="2.5" opacity="0.10"/>
+<g clip-path="url(#lensI)">
+<ellipse cx="-40" cy="-46" rx="44" ry="25" fill="#FFFFFF" opacity="0.5" transform="rotate(-28 -40 -46)"/>
+<path d="M -84 18 L -68 18 L -61 5 L -54 18 L -42 18 L -35 31 L -26 -56 L -17 41 L -9 18 L 2 18" fill="none" stroke="url(#pc)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#blurC)"/>
+<path d="M 8 18 H 86" fill="none" stroke="#5C7EA3" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.5 20"/>
+</g>
+<circle cx="0" cy="0" r="118" fill="none" stroke="#F4F8FC" stroke-width="15"/>
+<rect x="80" y="80" width="64" height="21" rx="10.5" transform="rotate(45 80 80)" fill="#F4F8FC"/>
+</g>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<a class="brand" href="/de/"><svg width="34" height="34"><use href="#forensika-icon"/></svg><span><b>Forens</b><span class="accent">ika</span></span></a>
+<div class="navwrap">
+<a class="cta" href="/de/artikel/">Fachartikel</a>
+<span class="langs"><a href="/clanky/model-povedal-srdce/" hreflang="sk">SK</a><a href="/en/articles/model-said-heart/" hreflang="en">EN</a><a class="on" href="/de/artikel/modell-sagte-herz/" hreflang="de">DE</a></span>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<p class="crumbs"><a href="/de/">Forensika</a> › <a href="/de/artikel/">Fachartikel</a></p>
+<article>
+<section class="hero">
+<div class="kicker">Histologie · künstliche Intelligenz</div>
+<h1>Das Modell sagte „Herz, 100 %“. Es war eine normale Lunge.</h1>
+<p class="meta">MUDr. Ján Šikuta, PhD, Rechtsmediziner · Veröffentlicht am 15. November 2026</p>
+<p class="lede">Ein Bild normaler Lunge aus dem Internet bezeichnete das Modell mit 100 % Sicherheit als Herz. Graue Hepatisation bei Lobärpneumonie wurde zu Leber, 81,8 %. Bei der Entwicklung von littlEye AI haben mich solche Fehler mehr gelehrt als gute Zahlen.</p>
+</section>
+<div class="body">
+<h2>Warum sich ein Modell so selbstsicher irrt</h2>
+<p>Ein Modell kann nicht „ich weiß es nicht“ sagen. Es muss eine seiner Klassen wählen, und 100 % bedeuten daher nicht die Sicherheit eines Pathologen. Es bedeutet nur, dass das Bild von allem, was es kennt, am ehesten dem Herzen ähnelte. Eine Pneumonie hatte es im Training nie gesehen, und ein dichter luftleerer Lappen ähnelte für das Modell der Leber. Deshalb lässt littlEye AI ein diagnostisches Modell nur auf dem Gewebe laufen, zu dem es gehört, und zeigt das Ergebnis als Vorschlag mit einem Prozentwert.</p>
+
+<h2>Was mich diese Fehler gelehrt haben</h2>
+<ul class="check">
+<li><b>Die Vergrößerung muss passen.</b> Ein Modell lernt die Größe von Zellen in Pixeln. Bei einem 20×-Objektiv trainiert, erreichte es im Test 78 %. Als wir die Testbilder so veränderten, dass sie ein 40×-Objektiv nachahmten, fiel der Wert auf 52 %, bei 100×-Ölimmersion auf 11 %, was bei 19 Geweben nahe am Zufall liegt. Bilder vom Mikroskop müssen deshalb mit einem Objektmikrometer kalibriert werden.</li>
+<li><b>Ein Präparat lehrt den Farbton, nicht das Gewebe.</b> Mit ein oder zwei Objektträgern pro Klasse verband das Modell die Farbe des Präparats mit dem Organ. Auf fremdem Material fiel der Test auf etwa 65 %, und eine rötere Leber aus einem anderen Institut wurde zur Niere. Jede Diagnose braucht mindestens drei verschiedene Fälle.</li>
+<li><b>Der Test muss ehrlich sein.</b> Ausschnitte aus derselben Stelle eines Objektträgers gehören nicht zugleich in Training und Test, sonst wird das Modell mit dem geprüft, was es schon gesehen hat. Ausschnitte muss man auch mit eigenen Augen prüfen; ein automatischer Filter lässt auch anderes Gewebe durch, als auf dem Etikett steht.</li>
+<li><b>Auch eine frei zugängliche Sammlung hat eine Lizenz.</b> Modelle aus einer offenen Sammlung mit nichtkommerzieller Lizenz habe ich nach der Stellungnahme der Universität gelöscht. Seitdem arbeite ich mit eigenen Präparaten und lizenzrechtlich sauberen Daten.</li>
+</ul>
+<p>Das ist nicht nur meine Erfahrung. Tellez et al. (2019) beschreiben an HE-Bildern aus 9 Laboren, dass ein in einem Labor trainiertes Netz auf Bildern eines anderen oft schlechter abschneidet. Howard et al. (2021) zeigten in der TCGA-Datenbank, dass sich die Herkunftseinrichtung auch nach einer Farbnormalisierung am Präparat erkennen lässt und dass dies zu übermäßig optimistischen Ergebnissen führt. Bei jeder schönen Zahl in einer Arbeit lohnt sich daher die Frage, ob das Modell an Daten einer anderen Einrichtung geprüft wurde.</p>
+
+<h2>Was littlEye AI ist und was nicht</h2>
+<p>littlEye AI ist meine kostenlose App für iPhone, iPad und Mac, auf Slowakisch und Englisch. Ein Arzt trainiert darin aus eigenen HE-Mikrofotografien ein Modell direkt auf dem Gerät; nichts geht an einen Server. Kollegen können Bilder bewerten, jede Bewertung bleibt mit Name und Datum erfasst, und die Mehrheit entscheidet. Vor dem Training weist eine Ampel auf Schwachstellen in den Daten hin, danach zeigt die App das Ergebnis auf einem unabhängigen Test und eine Konfusionsmatrix. Einrichtungen können Sets und Modelle austauschen, damit jede das annotiert, wovon sie am meisten versteht.</p>
+<p>Die Prüfung an fremdem Material, mit einem anderen Scanner und in anderen Händen ist bisher nur vorbereitet, daher habe ich noch keine Zahlen dazu, wie sich die Modelle außerhalb der Einrichtung verhalten, in der sie entstanden sind. Auch deshalb steht bei den Ergebnissen in der App immer derselbe Satz: Forschungs- und Unterstützungswerkzeug. Kein Medizinprodukt. Die abschließende Beurteilung liegt immer beim Pathologen oder Rechtsmediziner.</p>
+<p>Wer die Modelle oder die Quantifizierung am eigenen Material ausprobieren möchte, findet die Bedingungen im Abschnitt <a href="https://dzanino.github.io/littlEyeAI/#spolupraca">Collaboration</a> auf der Website der App. Der Studienvorschlag liegt fertig vor: Die App ist kostenlos, Bilder werden nicht verschickt, und jede beteiligte Abteilung ist Mitautor. Ich suche auch HE- und IHC-Präparate mit klarer Lizenz zum Teilen.</p>
+</div>
+<div class="note" style="margin-top:22px">App zum Thema: <a href="/de/littleye-ai/">littlEye AI</a>. Der Artikel ist eine Fachübersicht für qualifizierte Fachleute; er ersetzt weder ein Lehrbuch noch Leitlinien oder ein Gutachten.</div>
+<h2>Literatur</h2>
+<ol class="refs"><li>Šikuta J. How littlEye AI learns, and why it sometimes answers wrongly. App guide. https://dzanino.github.io/littlEyeAI/littlEye_AI_how_it_learns_EN.pdf</li><li>Tellez D, Litjens G, Bándi P, et al. Quantifying the effects of data augmentation and stain color normalization in convolutional neural networks for computational pathology. Med Image Anal. 2019;58:101544. doi:10.1016/j.media.2019.101544</li><li>Howard FM, Dolezal J, Kochanny S, et al. The impact of site-specific digital histology signatures on deep learning model accuracy and bias. Nat Commun. 2021;12(1):4423. doi:10.1038/s41467-021-24698-1</li></ol>
+</article>
+</div>
+</main>
+<footer>
+<div class="wrap">
+<div class="site"><a href="/de/"><b>Forens</b><span class="accent" style="background:linear-gradient(90deg,#4FCBBB,#66B0E8 55%,#8E86EC);-webkit-background-clip:text;background-clip:text;color:transparent;">ika</span></a></div>
+<div class="copy"><span data-fz>©</span> 2026 MUDr. Ján Šikuta, PhD · <a href="mailto:admin@forensika.eu">admin@forensika.eu</a> · <a href="/de/">forensika.eu</a></div>
+</div>
+</footer>
+<script src="/site.js" defer></script>
+</body>
+</html>

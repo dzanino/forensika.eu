@@ -35,6 +35,7 @@ Web je po slovensky, anglicky a nemecky. Podrobná verzia pre asistentov (v angl
 - [Farba podliatiny z fotografie: čo sa dá zmerať a čo nie](https://forensika.eu/clanky/farba-podliatiny/)
 - [3D dokumentácia prehliadky iPhonom: mierka, neistota a integrita](https://forensika.eu/clanky/3d-dokumentacia-obhliadky/)
 - [Widmarkov výpočet v praxi: spätný prepočet, bilancia a dych](https://forensika.eu/clanky/widmarkov-vypocet/)
+- [Model povedal „srdce, 100 %“. Boli to normálne pľúca.](https://forensika.eu/clanky/model-povedal-srdce/)
 
 ## O autorovi
 
