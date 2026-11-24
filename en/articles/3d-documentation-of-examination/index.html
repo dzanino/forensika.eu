@@ -92,7 +92,7 @@
       "description": "How photographs and LiDAR become a measurable 3D model of a body or a scene, how the scale is verified, what an uncertainty of ± U (k = 2) means, documentation classes A to D and SHA-256 integrity.",
       "inLanguage": "en",
       "datePublished": "2026-11-01",
-      "dateModified": "2026-11-01",
+      "dateModified": "2026-11-24",
       "image": "https://forensika.eu/img/og/aprehliadky.png",
       "author": {
         "@type": "Person",
@@ -180,21 +180,21 @@
 <section class="hero">
 <div class="kicker">Death scene examination · forensic photogrammetry</div>
 <h1>3D documentation of an examination with an iPhone: scale, uncertainty and integrity</h1>
-<p class="meta">Ján Šikuta, MD, PhD, forensic pathologist · Published 1 November 2026</p>
+<p class="meta">Ján Šikuta, MD, PhD, forensic pathologist · Published 1 November 2026 · Updated 24 November 2026</p>
 <p class="lede">Photographs capture how a finding looks, but not the spatial relations: the distance between injuries, the angle of a wound to the body axis or the position of the body in a room. A 3D model preserves them, provided its scale is verified and its files unchanged.</p>
 </section>
 <div class="body">
 <h2>Photogrammetry and LiDAR</h2>
-<p>Photogrammetry builds a 3D model from a series of overlapping images. On its own, however, it does not know how large the object is: the model is to scale only when something supplies the scale. On iPhones with LiDAR every frame has depth, the direction of gravity and a metric camera trajectory from which the scale is derived. Without LiDAR, the ARKit trajectory and a calibration target in the frame supply it. For forensic use it matters that the model is built only from captured data, with no AI-completed geometry.</p>
+<p>Photogrammetry builds a 3D model from a series of overlapping images. On its own, however, it does not know how large the object is: the model is to scale only when something supplies the scale. On iPhones with LiDAR every frame has depth and the direction of gravity, and the scale is derived from the depth compared with the model. Without LiDAR it comes from a calibration target in the frame or, with a larger uncertainty, from the ARKit camera path. For forensic use it matters that the model is built only from captured data, with no AI-completed geometry.</p>
 
 <h2>The scale must be verified</h2>
-<p>A scale from a single source can be wrong. Independent routes are therefore compared: the metric camera trajectory, the calibration target found in the model and a reference length measured in the model. If the scale sources disagree, the target decides and the uncertainty grows. A reference shorter than 290 mm cannot resolve a 1 % error, so body length calls for a 500 to 1000 mm reference, such as a measuring tape.</p>
+<p>A scale from a single source can be wrong. The following are therefore compared: LiDAR depth, the calibration target found in the model and a reference length measured in the model. If they disagree, the target with a verified focal length decides, otherwise the LiDAR depth, and the uncertainty grows. When the LiDAR depth is conclusive, the camera path serves only as a check. A reference shorter than 290 mm cannot resolve a 1 % error, so body length calls for a 500 to 1000 mm reference, such as a measuring tape.</p>
 
 <h2>Uncertainty ± U (k = 2)</h2>
 <p>Every measurement in the model carries an expanded uncertainty U with a coverage factor k = 2, roughly a 95 % level of confidence under the GUM metrology standard. It combines the uncertainty of the scale, the precision with which points are placed on the surface and the resolution of the model. A measurement without a stated uncertainty is an estimate, not a measurement.</p>
 
 <h2>Documentation classes A to D</h2>
-<p>The 3D documentation certificate states how many independent routes support the scale and with what result. Class A is metrologically verified (LiDAR depth, scale corrected by a trajectory fit and an independent check able to resolve 1 %). Class B is metric but lacks a sufficient independent check. Class C has only an approximate scale and class D no known scale. The worst of the available checks decides.</p>
+<p>The 3D documentation certificate states how many independent routes support the scale and with what result. Class A is metrologically verified (LiDAR depth, a metric scale and a physical verification able to resolve 1 %). Class B is metric but lacks a sufficient independent check. Class C has only an approximate scale and class D no known scale. The worst of the available checks decides.</p>
 
 <h2>Integrity: SHA-256 and signing</h2>
 <p>Documentation is useful only if it can be shown not to have changed. The .f3d package carries a SHA-256 of every file, so the recipient sees on import whether anything is missing or was altered. Processing on a Mac adds a reconstruction record (tool, version, stages, duration) and can sign the output package with the computer's key.</p>

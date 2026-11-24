@@ -92,7 +92,7 @@
       "description": "Wie aus Fotos und LiDAR ein messbares 3D-Modell eines Körpers oder Fundorts entsteht, wie der Maßstab überprüft wird, was eine Unsicherheit von ± U (k = 2) bedeutet, Dokumentationsklassen A bis D und Integrität mit SHA-256.",
       "inLanguage": "de",
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-24",
       "image": "https://forensika.eu/img/og/aprehliadky.png",
       "author": {
         "@type": "Person",
@@ -180,21 +180,21 @@
 <section class="hero">
 <div class="kicker">Leichenschau · forensische Photogrammetrie</div>
 <h1>3D-Dokumentation der Leichenschau mit dem iPhone: Maßstab, Unsicherheit und Integrität</h1>
-<p class="meta">MUDr. Ján Šikuta, PhD, Rechtsmediziner · Veröffentlicht am 3. November 2026</p>
+<p class="meta">MUDr. Ján Šikuta, PhD, Rechtsmediziner · Veröffentlicht am 3. November 2026 · Aktualisiert am 24. November 2026</p>
 <p class="lede">Fotos halten fest, wie ein Befund aussieht, aber nicht die räumlichen Beziehungen: den Abstand zwischen Verletzungen, den Winkel einer Wunde zur Körperachse oder die Lage des Körpers im Raum. Ein 3D-Modell bewahrt sie, vorausgesetzt, sein Maßstab ist überprüft und seine Dateien sind unverändert.</p>
 </section>
 <div class="body">
 <h2>Photogrammetrie und LiDAR</h2>
-<p>Die Photogrammetrie setzt ein 3D-Modell aus einer Serie sich überlappender Aufnahmen zusammen. Für sich allein weiß sie jedoch nicht, wie groß das Objekt ist: Maßstäblich ist das Modell nur, wenn etwas den Maßstab liefert. Auf iPhones mit LiDAR hat jede Aufnahme eine Tiefe, die Richtung der Schwerkraft und eine metrische Kamerabahn, aus der sich der Maßstab ableitet. Ohne LiDAR liefern ihn die ARKit-Kamerabahn und ein Kalibrierziel im Bild. Für forensische Zwecke ist wichtig, dass das Modell ausschließlich aus den aufgenommenen Daten entsteht, ohne von künstlicher Intelligenz ergänzte Geometrie.</p>
+<p>Die Photogrammetrie setzt ein 3D-Modell aus einer Serie sich überlappender Aufnahmen zusammen. Für sich allein weiß sie jedoch nicht, wie groß das Objekt ist: Maßstäblich ist das Modell nur, wenn etwas den Maßstab liefert. Auf iPhones mit LiDAR hat jede Aufnahme eine Tiefe und die Richtung der Schwerkraft, und der Maßstab wird aus der Tiefe im Vergleich mit dem Modell abgeleitet. Ohne LiDAR liefert ihn ein Kalibrierziel im Bild oder, mit größerer Unsicherheit, die ARKit-Kamerabahn. Für forensische Zwecke ist wichtig, dass das Modell ausschließlich aus den aufgenommenen Daten entsteht, ohne von künstlicher Intelligenz ergänzte Geometrie.</p>
 
 <h2>Der Maßstab muss überprüft werden</h2>
-<p>Ein Maßstab aus einer einzigen Quelle kann falsch sein. Deshalb werden unabhängige Wege verglichen: die metrische Kamerabahn, das im Modell gefundene Kalibrierziel und eine Referenzstrecke bekannter Länge, die im Modell gemessen wird. Widersprechen sich die Quellen, entscheidet das Kalibrierziel und die Unsicherheit wächst. Eine Referenz kürzer als 290 mm kann einen Fehler von 1 % nicht auflösen; für die Körperlänge braucht es daher eine Referenz von 500 bis 1000 mm, etwa ein Maßband.</p>
+<p>Ein Maßstab aus einer einzigen Quelle kann falsch sein. Deshalb werden verglichen: die LiDAR-Tiefe, das im Modell gefundene Kalibrierziel und eine Referenzstrecke bekannter Länge, die im Modell gemessen wird. Widersprechen sie sich, entscheidet das Kalibrierziel mit geprüfter Brennweite, sonst die LiDAR-Tiefe, und die Unsicherheit wächst. Bei aussagekräftiger LiDAR-Tiefe dient die Kamerabahn nur zur Kontrolle. Eine Referenz kürzer als 290 mm kann einen Fehler von 1 % nicht auflösen; für die Körperlänge braucht es daher eine Referenz von 500 bis 1000 mm, etwa ein Maßband.</p>
 
 <h2>Unsicherheit ± U (k = 2)</h2>
 <p>Jede Messung im Modell trägt eine erweiterte Unsicherheit U mit dem Erweiterungsfaktor k = 2, was nach dem metrologischen Standard GUM etwa einem Vertrauensniveau von 95 % entspricht. Sie setzt sich aus der Unsicherheit des Maßstabs, der Genauigkeit, mit der Punkte auf der Oberfläche gesetzt werden, und der Auflösung des Modells zusammen. Eine Messung ohne angegebene Unsicherheit ist keine Messung, sondern eine Schätzung.</p>
 
 <h2>Dokumentationsklassen A bis D</h2>
-<p>Das Zertifikat der 3D-Dokumentation gibt an, auf wie vielen unabhängigen Wegen der Maßstab belegt ist und mit welchem Ergebnis. Klasse A ist metrologisch überprüft (Tiefe aus LiDAR, Maßstab durch Anpassung an die Kamerabahn korrigiert und eine unabhängige Prüfung, die 1 % auflösen kann). Klasse B ist metrisch, aber ohne ausreichende unabhängige Prüfung. Klasse C hat nur einen orientierenden Maßstab, Klasse D keinen bekannten. Es entscheidet die schlechteste der verfügbaren Prüfungen.</p>
+<p>Das Zertifikat der 3D-Dokumentation gibt an, auf wie vielen unabhängigen Wegen der Maßstab belegt ist und mit welchem Ergebnis. Klasse A ist metrologisch überprüft (Tiefe aus LiDAR, metrischer Maßstab und eine physische Überprüfung, die 1 % auflösen kann). Klasse B ist metrisch, aber ohne ausreichende unabhängige Prüfung. Klasse C hat nur einen orientierenden Maßstab, Klasse D keinen bekannten. Es entscheidet die schlechteste der verfügbaren Prüfungen.</p>
 
 <h2>Integrität: SHA-256 und Signatur</h2>
 <p>Eine Dokumentation ist nur nützlich, wenn sich zeigen lässt, dass sie nicht verändert wurde. Das Paket .f3d enthält für jede Datei einen SHA-256-Hash, sodass der Empfänger beim Import sieht, ob etwas fehlt oder verändert wurde. Die Berechnung auf dem Mac ergänzt ein Rekonstruktionsprotokoll (Werkzeug, Version, Phasen, Dauer) und kann das Ausgabepaket mit dem Schlüssel des Rechners signieren.</p>

@@ -92,7 +92,7 @@
       "description": "Ako z fotografií a LiDARu vznikne merateľný 3D model tela alebo miesta, ako sa overuje mierka, čo znamená neistota ± U (k = 2), triedy dokumentácie A až D a integrita SHA-256.",
       "inLanguage": "sk",
       "datePublished": "2026-11-01",
-      "dateModified": "2026-11-01",
+      "dateModified": "2026-11-24",
       "image": "https://forensika.eu/img/og/aprehliadky.png",
       "author": {
         "@type": "Person",
@@ -180,21 +180,21 @@
 <section class="hero">
 <div class="kicker">Prehliadka · forenzná fotogrametria</div>
 <h1>3D dokumentácia prehliadky iPhonom: mierka, neistota a integrita</h1>
-<p class="meta">MUDr. Ján Šikuta, PhD., súdny lekár · Uverejnené 1. 11. 2026</p>
+<p class="meta">MUDr. Ján Šikuta, PhD., súdny lekár · Uverejnené 1. 11. 2026 · Aktualizované 24. 11. 2026</p>
 <p class="lede">Fotografie zachytia vzhľad nálezu, ale nie priestorové vzťahy: vzdialenosť medzi poraneniami, uhol rany voči osi tela či polohu tela v miestnosti. 3D model ich zachová, ak je jeho mierka overená a jeho súbory nezmenené.</p>
 </section>
 <div class="body">
 <h2>Fotogrametria a LiDAR</h2>
-<p>Fotogrametria skladá 3D model zo série prekrývajúcich sa snímok. Sama o sebe však nevie, aký veľký je objekt: model je v mierke len vtedy, keď ju niečo dodá. Na iPhonoch s LiDARom má každý záber hĺbku, smer gravitácie a metrickú trajektóriu kamery, z ktorej sa mierka odvodí. Bez LiDARu mierku dodá trajektória ARKitu a kalibračný terč v zábere. Pre forenzné účely je dôležité, aby model vznikol výlučne zo zosnímaných dát, bez geometrie dopĺňanej umelou inteligenciou.</p>
+<p>Fotogrametria skladá 3D model zo série prekrývajúcich sa snímok. Sama o sebe však nevie, aký veľký je objekt: model je v mierke len vtedy, keď ju niečo dodá. Na iPhonoch s LiDARom má každý záber hĺbku a smer gravitácie a mierka sa odvodí z hĺbky porovnanej s modelom. Bez LiDARu mierku dodá kalibračný terč v zábere alebo, s väčšou neistotou, dráha kamery z ARKitu. Pre forenzné účely je dôležité, aby model vznikol výlučne zo zosnímaných dát, bez geometrie dopĺňanej umelou inteligenciou.</p>
 
 <h2>Mierka sa musí overiť</h2>
-<p>Mierka z jedného zdroja môže byť chybná. Preto sa porovnávajú nezávislé cesty: metrická trajektória kamery, kalibračný terč nájdený v modeli a etalón, teda úsek známej dĺžky zmeraný v modeli. Ak sa zdroje mierky nezhodujú, rozhoduje terč a neistota sa zväčší. Etalón kratší ako 290 mm nedokáže rozlíšiť chybu 1 %, preto na dĺžku tela patrí etalón 500 až 1000 mm, napríklad meracie pásmo.</p>
+<p>Mierka z jedného zdroja môže byť chybná. Preto sa porovnávajú: LiDAR hĺbka, kalibračný terč nájdený v modeli a etalón, teda úsek známej dĺžky zmeraný v modeli. Ak sa zdroje nezhodujú, rozhoduje terč s overeným ohniskom kamery, inak LiDAR hĺbka, a neistota sa zväčší. Dráha kamery slúži pri presvedčivej LiDAR hĺbke len na kontrolu. Etalón kratší ako 290 mm nedokáže rozlíšiť chybu 1 %, preto na dĺžku tela patrí etalón 500 až 1000 mm, napríklad meracie pásmo.</p>
 
 <h2>Neistota ± U (k = 2)</h2>
 <p>Každé meranie v modeli má rozšírenú neistotu U s koeficientom pokrytia k = 2, čo približne zodpovedá 95 % pravdepodobnosti podľa metrologického štandardu GUM. Skladá sa z neistoty mierky, z presnosti, s akou sa ukážu body na povrchu, a z rozlíšenia modelu. Meranie bez uvedenej neistoty nie je meraním, ale odhadom.</p>
 
 <h2>Triedy dokumentácie A až D</h2>
-<p>Certifikát 3D dokumentácie hovorí, koľkými nezávislými cestami je mierka doložená a s akým výsledkom. Trieda A je metrologicky overená (hĺbka z LiDARu, mierka korigovaná fitom trajektórie a nezávislé overenie schopné rozlíšiť 1 %). Trieda B je metrická, ale bez dostatočného nezávislého overenia. Trieda C má mierku len orientačnú a trieda D mierku nepozná. Rozhoduje najhoršie z dostupných overení.</p>
+<p>Certifikát 3D dokumentácie hovorí, koľkými nezávislými cestami je mierka doložená a s akým výsledkom. Trieda A je metrologicky overená (hĺbka z LiDARu, metrická mierka a fyzické overenie schopné rozlíšiť 1 %). Trieda B je metrická, ale bez dostatočného nezávislého overenia. Trieda C má mierku len orientačnú a trieda D mierku nepozná. Rozhoduje najhoršie z dostupných overení.</p>
 
 <h2>Integrita: SHA-256 a podpis</h2>
 <p>Dokumentácia je užitočná len vtedy, keď sa dá preukázať, že sa nezmenila. Balík .f3d nesie odtlačok SHA-256 každého súboru, takže príjemca pri importe vidí, či niečo chýba alebo bolo upravené. Výpočet na Macu doplní záznam o výpočte (nástroj, verzia, fázy, trvanie) a môže výstupný balík podpísať kľúčom počítača.</p>
