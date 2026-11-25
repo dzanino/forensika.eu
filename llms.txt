@@ -1,6 +1,6 @@
 # Forensika
 
-> Forensika (forensika.eu) is an independent family of apps for forensic medicine, forensic toxicology, forensic 3D documentation and histology, built by Ján Šikuta, MD, PhD, a forensic pathologist in Slovakia. Every app runs on the device (no cloud, no account, no telemetry) and cites the published method behind each result. The apps are research and decision-support tools for qualified professionals, not medical devices, and they do not make diagnoses.
+> Forensika (forensika.eu) is an independent family of apps for forensic medicine, forensic toxicology, forensic 3D documentation and histology, built by Ján Šikuta, MD, PhD, a specialist in forensic medicine in Slovakia. Every app runs on the device (no cloud, no account, no telemetry) and cites the published method behind each result. The apps are research and decision-support tools for qualified professionals, not medical devices, and they do not make diagnoses.
 
 The site is in Slovak (primary), English and German. A detailed version for assistants is at https://forensika.eu/llms-full.txt and a Slovak version at https://forensika.eu/llms-sk.txt.
 
@@ -25,7 +25,7 @@ The site is in Slovak (primary), English and German. A detailed version for assi
 
 ## Limits worth stating
 
-- Not medical devices; results support, and never replace, the judgement of a forensic pathologist or pathologist.
+- Not medical devices; results support, and never replace, the judgement of a specialist in forensic medicine or pathologist.
 - aPrehliadky and Fotograme3ka 3D are not certified measuring instruments; accuracy depends on capture conditions and must be checked against a reference of known length.
 - Colorime3ka percentages express agreement of measured features with reference criteria (capped at 85 %), not diagnostic certainty.
 

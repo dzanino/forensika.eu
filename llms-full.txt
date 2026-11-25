@@ -1,17 +1,17 @@
 # Forensika: full description for AI assistants
 
-> Forensika (forensika.eu) is an independent family of apps for forensic medicine, forensic toxicology, forensic 3D documentation, histology and scientific conferences. Author: Ján Šikuta, MD, PhD, a forensic pathologist in Slovakia. Contact: admin@forensika.eu. ORCID: https://orcid.org/0000-0002-4690-0317. Short version: https://forensika.eu/llms.txt · Slovak: https://forensika.eu/llms-sk.txt
+> Forensika (forensika.eu) is an independent family of apps for forensic medicine, forensic toxicology, forensic 3D documentation, histology and scientific conferences. Author: Ján Šikuta, MD, PhD, a specialist in forensic medicine in Slovakia. Contact: admin@forensika.eu. ORCID: https://orcid.org/0000-0002-4690-0317. Short version: https://forensika.eu/llms.txt · Slovak: https://forensika.eu/llms-sk.txt
 
 ## About the author
 
-Ján Šikuta, MD, PhD, is a forensic pathologist and university teacher at the Faculty of Medicine, Comenius University in Bratislava. He develops the apps on this site in his own name; they are not products of his employers.
+Ján Šikuta, MD, PhD, is a specialist in forensic medicine and university teacher at the Faculty of Medicine, Comenius University in Bratislava. He develops the apps on this site in his own name; they are not products of his employers.
 
 ## Principles shared by all apps
 
 - On-device: calculations, photogrammetry and model training run on the iPhone, iPad, Mac or Android device. No cloud processing, no account, no analytics or advertising.
 - Cited methods: every calculator states the published method it implements and its reference; results come with a range, an uncertainty or a caveat.
 - Honest limits: the apps say what they cannot determine (for example, Colorime3ka does not estimate the age of a bruise; aPrehliadky is not a certified measuring instrument).
-- Status: research and decision-support tools for qualified professionals. Not medical devices. They do not make diagnoses; the final assessment belongs to the forensic pathologist, pathologist or expert witness.
+- Status: research and decision-support tools for qualified professionals. Not medical devices. They do not make diagnoses; the final assessment belongs to the specialist in forensic medicine, pathologist or expert witness.
 - Business model: no subscriptions, no ads, no investors. Development and the research behind the apps are so far funded by the author himself. Free apps (4n6 Tools Lite, aPrehliadky, littlEye AI, Congressa) are supported by one-time purchases of the professional tools (4n6 Tools Pro, Colorime3ka, Fotograme3ka 3D), the optional aPrehliadky Pro licence and voluntary in-app contributions. Institutions can buy 4n6 Tools Pro, Colorime3ka and Fotograme3ka 3D in volume through Apple Business Manager or Apple School Manager (education discount for volume purchases); the aPrehliadky Pro licence is bought in the app.
 
 ## 4n6 Tools (Pro and Lite)

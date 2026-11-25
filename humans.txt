@@ -1,5 +1,5 @@
 /* TEAM */
-Author: Ján Šikuta, MD, PhD: forensic pathologist, Slovakia
+Author: Ján Šikuta, MD, PhD: specialist in forensic medicine, Slovakia
 Contact: admin@forensika.eu
 ORCID: https://orcid.org/0000-0002-4690-0317
 Site: https://forensika.eu/
