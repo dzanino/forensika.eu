@@ -67,13 +67,13 @@
       tr: 'Rektaltemperatur', ta: 'Umgebungstemperatur', mass: 'Körpermasse', cf: 'Korrekturfaktor (Bedingungen)',
       cfs: [['1', 'unbekleidet, ruhende Luft (1,0)'], ['0.7', 'nasser Körper oder bewegte Luft (0,7)'], ['1.2', 'leichte Kleidung (1,2)'], ['1.4', 'bekleidet, ruhende Luft (1,4)'], ['1.8', 'warme Kleidung oder Decke (1,8)'], ['2.4', 'dickes Bettzeug (2,4)']],
       ci: '95-%-Intervall: <b>{0} bis {1} h</b> (± {2} h laut Nomogrammlegende)',
-      hLate: 'Späte Abkühlungsphase (Q < 0,2): Der Körper liegt nahe der Umgebung, die Genauigkeit sinkt deutlich. Die App markiert das und empfiehlt weitere Methoden.',
+      hLate: 'Späte Abkühlungsphase (Q < 0,2): Die Körpertemperatur liegt nahe der Umgebungstemperatur, die Genauigkeit sinkt deutlich. Die App markiert das und empfiehlt weitere Methoden.',
       hImp: 'Der Körper kann bei diesen Eingaben nicht wärmer als 37,2 °C sein; die App liefert eine Erklärung, keine Zahl.',
       hTa: 'Die Rektaltemperatur muss über der Umgebungstemperatur liegen.',
-      hNote: 'Standardkörper 37,2 °C, zweiexponentielles Abkühlungsmodell. Die App ergänzt einen Assistenten für den Korrekturfaktor, die Glaister-Regel als Kontrolle und den Protokolleintrag.',
+      hNote: 'Standardkörper 37,2 °C, doppelt exponentielles Abkühlungsmodell. Die App ergänzt einen Assistenten für den Korrekturfaktor, die Glaister-Regel als Kontrolle und den Protokolleintrag.',
       hCite: 'Henssge C. Death time estimation in case work I. The rectal temperature time of death nomogram. <i>Forensic Sci Int.</i> 1988;38(3–4):209–236. · Henssge C, Madea B. Estimation of the time since death in the early post-mortem period. <i>Forensic Sci Int.</i> 2004;144(2–3):167–175.',
       glu: 'Glukose', lac: 'Laktat', matrix: 'Material', vit: 'Glaskörper', csf: 'Liquor', tRes: 'Traub-Index',
-      tHyper: 'Hyperglykämie', tHyperT: 'Index über der Schwelle für {0} (> {1} mg/dl). Die App empfiehlt β-Hydroxybutyrat und HbA1c zu ergänzen.',
+      tHyper: 'Hyperglykämie', tHyperT: 'Index über der Schwelle für {0} (> {1} mg/dl). Die App empfiehlt, β-Hydroxybutyrat und HbA1c zu ergänzen.',
       tLow: 'Niedriger Index, nicht diagnostisch', tLowT: 'Eine Summe unter 160 mg/dl beweist keine Hypoglykämie: Glukose fällt nach dem Tod durch Glykolyse. Die App erklärt, womit eine Hypoglykämie belegt wird.',
       tNorm: 'Kein Hinweis auf Hyperglykämie', tNormT: 'Index im Bereich {0} bis {1} mg/dl für {2}. Die App gibt ihn zusammen mit der Glukose allein an.',
       tNote: 'Index = Glukose × 18,016 + Laktat × 9,008 (mg/dl). Schwellen: Glaskörper 160 und 410 mg/dl, Liquor 160 und 362 mg/dl.',
@@ -83,7 +83,7 @@
       cats: { thanatology: 'Thanatologie', trauma: 'Trauma', toxicology: 'Toxikologie', biochem: 'Biochemie', cardio: 'Kardiopathologie', identity: 'Identifizierung', anthro: 'Anthropologie', micro: 'Mikroskopie', tools: 'Werkzeuge', 'case': 'Fall' }
     },
     es: {
-      kK: 'Potasio (K⁺) en humor vítreo', vRes: 'desde la muerte · Madea 1989', vCi: 'Intervalo del 95 %: <b>{0} a {1} h</b> (± 20 h)', vBelow: 'El valor está por debajo del rango de los métodos lineales: el K⁺ corresponde a un IPM muy corto. La aplicación no lo informa como número.', vNeg: 'por debajo del rango del método', vMeth: 'Método',
+      kK: 'Potasio (K⁺) en humor vítreo', vRes: 'desde la muerte · Madea 1989', vCi: 'Intervalo del 95 %: <b>{0} a {1} h</b> (± 20 h)', vBelow: 'El valor está por debajo del rango de los métodos lineales: el K⁺ corresponde a un IPM muy corto. La aplicación no lo muestra como número.', vNeg: 'por debajo del rango del método', vMeth: 'Método',
       vNote: 'Las regresiones lineales son válidas aproximadamente de 0 a 100 h tras la muerte. La aplicación añade el modelo Zilg 2015 con edad y temperatura ambiente, y la hipoxantina como control.',
       vCite: 'Sturner WQ, Gantner GE. The postmortem interval. A study of potassium in the vitreous humor. <i>Am J Clin Pathol.</i> 1964;42:137–144. · Madea B, Henssge C, Hönig W, Gerbracht A. References for determining the time of death by potassium in vitreous humor. <i>Forensic Sci Int.</i> 1989;40(3):231–243. · James RA, Hoadley PA, Sampson BG. Determination of the postmortem interval by sampling vitreous humour. <i>Am J Forensic Med Pathol.</i> 1997;18(2):158–162.',
       to: 'a',
@@ -92,7 +92,7 @@
       tr: 'Temperatura rectal', ta: 'Temperatura ambiente', mass: 'Masa corporal', cf: 'Factor de corrección (condiciones)',
       cfs: [['1', 'desnudo, aire en calma (1,0)'], ['0.7', 'cuerpo mojado o aire en movimiento (0,7)'], ['1.2', 'ropa ligera (1,2)'], ['1.4', 'vestido, aire en calma (1,4)'], ['1.8', 'ropa de abrigo o manta (1,8)'], ['2.4', 'ropa de cama gruesa (2,4)']],
       ci: 'Intervalo del 95 %: <b>{0} a {1} h</b> (± {2} h según la leyenda del nomograma)',
-      hLate: 'Fase tardía del enfriamiento (Q < 0,2): el cuerpo está cerca del ambiente y la precisión cae mucho. La aplicación lo señala y recomienda otros métodos.',
+      hLate: 'Fase tardía del enfriamiento (Q < 0,2): la temperatura corporal está cerca de la ambiental y la precisión cae mucho. La aplicación lo señala y recomienda otros métodos.',
       hImp: 'El cuerpo no puede estar a más de 37,2 °C con estas entradas; la aplicación devuelve una explicación, no un número.',
       hTa: 'La temperatura rectal debe superar la ambiente.',
       hNote: 'Cuerpo estándar de 37,2 °C, modelo biexponencial de enfriamiento. La aplicación añade un asistente del factor de corrección, la regla de Glaister como control y la entrada en el informe.',
@@ -100,10 +100,10 @@
       glu: 'Glucosa', lac: 'Lactato', matrix: 'Matriz', vit: 'humor vítreo', csf: 'LCR', tRes: 'Índice de Traub',
       tHyper: 'Hiperglucemia', tHyperT: 'Índice por encima del umbral para {0} (> {1} mg/dl). La aplicación recomienda añadir β-hidroxibutirato y HbA1c.',
       tLow: 'Índice bajo, no diagnóstico', tLowT: 'Una suma inferior a 160 mg/dl no demuestra hipoglucemia: la glucosa baja tras la muerte por glucólisis. La aplicación explica cómo se demuestra la hipoglucemia.',
-      tNorm: 'Sin signos de hiperglucemia', tNormT: 'Índice entre {0} y {1} mg/dl para {2}. La aplicación lo informa junto con la glucosa sola.',
+      tNorm: 'Sin signos de hiperglucemia', tNormT: 'Índice entre {0} y {1} mg/dl para {2}. La aplicación lo muestra junto con la glucosa sola.',
       tNote: 'Índice = glucosa × 18,016 + lactato × 9,008 (mg/dl). Umbrales: vítreo 160 y 410 mg/dl, LCR 160 y 362 mg/dl.',
       tCite: 'Traub F. Methode zur Erkennung von tödlichen Zuckerstoffwechselstörungen an der Leiche (Diabetes mellitus und Hypoglykämie). <i>Zentralbl Allg Pathol.</i> 1969;112(4):390–399. · Karlovsek MZ. Diagnostic values of combined glucose and lactate values in cerebrospinal fluid and vitreous humour - our experiences. <i>Forensic Sci Int.</i> 2004;146 Suppl:S19–S23. · Zilg B. Postmortem analyses of vitreous fluid (PhD thesis). Stockholm: Karolinska Institutet; 2015.',
-      cite: 'Fuente del método', foot: 'El cálculo se ejecuta en su navegador; no se envía nada. En la aplicación cada herramienta tiene asistentes, reservas y entrada en el informe.',
+      cite: 'Fuente del método', foot: 'El cálculo se ejecuta en su navegador; no se envía nada. En la aplicación cada herramienta tiene asistentes, advertencias y entrada en el informe.',
       all: 'Todas', lite: 'Gratis en Lite', pro: 'Pro', count: '{0} de 27 herramientas',
       cats: { thanatology: 'Tanatología', trauma: 'Trauma', toxicology: 'Toxicología', biochem: 'Bioquímica', cardio: 'Cardiopatología', identity: 'Identificación', anthro: 'Antropología', micro: 'Microscopía', tools: 'Herramientas', 'case': 'Caso' }
     },
@@ -117,7 +117,7 @@
       tr: 'Temperatura retal', ta: 'Temperatura ambiente', mass: 'Massa corporal', cf: 'Fator de correção (condições)',
       cfs: [['1', 'despido, ar parado (1,0)'], ['0.7', 'corpo molhado ou ar em movimento (0,7)'], ['1.2', 'roupa leve (1,2)'], ['1.4', 'vestido, ar parado (1,4)'], ['1.8', 'roupa quente ou cobertor (1,8)'], ['2.4', 'roupa de cama grossa (2,4)']],
       ci: 'Intervalo de 95 %: <b>{0} a {1} h</b> (± {2} h conforme a legenda do nomograma)',
-      hLate: 'Fase tardia do resfriamento (Q < 0,2): o corpo está próximo do ambiente e a precisão cai muito. O aplicativo sinaliza isso e recomenda outros métodos.',
+      hLate: 'Fase tardia do resfriamento (Q < 0,2): a temperatura do corpo está próxima da ambiente e a precisão cai muito. O aplicativo sinaliza isso e recomenda outros métodos.',
       hImp: 'O corpo não pode estar acima de 37,2 °C com estas entradas; o aplicativo devolve uma explicação, não um número.',
       hTa: 'A temperatura retal deve ser superior à ambiente.',
       hNote: 'Corpo padrão de 37,2 °C, modelo biexponencial de resfriamento. O aplicativo acrescenta um assistente do fator de correção, a regra de Glaister como controle e o registro no laudo.',
@@ -153,9 +153,9 @@
       tNorm: 'Bez cech hiperglikemii', tNormT: 'Wskaźnik w zakresie {0} do {1} mg/dl dla: {2}. Aplikacja podaje go razem z samą glukozą.',
       tNote: 'Wskaźnik = glukoza × 18,016 + mleczan × 9,008 (mg/dl). Progi: ciało szkliste 160 i 410 mg/dl, PMR 160 i 362 mg/dl.',
       tCite: 'Traub F. Methode zur Erkennung von tödlichen Zuckerstoffwechselstörungen an der Leiche (Diabetes mellitus und Hypoglykämie). <i>Zentralbl Allg Pathol.</i> 1969;112(4):390–399. · Karlovsek MZ. Diagnostic values of combined glucose and lactate values in cerebrospinal fluid and vitreous humour - our experiences. <i>Forensic Sci Int.</i> 2004;146 Suppl:S19–S23. · Zilg B. Postmortem analyses of vitreous fluid (PhD thesis). Stockholm: Karolinska Institutet; 2015.',
-      cite: 'Źródło metody', foot: 'Obliczenie działa w Twojej przeglądarce; nic nie jest wysyłane. W aplikacji każde narzędzie ma asystentów, zastrzeżenia i wpis do protokołu.',
+      cite: 'Źródło metody', foot: 'Obliczenie działa w Państwa przeglądarce; nic nie jest wysyłane. W aplikacji każde narzędzie ma asystentów, zastrzeżenia i wpis do protokołu.',
       all: 'Wszystkie', lite: 'Za darmo w Lite', pro: 'Pro', count: '{0} z 27 narzędzi',
-      cats: { thanatology: 'Tanatologia', trauma: 'Uraz', toxicology: 'Toksykologia', biochem: 'Biochemia', cardio: 'Kardiopatologia', identity: 'Identyfikacja', anthro: 'Antropologia', micro: 'Mikroskopia', tools: 'Narzędzia', 'case': 'Sprawa' }
+      cats: { thanatology: 'Tanatologia', trauma: 'Urazy', toxicology: 'Toksykologia', biochem: 'Biochemia', cardio: 'Kardiopatologia', identity: 'Identyfikacja', anthro: 'Antropologia', micro: 'Mikroskopia', tools: 'Narzędzia', 'case': 'Sprawa' }
     }
   };
   var T = S[L] || S.en;
@@ -235,7 +235,7 @@
         var st = 7.14 * K - 39.1, ma = 5.26 * K - 30.9, ja = 4.32 * K - 18.35;
         var f = function (h) { return h < 0 ? T.vNeg : num(h, 1) + ' ' + T.h; };
         var rows = [['Sturner &amp; Gantner 1964', st], ['Madea et al. 1989 (± 20 h)', ma], ['James et al. 1997', ja]];
-        var tbl = '<table class="n6-tbl"><tr><th>' + T.vMeth + '</th><th>PMI</th></tr>' + rows.map(function (r) { return '<tr><td>' + r[0] + '</td><td>' + f(r[1]) + '</td></tr>'; }).join('') + '</table>';
+        var tbl = '<table class="n6-tbl"><tr><th>' + T.vMeth + '</th><th>' + (L === 'es' || L === 'pt' ? 'IPM' : 'PMI') + '</th></tr>' + rows.map(function (r) { return '<tr><td>' + r[0] + '</td><td>' + f(r[1]) + '</td></tr>'; }).join('') + '</table>';
         var head = ma < 0 ? '<span class="n6-state warn">' + T.vBelow + '</span>' :
           '<p class="n6-res"><span class="n6-grad">' + num(ma, 1) + ' ' + T.h + '</span><small>' + T.vRes + '</small></p>' +
           '<p class="n6-ci">' + fmt(T.vCi, num(Math.max(0, ma - 20), 1), num(ma + 20, 1)) + '</p>' + band(Math.max(0, ma - 20), ma + 20, ma, 0, 100);

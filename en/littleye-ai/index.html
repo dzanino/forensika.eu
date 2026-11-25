@@ -19,7 +19,7 @@
 <link rel="alternate" hreflang="x-default" href="https://forensika.eu/en/littleye-ai/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="littlEye AI: Forensic Histology AI, Trained On-Device">
-<meta property="og:description" content="Train and evaluate AI models from histology slide microphotographs: for forensic pathologists, pathologists and medical students. 27 organs, an atlas of 103 diagnoses. No cloud, no telemetry, free.">
+<meta property="og:description" content="Train and evaluate AI models from histology slide micrographs: for forensic pathologists, pathologists and medical students. 27 organs, an atlas of 103 diagnoses. No cloud, no telemetry, free.">
 <meta property="og:url" content="https://forensika.eu/en/littleye-ai/">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="sk_SK">
@@ -95,7 +95,7 @@
   "author": { "@type": "Person", "name": "Ján Šikuta" },
   "publisher": { "@type": "Person", "name": "Ján Šikuta" },
   "downloadUrl": "https://apps.apple.com/app/id6799417580",
-  "description": "An application for training and evaluating AI models from histology slide microphotographs, entirely on-device. A dataset spanning 27 organs, an atlas of 103 diagnoses, encrypted .le3AI model sharing. No cloud, no telemetry."
+  "description": "An application for training and evaluating AI models from histology slide micrographs, entirely on-device. A dataset spanning 27 organs, an atlas of 103 diagnoses, encrypted .le3AI model sharing. No cloud, no telemetry."
 }
 </script>
 <script type="application/ld+json">
@@ -124,7 +124,7 @@
     },
     {
       "@type": "Question",
-      "name": "Do slide microphotographs get sent to a server?",
+      "name": "Do slide micrographs get sent to a server?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "No. The entire app runs exclusively on-device: images, cases and trained models never leave it unless you explicitly export them. The app makes no network connections and has no telemetry or analytics."
@@ -143,7 +143,7 @@
       "name": "Is littlEye AI a medical device?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It is a research and decision-support tool for qualified professionals. It does not provide a diagnosis: the final assessment always belongs to the pathologist or forensic physician."
+        "text": "No. It is a research and decision-support tool for qualified professionals. It does not provide a diagnosis: the final assessment always belongs to the pathologist or forensic pathologist."
       }
     },
     {
@@ -235,9 +235,9 @@
 <div class="wrap">
 <h2>From slide to trained model</h2>
 <div class="steps">
-<div class="step"><div class="n"></div><div><h3>Import and dataset</h3><p>Microphotographs (JPEG/PNG/TIFF/HEIC) are sorted by organ and diagnosis; a stain and magnification log keeps the data consistent.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>Import and dataset</h3><p>Micrographs (JPEG/PNG/TIFF/HEIC) are sorted by organ and diagnosis; a stain and magnification log keeps the data consistent.</p></div></div>
 <div class="step"><div class="n"></div><div><h3>Colleague review</h3><p>Multiple colleagues independently review slides; the app records the reviewer's name and date for each assessment (audit trail), and majority vote sets the final label.</p></div></div>
-<div class="step"><div class="n"></div><div><h3>On-device Core ML training</h3><p>Configurable iterations and augmentations, an independent test set (10–20% stratified holdout), progress with the option to cancel.</p></div></div>
+<div class="step"><div class="n"></div><div><h3>On-device Core ML training</h3><p>Configurable iterations and augmentations, an independent test set (10–20 % stratified holdout), progress with the option to cancel.</p></div></div>
 <div class="step"><div class="n"></div><div><h3>Metrics and confusion matrix</h3><p>Training, validation and test accuracy, plus sensitivity and precision reported separately for each class.</p></div></div>
 <div class="step"><div class="n"></div><div><h3>Export and sharing</h3><p>The finished model is saved as an encrypted .le3AI file with a manifest: imported into another littlEye AI installation via Files, AirDrop or a double tap.</p></div></div>
 </div>
@@ -267,7 +267,7 @@
 <li>No analytics, no telemetry, no advertising identifiers</li>
 <li>Transfer files .le3AI and .le3set can only be opened by littlEye AI</li>
 </ul>
-<div class="note">littlEye AI is a research and decision-support tool for qualified professionals: not a medical device, and it does not provide a diagnosis; the final assessment always belongs to the pathologist or forensic physician.</div>
+<div class="note">littlEye AI is a research and decision-support tool for qualified professionals: not a medical device, and it does not provide a diagnosis; the final assessment always belongs to the pathologist or forensic pathologist.</div>
 </div>
 </section>
 
@@ -275,9 +275,9 @@
 <div class="wrap">
 <h2>Frequently asked questions</h2>
 <details><summary>Does littlEye AI ship with ready-made diagnostic models?</summary><p>No. The app is a training tool, not a model collection: it ships with a single demonstration model trained on synthetic patterns. Real models are trained from your own slides, or exchanged with colleagues as standalone encrypted .le3AI files.</p></details>
-<details><summary>Do slide microphotographs get sent to a server?</summary><p>No. The entire app runs exclusively on-device: images, cases and trained models never leave it unless you explicitly export them. The app makes no network connections and has no telemetry or analytics.</p></details>
+<details><summary>Do slide micrographs get sent to a server?</summary><p>No. The entire app runs exclusively on-device: images, cases and trained models never leave it unless you explicitly export them. The app makes no network connections and has no telemetry or analytics.</p></details>
 <details><summary>How many images do I need to train a model?</summary><p>The technical minimum is 2 classes with 5 images each, but the app recommends 30 or more images per class drawn from multiple cases: a colour-coded dataset-readiness indicator shows whether you have enough material before you start training.</p></details>
-<details><summary>Is littlEye AI a medical device?</summary><p>No. It is a research and decision-support tool for qualified professionals. It does not provide a diagnosis: the final assessment always belongs to the pathologist or forensic physician.</p></details>
+<details><summary>Is littlEye AI a medical device?</summary><p>No. It is a research and decision-support tool for qualified professionals. It does not provide a diagnosis: the final assessment always belongs to the pathologist or forensic pathologist.</p></details>
 <details><summary>Is littlEye AI free?</summary><p>Yes, since version 3.0. No subscription, no feature behind a paywall: an optional one-time in-app contribution supports further development and unlocks nothing.</p></details>
 <!-- ako-citovat -->
 <details id="cite" style="overflow-wrap:anywhere"><summary>How to cite littlEye AI</summary>

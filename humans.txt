@@ -4,14 +4,9 @@ Contact: admin@forensika.eu
 ORCID: https://orcid.org/0000-0002-4690-0317
 Site: https://forensika.eu/
 
-/* THANKS */
-Faculty of Medicine, Comenius University Bratislava: Institute of Histology and Embryology,
-Institute of Pathological Anatomy, Institute of Forensic Medicine and Forensic Toxicology
-(collaboration on littlEye AI)
-
 /* SITE */
-Last update: 2026-10-30
-Language: Slovak, English
+Last update: 2026-11-25
+Language: Slovak, English, German
 Hosting: GitHub Pages
 Standards: HTML5, CSS3, JSON-LD (schema.org)
 Principle: everything on the device, no cloud, no account, no telemetry

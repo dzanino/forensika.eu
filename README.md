@@ -1,23 +1,7 @@
 # forensika.eu
 
-Official web presentation and repository for digital forensic medicine, toxicology, and specialized software tools. 
-
-Developed by **MUDr. Šikuta, PhD.**, expert in forensic medicine.
-
-## 🛠️ Included Applications & Modules
-* **4n6 Tools (Pro & Lite):** Software tools tailored for comprehensive forensic analysis and evidence processing.
-* **Colorime3ka:** Application designed for colorimetric measurements and analysis of color spectra in laboratory conditions.
-* **littlEye AI:** Advanced implementation of Artificial Intelligence to automate and streamline forensic data evaluation.
-* **aPrehliadky & Congressa:** Software modules specialized for managing medical body examinations (post-mortem examinations) and managing expert congresses.
-
-## 🧠 Forensic Methodology & Algorithms
-The platform integrates verified scientific calculations and methods used in daily forensic practice, including:
-* Post-mortem interval (PMI) calculation (Henssge nomogram, Potassium \(K^+\) levels in vitreous humor).
-* Toxicology models (Widmark formula for blood alcohol concentration calculations).
-* Digital imaging analysis (CIELAB color space, SHA-256 data integrity hashing, DVI protocols).
-
-## 🌍 Internationalization
-Fully accessible in multiple languages: Slovak, German, Polish, Spanish, and Portuguese (BR). Includes structured metadata (`llms.txt`, `llms-full.txt`) for optimal LLM and AI assistant crawling.
-
----
-*For more information, technical documentation, and pricing details, visit [forensika.eu](https://forensika.eu).*
+This repository contains the website forensika.eu, an independent project by Ján Šikuta, MD, PhD, a forensic pathologist in Slovakia.
+The site presents 4n6 Tools Pro and Lite (forensic medicine calculators that cite the source of every method), Colorime3ka (the colour of skin findings measured in CIELAB from a photograph), aPrehliadky with Fotograme3ka 3D (3D documentation of an examination on iPhone, iPad and Mac), littlEye AI (histology models trained on your own slides) and Congressa (a conference programme that works offline).
+The apps run on the device, with no account, no telemetry and no subscription.
+They are professional aids for qualified experts, not medical devices, and they do not make diagnoses.
+The site is in Slovak, English and German, with the 4n6 Tools page also in Spanish, Brazilian Portuguese and Polish; contact: admin@forensika.eu.

@@ -79,7 +79,7 @@
   footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
   footer .copy a{color:var(--blue);font-weight:600;}
 </style>
-<style>article h1,article h2{hyphens:manual;-webkit-hyphens:manual} article .body h2{margin-top:30px} article .body p{max-width:72ch} .meta{color:var(--muted);font-size:14px;margin:6px 0 18px} ol.refs li{font-size:14px;color:var(--muted);margin-bottom:8px}</style>
+<style>article h1,article h2{hyphens:manual;-webkit-hyphens:manual} article .body h2{margin-top:30px} article .body p{max-width:72ch} .meta{color:var(--muted);font-size:14px;margin:6px 0 18px} ol.refs li{font-size:14px;color:var(--muted);margin-bottom:8px;overflow-wrap:anywhere}</style>
 <link rel="stylesheet" href="/glam.css">
 <script type="application/ld+json">
 {
@@ -92,7 +92,7 @@
       "description": "Ako z fotografií a LiDARu vznikne merateľný 3D model tela alebo miesta, ako sa overuje mierka, čo znamená neistota ± U (k = 2), triedy dokumentácie A až D a integrita SHA-256.",
       "inLanguage": "sk",
       "datePublished": "2026-11-01",
-      "dateModified": "2026-11-24",
+      "dateModified": "2026-11-25",
       "image": "https://forensika.eu/img/og/aprehliadky.png",
       "author": {
         "@type": "Person",
@@ -109,7 +109,7 @@
       "citation": [
         "JCGM 100:2008. Evaluation of measurement data: Guide to the expression of uncertainty in measurement (GUM). Joint Committee for Guides in Metrology; 2008.",
         "Buck U, Naether S, Räss B, Jackowski C, Thali MJ. Accident or homicide: virtual crime scene reconstruction using 3D methods. Forensic Sci Int. 2013;225(1–3):75–84. doi:10.1016/j.forsciint.2012.05.015",
-        "Metodika certifikácie 3D dokumentácie aPrehliadky, verzia 3 (2026). https://dzanino.github.io/aPrehliadky/"
+        "Metodika certifikácie 3D dokumentácie aPrehliadky, verzia 6 (2026). https://dzanino.github.io/aPrehliadky/"
       ]
     },
     {
@@ -180,7 +180,7 @@
 <section class="hero">
 <div class="kicker">Prehliadka · forenzná fotogrametria</div>
 <h1>3D dokumentácia prehliadky iPhonom: mierka, neistota a integrita</h1>
-<p class="meta">MUDr. Ján Šikuta, PhD., súdny lekár · Uverejnené 1. 11. 2026 · Aktualizované 24. 11. 2026</p>
+<p class="meta">MUDr. Ján Šikuta, PhD., súdny lekár · Uverejnené 1. 11. 2026 · Aktualizované 25. 11. 2026</p>
 <p class="lede">Fotografie zachytia vzhľad nálezu, ale nie priestorové vzťahy: vzdialenosť medzi poraneniami, uhol rany voči osi tela či polohu tela v miestnosti. 3D model ich zachová, ak je jeho mierka overená a jeho súbory nezmenené.</p>
 </section>
 <div class="body">
@@ -194,7 +194,7 @@
 <p>Každé meranie v modeli má rozšírenú neistotu U s koeficientom pokrytia k = 2, čo približne zodpovedá 95 % pravdepodobnosti podľa metrologického štandardu GUM. Skladá sa z neistoty mierky, z presnosti, s akou sa ukážu body na povrchu, a z rozlíšenia modelu. Meranie bez uvedenej neistoty nie je meraním, ale odhadom.</p>
 
 <h2>Triedy dokumentácie A až D</h2>
-<p>Certifikát 3D dokumentácie hovorí, koľkými nezávislými cestami je mierka doložená a s akým výsledkom. Trieda A je metrologicky overená (hĺbka z LiDARu, metrická mierka a fyzické overenie schopné rozlíšiť 1 %). Trieda B je metrická, ale bez dostatočného nezávislého overenia. Trieda C má mierku len orientačnú a trieda D mierku nepozná. Rozhoduje najhoršie z dostupných overení.</p>
+<p>Certifikát 3D dokumentácie hovorí, koľkými nezávislými cestami je mierka doložená a s akým výsledkom. Trieda A je metrologicky overená (hĺbka z LiDARu, metrická mierka a fyzické overenie schopné rozlíšiť 1 %). Trieda B je metrická, ale bez dostatočného nezávislého overenia. Trieda C má mierku len orientačnú a trieda D má mierku nedoloženú alebo vyvrátenú. Rozhoduje najhoršie z dostupných overení.</p>
 
 <h2>Integrita: SHA-256 a podpis</h2>
 <p>Dokumentácia je užitočná len vtedy, keď sa dá preukázať, že sa nezmenila. Balík .f3d nesie odtlačok SHA-256 každého súboru, takže príjemca pri importe vidí, či niečo chýba alebo bolo upravené. Výpočet na Macu doplní záznam o výpočte (nástroj, verzia, fázy, trvanie) a môže výstupný balík podpísať kľúčom počítača.</p>
@@ -211,7 +211,7 @@
 </div>
 <div class="note" style="margin-top:22px">Aplikácia k téme: <a href="/aprehliadky/">aPrehliadky</a>. Článok je odborný prehľad pre kvalifikovaných odborníkov; nenahrádza učebnicu, metodické usmernenie ani posudok.</div>
 <h2>Literatúra</h2>
-<ol class="refs"><li>JCGM 100:2008. Evaluation of measurement data: Guide to the expression of uncertainty in measurement (GUM). Joint Committee for Guides in Metrology; 2008.</li><li>Buck U, Naether S, Räss B, Jackowski C, Thali MJ. Accident or homicide: virtual crime scene reconstruction using 3D methods. Forensic Sci Int. 2013;225(1–3):75–84. doi:10.1016/j.forsciint.2012.05.015</li><li>Metodika certifikácie 3D dokumentácie aPrehliadky, verzia 3 (2026). https://dzanino.github.io/aPrehliadky/</li></ol>
+<ol class="refs"><li>JCGM 100:2008. Evaluation of measurement data: Guide to the expression of uncertainty in measurement (GUM). Joint Committee for Guides in Metrology; 2008.</li><li>Buck U, Naether S, Räss B, Jackowski C, Thali MJ. Accident or homicide: virtual crime scene reconstruction using 3D methods. Forensic Sci Int. 2013;225(1–3):75–84. doi:10.1016/j.forsciint.2012.05.015</li><li>Metodika certifikácie 3D dokumentácie aPrehliadky, verzia 6 (2026). https://dzanino.github.io/aPrehliadky/</li></ol>
 </article>
 </div>
 </main>

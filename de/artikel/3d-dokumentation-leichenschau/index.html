@@ -79,7 +79,7 @@
   footer .copy{margin-top:8px;font-size:13.5px;color:var(--muted);}
   footer .copy a{color:var(--blue);font-weight:600;}
 </style>
-<style>article h1,article h2{hyphens:manual;-webkit-hyphens:manual} article .body h2{margin-top:30px} article .body p{max-width:72ch} .meta{color:var(--muted);font-size:14px;margin:6px 0 18px} ol.refs li{font-size:14px;color:var(--muted);margin-bottom:8px}</style>
+<style>article h1,article h2{hyphens:manual;-webkit-hyphens:manual} article .body h2{margin-top:30px} article .body p{max-width:72ch} .meta{color:var(--muted);font-size:14px;margin:6px 0 18px} ol.refs li{font-size:14px;color:var(--muted);margin-bottom:8px;overflow-wrap:anywhere}</style>
 <link rel="stylesheet" href="/glam.css">
 <script type="application/ld+json">
 {
@@ -92,7 +92,7 @@
       "description": "Wie aus Fotos und LiDAR ein messbares 3D-Modell eines Körpers oder Fundorts entsteht, wie der Maßstab überprüft wird, was eine Unsicherheit von ± U (k = 2) bedeutet, Dokumentationsklassen A bis D und Integrität mit SHA-256.",
       "inLanguage": "de",
       "datePublished": "2026-11-03",
-      "dateModified": "2026-11-24",
+      "dateModified": "2026-11-25",
       "image": "https://forensika.eu/img/og/aprehliadky.png",
       "author": {
         "@type": "Person",
@@ -109,7 +109,7 @@
       "citation": [
         "JCGM 100:2008. Evaluation of measurement data: Guide to the expression of uncertainty in measurement (GUM). Joint Committee for Guides in Metrology; 2008.",
         "Buck U, Naether S, Räss B, Jackowski C, Thali MJ. Accident or homicide: virtual crime scene reconstruction using 3D methods. Forensic Sci Int. 2013;225(1–3):75–84. doi:10.1016/j.forsciint.2012.05.015",
-        "Metodika certifikácie 3D dokumentácie aPrehliadky, verzia 3 (2026). https://dzanino.github.io/aPrehliadky/"
+        "Metodika certifikácie 3D dokumentácie aPrehliadky, verzia 6 (2026). https://dzanino.github.io/aPrehliadky/"
       ]
     },
     {
@@ -180,7 +180,7 @@
 <section class="hero">
 <div class="kicker">Leichenschau · forensische Photogrammetrie</div>
 <h1>3D-Dokumentation der Leichenschau mit dem iPhone: Maßstab, Unsicherheit und Integrität</h1>
-<p class="meta">MUDr. Ján Šikuta, PhD, Rechtsmediziner · Veröffentlicht am 3. November 2026 · Aktualisiert am 24. November 2026</p>
+<p class="meta">MUDr. Ján Šikuta, PhD, Rechtsmediziner · Veröffentlicht am 3. November 2026 · Aktualisiert am 25. November 2026</p>
 <p class="lede">Fotos halten fest, wie ein Befund aussieht, aber nicht die räumlichen Beziehungen: den Abstand zwischen Verletzungen, den Winkel einer Wunde zur Körperachse oder die Lage des Körpers im Raum. Ein 3D-Modell bewahrt sie, vorausgesetzt, sein Maßstab ist überprüft und seine Dateien sind unverändert.</p>
 </section>
 <div class="body">
@@ -194,7 +194,7 @@
 <p>Jede Messung im Modell trägt eine erweiterte Unsicherheit U mit dem Erweiterungsfaktor k = 2, was nach dem metrologischen Standard GUM etwa einem Vertrauensniveau von 95 % entspricht. Sie setzt sich aus der Unsicherheit des Maßstabs, der Genauigkeit, mit der Punkte auf der Oberfläche gesetzt werden, und der Auflösung des Modells zusammen. Eine Messung ohne angegebene Unsicherheit ist keine Messung, sondern eine Schätzung.</p>
 
 <h2>Dokumentationsklassen A bis D</h2>
-<p>Das Zertifikat der 3D-Dokumentation gibt an, auf wie vielen unabhängigen Wegen der Maßstab belegt ist und mit welchem Ergebnis. Klasse A ist metrologisch überprüft (Tiefe aus LiDAR, metrischer Maßstab und eine physische Überprüfung, die 1 % auflösen kann). Klasse B ist metrisch, aber ohne ausreichende unabhängige Prüfung. Klasse C hat nur einen orientierenden Maßstab, Klasse D keinen bekannten. Es entscheidet die schlechteste der verfügbaren Prüfungen.</p>
+<p>Das Zertifikat der 3D-Dokumentation gibt an, auf wie vielen unabhängigen Wegen der Maßstab belegt ist und mit welchem Ergebnis. Klasse A ist metrologisch überprüft (Tiefe aus LiDAR, metrischer Maßstab und eine physische Überprüfung, die 1 % auflösen kann). Klasse B ist metrisch, aber ohne ausreichende unabhängige Prüfung. Klasse C hat nur einen näherungsweisen Maßstab, in Klasse D ist der Maßstab nicht belegt oder widerlegt. Es entscheidet die schlechteste der verfügbaren Prüfungen.</p>
 
 <h2>Integrität: SHA-256 und Signatur</h2>
 <p>Eine Dokumentation ist nur nützlich, wenn sich zeigen lässt, dass sie nicht verändert wurde. Das Paket .f3d enthält für jede Datei einen SHA-256-Hash, sodass der Empfänger beim Import sieht, ob etwas fehlt oder verändert wurde. Die Berechnung auf dem Mac ergänzt ein Rekonstruktionsprotokoll (Werkzeug, Version, Phasen, Dauer) und kann das Ausgabepaket mit dem Schlüssel des Rechners signieren.</p>
@@ -211,7 +211,7 @@
 </div>
 <div class="note" style="margin-top:22px">App zum Thema: <a href="/de/aprehliadky/">aPrehliadky</a>. Der Artikel ist eine Fachübersicht für qualifizierte Fachleute; er ersetzt weder ein Lehrbuch noch Leitlinien oder ein Gutachten.</div>
 <h2>Literatur</h2>
-<ol class="refs"><li>JCGM 100:2008. Evaluation of measurement data: Guide to the expression of uncertainty in measurement (GUM). Joint Committee for Guides in Metrology; 2008.</li><li>Buck U, Naether S, Räss B, Jackowski C, Thali MJ. Accident or homicide: virtual crime scene reconstruction using 3D methods. Forensic Sci Int. 2013;225(1–3):75–84. doi:10.1016/j.forsciint.2012.05.015</li><li>Metodika certifikácie 3D dokumentácie aPrehliadky, verzia 3 (2026). https://dzanino.github.io/aPrehliadky/</li></ol>
+<ol class="refs"><li>JCGM 100:2008. Evaluation of measurement data: Guide to the expression of uncertainty in measurement (GUM). Joint Committee for Guides in Metrology; 2008.</li><li>Buck U, Naether S, Räss B, Jackowski C, Thali MJ. Accident or homicide: virtual crime scene reconstruction using 3D methods. Forensic Sci Int. 2013;225(1–3):75–84. doi:10.1016/j.forsciint.2012.05.015</li><li>Metodika certifikácie 3D dokumentácie aPrehliadky, verzia 6 (2026). https://dzanino.github.io/aPrehliadky/</li></ol>
 </article>
 </div>
 </main>

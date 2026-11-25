@@ -4,7 +4,7 @@
 
 ## About the author
 
-Ján Šikuta, MD, PhD, is a forensic physician and university teacher at the Faculty of Medicine, Comenius University in Bratislava. He develops the apps on this site in his own name; they are not products of his employers.
+Ján Šikuta, MD, PhD, is a forensic pathologist and university teacher at the Faculty of Medicine, Comenius University in Bratislava. He develops the apps on this site in his own name; they are not products of his employers.
 
 ## Principles shared by all apps
 
@@ -84,3 +84,5 @@ Peer-reviewed review on mobile 3D scanning by the author and colleagues: Šikuta
 - [Estimating time of death from rectal temperature: the Henssge nomogram in practice](https://forensika.eu/en/articles/henssge-nomogram/)
 - [Bruise colour from a photograph: what can be measured and what cannot](https://forensika.eu/en/articles/bruise-colour/)
 - [3D documentation of an examination with an iPhone: scale, uncertainty and integrity](https://forensika.eu/en/articles/3d-documentation-of-examination/)
+- [The Widmark calculation in practice: back-calculation, balance and breath](https://forensika.eu/en/articles/widmark-calculation/)
+- [The model said “heart, 100 %”. It was a normal lung.](https://forensika.eu/en/articles/model-said-heart/)
